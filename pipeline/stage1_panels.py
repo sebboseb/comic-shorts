@@ -111,6 +111,9 @@ def run(config, workdir: Path):
     white_threshold = s1.get("white_threshold")  # None = per-page adaptive
     min_area_ratio = s1.get("min_panel_area_ratio", 0.02)
     margin = s1.get("crop_margin", 4)
+    detector = s1.get("detector", "floodfill")  # claude_boxes | floodfill | contour
+    vision_model = config.get("models", {}).get("vision_model",
+                                                "claude-sonnet-4-6")
 
     out_dir = workdir / "panels"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -128,6 +131,7 @@ def run(config, workdir: Path):
 
     panels = []
     flagged_pages = []
+    total_cost = 0.0
 
     for page_idx, page_path in enumerate(page_files, start=1):
         img = cv2.imread(str(page_path))
@@ -138,10 +142,29 @@ def run(config, workdir: Path):
 
         h, w = img.shape[:2]
         manual = overrides.get(page_path.name)
+        page_cost = None
         if manual:
             # hand-drawn boxes from tools/tag_ui.py, already in reading order
             boxes = [tuple(b) for b in manual]
-        else:
+        elif detector == "claude_boxes":
+            from pipeline import detect_claude_boxes
+            try:
+                # boxes already in reading order from the model
+                boxes, usage = detect_claude_boxes.detect_panels(
+                    img, model=vision_model, min_area_ratio=min_area_ratio)
+                page_cost = usage["cost_usd"]
+                total_cost += page_cost
+            except Exception as e:
+                print(f"WARNING: claude_boxes failed on {page_path.name} "
+                      f"({type(e).__name__}: {e}), falling back to floodfill "
+                      "for the rest of this run")
+                detector = "floodfill"
+        if not manual and detector == "floodfill":
+            from pipeline import detect_floodfill
+            boxes = detect_floodfill.detect_panels(
+                img, min_area_ratio=min_area_ratio)
+            boxes = reading_order(boxes, direction)
+        elif not manual and detector == "contour":
             boxes = detect_panels(img, white_threshold=white_threshold,
                                   dark_threshold=s1.get("dark_threshold", 48),
                                   min_area_ratio=min_area_ratio)
@@ -185,12 +208,16 @@ def run(config, workdir: Path):
                 "bbox_on_page": [x0, y0, x1 - x0, y1 - y0],
             })
 
-        print(f"page {page_idx:02d}: {len(boxes)} panels ({coverage:.0%} coverage)")
+        cost_note = f", ${page_cost:.4f}" if page_cost is not None else ""
+        print(f"page {page_idx:02d}: {len(boxes)} panels "
+              f"({coverage:.0%} coverage{cost_note})")
 
     result = {"panels": panels, "flagged_pages": flagged_pages}
     (workdir / "panels.json").write_text(json.dumps(result, indent=2))
 
     print(f"\n{len(panels)} panels -> {out_dir}")
+    if total_cost:
+        print(f"vision API cost: ${total_cost:.4f}")
     if flagged_pages:
         print(f"WARNING: {len(flagged_pages)} pages flagged, check panels.json "
               "and fix crops by hand before stage 2:")

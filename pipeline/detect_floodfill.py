@@ -124,6 +124,6 @@ def detect_panels(img, min_area_ratio=0.02):
                 continue
         final.append(box)
 
-    return [(x0, y0, x1 - x0, y1 - y0)
+    return [(int(x0), int(y0), int(x1 - x0), int(y1 - y0))
             for x0, y0, x1, y1 in final
             if (x1-x0) * (y1-y0) >= min_area]
