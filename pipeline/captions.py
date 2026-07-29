@@ -62,7 +62,7 @@ def _chunk(text):
 
 
 def cues(shots, fps):
-    """(start_frame, end_frame, text) over the episode timeline.
+    """(start_frame, end_frame, text, speaker) over the episode timeline.
 
     The shot's duration_frames is authoritative for where the video is:
     it covers the whole wav, including the trailing shot-gap silence that
@@ -90,7 +90,8 @@ def cues(shots, fps):
                     share = (frames - spent if i == len(pieces) - 1
                              else round(frames * len(piece) / total))
                     if share > 0:
-                        out.append((t + spent, t + spent + share, piece))
+                        out.append((t + spent, t + spent + share, piece,
+                                    shot.get("speaker") or "narrator"))
                     spent += share
             t += frames
         clock += dur  # never the segment sum
@@ -98,25 +99,42 @@ def cues(shots, fps):
 
 
 FONT_CANDIDATES = [
+    "/System/Library/Fonts/Supplemental/Impact.ttf",
     "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
     "/System/Library/Fonts/Helvetica.ttc",
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
 ]
 
+DEFAULTS = {
+    "font": None,             # explicit path, else first of FONT_CANDIDATES
+    "size_pct": 0.046,        # of frame height
+    "uppercase": True,
+    "outline_ratio": 9,       # size // ratio
+    "shadow": True,
+    "color": "#FFFFFF",
+    "speaker_colors": {},     # {"Ada": "#FF80AB", ...}; narrator falls to color
+    "bottom_pct": 0.10,
+}
 
-def _font(size):
+
+def _hex(c):
+    c = (c or "#FFFFFF").lstrip("#")
+    return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4)) + (255,)
+
+
+def _font(size, path=None):
     from PIL import ImageFont
-    for path in FONT_CANDIDATES:
-        if Path(path).exists():
+    for candidate in ([path] if path else []) + FONT_CANDIDATES:
+        if candidate and Path(candidate).expanduser().exists():
             try:
-                return ImageFont.truetype(path, size)
+                return ImageFont.truetype(str(Path(candidate).expanduser()), size)
             except OSError:
                 continue
     return ImageFont.load_default(size)
 
 
-def render_pngs(cue_list, width, height, out_dir):
+def render_pngs(cue_list, width, height, out_dir, style=None):
     """One transparent strip per cue.
 
     This ffmpeg build ships without libass *and* without drawtext, so the
@@ -126,24 +144,36 @@ def render_pngs(cue_list, width, height, out_dir):
     """
     from PIL import Image, ImageDraw
 
+    st = {**DEFAULTS, **(style or {})}
     out_dir.mkdir(parents=True, exist_ok=True)
-    size = round(height * 0.044)   # punchy, not a subtitle strip
-    font = _font(size)
-    strip_h = round(height * 0.20)
-    margin_b = round(height * 0.10)
-    stroke = max(4, size // 9)
+    size = round(height * st["size_pct"])
+    font = _font(size, st.get("font"))
+    strip_h = round(height * 0.22)
+    margin_b = round(height * st["bottom_pct"])
+    stroke = max(4, size // st["outline_ratio"])
+    base = _hex(st["color"])
+    by_speaker = {k: _hex(v) for k, v in (st.get("speaker_colors") or {}).items()}
 
     paths = []
-    for i, (_, _, text) in enumerate(cue_list):
+    for i, cue in enumerate(cue_list):
+        text, speaker = cue[2], (cue[3] if len(cue) > 3 else "narrator")
+        fill = by_speaker.get(speaker, base)
         img = Image.new("RGBA", (width, strip_h), (0, 0, 0, 0))
         draw = ImageDraw.Draw(img)
         # uppercase reads as a title card rather than a subtitle
-        lines = _wrap(text.upper(), draw, font, width - 110)
-        line_h = round(size * 1.25)
+        lines = _wrap(text.upper() if st["uppercase"] else text,
+                      draw, font, width - 110)
+        line_h = round(size * 1.22)
         y = strip_h - len(lines) * line_h
         for line in lines:
             w = draw.textlength(line, font=font)
-            draw.text(((width - w) / 2, y), line, font=font, fill=(255, 255, 255, 255),
+            x = (width - w) / 2
+            if st["shadow"]:
+                off = max(2, size // 14)
+                draw.text((x + off, y + off), line, font=font,
+                          fill=(0, 0, 0, 150), stroke_width=stroke,
+                          stroke_fill=(0, 0, 0, 150))
+            draw.text((x, y), line, font=font, fill=fill,
                       stroke_width=stroke, stroke_fill=(0, 0, 0, 255))
             y += line_h
         p = out_dir / f"cue{i:04d}.png"

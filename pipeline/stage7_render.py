@@ -236,12 +236,14 @@ def run(config, workdir: Path):
                  "-safe", "0", "-i", str(listing), "-c", "copy", str(joined)],
                 check=True, capture_output=True, text=True)
             cue_list = captions.cues(data.get("shots", []), FPS)
-            pngs, y = captions.render_pngs(cue_list, W, H, tmp / "cues")
+            style = config.get("shorts", {}).get("caption_style") or {}
+            pngs, y = captions.render_pngs(cue_list, W, H, tmp / "cues", style)
             cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(joined)]
             for p in pngs:
                 cmd += ["-i", str(p)]
             chain, prev = [], "0:v"
-            for n, (a, b, _) in enumerate(cue_list):
+            for n, cue in enumerate(cue_list):
+                a, b = cue[0], cue[1]
                 label = f"v{n}"
                 chain.append(
                     f"[{prev}][{n+1}:v]overlay=0:{y}:"

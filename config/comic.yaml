@@ -26,6 +26,21 @@ shorts:
   ellipsis_pause_ms: 850   # at ... (trailing off)
   shot_gap_ms: 700         # after each line, before the next shot
   captions: true           # burn subtitles into the render (stage 7)
+  caption_style:
+    font: "/System/Library/Fonts/Supplemental/Impact.ttf"
+    size_pct: 0.046        # of frame height
+    uppercase: true
+    outline_ratio: 9       # smaller number = thicker black outline
+    shadow: true
+    color: "#FFFFFF"       # narrator and anything unlisted
+    bottom_pct: 0.10
+    # a caption in the speaker's colour reinforces who is talking, which
+    # matters when several characters share a register
+    speaker_colors:
+      Mars: "#FF5252"
+      "Dick Warren": "#FFD54F"
+      Wad: "#B388FF"
+      Ada: "#FF80AB"
 
   # Background music. Tracks are MPT's royalty-free library, which ships
   # unlabelled (output000.mp3...), so these are first-pass picks bucketed
