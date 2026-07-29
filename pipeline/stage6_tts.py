@@ -15,6 +15,11 @@ FPS = 30
 SILENT_S = 1.2
 DEFAULT_PROFILE = "Narrator"
 ENGINE = "kokoro"
+# engines that actually act a delivery direction. kokoro accepts `instruct`
+# and ignores it; qwen visibly changes pace and register (a "whispered,
+# afraid" reading of the same line ran 69% longer than a plain one).
+INSTRUCT_ENGINES = {"qwen", "qwen_custom_voice", "chatterbox",
+                    "chatterbox_turbo", "luxtts", "tada"}
 PAUSE_MS = 600          # silence inserted at . ! ?
 ELLIPSIS_PAUSE_MS = 850  # ... trails off, give it room
 SHOT_GAP_MS = 450        # beat after each line, so cuts don't clip speech
@@ -124,10 +129,12 @@ def _trim(frames, sw, ch, sr, keep_ms=60):
     return frames[a:b]
 
 
-def _synth_one(port, profile_id, text, engine):
-    gen = _api(port, "POST", "/generate",
-               {"profile_id": profile_id, "text": text,
-                "language": "en", "engine": engine})
+def _synth_one(port, profile_id, text, engine, instruct=None):
+    body = {"profile_id": profile_id, "text": text,
+            "language": "en", "engine": engine}
+    if instruct and engine in INSTRUCT_ENGINES:
+        body["instruct"] = instruct
+    gen = _api(port, "POST", "/generate", body)
     gen_id = gen.get("id") or gen.get("generation_id")
     if not gen_id:
         raise RuntimeError(f"bad /generate response: {json.dumps(gen)[:200]}")
@@ -143,7 +150,8 @@ def _synth_one(port, profile_id, text, engine):
     raise RuntimeError("synthesis timed out")
 
 
-def _synth(port, profile_id, text, out_path: Path, engine=ENGINE, pace=None):
+def _synth(port, profile_id, text, out_path: Path, engine=ENGINE,
+           pace=None, instruct=None):
     """Synthesise a line sentence by sentence, joined with explicit pauses.
 
     Returns the per-sentence segments with their frame counts, which is
@@ -157,7 +165,7 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE, pace=None):
     for sentence, pause_ms in _sentences(
             _speakable(text), pace.get("pause_ms"), pace.get("ellipsis_pause_ms")):
         with wave.open(io.BytesIO(_synth_one(port, profile_id, sentence,
-                                             engine)), "rb") as w:
+                                             engine, instruct)), "rb") as w:
             params = params or w.getparams()
             frames = w.readframes(w.getnframes())
         sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
@@ -237,7 +245,8 @@ def run(config, workdir: Path):
             pid, engine = entry
             wav = out_dir / f"shot{i:03d}.wav"
             print(f"  {short_id} shot{i:03d} [{speaker}] {line[:50]!r}")
-            segments = _synth(port, pid, line, wav, engine, pace)
+            segments = _synth(port, pid, line, wav, engine, pace,
+                              shot.get("emotion"))
             shot["audio"] = str(wav.relative_to(workdir.parent)
                                 if wav.is_relative_to(workdir.parent) else wav)
             shot["duration_frames"] = round(_wav_seconds(wav) * FPS)
