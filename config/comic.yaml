@@ -1,12 +1,12 @@
 # Comic project configuration. One file per comic.
 
 comic:
-  title: "My Comic"
+  title: "Mars, God of War (Planet Comics 69, 1953)"
   reading_direction: ltr        # ltr = western, rtl = manga
   pages_dir: "pages"            # folder of page images, sorted by filename
 
 shorts:
-  target_count: 7               # rough number of shorts to cut the story into
+  target_count: 2               # 5 pages -> 1-2 shorts for the e2e test
   min_seconds: 30
   max_seconds: 60
   narrator_voice_id: "ELEVENLABS_VOICE_ID_HERE"
@@ -14,45 +14,22 @@ shorts:
 # Character roster. The `ref_image` is a face crop you make yourself
 # (config/characters/<file>.png) — this is the 5-minute tagging pass that
 # makes speaker attribution dramatically more accurate.
+# Planet Comics 69 test run: no ref crops yet, descriptions only.
 characters:
-  - name: "nova"
-    description: "cocky but earnest, wisecracks under pressure"
-    ref_image: "nova.png"
+  - name: "Mars"
+    description: "the god of war; bearded warrior in a crested helmet, carries a flaming torch; cruel, theatrical"
+    voice_id: "ELEVENLABS_VOICE_ID_HERE"
+    speaking_style: "booming"
+  - name: "Dick Warren"
+    description: "square-jawed explorer hero in a green tunic and helmet; brave, plainspoken"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"
-  - name: "drax"
-    description: "blunt, single-minded, driven by vengeance"
-    ref_image: "drax.png"
+  - name: "Wad"
+    description: "leader of the hooded purple-robed people; bald, stern; possessed by Mars partway through"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"
-  - name: "Thanos"
-    description: "calm, imperious, coldly philosophical"
-    ref_image: "thanos.png"
-    voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "neutral"
-  - name: "Annihilus"
-    description: "cold, ruthless, genocidal"
-    ref_image: "annihilus.png"
-    voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "neutral"
-  - name: "Nova_nohelmet"
-    description: "tired, unguarded, more human without the mask"
-    ref_image: "nova_nohelmet.png"
-    voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "neutral"
-  - name: "Gamora"
-    description: "lethal, sharp-tongued, emotionally guarded"
-    ref_image: "gamora.png"
-    voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "neutral"
-  - name: "Galactus"
-    description: "detached, indifferent, thinks in cosmic scale"
-    ref_image: "galactus.png"
-    voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "neutral"
-  - name: "Exterpia"
-    description: "loyal, aggressive, follows Annihilus without question"
-    ref_image: "exterpia.png"
+  - name: "Ada"
+    description: "young blonde woman enslaved by the hooded people; desperate, then resolute"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"
 

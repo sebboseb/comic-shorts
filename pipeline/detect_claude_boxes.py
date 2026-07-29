@@ -39,13 +39,15 @@ markdown fences, no commentary:
 
 {
   "panels": [
-    {"box": [x, y, w, h]},
+    {"box": [left, top, right, bottom]},
     ...
   ]
 }
 
 Rules:
-- Boxes use coordinates normalized to 0-1000 on both axes of the page image.
+- Box coordinates are the panel's top-left and bottom-right corners,
+  normalized to 0-1000 on both axes of the page image. right > left and
+  bottom > top always.
 - List panels in reading order (left-to-right, top-to-bottom rows, unless
   the layout clearly dictates otherwise).
 - One box per story panel. Include the panel border in the box. Exclude the
@@ -138,9 +140,9 @@ def detect_panels(img, model, min_area_ratio=0.02):
     min_area = min_area_ratio * w * h
     boxes = []
     for p in data.get("panels", []):
-        x, y, bw, bh = p["box"]
-        px = (round(x / 1000 * w), round(y / 1000 * h),
-              round((x + bw) / 1000 * w), round((y + bh) / 1000 * h))
+        left, top, right, bottom = p["box"]
+        px = (round(left / 1000 * w), round(top / 1000 * h),
+              round(right / 1000 * w), round(bottom / 1000 * h))
         px = _snap_edges(px, content, w, h)
         x0, y0, x1, y1 = px
         if (x1 - x0) * (y1 - y0) >= min_area:
