@@ -1,0 +1,258 @@
+{
+ "short_id": "ep02",
+ "title": "Ada Was the Only One With a Plan the Whole Time",
+ "description": "Mars possesses the village leader, Dick gets swarmed, and the enslaved girl Ada finally snaps. It does not go the way anyone expects.",
+ "hashtags": [
+  "#comic",
+  "#scifi",
+  "#planetcomics",
+  "#retro",
+  "#plottwist",
+  "#mars"
+ ],
+ "music_mood": "tense_buildup",
+ "hook_note": "Picks up the instant the war-god lands, then immediately shows him hijacking a body - clear stakes, fast.",
+ "shots": [
+  {
+   "panel": "p03_01",
+   "speaker": "narrator",
+   "line": "So Mars, this washed-up war god, has just landed unseen in the village - and he spots the perfect body to steal. The leader, Wad.",
+   "emotion": "gleeful, ominous",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "ominous",
+   "audio": "work/audio/ep02/shot000.wav",
+   "duration_frames": 364,
+   "segments": [
+    {
+     "text": "So Mars, this washed-up war god, has just landed unseen in the village - and he spots the perfect body to steal.",
+     "frames": 293
+    },
+    {
+     "text": "The leader, Wad.",
+     "frames": 50
+    }
+   ]
+  },
+  {
+   "panel": "p03_01",
+   "speaker": "Mars",
+   "line": "This is my chance to destroy a civilization! I'll enter Wad's body!",
+   "emotion": "scheming, theatrical",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep02/shot001.wav",
+   "duration_frames": 222,
+   "segments": [
+    {
+     "text": "This is my chance to destroy a civilization!",
+     "frames": 140
+    },
+    {
+     "text": "I'll enter Wad's body!",
+     "frames": 62
+    }
+   ]
+  },
+  {
+   "panel": "p03_02",
+   "speaker": "Wad",
+   "line": "How dare a stranger interfere with my people? Take this!",
+   "emotion": "angry, threatening",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot002.wav",
+   "duration_frames": 136,
+   "segments": [
+    {
+     "text": "How dare a stranger interfere with my people?",
+     "frames": 94
+    },
+    {
+     "text": "Take this!",
+     "frames": 21
+    }
+   ]
+  },
+  {
+   "panel": "p03_03",
+   "speaker": "Dick Warren",
+   "line": "Earthman's fist!",
+   "emotion": "shouting, triumphant",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot003.wav",
+   "duration_frames": 56,
+   "segments": [
+    {
+     "text": "Earthman's fist!",
+     "frames": 35
+    }
+   ]
+  },
+  {
+   "panel": "p03_04",
+   "speaker": "narrator",
+   "line": "One good punch, and then about forty hooded guys pile on. Certified problem-solver Dick Warren, overpowered.",
+   "emotion": "dry",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "whoosh",
+   "audio": "work/audio/ep02/shot004.wav",
+   "duration_frames": 247,
+   "segments": [
+    {
+     "text": "One good punch, and then about forty hooded guys pile on.",
+     "frames": 135
+    },
+    {
+     "text": "Certified problem-solver Dick Warren, overpowered.",
+     "frames": 91
+    }
+   ]
+  },
+  {
+   "panel": "p03_05",
+   "speaker": "Wad",
+   "line": "Tonight we feast on your tender Earth-man's flesh! Tomorrow we invade the Hidden People!",
+   "emotion": "cruel, menacing",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot005.wav",
+   "duration_frames": 198,
+   "segments": [
+    {
+     "text": "Tonight we feast on your tender Earth-man's flesh!",
+     "frames": 120
+    },
+    {
+     "text": "Tomorrow we invade the Hidden People!",
+     "frames": 57
+    }
+   ]
+  },
+  {
+   "panel": "p03_05",
+   "speaker": "Dick Warren",
+   "line": "Cannibals!",
+   "emotion": "horrified, exclaiming",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work/audio/ep02/shot006.wav",
+   "duration_frames": 46,
+   "segments": [
+    {
+     "text": "Cannibals!",
+     "frames": 25
+    }
+   ]
+  },
+  {
+   "panel": "p03_07",
+   "speaker": "narrator",
+   "line": "But nobody's asked the actual MVP, Ada. She's been a slave to these people for years. And she's done.",
+   "emotion": "hyped",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot007.wav",
+   "duration_frames": 323,
+   "segments": [
+    {
+     "text": "But nobody's asked the actual MVP, Ada.",
+     "frames": 127
+    },
+    {
+     "text": "She's been a slave to these people for years.",
+     "frames": 125
+    },
+    {
+     "text": "And she's done.",
+     "frames": 50
+    }
+   ]
+  },
+  {
+   "panel": "p03_07",
+   "speaker": "Ada",
+   "line": "I have been a slave too long! Die!",
+   "emotion": "fierce, defiant",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot008.wav",
+   "duration_frames": 111,
+   "segments": [
+    {
+     "text": "I have been a slave too long!",
+     "frames": 70
+    },
+    {
+     "text": "Die!",
+     "frames": 21
+    }
+   ]
+  },
+  {
+   "panel": "p03_08",
+   "speaker": "narrator",
+   "line": "She cuts Dick loose and drags him toward the mountain where the Hidden People live, with the whole tribe screaming behind them.",
+   "emotion": "breathless",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "whoosh",
+   "audio": "work/audio/ep02/shot009.wav",
+   "duration_frames": 195,
+   "segments": [
+    {
+     "text": "She cuts Dick loose and drags him toward the mountain where the Hidden People live, with the whole tribe screaming behind them.",
+     "frames": 174
+    }
+   ]
+  },
+  {
+   "panel": "p04_03",
+   "speaker": "narrator",
+   "line": "They stop in a cave to catch their breath. What they do not clock is the face watching them from the rocks.",
+   "emotion": "dry, foreboding",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "heartbeat",
+   "audio": "work/audio/ep02/shot010.wav",
+   "duration_frames": 227,
+   "segments": [
+    {
+     "text": "They stop in a cave to catch their breath.",
+     "frames": 94
+    },
+    {
+     "text": "What they do not clock is the face watching them from the rocks.",
+     "frames": 112
+    }
+   ]
+  },
+  {
+   "panel": "p04_04",
+   "speaker": "Dick Warren",
+   "line": "We're trapped!",
+   "emotion": "alarmed, urgent",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot011.wav",
+   "duration_frames": 51,
+   "segments": [
+    {
+     "text": "We're trapped!",
+     "frames": 30
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": "Tiny creatures are swarming Dick and Ada in the dark cave - who lives inside this mountain, and are they friend or foe?"
+}

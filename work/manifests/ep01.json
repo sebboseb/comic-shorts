@@ -1,0 +1,266 @@
+{
+ "short_id": "ep01",
+ "title": "He Made a Fire and the Whole Village Panicked",
+ "description": "An Earth astronaut lands on a strange planetoid, gets welcomed by hooded locals, and then makes one tiny mistake with a lighter.",
+ "hashtags": [
+  "#comic",
+  "#scifi",
+  "#planetcomics",
+  "#retro",
+  "#godofwar",
+  "#mars"
+ ],
+ "music_mood": "ominous",
+ "hook_note": "Opens on a cosmic war-god striding across space with a flaming torch, screaming to kill and destroy - impossible not to look.",
+ "shots": [
+  {
+   "panel": "p01_01",
+   "speaker": "narrator",
+   "line": "This is Mars, drama queen of the cosmos, and his one hobby is strolling the universe looking for people to murder.",
+   "emotion": "ominous, delighted",
+   "motion": "slow_pan",
+   "hero": true,
+   "sfx": "ominous",
+   "audio": "work/audio/ep01/shot000.wav",
+   "duration_frames": 244,
+   "segments": [
+    {
+     "text": "This is Mars, drama queen of the cosmos, and his one hobby is strolling the universe looking for people to murder.",
+     "frames": 223
+    }
+   ]
+  },
+  {
+   "panel": "p01_01",
+   "speaker": "narrator",
+   "line": "Meanwhile a ship from Earth is parking on planetoid 206, completely unaware it just booked the worst vacation ever.",
+   "emotion": "dry",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "whoosh",
+   "audio": "work/audio/ep01/shot001.wav",
+   "duration_frames": 294,
+   "segments": [
+    {
+     "text": "Meanwhile a ship from Earth is parking on planetoid 206, completely unaware it just booked the worst vacation ever.",
+     "frames": 273
+    }
+   ]
+  },
+  {
+   "panel": "p02_01",
+   "speaker": "Dick Warren",
+   "line": "This explodes my theory! Only human beings have made these. I'll take it back and try to decipher it.",
+   "emotion": "thoughtful, intrigued",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot002.wav",
+   "duration_frames": 252,
+   "segments": [
+    {
+     "text": "This explodes my theory!",
+     "frames": 79
+    },
+    {
+     "text": "Only human beings have made these.",
+     "frames": 86
+    },
+    {
+     "text": "I'll take it back and try to decipher it.",
+     "frames": 66
+    }
+   ]
+  },
+  {
+   "panel": "p02_02",
+   "speaker": "narrator",
+   "line": "Enter a crowd of hooded purple guys. Their opener?",
+   "emotion": "amused",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot003.wav",
+   "duration_frames": 163,
+   "segments": [
+    {
+     "text": "Enter a crowd of hooded purple guys.",
+     "frames": 92
+    },
+    {
+     "text": "Their opener?",
+     "frames": 51
+    }
+   ]
+  },
+  {
+   "panel": "p02_02",
+   "speaker": "Wad",
+   "line": "Stranger! Stranger! We are friends!",
+   "emotion": "calling out, welcoming",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot004.wav",
+   "duration_frames": 157,
+   "segments": [
+    {
+     "text": "Stranger!",
+     "frames": 56
+    },
+    {
+     "text": "Stranger!",
+     "frames": 46
+    },
+    {
+     "text": "We are friends!",
+     "frames": 35
+    }
+   ]
+  },
+  {
+   "panel": "p02_04",
+   "speaker": "Dick Warren",
+   "line": "I'm Dick Warren from Earth. I never suspected this planetoid was inhabited.",
+   "emotion": "plain, surprised",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot005.wav",
+   "duration_frames": 167,
+   "segments": [
+    {
+     "text": "I'm Dick Warren from Earth.",
+     "frames": 63
+    },
+    {
+     "text": "I never suspected this planetoid was inhabited.",
+     "frames": 83
+    }
+   ]
+  },
+  {
+   "panel": "p02_06",
+   "speaker": "narrator",
+   "line": "Big man Wad throws a feast, a girl named Ada serves the food raw, and our boy Dick decides these people simply must be taught fire.",
+   "emotion": "dry, foreboding",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot006.wav",
+   "duration_frames": 282,
+   "segments": [
+    {
+     "text": "Big man Wad throws a feast, a girl named Ada serves the food raw, and our boy Dick decides these people simply must be taught fire.",
+     "frames": 261
+    }
+   ]
+  },
+  {
+   "panel": "p02_07",
+   "speaker": "narrator",
+   "line": "He flicks open his little monogrammed lighter. Bad. Idea.",
+   "emotion": "wince",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep01/shot007.wav",
+   "duration_frames": 371,
+   "segments": [
+    {
+     "text": "He flicks open his little monogrammed lighter.",
+     "frames": 106
+    },
+    {
+     "text": "Bad.",
+     "frames": 200
+    },
+    {
+     "text": "Idea.",
+     "frames": 44
+    }
+   ]
+  },
+  {
+   "panel": "p02_08",
+   "speaker": "Ada",
+   "line": "Put it out!",
+   "emotion": "desperate, alarmed",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep01/shot008.wav",
+   "duration_frames": 46,
+   "segments": [
+    {
+     "text": "Put it out!",
+     "frames": 25
+    }
+   ]
+  },
+  {
+   "panel": "p02_09",
+   "speaker": "Dick Warren",
+   "line": "What's the matter?",
+   "emotion": "concerned, urgent",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot009.wav",
+   "duration_frames": 44,
+   "segments": [
+    {
+     "text": "What's the matter?",
+     "frames": 23
+    }
+   ]
+  },
+  {
+   "panel": "p02_09",
+   "speaker": "Ada",
+   "line": "They cannot stand the smallest flame! It draws the oxygen from their bodies and strangles them! I am different! Why, I don't know!",
+   "emotion": "earnest, explaining",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot010.wav",
+   "duration_frames": 344,
+   "segments": [
+    {
+     "text": "They cannot stand the smallest flame!",
+     "frames": 88
+    },
+    {
+     "text": "It draws the oxygen from their bodies and strangles them!",
+     "frames": 140
+    },
+    {
+     "text": "I am different!",
+     "frames": 53
+    },
+    {
+     "text": "Why, I don't know!",
+     "frames": 42
+    }
+   ]
+  },
+  {
+   "panel": "p02_10",
+   "speaker": "narrator",
+   "line": "And right on cue, invisible to everyone, the god of war himself drops into the middle of the crowd.",
+   "emotion": "ominous, thrilled",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "ominous",
+   "audio": "work/audio/ep01/shot011.wav",
+   "duration_frames": 224,
+   "segments": [
+    {
+     "text": "And right on cue, invisible to everyone, the god of war himself drops into the middle of the crowd.",
+     "frames": 203
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": "Mars has arrived unseen among the villagers - what is he about to do with them?"
+}

@@ -1,0 +1,1981 @@
+[
+  {
+    "id": "p01_01",
+    "page": 1,
+    "panel": 1,
+    "file": "panels/p01_01.png",
+    "bbox_on_page": [
+      57,
+      134,
+      1560,
+      2366
+    ],
+    "size": [
+      1560,
+      2366
+    ],
+    "scene": "Title splash page showing Mars, the God of War, striding through space with a flaming torch while a spaceship approaches Planetoid 206 in an inset panel.",
+    "characters_present": [
+      "Mars"
+    ],
+    "dialogue": [
+      {
+        "text": "With the horrible war-cry of \"Kill and Destroy\" on his blood-flecked lips, Mars, God of War, strides across the universe in his eternal search for more victims to satisfy his lust for carnage.",
+        "speaker": "narrator",
+        "emotion": "ominous, declarative",
+        "bubble_box": [
+          47,
+          1987,
+          484,
+          308
+        ]
+      },
+      {
+        "text": "A huge space-ship from earth approaches the planetoid 206.",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact",
+        "bubble_box": [
+          764,
+          1656,
+          452,
+          142
+        ]
+      }
+    ],
+    "focus_box": [
+      156,
+      426,
+      1092,
+      1467
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p01_01.png",
+    "clean_size": [
+      1560,
+      2366
+    ]
+  },
+  {
+    "id": "p01_02",
+    "page": 1,
+    "panel": 2,
+    "file": "panels/p01_02.png",
+    "bbox_on_page": [
+      859,
+      2234,
+      767,
+      266
+    ],
+    "size": [
+      767,
+      266
+    ],
+    "scene": "A wide establishing shot of dark, jagged mountains under a dim sky, with a partial figure visible at the right edge.",
+    "characters_present": [],
+    "dialogue": [],
+    "focus_box": [
+      0,
+      0,
+      767,
+      266
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p01_02.png",
+    "clean_size": [
+      2200,
+      763
+    ]
+  },
+  {
+    "id": "p02_01",
+    "page": 2,
+    "panel": 1,
+    "file": "panels/p02_01.png",
+    "bbox_on_page": [
+      0,
+      71,
+      380,
+      708
+    ],
+    "size": [
+      380,
+      708
+    ],
+    "scene": "Dick Warren crouches down to examine an item on the ground, musing aloud about its implications for the theory that Zog was never inhabited by humans.",
+    "characters_present": [
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "THIS EXPLODES MY TH-- THAT ZOG WAS NEVER -- ONLY HUMAN BEINGS HAVE MADE THESE MA-- I'LL TAKE IT BACK TO -- AND TRY TO DECIPHER --",
+        "speaker": "Dick Warren",
+        "emotion": "thoughtful, intrigued",
+        "bubble_box": [
+          11,
+          60,
+          141,
+          198
+        ]
+      }
+    ],
+    "focus_box": [
+      38,
+      142,
+      114,
+      411
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_01.png",
+    "clean_size": [
+      1181,
+      2200
+    ]
+  },
+  {
+    "id": "p02_02",
+    "page": 2,
+    "panel": 2,
+    "file": "panels/p02_02.png",
+    "bbox_on_page": [
+      372,
+      71,
+      564,
+      708
+    ],
+    "size": [
+      564,
+      708
+    ],
+    "scene": "A group of hooded purple-robed figures approaches Dick Warren, hailing him as a stranger and declaring themselves friends.",
+    "characters_present": [
+      "Dick Warren",
+      "Wad"
+    ],
+    "dialogue": [
+      {
+        "text": "STRANGER! STRANGER!.. WE ARE FRIENDS!",
+        "speaker": "Wad",
+        "emotion": "calling out, welcoming",
+        "bubble_box": [
+          152,
+          28,
+          118,
+          85
+        ]
+      }
+    ],
+    "focus_box": [
+      152,
+      142,
+      175,
+      411
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_02.png",
+    "clean_size": [
+      1753,
+      2200
+    ]
+  },
+  {
+    "id": "p02_03",
+    "page": 2,
+    "panel": 3,
+    "file": "panels/p02_03.png",
+    "bbox_on_page": [
+      928,
+      71,
+      474,
+      741
+    ],
+    "size": [
+      474,
+      741
+    ],
+    "scene": "Dick Warren kneels near a tiger while Wad, the bald leader of the hooded people, introduces himself and explains why his people approached.",
+    "characters_present": [
+      "Dick Warren",
+      "Wad"
+    ],
+    "dialogue": [
+      {
+        "text": "HE STONE, FTS HIM.",
+        "speaker": "narrator",
+        "emotion": "neutral narration",
+        "bubble_box": [
+          0,
+          0,
+          57,
+          44
+        ]
+      },
+      {
+        "text": "THIS ERTAINLY INTERESTING... HAT'S THAT?",
+        "speaker": "Dick Warren",
+        "emotion": "curious, surprised",
+        "bubble_box": [
+          0,
+          41,
+          88,
+          130
+        ]
+      },
+      {
+        "text": "WE SAW YOU LAN CAME TO INVESTIO. THAT STONE GIVE DISTANCE TO OUR MY NAME IS WA AM LEADER HER",
+        "speaker": "Wad",
+        "emotion": "stern, formal",
+        "bubble_box": [
+          92,
+          0,
+          232,
+          111
+        ]
+      }
+    ],
+    "focus_box": [
+      109,
+      96,
+      123,
+      274
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_03.png",
+    "clean_size": [
+      1407,
+      2200
+    ]
+  },
+  {
+    "id": "p02_04",
+    "page": 2,
+    "panel": 4,
+    "file": "panels/p02_04.png",
+    "bbox_on_page": [
+      1394,
+      71,
+      330,
+      739
+    ],
+    "size": [
+      330,
+      739
+    ],
+    "scene": "Dick Warren introduces himself to Wad, explaining he is from Earth and had no idea the planetoid was inhabited.",
+    "characters_present": [
+      "Dick Warren",
+      "Wad"
+    ],
+    "dialogue": [
+      {
+        "text": "ND AND GATE!... ES THE R VILLAGE. AD!... I RE!",
+        "speaker": "Wad",
+        "emotion": "stern, commanding",
+        "bubble_box": [
+          0,
+          0,
+          66,
+          133
+        ]
+      },
+      {
+        "text": "I'M DICK WARREN FROM EARTH. I NEVER SUSPECTED THIS PLANETOID WAS INHABITED.",
+        "speaker": "Dick Warren",
+        "emotion": "plain, surprised",
+        "bubble_box": [
+          64,
+          0,
+          139,
+          148
+        ]
+      }
+    ],
+    "focus_box": [
+      16,
+      37,
+      132,
+      443
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_04.png",
+    "clean_size": [
+      982,
+      2200
+    ]
+  },
+  {
+    "id": "p02_05",
+    "page": 2,
+    "panel": 5,
+    "file": "panels/p02_05.png",
+    "bbox_on_page": [
+      0,
+      771,
+      389,
+      658
+    ],
+    "size": [
+      389,
+      658
+    ],
+    "scene": "Dick Warren is led into the hooded people's village, with two robed figures welcoming him as they approach the red-walled settlement.",
+    "characters_present": [
+      "Wad",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "LATER, THEY TAKE HIM TO THE VILLAGE:",
+        "speaker": "narrator",
+        "emotion": "neutral, informational",
+        "bubble_box": [
+          44,
+          64,
+          113,
+          36
+        ]
+      },
+      {
+        "text": "THIS IS OUR VILLAGE!...YOU ARE WELCOME!",
+        "speaker": "Wad",
+        "emotion": "welcoming, formal",
+        "bubble_box": [
+          8,
+          97,
+          82,
+          66
+        ]
+      },
+      {
+        "text": "I WIL... SEVER... HE...",
+        "speaker": "Dick Warren",
+        "emotion": "speaking, partially cut off",
+        "bubble_box": [
+          117,
+          97,
+          47,
+          53
+        ]
+      }
+    ],
+    "focus_box": [
+      19,
+      316,
+      136,
+      197
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_05.png",
+    "clean_size": [
+      1301,
+      2200
+    ]
+  },
+  {
+    "id": "p02_06",
+    "page": 2,
+    "panel": 6,
+    "file": "panels/p02_06.png",
+    "bbox_on_page": [
+      381,
+      771,
+      806,
+      708
+    ],
+    "size": [
+      806,
+      708
+    ],
+    "scene": "Ada serves raw meat at a feast while Dick Warren watches and mentally resolves to teach the hooded people how to cook with fire.",
+    "characters_present": [
+      "Ada",
+      "Wad",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "A FEAST IS PREPARED IN HONOR OF THEIR GUEST. A WHITE GIRL SERVES THEM.",
+        "speaker": "narrator",
+        "emotion": "neutral, expository",
+        "bubble_box": [
+          176,
+          13,
+          322,
+          67
+        ]
+      },
+      {
+        "text": "THEY EAT THEIR MEAT RAW!... I'M GOING TO SHOW THEM HOW TO MAKE A FIRE AND COOK!",
+        "speaker": "Dick Warren",
+        "emotion": "determined, thoughtful",
+        "bubble_box": [
+          395,
+          39,
+          258,
+          124
+        ]
+      }
+    ],
+    "focus_box": [
+      314,
+      106,
+      339,
+      340
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_06.png",
+    "clean_size": [
+      2200,
+      1933
+    ]
+  },
+  {
+    "id": "p02_07",
+    "page": 2,
+    "panel": 7,
+    "file": "panels/p02_07.png",
+    "bbox_on_page": [
+      1179,
+      804,
+      545,
+      708
+    ],
+    "size": [
+      545,
+      708
+    ],
+    "scene": "A split panel showing Wad holding a staff in a jungle setting on the left, while on the right a close-up shows a hand flicking open a monogrammed lighter with the initials 'DW'.",
+    "characters_present": [
+      "Wad",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "ng y o",
+        "speaker": "Wad",
+        "emotion": "stern, threatening",
+        "bubble_box": [
+          0,
+          21,
+          65,
+          85
+        ]
+      }
+    ],
+    "focus_box": [
+      262,
+      106,
+      283,
+      460
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_07.png",
+    "clean_size": [
+      1694,
+      2200
+    ]
+  },
+  {
+    "id": "p02_08",
+    "page": 2,
+    "panel": 8,
+    "file": "panels/p02_08.png",
+    "bbox_on_page": [
+      0,
+      1471,
+      595,
+      1016
+    ],
+    "size": [
+      595,
+      1016
+    ],
+    "scene": "As a tiny flame flickers, Ada cries out and the hooded people react in panic while Dick Warren looks on from behind.",
+    "characters_present": [
+      "Ada",
+      "Dick Warren",
+      "Wad"
+    ],
+    "dialogue": [
+      {
+        "text": "AS THE TINY FLAME FLICKERS..",
+        "speaker": "narrator",
+        "emotion": "neutral, descriptive",
+        "bubble_box": [
+          70,
+          99,
+          220,
+          36
+        ]
+      },
+      {
+        "text": "PUT IT OUT!",
+        "speaker": "Ada",
+        "emotion": "desperate, alarmed",
+        "bubble_box": [
+          256,
+          178,
+          86,
+          86
+        ]
+      },
+      {
+        "text": "EEH!",
+        "speaker": "unknown",
+        "emotion": "frightened, exclaiming",
+        "bubble_box": [
+          256,
+          630,
+          77,
+          56
+        ]
+      },
+      {
+        "text": "OHH!",
+        "speaker": "unknown",
+        "emotion": "pained, alarmed",
+        "bubble_box": [
+          247,
+          691,
+          83,
+          56
+        ]
+      }
+    ],
+    "focus_box": [
+      60,
+      498,
+      226,
+      406
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_08.png",
+    "clean_size": [
+      1288,
+      2200
+    ]
+  },
+  {
+    "id": "p02_09",
+    "page": 2,
+    "panel": 9,
+    "file": "panels/p02_09.png",
+    "bbox_on_page": [
+      587,
+      1471,
+      623,
+      1015
+    ],
+    "size": [
+      623,
+      1015
+    ],
+    "scene": "Dick Warren leans toward Ada to ask what is happening as the hooded purple-robed people scatter and flee in the background, apparently driven away by a small flame on the ground.",
+    "characters_present": [
+      "Dick Warren",
+      "Ada"
+    ],
+    "dialogue": [
+      {
+        "text": "WHAT'S THE MATTER?",
+        "speaker": "Dick Warren",
+        "emotion": "concerned, urgent",
+        "bubble_box": [
+          122,
+          218,
+          90,
+          122
+        ]
+      },
+      {
+        "text": "THEY CANNOT STAND THE SMALLEST FLAME! IT DRAWS THE OXYGEN FROM THEIR BODIES AND STRANGLES THEM! I AM DIFFERENT!... WHY, I DON'T KNOW!",
+        "speaker": "Ada",
+        "emotion": "earnest, explaining",
+        "bubble_box": [
+          193,
+          198,
+          181,
+          198
+        ]
+      }
+    ],
+    "focus_box": [
+      118,
+      294,
+      231,
+      426
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_09.png",
+    "clean_size": [
+      1350,
+      2200
+    ]
+  },
+  {
+    "id": "p02_10",
+    "page": 2,
+    "panel": 10,
+    "file": "panels/p02_10.png",
+    "bbox_on_page": [
+      1202,
+      1504,
+      522,
+      982
+    ],
+    "size": [
+      522,
+      982
+    ],
+    "scene": "The spirit of Mars, an enormous bearded warrior in a crested helmet and red armor, descends invisibly among a crowd of hooded purple-robed people while Ada and Dick Warren look on from the foreground.",
+    "characters_present": [
+      "Mars",
+      "Ada",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "SUDDENLY, UNSEEN BY HUMAN EYES, THE SPIRIT OF MARS DESCENDS IN THEIR MIDST",
+        "speaker": "narrator",
+        "emotion": "ominous, declarative",
+        "bubble_box": [
+          68,
+          10,
+          193,
+          83
+        ]
+      }
+    ],
+    "focus_box": [
+      52,
+      79,
+      188,
+      570
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_10.png",
+    "clean_size": [
+      1169,
+      2200
+    ]
+  },
+  {
+    "id": "p03_01",
+    "page": 3,
+    "panel": 1,
+    "file": "panels/p03_01.png",
+    "bbox_on_page": [
+      18,
+      137,
+      542,
+      642
+    ],
+    "size": [
+      542,
+      642
+    ],
+    "scene": "Dick Warren reports to Wad about discovering a tribe of white people living inside a mountain, while Mars lurks nearby and schemes to possess Wad's body to destroy the civilization.",
+    "characters_present": [
+      "Dick Warren",
+      "Wad",
+      "Mars"
+    ],
+    "dialogue": [
+      {
+        "text": "I'M SORRY I MADE A FIRE! IT WILL NOT HAPPEN AGAIN!",
+        "speaker": "Dick Warren",
+        "emotion": "apologetic, submissive",
+        "bubble_box": [
+          0,
+          0,
+          106,
+          112
+        ]
+      },
+      {
+        "text": "WAD! WAD! THERE IS A TRIBE OF WHITE PEOPLE LIVING INSIDE A MOUNTAIN!... I ENTERED A CAVE AND SAW THEM!",
+        "speaker": "Dick Warren",
+        "emotion": "excited, urgent",
+        "bubble_box": [
+          100,
+          0,
+          287,
+          83
+        ]
+      },
+      {
+        "text": "THIS IS MY CHANCE TO DESTROY A CIVILIZATION... I'LL ENTER WAD'S BODY!",
+        "speaker": "Mars",
+        "emotion": "scheming, theatrical",
+        "bubble_box": [
+          184,
+          83,
+          287,
+          148
+        ]
+      }
+    ],
+    "focus_box": [
+      108,
+      96,
+      217,
+      321
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_01.png",
+    "clean_size": [
+      1857,
+      2200
+    ]
+  },
+  {
+    "id": "p03_02",
+    "page": 3,
+    "panel": 2,
+    "file": "panels/p03_02.png",
+    "bbox_on_page": [
+      552,
+      134,
+      601,
+      645
+    ],
+    "size": [
+      601,
+      645
+    ],
+    "scene": "Wad punches Dick Warren in the face while confronting him for interfering with his people.",
+    "characters_present": [
+      "Wad",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "HOW DARE A STRANGER INTERFERE WITH MY PEOPLE?... TAKE THIS!",
+        "speaker": "Wad",
+        "emotion": "angry, threatening",
+        "bubble_box": [
+          93,
+          0,
+          234,
+          74
+        ]
+      },
+      {
+        "text": "UGH!",
+        "speaker": "Dick Warren",
+        "emotion": "pained, reacting to blow",
+        "bubble_box": [
+          300,
+          19,
+          84,
+          45
+        ]
+      }
+    ],
+    "focus_box": [
+      180,
+      52,
+      228,
+      206
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_02.png",
+    "clean_size": [
+      2050,
+      2200
+    ]
+  },
+  {
+    "id": "p03_03",
+    "page": 3,
+    "panel": 3,
+    "file": "panels/p03_03.png",
+    "bbox_on_page": [
+      1127,
+      134,
+      564,
+      666
+    ],
+    "size": [
+      564,
+      666
+    ],
+    "scene": "Dick Warren punches a hooded figure (likely Wad) hard enough to knock him down, while Mars and another robed figure watch from behind.",
+    "characters_present": [
+      "Dick Warren",
+      "Wad",
+      "Mars"
+    ],
+    "dialogue": [
+      {
+        "text": "EARTHMAN'S FIST!",
+        "speaker": "Dick Warren",
+        "emotion": "shouting, triumphant",
+        "bubble_box": [
+          87,
+          0,
+          164,
+          40
+        ]
+      }
+    ],
+    "focus_box": [
+      56,
+      67,
+      282,
+      366
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_03.png",
+    "clean_size": [
+      1863,
+      2200
+    ]
+  },
+  {
+    "id": "p03_04",
+    "page": 3,
+    "panel": 4,
+    "file": "panels/p03_04.png",
+    "bbox_on_page": [
+      18,
+      971,
+      542,
+      783
+    ],
+    "size": [
+      542,
+      783
+    ],
+    "scene": "Dick Warren is swarmed and overpowered by a mob of hooded purple-robed figures who grab and restrain him from all sides.",
+    "characters_present": [
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "OVERPOWERED",
+        "speaker": "narrator",
+        "emotion": "neutral caption",
+        "bubble_box": [
+          0,
+          0,
+          119,
+          43
+        ]
+      }
+    ],
+    "focus_box": [
+      81,
+      78,
+      206,
+      329
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_04.png",
+    "clean_size": [
+      1523,
+      2200
+    ]
+  },
+  {
+    "id": "p03_05",
+    "page": 3,
+    "panel": 5,
+    "file": "panels/p03_05.png",
+    "bbox_on_page": [
+      552,
+      971,
+      583,
+      583
+    ],
+    "size": [
+      583,
+      583
+    ],
+    "scene": "Wad declares to a captive Dick Warren that they will feast on his flesh tonight before invading the Hidden People, while a hooded figure to the left announces they have captured him.",
+    "characters_present": [
+      "Wad",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "WE GOT HIM!",
+        "speaker": "unknown",
+        "emotion": "triumphant, shouting",
+        "bubble_box": [
+          0,
+          114,
+          85,
+          122
+        ]
+      },
+      {
+        "text": "TONIGHT WE FEAST ON YOUR TENDER EARTH-MAN'S FLESH! TOMOR-ROW WE INVADE THE HIDDEN PEOPLE!",
+        "speaker": "Wad",
+        "emotion": "cruel, menacing",
+        "bubble_box": [
+          85,
+          12,
+          292,
+          128
+        ]
+      },
+      {
+        "text": "CANNIBALS!",
+        "speaker": "Dick Warren",
+        "emotion": "horrified, exclaiming",
+        "bubble_box": [
+          251,
+          163,
+          128,
+          58
+        ]
+      }
+    ],
+    "focus_box": [
+      216,
+      117,
+      204,
+      292
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_05.png",
+    "clean_size": [
+      2200,
+      2200
+    ]
+  },
+  {
+    "id": "p03_06",
+    "page": 3,
+    "panel": 6,
+    "file": "panels/p03_06.png",
+    "bbox_on_page": [
+      1127,
+      921,
+      564,
+      683
+    ],
+    "size": [
+      564,
+      683
+    ],
+    "scene": "Dick Warren stands beside Wad outdoors, with Ada visible in the background, as a thought bubble above expresses a partial sentiment about their adventure.",
+    "characters_present": [
+      "Dick Warren",
+      "Wad",
+      "Ada"
+    ],
+    "dialogue": [
+      {
+        "text": "CLUB ABOUT THIS AD- VENTURE!",
+        "speaker": "Dick Warren",
+        "emotion": "thinking, determined",
+        "bubble_box": [
+          96,
+          0,
+          226,
+          41
+        ]
+      }
+    ],
+    "focus_box": [
+      152,
+      34,
+      180,
+      287
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_06.png",
+    "clean_size": [
+      1817,
+      2200
+    ]
+  },
+  {
+    "id": "p03_07",
+    "page": 3,
+    "panel": 7,
+    "file": "panels/p03_07.png",
+    "bbox_on_page": [
+      18,
+      1746,
+      542,
+      658
+    ],
+    "size": [
+      542,
+      658
+    ],
+    "scene": "Ada strikes down at Wad while declaring her freedom, as he cries out in pain.",
+    "characters_present": [
+      "Ada",
+      "Wad"
+    ],
+    "dialogue": [
+      {
+        "text": "I HAVE BEEN A SLAVE TOO LONG! DIE!..",
+        "speaker": "Ada",
+        "emotion": "fierce, defiant",
+        "bubble_box": [
+          65,
+          20,
+          201,
+          115
+        ]
+      },
+      {
+        "text": "EEEHH!",
+        "speaker": "Wad",
+        "emotion": "screaming, agonized",
+        "bubble_box": [
+          201,
+          184,
+          108,
+          86
+        ]
+      }
+    ],
+    "focus_box": [
+      54,
+      184,
+      244,
+      382
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_07.png",
+    "clean_size": [
+      1812,
+      2200
+    ]
+  },
+  {
+    "id": "p03_08",
+    "page": 3,
+    "panel": 8,
+    "file": "panels/p03_08.png",
+    "bbox_on_page": [
+      552,
+      1621,
+      583,
+      783
+    ],
+    "size": [
+      583,
+      783
+    ],
+    "scene": "Ada leads Dick Warren away from pursuers toward the mountain where the hidden people dwell, both running urgently through the wilderness.",
+    "characters_present": [
+      "Ada",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "HAVING CUT NICK'S BONDS, THE GIRL LEADS HIM TOWARD THE MOUNTAIN...",
+        "speaker": "narrator",
+        "emotion": "neutral, caption",
+        "bubble_box": [
+          35,
+          110,
+          309,
+          59
+        ]
+      },
+      {
+        "text": "THEY WILL FOLLOW US! I OVERHEARD THE HUNTER TELL WHERE THE HIDDEN PEOPLE DWELL. WE WILL GO THERE!",
+        "speaker": "Ada",
+        "emotion": "urgent, breathless",
+        "bubble_box": [
+          85,
+          168,
+          175,
+          137
+        ]
+      },
+      {
+        "text": "...AND WARN THEM! WHAT IS YOUR NAME?",
+        "speaker": "Dick Warren",
+        "emotion": "urgent, curious",
+        "bubble_box": [
+          227,
+          231,
+          114,
+          121
+        ]
+      }
+    ],
+    "focus_box": [
+      70,
+      337,
+      222,
+      219
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_08.png",
+    "clean_size": [
+      1638,
+      2200
+    ]
+  },
+  {
+    "id": "p03_09",
+    "page": 3,
+    "panel": 9,
+    "file": "panels/p03_09.png",
+    "bbox_on_page": [
+      1127,
+      1654,
+      564,
+      750
+    ],
+    "size": [
+      564,
+      750
+    ],
+    "scene": "Ada introduces herself and urges haste in a close-up of her face against a dark background.",
+    "characters_present": [
+      "Ada"
+    ],
+    "dialogue": [
+      {
+        "text": "MY NAME IS ADA!...COME, WE MUST HURRY!",
+        "speaker": "Ada",
+        "emotion": "urgent, anxious",
+        "bubble_box": [
+          68,
+          22,
+          209,
+          165
+        ]
+      }
+    ],
+    "focus_box": [
+      169,
+      112,
+      395,
+      638
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_09.png",
+    "clean_size": [
+      1654,
+      2200
+    ]
+  },
+  {
+    "id": "p04_01",
+    "page": 4,
+    "panel": 1,
+    "file": "panels/p04_01.png",
+    "bbox_on_page": [
+      45,
+      114,
+      548,
+      615
+    ],
+    "size": [
+      548,
+      615
+    ],
+    "scene": "Ada and Dick Warren stand on rocky ground before a cave entrance, urgently warning each other that Wad is in pursuit.",
+    "characters_present": [
+      "Ada",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "THIS IS THE CAVE! LOOK!... WAD IS AFTER US!",
+        "speaker": "Ada",
+        "emotion": "urgent, frightened",
+        "bubble_box": [
+          0,
+          0,
+          175,
+          98
+        ]
+      },
+      {
+        "text": "LET'S HURRY!",
+        "speaker": "Dick Warren",
+        "emotion": "alert, determined",
+        "bubble_box": [
+          214,
+          18,
+          110,
+          74
+        ]
+      }
+    ],
+    "focus_box": [
+      164,
+      135,
+      208,
+      295
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_01.png",
+    "clean_size": [
+      1960,
+      2200
+    ]
+  },
+  {
+    "id": "p04_02",
+    "page": 4,
+    "panel": 2,
+    "file": "panels/p04_02.png",
+    "bbox_on_page": [
+      585,
+      114,
+      589,
+      615
+    ],
+    "size": [
+      589,
+      615
+    ],
+    "scene": "Dick Warren and Ada jog through a dark cave tunnel, exchanging words about the strange place and needing to rest.",
+    "characters_present": [
+      "Ada",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "STRANGE PLACE, ISN'T IT?",
+        "speaker": "Ada",
+        "emotion": "uneasy, curious",
+        "bubble_box": [
+          18,
+          6,
+          147,
+          55
+        ]
+      },
+      {
+        "text": "WE HAVE COME SEVERAL MILES...LET'S REST HERE!",
+        "speaker": "Dick Warren",
+        "emotion": "steady, practical",
+        "bubble_box": [
+          159,
+          3,
+          171,
+          65
+        ]
+      }
+    ],
+    "focus_box": [
+      135,
+      92,
+      188,
+      277
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_02.png",
+    "clean_size": [
+      2107,
+      2200
+    ]
+  },
+  {
+    "id": "p04_03",
+    "page": 4,
+    "panel": 3,
+    "file": "panels/p04_03.png",
+    "bbox_on_page": [
+      1166,
+      84,
+      566,
+      645
+    ],
+    "size": [
+      566,
+      645
+    ],
+    "scene": "Dick Warren and Ada pause to catch their breath in a cave filled with stalactites, unaware that a face is peering out at them from the rocky formations.",
+    "characters_present": [
+      "Dick Warren",
+      "Ada"
+    ],
+    "dialogue": [
+      {
+        "text": "PAUSING, TO CATCH THEIR BREATH, THE FAIL TO SEE A FACE PEERING OUT AT THEM.",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact",
+        "bubble_box": [
+          0,
+          0,
+          351,
+          61
+        ]
+      }
+    ],
+    "focus_box": [
+      130,
+      213,
+      158,
+      206
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_03.png",
+    "clean_size": [
+      1931,
+      2200
+    ]
+  },
+  {
+    "id": "p04_04",
+    "page": 4,
+    "panel": 4,
+    "file": "panels/p04_04.png",
+    "bbox_on_page": [
+      45,
+      721,
+      1147,
+      1008
+    ],
+    "size": [
+      1147,
+      1008
+    ],
+    "scene": "A scream echoes through a cave as hundreds of small misshapen creatures leap upon Dick Warren and his companions, overwhelming them in a chaotic ambush.",
+    "characters_present": [
+      "Dick Warren",
+      "Ada"
+    ],
+    "dialogue": [
+      {
+        "text": "WHAT'S THAT? OHHH!",
+        "speaker": "unknown",
+        "emotion": "startled, panicked",
+        "bubble_box": [
+          17,
+          222,
+          149,
+          101
+        ]
+      },
+      {
+        "text": "WE'RE TRAPPED!",
+        "speaker": "Dick Warren",
+        "emotion": "alarmed, urgent",
+        "bubble_box": [
+          178,
+          333,
+          161,
+          86
+        ]
+      }
+    ],
+    "focus_box": [
+      0,
+      605,
+      688,
+      403
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_04.png",
+    "clean_size": [
+      2200,
+      1933
+    ]
+  },
+  {
+    "id": "p04_05",
+    "page": 4,
+    "panel": 5,
+    "file": "panels/p04_05.png",
+    "bbox_on_page": [
+      986,
+      721,
+      746,
+      1008
+    ],
+    "size": [
+      746,
+      1008
+    ],
+    "scene": "Dick Warren and Ada are swarmed and overwhelmed by tiny creatures in a cave, fighting back furiously as the creatures pile on and try to grab them.",
+    "characters_present": [
+      "Dick Warren",
+      "Ada"
+    ],
+    "dialogue": [
+      {
+        "text": "FURIOUSLY, THEY FIGHT BACK, BUT THE TINY CREATURES PILE ON!",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact, narrating",
+        "bubble_box": [
+          97,
+          96,
+          463,
+          66
+        ]
+      },
+      {
+        "text": "LITTLE DEVILS!",
+        "speaker": "Dick Warren",
+        "emotion": "shouting, frustrated",
+        "bubble_box": [
+          276,
+          197,
+          172,
+          111
+        ]
+      },
+      {
+        "text": "GRAB HIM!",
+        "speaker": "unknown",
+        "emotion": "commanding, aggressive",
+        "bubble_box": [
+          328,
+          655,
+          142,
+          101
+        ]
+      },
+      {
+        "text": "FINALLY DICK AND ADA ARE OVER-POWERED BY THE...",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact, narrating",
+        "bubble_box": [
+          0,
+          927,
+          545,
+          81
+        ]
+      }
+    ],
+    "focus_box": [
+      75,
+      282,
+      485,
+      554
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_05.png",
+    "clean_size": [
+      1628,
+      2200
+    ]
+  },
+  {
+    "id": "p04_06",
+    "page": 4,
+    "panel": 6,
+    "file": "panels/p04_06.png",
+    "bbox_on_page": [
+      18,
+      1721,
+      1408,
+      767
+    ],
+    "size": [
+      1408,
+      767
+    ],
+    "scene": "Robed figures wrestle a captive Ada to the ground, forcing her down while she struggles, as one of them declares she will be a gift for the queen.",
+    "characters_present": [
+      "Ada",
+      "Wad"
+    ],
+    "dialogue": [
+      {
+        "text": "A GIFT FOR THE QUE... SHE WILL SMI... AT US AGAIN!",
+        "speaker": "Wad",
+        "emotion": "triumphant, eager",
+        "bubble_box": [
+          1225,
+          107,
+          183,
+          100
+        ]
+      }
+    ],
+    "focus_box": [
+      141,
+      77,
+      1056,
+      499
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_06.png",
+    "clean_size": [
+      2200,
+      1198
+    ]
+  },
+  {
+    "id": "p04_07",
+    "page": 4,
+    "panel": 7,
+    "file": "panels/p04_07.png",
+    "bbox_on_page": [
+      1418,
+      1689,
+      314,
+      799
+    ],
+    "size": [
+      314,
+      799
+    ],
+    "scene": "Dick Warren and Ada are surrounded and escorted by a crowd of small, stout blue-clad figures inside a cave.",
+    "characters_present": [
+      "Dick Warren",
+      "Ada"
+    ],
+    "dialogue": [
+      {
+        "text": "...SEN! ILE ...",
+        "speaker": "unknown",
+        "emotion": "calling out",
+        "bubble_box": [
+          0,
+          216,
+          38,
+          144
+        ]
+      }
+    ],
+    "focus_box": [
+      38,
+      120,
+      195,
+      519
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_07.png",
+    "clean_size": [
+      865,
+      2200
+    ]
+  },
+  {
+    "id": "p05_01",
+    "page": 5,
+    "panel": 1,
+    "file": "panels/p05_01.png",
+    "bbox_on_page": [
+      18,
+      108,
+      1080,
+      840
+    ],
+    "size": [
+      1080,
+      840
+    ],
+    "scene": "A wide aerial establishing shot of an elaborate plaza or courtyard featuring a large circular fountain or pool at its center, surrounded by manicured gardens, pathways, and small figures of people milling about, with mountains and a ornate building visible in the background.",
+    "characters_present": [],
+    "dialogue": [],
+    "focus_box": [
+      324,
+      336,
+      540,
+      336
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_01.png",
+    "clean_size": [
+      2200,
+      1711
+    ]
+  },
+  {
+    "id": "p05_02",
+    "page": 5,
+    "panel": 2,
+    "file": "panels/p05_02.png",
+    "bbox_on_page": [
+      1090,
+      108,
+      663,
+      571
+    ],
+    "size": [
+      663,
+      571
+    ],
+    "scene": "A queen or ruler seated on a throne questions a group of people, one of whom warns that the crust-people are preparing to attack.",
+    "characters_present": [
+      "Dick Warren",
+      "Ada"
+    ],
+    "dialogue": [
+      {
+        "text": "WHO ARE THESE PEOPLE?",
+        "speaker": "unknown",
+        "emotion": "questioning, authoritative",
+        "bubble_box": [
+          12,
+          6,
+          133,
+          51
+        ]
+      },
+      {
+        "text": "WE FOUND THEM IN THE FORBIDDEN PASSAGE!",
+        "speaker": "unknown",
+        "emotion": "reporting, firm",
+        "bubble_box": [
+          129,
+          6,
+          129,
+          74
+        ]
+      },
+      {
+        "text": "WE WERE SEARCHING FOR YOU! THE CRUST-PEOPLE ARE PREPARING TO ATTACK!",
+        "speaker": "Dick Warren",
+        "emotion": "urgent, alarmed",
+        "bubble_box": [
+          278,
+          57,
+          146,
+          106
+        ]
+      }
+    ],
+    "focus_box": [
+      36,
+      114,
+      186,
+      228
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_02.png",
+    "clean_size": [
+      2200,
+      1895
+    ]
+  },
+  {
+    "id": "p05_03",
+    "page": 5,
+    "panel": 3,
+    "file": "panels/p05_03.png",
+    "bbox_on_page": [
+      1090,
+      671,
+      663,
+      658
+    ],
+    "size": [
+      663,
+      658
+    ],
+    "scene": "A narrator caption announces the queen orders the trial despite Dick's warning, while Ada, Dick Warren, and Wad each speak defiantly about confronting a threat.",
+    "characters_present": [
+      "Ada",
+      "Dick Warren",
+      "Wad"
+    ],
+    "dialogue": [
+      {
+        "text": "IGNORING DICK'S WARNING, THE QUEEN ORDERS THE TRIAL...",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact",
+        "bubble_box": [
+          78,
+          128,
+          338,
+          59
+        ]
+      },
+      {
+        "text": "DON'T LET HIM TOUCH ME!",
+        "speaker": "Ada",
+        "emotion": "frightened, desperate",
+        "bubble_box": [
+          86,
+          201,
+          113,
+          102
+        ]
+      },
+      {
+        "text": "NEVER FEAR! I'LL TAKE CARE OF HIM!",
+        "speaker": "Dick Warren",
+        "emotion": "reassuring, confident",
+        "bubble_box": [
+          176,
+          217,
+          126,
+          112
+        ]
+      },
+      {
+        "text": "I'LL BREAK HIS NECK!",
+        "speaker": "Wad",
+        "emotion": "stern, threatening",
+        "bubble_box": [
+          312,
+          243,
+          113,
+          86
+        ]
+      }
+    ],
+    "focus_box": [
+      86,
+      395,
+      351,
+      263
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_03.png",
+    "clean_size": [
+      2200,
+      2183
+    ]
+  },
+  {
+    "id": "p05_04",
+    "page": 5,
+    "panel": 4,
+    "file": "panels/p05_04.png",
+    "bbox_on_page": [
+      18,
+      934,
+      347,
+      495
+    ],
+    "size": [
+      347,
+      495
+    ],
+    "scene": "A dark-haired woman with a red headband thinks to herself about a worthy mate and gives orders to dwarfs to warn of approaching people.",
+    "characters_present": [
+      "unknown"
+    ],
+    "dialogue": [
+      {
+        "text": "HE LOOKS WORTHY TO BE MY MATE. THE GIRL IS TOO NEAR TO BE NEAR HIM.",
+        "speaker": "unknown",
+        "emotion": "calculating, possessive",
+        "bubble_box": [
+          21,
+          0,
+          326,
+          89
+        ]
+      },
+      {
+        "text": "DWARFS, RETURN TO THE PASSAGE AND WARN US OF THE APPROACH OF THE CRUEL PEOPLE! SEND LOM TO...",
+        "speaker": "unknown",
+        "emotion": "commanding, stern",
+        "bubble_box": [
+          21,
+          84,
+          326,
+          183
+        ]
+      }
+    ],
+    "focus_box": [
+      35,
+      148,
+      278,
+      346
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_04.png",
+    "clean_size": [
+      1542,
+      2200
+    ]
+  },
+  {
+    "id": "p05_05",
+    "page": 5,
+    "panel": 5,
+    "file": "panels/p05_05.png",
+    "bbox_on_page": [
+      357,
+      940,
+      741,
+      489
+    ],
+    "size": [
+      741,
+      489
+    ],
+    "scene": "A misshapen dwarf lumbers forward toward Dick Warren and Ada as Wad commands silence and offers Ada as a prize if the dwarf defeats Warren.",
+    "characters_present": [
+      "Dick Warren",
+      "Ada",
+      "Wad"
+    ],
+    "dialogue": [
+      {
+        "text": "A MISSHAPEN DWARF LUMBERS FORWARD.",
+        "speaker": "narrator",
+        "emotion": "neutral, descriptive",
+        "bubble_box": [
+          163,
+          0,
+          230,
+          29
+        ]
+      },
+      {
+        "text": "THERE IS NO TIME TO WASTE! WE MUST PREPARE!",
+        "speaker": "unknown",
+        "emotion": "urgent, commanding",
+        "bubble_box": [
+          159,
+          27,
+          156,
+          54
+        ]
+      },
+      {
+        "text": "WHAT A PRIZE!",
+        "speaker": "unknown",
+        "emotion": "leering, greedy",
+        "bubble_box": [
+          393,
+          44,
+          119,
+          34
+        ]
+      },
+      {
+        "text": "SILENCE! LOM, IF YOU PUT HIM ON HIS BACK YOU MAY MARRY THE GIRL!",
+        "speaker": "Wad",
+        "emotion": "commanding, stern",
+        "bubble_box": [
+          319,
+          76,
+          170,
+          68
+        ]
+      }
+    ],
+    "focus_box": [
+      459,
+      64,
+      148,
+      108
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_05.png",
+    "clean_size": [
+      2200,
+      1452
+    ]
+  },
+  {
+    "id": "p05_06",
+    "page": 5,
+    "panel": 6,
+    "file": "panels/p05_06.png",
+    "bbox_on_page": [
+      18,
+      1421,
+      869,
+      1061
+    ],
+    "size": [
+      869,
+      1061
+    ],
+    "scene": "Wad lifts Dick Warren off the ground in a powerful bear hug, threatening to crush him.",
+    "characters_present": [
+      "Wad",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "POWERFUL ARMS LIFT DICK FROM THE GROUND.",
+        "speaker": "narrator",
+        "emotion": "descriptive caption",
+        "bubble_box": [
+          94,
+          207,
+          426,
+          48
+        ]
+      },
+      {
+        "text": "NOW TO CRUSH HIM!",
+        "speaker": "Wad",
+        "emotion": "threatening, exerting",
+        "bubble_box": [
+          287,
+          249,
+          152,
+          95
+        ]
+      }
+    ],
+    "focus_box": [
+      87,
+      371,
+      608,
+      637
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_06.png",
+    "clean_size": [
+      1802,
+      2200
+    ]
+  },
+  {
+    "id": "p05_07",
+    "page": 5,
+    "panel": 7,
+    "file": "panels/p05_07.png",
+    "bbox_on_page": [
+      879,
+      1421,
+      874,
+      1061
+    ],
+    "size": [
+      874,
+      1061
+    ],
+    "scene": "A bald, muscular opponent looms triumphantly over Dick Warren, who has been knocked down to the ground during a combat match.",
+    "characters_present": [
+      "Wad",
+      "Dick Warren"
+    ],
+    "dialogue": [
+      {
+        "text": "I'VE WON! THE PRIZE IS MINE!",
+        "speaker": "Wad",
+        "emotion": "shouting, triumphant",
+        "bubble_box": [
+          168,
+          207,
+          227,
+          122
+        ]
+      },
+      {
+        "text": "UGH!",
+        "speaker": "Dick Warren",
+        "emotion": "pained, defeated",
+        "bubble_box": [
+          135,
+          589,
+          105,
+          80
+        ]
+      }
+    ],
+    "focus_box": [
+      153,
+      308,
+      323,
+      446
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_07.png",
+    "clean_size": [
+      1812,
+      2200
+    ]
+  }
+]
