@@ -15,6 +15,7 @@ shorts:
   pause_ms: 600            # at . ! ?
   ellipsis_pause_ms: 850   # at ... (trailing off)
   shot_gap_ms: 700         # after each line, before the next shot
+  captions: true           # burn subtitles into the render (stage 7)
   voicebox_profile: "Narrator"      # stage 6 default voice (kokoro preset);
                                     # per-character
                                     # override with `voicebox_profile` below

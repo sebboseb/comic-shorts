@@ -6,7 +6,8 @@ the manifest's `motion` intent and aimed at the panel's `focus_box`. Clips
 carry their own audio (the stage-6 wav, or generated silence), so
 concatenating them keeps A/V in sync without a global offset.
 
-Scrappy by design: no music bed, no subtitles, no transitions, no sfx.
+Captions are burned in from stage 6's per-sentence timings (see
+captions.py). Scrappy by design: no music bed, no transitions, no sfx.
 Remotion is the plan of record for the polished version.
 
 Runs without stage 6: shots with no audio get a duration estimated from
@@ -19,6 +20,8 @@ import json
 import shutil
 import subprocess
 from pathlib import Path
+
+from pipeline import captions
 
 FPS = 30
 W, H = 1080, 1920
@@ -137,6 +140,8 @@ def run(config, workdir: Path):
     if not manifests:
         raise SystemExit("no manifests in work/manifests - run stage 4 first")
 
+    captions_on = config.get("shorts", {}).get("captions", True)
+
     out_dir = workdir / "renders"
     out_dir.mkdir(parents=True, exist_ok=True)
     tmp_root = workdir / "renders" / "_clips"
@@ -191,10 +196,37 @@ def run(config, workdir: Path):
         listing = tmp / "concat.txt"
         listing.write_text("".join(f"file '{c.resolve()}'\n" for c in clips))
         out_path = out_dir / f"{short_id}.mp4"
-        subprocess.run(
-            ["ffmpeg", "-y", "-loglevel", "error", "-f", "concat",
-             "-safe", "0", "-i", str(listing), "-c", "copy", str(out_path)],
-            check=True, capture_output=True, text=True)
+
+        if captions_on:
+            # burn captions in one pass over the joined video: doing it
+            # per-shot would re-encode every clip and still need this join
+            joined = tmp / "joined.mp4"
+            subprocess.run(
+                ["ffmpeg", "-y", "-loglevel", "error", "-f", "concat",
+                 "-safe", "0", "-i", str(listing), "-c", "copy", str(joined)],
+                check=True, capture_output=True, text=True)
+            cue_list = captions.cues(data.get("shots", []), FPS)
+            pngs, y = captions.render_pngs(cue_list, W, H, tmp / "cues")
+            cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(joined)]
+            for p in pngs:
+                cmd += ["-i", str(p)]
+            chain, prev = [], "0:v"
+            for n, (a, b, _) in enumerate(cue_list):
+                label = f"v{n}"
+                chain.append(
+                    f"[{prev}][{n+1}:v]overlay=0:{y}:"
+                    f"enable='between(t,{a/FPS:.3f},{b/FPS:.3f})'[{label}]")
+                prev = label
+            cmd += ["-filter_complex", ";".join(chain),
+                    "-map", f"[{prev}]", "-map", "0:a",
+                    "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+                    "-c:a", "copy", str(out_path)]
+            subprocess.run(cmd, check=True, capture_output=True, text=True)
+        else:
+            subprocess.run(
+                ["ffmpeg", "-y", "-loglevel", "error", "-f", "concat",
+                 "-safe", "0", "-i", str(listing), "-c", "copy", str(out_path)],
+                check=True, capture_output=True, text=True)
 
         probe = subprocess.run(
             ["ffprobe", "-v", "error", "-show_entries", "format=duration",

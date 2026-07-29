@@ -144,9 +144,16 @@ def _synth_one(port, profile_id, text, engine):
 
 
 def _synth(port, profile_id, text, out_path: Path, engine=ENGINE, pace=None):
-    """Synthesise a line sentence by sentence, joined with explicit pauses."""
+    """Synthesise a line sentence by sentence, joined with explicit pauses.
+
+    Returns the per-sentence segments with their frame counts, which is
+    ground-truth caption timing: we know what each sentence says because
+    we sent it, and how long it runs because we measured the wav. No
+    speech-to-text round trip, so proper nouns can't be mangled.
+    """
     pieces, params = [], None
     pace = pace or {}
+    segments = []
     for sentence, pause_ms in _sentences(
             _speakable(text), pace.get("pause_ms"), pace.get("ellipsis_pause_ms")):
         with wave.open(io.BytesIO(_synth_one(port, profile_id, sentence,
@@ -154,9 +161,14 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE, pace=None):
             params = params or w.getparams()
             frames = w.readframes(w.getnframes())
         sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
-        pieces.append(_trim(frames, sw, ch, sr))
-        if pause_ms:
-            pieces.append(b"\x00" * (int(sr * pause_ms / 1000) * sw * ch))
+        body = _trim(frames, sw, ch, sr)
+        pieces.append(body)
+        gap_bytes = int(sr * pause_ms / 1000) * sw * ch if pause_ms else 0
+        if gap_bytes:
+            pieces.append(b"\x00" * gap_bytes)
+        seg_samples = (len(body) + gap_bytes) // (sw * ch)
+        segments.append({"text": sentence,
+                         "frames": round(seg_samples / sr * FPS)})
 
     # trailing beat: _trim leaves only 60ms, so without this the next
     # shot's first word lands almost on top of this one's last
@@ -167,6 +179,7 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE, pace=None):
     with wave.open(str(out_path), "wb") as out:
         out.setparams(params)
         out.writeframes(b"".join(pieces))
+    return segments
 
 def _wav_seconds(path: Path) -> float:
     with wave.open(str(path), "rb") as w:
@@ -218,10 +231,11 @@ def run(config, workdir: Path):
             pid, engine = entry
             wav = out_dir / f"shot{i:03d}.wav"
             print(f"  {short_id} shot{i:03d} [{speaker}] {line[:50]!r}")
-            _synth(port, pid, line, wav, engine, pace)
+            segments = _synth(port, pid, line, wav, engine, pace)
             shot["audio"] = str(wav.relative_to(workdir.parent)
                                 if wav.is_relative_to(workdir.parent) else wav)
             shot["duration_frames"] = round(_wav_seconds(wav) * FPS)
+            shot["segments"] = segments
             changed = True
         if changed:
             mf.write_text(json.dumps(data, indent=1))
