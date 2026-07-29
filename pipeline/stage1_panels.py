@@ -142,6 +142,13 @@ def run(config, workdir: Path):
                 "reason": f"{len(boxes)} panels found, coverage {coverage:.0%} "
                           "— check for bleed/overlapping layout, crop manually if wrong",
             })
+        elif not manual and len(boxes) == 1 and coverage >= 0.90:
+            flagged_pages.append({
+                "page": page_idx, "file": page_path.name,
+                "reason": f"whole-page fallback (1 panel, coverage {coverage:.0%}) "
+                          "— real splash page, or gutters missed (aged paper above "
+                          "white_threshold?)",
+            })
 
         for panel_idx, (x, y, bw, bh) in enumerate(boxes, start=1):
             x0 = max(0, x - margin)
