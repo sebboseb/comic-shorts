@@ -8,13 +8,16 @@ Fills `audio` and `duration_frames` on every shot in every manifest.
 
 Requires the Voicebox app to be open. Run AFTER the stage-5 review gate.
 """
-import json, re, subprocess, sys, time, urllib.request, wave
+import io, json, re, struct, subprocess, sys, time, urllib.request, wave
 from pathlib import Path
 
 FPS = 30
 SILENT_S = 1.2
 DEFAULT_PROFILE = "Narrator"
 ENGINE = "kokoro"
+PAUSE_MS = 600          # silence inserted at . ! ?
+ELLIPSIS_PAUSE_MS = 850  # ... trails off, give it room
+SHOT_GAP_MS = 450        # beat after each line, so cuts don't clip speech
 VOICE_MAP = {}  # e.g. {"Mark": "MarkVoice", "narrator": "Narrator"}
 
 def _find_port():
@@ -76,9 +79,54 @@ def _speakable(text):
     return out
 
 
-def _synth(port, profile_id, text, out_path: Path, engine=ENGINE):
+def _sentences(text, pause_ms=None, ellipsis_ms=None):
+    """Split a line into (sentence, pause_ms_after) pairs.
+
+    Kokoro gives ~420ms at a full stop regardless of context, which reads
+    as rushed for narration, and it has no pause control. Synthesising
+    sentence by sentence and rejoining with our own silence is the only
+    way to set the beat. Comic punctuation is messy ("STRANGER!.. WE"),
+    so treat any run of terminal marks as one boundary and let a trailing
+    ellipsis buy a longer beat.
+    """
+    parts = re.split(r"([.!?][.!?]*)", text)
+    out = []
+    for i in range(0, len(parts) - 1, 2):
+        body, mark = parts[i].strip(), parts[i + 1]
+        if not body:
+            continue
+        pause = (ellipsis_ms or ELLIPSIS_PAUSE_MS) if len(mark) > 1 \
+            or "…" in mark else (pause_ms or PAUSE_MS)
+        out.append((body + mark, pause))
+    tail = parts[-1].strip()
+    if tail:
+        out.append((tail, pause_ms or PAUSE_MS))
+    if out:
+        out[-1] = (out[-1][0], 0)  # no trailing pad; shot joins handle it
+    return out or [(text, 0)]
+
+
+def _trim(frames, sw, ch, sr, keep_ms=60):
+    """Strip leading/trailing near-silence so joined pauses are exact."""
+    n = len(frames) // (sw * ch)
+    if sw != 2 or n == 0:
+        return frames
+    mono = struct.unpack(f"<{n * ch}h", frames)[::ch]
+    peak = max((abs(x) for x in mono), default=0)
+    if peak == 0:
+        return frames
+    floor = peak * 0.03
+    first = next((i for i, x in enumerate(mono) if abs(x) > floor), 0)
+    last = n - next((i for i, x in enumerate(reversed(mono)) if abs(x) > floor), 0)
+    keep = int(sr * keep_ms / 1000)
+    a = max(0, first - keep) * sw * ch
+    b = min(n, last + keep) * sw * ch
+    return frames[a:b]
+
+
+def _synth_one(port, profile_id, text, engine):
     gen = _api(port, "POST", "/generate",
-               {"profile_id": profile_id, "text": _speakable(text),
+               {"profile_id": profile_id, "text": text,
                 "language": "en", "engine": engine})
     gen_id = gen.get("id") or gen.get("generation_id")
     if not gen_id:
@@ -88,12 +136,37 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE):
         try:
             audio = _api(port, "GET", f"/audio/{gen_id}")
             if isinstance(audio, (bytes, bytearray)) and len(audio) > 1000:
-                out_path.write_bytes(audio)
-                return
+                return bytes(audio)
         except Exception:
             pass
         time.sleep(1.5)
     raise RuntimeError("synthesis timed out")
+
+
+def _synth(port, profile_id, text, out_path: Path, engine=ENGINE, pace=None):
+    """Synthesise a line sentence by sentence, joined with explicit pauses."""
+    pieces, params = [], None
+    pace = pace or {}
+    for sentence, pause_ms in _sentences(
+            _speakable(text), pace.get("pause_ms"), pace.get("ellipsis_pause_ms")):
+        with wave.open(io.BytesIO(_synth_one(port, profile_id, sentence,
+                                             engine)), "rb") as w:
+            params = params or w.getparams()
+            frames = w.readframes(w.getnframes())
+        sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
+        pieces.append(_trim(frames, sw, ch, sr))
+        if pause_ms:
+            pieces.append(b"\x00" * (int(sr * pause_ms / 1000) * sw * ch))
+
+    # trailing beat: _trim leaves only 60ms, so without this the next
+    # shot's first word lands almost on top of this one's last
+    sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
+    gap = pace.get("shot_gap_ms", SHOT_GAP_MS)
+    pieces.append(b"\x00" * (int(sr * gap / 1000) * sw * ch))
+
+    with wave.open(str(out_path), "wb") as out:
+        out.setparams(params)
+        out.writeframes(b"".join(pieces))
 
 def _wav_seconds(path: Path) -> float:
     with wave.open(str(path), "rb") as w:
@@ -112,6 +185,9 @@ def run(config, workdir: Path):
     for ch in config.get("characters", []):
         if ch.get("voicebox_profile"):
             voice_map[ch["name"]] = ch["voicebox_profile"]
+
+    pace = {k: v for k, v in config.get("shorts", {}).items()
+            if k in ("pause_ms", "ellipsis_pause_ms", "shot_gap_ms")}
 
     audio_root = workdir / "audio"
     manifests = sorted((workdir / "manifests").glob("ep*.json"))
@@ -142,7 +218,7 @@ def run(config, workdir: Path):
             pid, engine = entry
             wav = out_dir / f"shot{i:03d}.wav"
             print(f"  {short_id} shot{i:03d} [{speaker}] {line[:50]!r}")
-            _synth(port, pid, line, wav, engine)
+            _synth(port, pid, line, wav, engine, pace)
             shot["audio"] = str(wav.relative_to(workdir.parent)
                                 if wav.is_relative_to(workdir.parent) else wav)
             shot["duration_frames"] = round(_wav_seconds(wav) * FPS)
