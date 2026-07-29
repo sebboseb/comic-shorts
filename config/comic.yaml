@@ -10,7 +10,8 @@ shorts:
   min_seconds: 30
   max_seconds: 60
   narrator_voice_id: "ELEVENLABS_VOICE_ID_HERE"
-  voicebox_profile: "Narrator-CB"   # stage 6 default voice; per-character
+  voicebox_profile: "Narrator"      # stage 6 default voice (kokoro preset);
+                                    # per-character
                                     # override with `voicebox_profile` below
 
 # Character roster. The `ref_image` is a face crop you make yourself
@@ -19,18 +20,22 @@ shorts:
 # Planet Comics 69 test run: no ref crops yet, descriptions only.
 characters:
   - name: "Mars"
+    voicebox_profile: "Mars"
     description: "the god of war; bearded warrior in a crested helmet, carries a flaming torch; cruel, theatrical"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "booming"
   - name: "Dick Warren"
+    voicebox_profile: "DickWarren"
     description: "square-jawed explorer hero in a green tunic and helmet; brave, plainspoken"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"
   - name: "Wad"
+    voicebox_profile: "Wad"
     description: "leader of the hooded purple-robed people; bald, stern; possessed by Mars partway through"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"
   - name: "Ada"
+    voicebox_profile: "Ada"
     description: "young blonde woman enslaved by the hooded people; desperate, then resolute"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"

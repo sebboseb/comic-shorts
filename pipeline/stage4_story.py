@@ -47,12 +47,24 @@ Respond with ONLY a JSON object, no markdown fences:
 }
 
 Rules:
-- Each short must OPEN on its most dramatic or intriguing beat. Reordering panels
-  for the hook is allowed as long as the story still tracks; the hook can be a
-  flash-forward that the short then rewinds from.
+- COMPREHENSION BEATS CLEVERNESS. The viewer has never read this comic, cannot
+  pause, and hears the audio once. If a choice is punchy but confusing, make the
+  clear choice instead.
+- Each short must OPEN on its most dramatic or intriguing beat, BUT the opening
+  must stand on its own without context the viewer doesn't have yet. Do not open
+  on a line that refers to a character or event not yet introduced. Reordering
+  panels for the hook is allowed only when the reordered opening is
+  self-explanatory; otherwise stay in reading order. Prefer a flash-forward you
+  can make legible in one narrator sentence over a cryptic cold open.
+- Establish the situation fast: within the first two shots the viewer must know
+  where we are and who we are following. Name each character in narration the
+  first time they appear ("the hooded leader, Wad" - not "he"). Never introduce
+  a character by an unexplained pronoun.
 - Each short (except the last) must END mid-tension, never at a resolved beat.
-- Write narrator lines to glue panel transitions that don't self-explain, but
-  sparingly - dialogue carries the story, narration fills gaps.
+- Write narrator lines to glue panel transitions that don't self-explain. Favour
+  clarity over economy: if a jump in place, time, or who-is-speaking would
+  confuse a first-time viewer, spend a narrator line on it. Dialogue still
+  carries the drama; narration carries the orientation.
 - Keep character dialogue verbatim from the panels. You may trim redundant lines
   but never rewrite a character's words.
 - A shot with no line (silent dramatic beat) is allowed: set line to "" and give
