@@ -58,8 +58,8 @@ Rules:
   can make legible in one narrator sentence over a cryptic cold open.
 - Establish the situation fast: within the first two shots the viewer must know
   where we are and who we are following. Name each character in narration the
-  first time they appear ("the hooded leader, Wad" - not "he"). Never introduce
-  a character by an unexplained pronoun.
+  first time they appear - give the role and the name together, the way
+  "the tribe's leader, <name>" does, never a bare "he" or "they".
 - Each short (except the last) must END mid-tension, never at a resolved beat.
 - THE SHORTS ARE ONE CONTINUOUS SERIES, watched back to back in order. Every
   short after the first must open with a narrator shot that (a) says in one
@@ -67,8 +67,8 @@ Rules:
   speak. Assume the viewer saw the previous short days ago and remembers only
   the broad situation. Write the pair so the last shot of short N and the first
   shot of short N+1 read as a single continuous beat, not two separate videos:
-  if short N ends on "the spirit of Mars descends", short N+1 opens by saying
-  what Mars then does and to whom.
+  if short N ends on some force or figure arriving unseen, short N+1 opens by
+  naming it and saying what it does next, and to whom.
 - Do not restate the same event as a cliffhanger in one short and again as the
   opening beat of the next. Move the story forward.
 - Write narrator lines to glue panel transitions that don't self-explain. Favour
@@ -78,7 +78,7 @@ Rules:
 - NARRATE, DON'T SUMMARISE. The narrator is a storyteller who already knows how
   this ends, not a caption writer describing a picture. This matters more than
   any other rule for whether the short holds a viewer.
-    * Never describe what is visibly happening in the panel ("Dick Warren
+    * Never describe what is visibly happening in the panel (as in "<name>
       examines an artifact"). The viewer can see it. Say what it MEANS, what it
       COSTS, or what is about to go wrong ("He'd crossed a hundred million miles
       to find that stone. It would cost him everything.").

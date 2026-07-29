@@ -4,7 +4,7 @@ Timing comes from stage 6, not from speech-to-text. We sent each sentence
 to the TTS engine and measured the wav it returned, so we already know
 exactly what is said and exactly when. Running whisper over our own
 output would only add transcription error -- and it errs precisely on the
-proper nouns a comic depends on (Wad, Ada, Dick Warren).
+proper nouns a comic depends on -- character and place names.
 
 Long sentences are split into short on-screen chunks, with the sentence's
 measured duration shared out across them by character count. That last
