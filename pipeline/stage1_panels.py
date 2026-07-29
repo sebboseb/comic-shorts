@@ -51,12 +51,24 @@ def _layout_score(boxes, w, h):
     return score
 
 
-def detect_panels(img, white_threshold=235, dark_threshold=48,
+def adaptive_white_threshold(gray):
+    """Gutter cutoff derived from this page's paper, not an absolute value.
+
+    p90 brightness lands inside the paper/gutter mass even on mostly-dark
+    pages; 0.92x that keeps aged, yellowed paper (paper ~220 on 1950s scans,
+    where a fixed 235 classifies the whole page as content) on the gutter
+    side of the cut."""
+    return 0.92 * float(np.percentile(gray, 90))
+
+
+def detect_panels(img, white_threshold=None, dark_threshold=48,
                   min_area_ratio=0.02):
     """Try both gutter polarities (white gutters and black gutters) and
     keep whichever segmentation looks more like a panel layout."""
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     h, w = gray.shape
+    if white_threshold is None:
+        white_threshold = adaptive_white_threshold(gray)
 
     # content = anything darker than white gutters
     _, light_mask = cv2.threshold(gray, white_threshold, 255,
@@ -96,7 +108,7 @@ def run(config, workdir: Path):
     pages_dir = Path(config["comic"]["pages_dir"])
     direction = config["comic"].get("reading_direction", "ltr")
     s1 = config.get("stage1", {})
-    white_threshold = s1.get("white_threshold", 235)
+    white_threshold = s1.get("white_threshold")  # None = per-page adaptive
     min_area_ratio = s1.get("min_panel_area_ratio", 0.02)
     margin = s1.get("crop_margin", 4)
 

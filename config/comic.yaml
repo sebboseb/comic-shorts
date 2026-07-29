@@ -64,5 +64,7 @@ models:
 
 stage1:
   min_panel_area_ratio: 0.02    # ignore contours smaller than 2% of page
-  white_threshold: 235          # gutter whiteness cutoff
+  # white_threshold: 235        # optional fixed gutter cutoff; unset = derived
+                                # per page (0.92 x p90 brightness), survives
+                                # aged/faded paper
   crop_margin: 4                # px margin kept around each panel
