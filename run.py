@@ -45,20 +45,32 @@ def _stage5(config, workdir):
     review.run(config, workdir)
 
 
+def _stage3p(config, workdir):
+    from pipeline import stage3_passthrough
+    stage3_passthrough.run(config, workdir)
+
+
+def _stage7(config, workdir):
+    from pipeline import stage7_render
+    stage7_render.run(config, workdir)
+
+
 STAGES = {
-    1: ("panel extraction", _stage1),
-    2: ("understanding pass", _stage2),
-    3: ("art cleanup", _stage3),
-    4: ("story compile", _stage4),
-    5: ("review page", _stage5),
-    6: ("tts (voicebox)", _stage6),
+    "1": ("panel extraction", _stage1),
+    "2": ("understanding pass", _stage2),
+    "3": ("art cleanup", _stage3),
+    "3p": ("art cleanup (passthrough, no GPU)", _stage3p),
+    "4": ("story compile", _stage4),
+    "5": ("review page", _stage5),
+    "6": ("tts (voicebox)", _stage6),
+    "7": ("render (ffmpeg)", _stage7),
 }
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--stage", type=int, nargs="+", required=True,
-                    choices=sorted(STAGES))
+    ap.add_argument("--stage", nargs="+", required=True,
+                    choices=list(STAGES))
     ap.add_argument("--config", default="config/comic.yaml")
     ap.add_argument("--workdir", default="work")
     args = ap.parse_args()
