@@ -75,6 +75,22 @@ Rules:
   clarity over economy: if a jump in place, time, or who-is-speaking would
   confuse a first-time viewer, spend a narrator line on it. Dialogue still
   carries the drama; narration carries the orientation.
+- NARRATE, DON'T SUMMARISE. The narrator is a storyteller who already knows how
+  this ends, not a caption writer describing a picture. This matters more than
+  any other rule for whether the short holds a viewer.
+    * Never describe what is visibly happening in the panel ("Dick Warren
+      examines an artifact"). The viewer can see it. Say what it MEANS, what it
+      COSTS, or what is about to go wrong ("He'd crossed a hundred million miles
+      to find that stone. It would cost him everything.").
+    * Lead with the consequence or the stakes, not the stage direction.
+    * Vary sentence length. Short sentences hit. Let a long one build, then cut
+      it off with a short one.
+    * Use concrete, physical nouns and hard verbs. No "suddenly", no "little did
+      they know", no "meanwhile", no rhetorical questions to camera.
+    * Withhold. Name the threat late in the line, not early.
+    * Address nobody. No "you won't believe", no direct address to the viewer.
+  The synthesised voice is flat and literal, so the WRITING has to carry the
+  performance: rhythm and word choice are the only prosody you get.
 - Keep character dialogue verbatim from the panels. You may trim redundant lines
   but never rewrite a character's words.
 - A shot with no line (silent dramatic beat) is allowed: set line to "" and give

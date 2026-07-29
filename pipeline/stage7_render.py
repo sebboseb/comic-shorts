@@ -7,7 +7,8 @@ carry their own audio (the stage-6 wav, or generated silence), so
 concatenating them keeps A/V in sync without a global offset.
 
 Captions are burned in from stage 6's per-sentence timings (see
-captions.py). Scrappy by design: no music bed, no transitions, no sfx.
+captions.py), and a music bed is mixed under the narration per the
+episode's music_mood. Still scrappy: no transitions, no sfx stings.
 Remotion is the plan of record for the polished version.
 
 Runs without stage 6: shots with no audio get a duration estimated from
@@ -127,6 +128,22 @@ def _render_shot(img_path, audio_path, frames, motion, cx, cy,
     subprocess.run(cmd, check=True, capture_output=True, text=True)
 
 
+def _music_track(config, mood):
+    """Pick the bed for an episode's music_mood, or None if disabled."""
+    s = config.get("shorts", {})
+    if not s.get("music_volume", 0):
+        return None
+    by_mood = s.get("music_by_mood") or {}
+    name = by_mood.get(mood) or by_mood.get("default")
+    if not name or not s.get("music_dir"):
+        return None
+    path = Path(s["music_dir"]).expanduser() / name
+    if not path.exists():
+        print(f"  WARNING: music track {path} missing, rendering without")
+        return None
+    return path
+
+
 def run(config, workdir: Path):
     if not shutil.which("ffmpeg"):
         raise SystemExit("ffmpeg not found on PATH")
@@ -226,6 +243,28 @@ def run(config, workdir: Path):
             subprocess.run(
                 ["ffmpeg", "-y", "-loglevel", "error", "-f", "concat",
                  "-safe", "0", "-i", str(listing), "-c", "copy", str(out_path)],
+                check=True, capture_output=True, text=True)
+
+        music = _music_track(config, data.get("music_mood"))
+        if music:
+            scored = tmp / "scored.mp4"
+            out_path.rename(scored)
+            dur = sum(s.get("duration_frames") or 0
+                      for s in data.get("shots", [])) / FPS
+            vol = config.get("shorts", {}).get("music_volume", 0.11)
+            # bed sits under the narration, fading in and out so it never
+            # starts or stops on a hard edge
+            af = (f"[1:a]volume={vol},afade=t=in:st=0:d=2,"
+                  f"afade=t=out:st={max(0, dur - 3):.2f}:d=3[m];"
+                  # normalize=0: amix otherwise scales every input by
+                  # 1/n, which would drop the narration ~3dB
+                  f"[0:a][m]amix=inputs=2:duration=first:normalize=0:"
+                  f"dropout_transition=0[a]")
+            subprocess.run(
+                ["ffmpeg", "-y", "-loglevel", "error", "-i", str(scored),
+                 "-i", str(music), "-filter_complex", af,
+                 "-map", "0:v", "-map", "[a]", "-c:v", "copy",
+                 "-c:a", "aac", "-b:a", "160k", "-shortest", str(out_path)],
                 check=True, capture_output=True, text=True)
 
         probe = subprocess.run(

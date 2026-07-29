@@ -16,6 +16,21 @@ shorts:
   ellipsis_pause_ms: 850   # at ... (trailing off)
   shot_gap_ms: 700         # after each line, before the next shot
   captions: true           # burn subtitles into the render (stage 7)
+
+  # Background music. Tracks are MPT's royalty-free library, which ships
+  # unlabelled (output000.mp3...), so these are first-pass picks bucketed
+  # by measured loudness, NOT by listening. Swap any filename after you
+  # audition them.
+  music_dir: "~/Dev/comicops/mpt-comic-kit/MoneyPrinterTurbo/resource/songs"
+  music_volume: 0.11       # under the narration; 0 disables music
+  music_by_mood:
+    ominous: "output029.mp3"        # quietest
+    melancholy: "output025.mp3"
+    tense_buildup: "output017.mp3"
+    playful: "output012.mp3"
+    triumphant: "output015.mp3"
+    action: "output004.mp3"         # loudest
+    default: "output021.mp3"
   voicebox_profile: "Narrator"      # bm_fable; stage 6 default voice;
                                     # per-character
                                     # override with `voicebox_profile` below
