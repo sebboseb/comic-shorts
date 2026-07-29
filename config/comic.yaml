@@ -52,28 +52,31 @@ shorts:
 characters:
   - name: "Mars"
     epithet: "this washed-up war god / drama queen of the cosmos"
-    voicebox_profile: "Mars"        # am_fenrir
+    voicebox_profile: "Mars"  # qwen Uncle_Fu
+
     description: "the god of war; bearded warrior in a crested helmet, carries a flaming torch; cruel, theatrical"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "booming"
+    speaking_style: "ancient booming war-god, theatrical and cruel"
   - name: "Dick Warren"
     epithet: "our boy Dick / certified problem-solver Dick Warren"
-    voicebox_profile: "DickWarren"  # am_adam
+    voicebox_profile: "DickWarren"  # qwen Aiden
+
     description: "square-jawed explorer hero in a green tunic and helmet; brave, plainspoken"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "neutral"
+    speaking_style: "steady plain-spoken adventurer, level and unfussy"
   - name: "Wad"
     epithet: "big man Wad / Wad, worst host in the galaxy"
-    voicebox_profile: "Wad"         # am_michael
+    voicebox_profile: "Wad"  # qwen Dylan
+
     description: "leader of the hooded purple-robed people; bald, stern; possessed by Mars partway through"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "neutral"
+    speaking_style: "stern imperious tribal leader, clipped and certain"
   - name: "Ada"
     epithet: "the actual MVP Ada / Ada, carrying this entire comic"
     voicebox_profile: "Ada"
     description: "young blonde woman enslaved by the hooded people; desperate, then resolute"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "neutral"
+    speaking_style: "young woman, bright and quick, always a little breathless"
 
 models:
   vision_model: "claude-sonnet-4-6"   # stage 2 panel understanding (batched, ~$1/run)

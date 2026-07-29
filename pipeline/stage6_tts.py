@@ -23,6 +23,8 @@ INSTRUCT_ENGINES = {"qwen", "qwen_custom_voice", "chatterbox",
 PAUSE_MS = 600          # silence inserted at . ! ?
 ELLIPSIS_PAUSE_MS = 850  # ... trails off, give it room
 SHOT_GAP_MS = 450        # beat after each line, so cuts don't clip speech
+MIN_SEG_CHARS = 18       # below this, an autoregressive engine loses the plot:
+                         # "Bad." alone came back as 6.7s of looped breath
 VOICE_MAP = {}  # e.g. {"Mark": "MarkVoice", "narrator": "Narrator"}
 
 def _find_port():
@@ -106,6 +108,22 @@ def _sentences(text, pause_ms=None, ellipsis_ms=None):
     tail = parts[-1].strip()
     if tail:
         out.append((tail, pause_ms or PAUSE_MS))
+    # Merge fragments too short to synthesise on their own. Splitting exists
+    # to control the pause between sentences, but a one-word sentence sent
+    # alone makes the model stutter or hallucinate, which is far worse than
+    # inheriting the engine's own shorter internal pause.
+    merged = []
+    for seg, pause in out:
+        if merged and len(merged[-1][0]) < MIN_SEG_CHARS:
+            prev, _ = merged.pop()
+            merged.append((prev + " " + seg, pause))
+        else:
+            merged.append((seg, pause))
+    if len(merged) > 1 and len(merged[-1][0]) < MIN_SEG_CHARS:
+        prev, _ = merged[-2]
+        merged[-2:] = [(prev + " " + merged[-1][0], merged[-1][1])]
+    out = merged
+
     if out:
         out[-1] = (out[-1][0], 0)  # no trailing pad; shot joins handle it
     return out or [(text, 0)]
@@ -202,6 +220,11 @@ def run(config, workdir: Path):
     # voicebox_profile overrides it for that speaker.
     default_profile = config.get("shorts", {}).get("voicebox_profile",
                                                    DEFAULT_PROFILE)
+    # a character's constant voice description, prepended to each shot's
+    # emotion: without it, strong per-shot direction drifts the register far
+    # enough that one character reads as several
+    styles = {c["name"]: c.get("speaking_style")
+              for c in config.get("characters", []) if c.get("speaking_style")}
     voice_map = dict(VOICE_MAP)
     for ch in config.get("characters", []):
         if ch.get("voicebox_profile"):
@@ -245,8 +268,10 @@ def run(config, workdir: Path):
             pid, engine = entry
             wav = out_dir / f"shot{i:03d}.wav"
             print(f"  {short_id} shot{i:03d} [{speaker}] {line[:50]!r}")
-            segments = _synth(port, pid, line, wav, engine, pace,
-                              shot.get("emotion"))
+            base = styles.get(speaker)
+            emotion = shot.get("emotion")
+            instruct = "; ".join(x for x in (base, emotion) if x) or None
+            segments = _synth(port, pid, line, wav, engine, pace, instruct)
             shot["audio"] = str(wav.relative_to(workdir.parent)
                                 if wav.is_relative_to(workdir.parent) else wav)
             shot["duration_frames"] = round(_wav_seconds(wav) * FPS)
