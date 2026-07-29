@@ -37,7 +37,14 @@ def _chunk(text):
 
 
 def cues(shots, fps):
-    """(start_frame, end_frame, text) over the episode timeline."""
+    """(start_frame, end_frame, text) over the episode timeline.
+
+    The shot's duration_frames is authoritative for where the video is:
+    it covers the whole wav, including the trailing shot-gap silence that
+    belongs to no sentence. Advancing the clock by the sum of segment
+    frames instead loses that gap every shot and drifts the captions
+    steadily earlier, so re-anchor to the shot boundary each time.
+    """
     out = []
     clock = 0
     for shot in shots:
@@ -46,23 +53,22 @@ def cues(shots, fps):
         if not segs and shot.get("line"):
             # no per-sentence timing (silent shot, or pre-segments manifest)
             segs = [{"text": shot["line"], "frames": dur}]
+
+        t = clock
         for seg in segs or []:
+            frames = seg.get("frames", 0)
             pieces = _chunk(seg["text"])
-            if not pieces:
-                clock += seg.get("frames", 0)
-                continue
-            total = sum(len(p) for p in pieces) or 1
-            start = clock
-            spent = 0
-            for i, piece in enumerate(pieces):
-                share = (seg["frames"] - spent if i == len(pieces) - 1
-                         else round(seg["frames"] * len(piece) / total))
-                if share > 0:
-                    out.append((start + spent, start + spent + share, piece))
-                spent += share
-            clock += seg["frames"]
-        if not segs:
-            clock += dur
+            if pieces:
+                total = sum(len(p) for p in pieces) or 1
+                spent = 0
+                for i, piece in enumerate(pieces):
+                    share = (frames - spent if i == len(pieces) - 1
+                             else round(frames * len(piece) / total))
+                    if share > 0:
+                        out.append((t + spent, t + spent + share, piece))
+                    spent += share
+            t += frames
+        clock += dur  # never the segment sum
     return out
 
 

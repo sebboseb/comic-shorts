@@ -16,7 +16,7 @@ shorts:
   ellipsis_pause_ms: 850   # at ... (trailing off)
   shot_gap_ms: 700         # after each line, before the next shot
   captions: true           # burn subtitles into the render (stage 7)
-  voicebox_profile: "Narrator"      # stage 6 default voice (kokoro preset);
+  voicebox_profile: "Narrator"      # bm_fable; stage 6 default voice;
                                     # per-character
                                     # override with `voicebox_profile` below
 
@@ -36,7 +36,7 @@ characters:
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"
   - name: "Wad"
-    voicebox_profile: "Wad"
+    voicebox_profile: "Wad"         # am_michael
     description: "leader of the hooded purple-robed people; bald, stern; possessed by Mars partway through"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"
