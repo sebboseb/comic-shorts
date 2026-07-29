@@ -7,8 +7,8 @@ comic:
 
 shorts:
   target_count: 2               # 5 pages -> 1-2 shorts for the e2e test
-  min_seconds: 30
-  max_seconds: 60
+  min_seconds: 60
+  max_seconds: 120              # room to pace properly rather than compress
   narrator_voice_id: "ELEVENLABS_VOICE_ID_HERE"
   # narration pacing (ms). kokoro's own full-stop pause is ~420ms, which
   # reads as rushed; these are inserted by stage 6 instead.
