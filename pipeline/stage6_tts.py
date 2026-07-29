@@ -44,15 +44,20 @@ def _api(port, method, path, body=None):
         return raw
 
 def _profiles(port):
+    """name -> (profile_id, engine). Profiles are engine-bound in Voicebox:
+    generating a chatterbox profile with engine=kokoro is a 400, so carry
+    each profile's own default_engine rather than assuming one."""
     r = _api(port, "GET", "/profiles")
     plist = r if isinstance(r, list) else r.get("profiles", [])
-    return {p.get("name", "").lower(): (p.get("id") or p.get("profile_id"))
+    return {p.get("name", "").lower():
+            (p.get("id") or p.get("profile_id"),
+             p.get("default_engine") or ENGINE)
             for p in plist}
 
-def _synth(port, profile_id, text, out_path: Path):
+def _synth(port, profile_id, text, out_path: Path, engine=ENGINE):
     gen = _api(port, "POST", "/generate",
                {"profile_id": profile_id, "text": text,
-                "language": "en", "engine": ENGINE})
+                "language": "en", "engine": engine})
     gen_id = gen.get("id") or gen.get("generation_id")
     if not gen_id:
         raise RuntimeError(f"bad /generate response: {json.dumps(gen)[:200]}")
@@ -75,6 +80,17 @@ def _wav_seconds(path: Path) -> float:
 def run(config, workdir: Path):
     port = _find_port()
     profiles = _profiles(port)
+
+    # Voicebox profile names are per-install, so they live in config:
+    # shorts.voicebox_profile is the fallback, and any character with a
+    # voicebox_profile overrides it for that speaker.
+    default_profile = config.get("shorts", {}).get("voicebox_profile",
+                                                   DEFAULT_PROFILE)
+    voice_map = dict(VOICE_MAP)
+    for ch in config.get("characters", []):
+        if ch.get("voicebox_profile"):
+            voice_map[ch["name"]] = ch["voicebox_profile"]
+
     audio_root = workdir / "audio"
     manifests = sorted((workdir / "manifests").glob("ep*.json"))
     if not manifests:
@@ -96,14 +112,15 @@ def run(config, workdir: Path):
                 changed = True
                 continue
             speaker = (shot.get("speaker") or "narrator")
-            pname = VOICE_MAP.get(speaker, DEFAULT_PROFILE)
-            pid = profiles.get(pname.lower())
-            if not pid:
+            pname = voice_map.get(speaker, default_profile)
+            entry = profiles.get(pname.lower())
+            if not entry:
                 sys.exit(f"no Voicebox profile named '{pname}' "
                          f"(have: {', '.join(profiles)})")
+            pid, engine = entry
             wav = out_dir / f"shot{i:03d}.wav"
             print(f"  {short_id} shot{i:03d} [{speaker}] {line[:50]!r}")
-            _synth(port, pid, line, wav)
+            _synth(port, pid, line, wav, engine)
             shot["audio"] = str(wav.relative_to(workdir.parent)
                                 if wav.is_relative_to(workdir.parent) else wav)
             shot["duration_frames"] = round(_wav_seconds(wav) * FPS)

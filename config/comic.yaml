@@ -10,6 +10,8 @@ shorts:
   min_seconds: 30
   max_seconds: 60
   narrator_voice_id: "ELEVENLABS_VOICE_ID_HERE"
+  voicebox_profile: "Narrator-CB"   # stage 6 default voice; per-character
+                                    # override with `voicebox_profile` below
 
 # Character roster. The `ref_image` is a face crop you make yourself
 # (config/characters/<file>.png) — this is the 5-minute tagging pass that
