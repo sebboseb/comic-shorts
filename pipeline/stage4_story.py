@@ -102,6 +102,39 @@ Rules:
   spoken text plus ~1.2s per silent shot."""
 
 
+def _voice_brief(config):
+    """The narrator persona and the character epithets.
+
+    Sent last and marked as overriding, because a house voice is the whole
+    identity of a channel: two shorts with the same facts and different
+    narrators are different products. Epithets are configured rather than
+    improvised so a character sounds the same across every episode.
+    """
+    shorts = config.get("shorts", {})
+    style = (shorts.get("narration_style") or "").strip()
+    eps = [(c["name"], c["epithet"]) for c in config.get("characters", [])
+           if c.get("epithet")]
+    if not style and not eps:
+        return ""
+
+    out = ["\n\n=== NARRATOR VOICE (overrides the general guidance above) ==="]
+    if style:
+        out.append("Write every narrator line in this voice:\n" + style)
+    if eps:
+        out.append(
+            "\nCharacter epithets - use these instead of plain names when "
+            "introducing or referring to someone, and vary them rather than "
+            "repeating one. Pick whichever fits the beat; adapt the wording "
+            "to the sentence. Do NOT apply them to a character's own spoken "
+            "dialogue, only to narration:")
+        out.extend(f"  {n}: {e}" for n, e in eps)
+    out.append(
+        "\nThe voice applies to NARRATION ONLY. Character dialogue stays "
+        "verbatim from the panels - never rewrite what a character says to "
+        "be funnier. The comedy is the narrator's, not theirs.")
+    return "\n".join(out)
+
+
 def _parse_json(text: str):
     text = text.strip()
     if text.startswith("```"):
@@ -138,6 +171,7 @@ def run(config, workdir: Path):
         f"Characters: "
         f"{', '.join(c['name'] + ' (' + c.get('speaking_style', '') + ')' for c in config.get('characters', []))}\n\n"
         f"Panels in reading order:\n{json.dumps(panel_lines, indent=1)}"
+        + _voice_brief(config)   # last, so the voice is the freshest instruction
     )
 
     print("compiling story...")

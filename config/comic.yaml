@@ -10,6 +10,16 @@ shorts:
   min_seconds: 60
   max_seconds: 120              # room to pace properly rather than compress
   narrator_voice_id: "ELEVENLABS_VOICE_ID_HERE"
+
+  # The narrator's PERSONA. This is the single biggest lever on how the
+  # short feels -- it sets attitude and word choice, not just information.
+  # Rewrite it freely; stage 4 is told to obey it over its own instincts.
+  narration_style: |
+    Irreverent, funny, and opinionated - a mate recapping a comic he loves
+    and finds ridiculous. Chronically-online register: casual slang, dry
+    asides, mock-outrage. You have takes and you share them. Rate people's
+    decisions. Never neutral, never a museum audio guide, but never
+    sneering at the comic either - the affection has to show.
   # narration pacing (ms). kokoro's own full-stop pause is ~420ms, which
   # reads as rushed; these are inserted by stage 6 instead.
   pause_ms: 600            # at . ! ?
@@ -41,21 +51,25 @@ shorts:
 # Planet Comics 69 test run: no ref crops yet, descriptions only.
 characters:
   - name: "Mars"
+    epithet: "this washed-up war god / drama queen of the cosmos"
     voicebox_profile: "Mars"        # am_fenrir
     description: "the god of war; bearded warrior in a crested helmet, carries a flaming torch; cruel, theatrical"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "booming"
   - name: "Dick Warren"
+    epithet: "our boy Dick / certified problem-solver Dick Warren"
     voicebox_profile: "DickWarren"  # am_adam
     description: "square-jawed explorer hero in a green tunic and helmet; brave, plainspoken"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"
   - name: "Wad"
+    epithet: "big man Wad / Wad, worst host in the galaxy"
     voicebox_profile: "Wad"         # am_michael
     description: "leader of the hooded purple-robed people; bald, stern; possessed by Mars partway through"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"
     speaking_style: "neutral"
   - name: "Ada"
+    epithet: "the actual MVP Ada / Ada, carrying this entire comic"
     voicebox_profile: "Ada"
     description: "young blonde woman enslaved by the hooded people; desperate, then resolute"
     voice_id: "ELEVENLABS_VOICE_ID_HERE"

@@ -14,25 +14,50 @@ few frames early or late. Sentence boundaries themselves are exact.
 
 from pathlib import Path
 
-MAX_CHARS = 42          # per caption line before splitting
-MAX_WORDS = 7
+MAX_CHARS = 26          # short bursts; uppercase at 4.4% of height is wide
+MAX_WORDS = 5
+
+
+# a caption shouldn't end on one of these -- "...LOOKING FOR" then a cut
+# reads as a mistake, and the eye has nowhere to rest
+WEAK_TAIL = {
+    "a", "an", "the", "and", "or", "but", "of", "for", "to", "in", "on",
+    "at", "by", "with", "from", "into", "as", "is", "was", "his", "her",
+    "its", "their", "this", "that", "he", "she", "they", "it",
+}
 
 
 def _chunk(text):
-    """Break a sentence into caption-sized pieces on word boundaries."""
+    """Break a sentence into caption-sized pieces on word boundaries.
+
+    Prefers to break after a comma and never leaves a chunk ending on a
+    function word, so each caption reads as a phrase rather than a slice.
+    """
     words = text.split()
     if not words:
         return []
+
     out, cur = [], []
     for w in words:
         trial = " ".join(cur + [w])
-        if cur and (len(trial) > MAX_CHARS or len(cur) >= MAX_WORDS):
+        full = cur and (len(trial) > MAX_CHARS or len(cur) >= MAX_WORDS)
+        if full:
+            # pull trailing function words forward into the next chunk
+            while len(cur) > 1 and cur[-1].strip(".,!?;:").lower() in WEAK_TAIL:
+                w, cur = cur[-1] + " " + w, cur[:-1]
             out.append(" ".join(cur))
-            cur = [w]
+            cur = w.split()
         else:
             cur.append(w)
+            # a comma is a natural rest: break here if we already have enough
+            if cur[-1].endswith(",") and len(cur) >= 3:
+                out.append(" ".join(cur))
+                cur = []
     if cur:
-        out.append(" ".join(cur))
+        if out and len(cur) == 1 and cur[0].strip(".,!?;:").lower() in WEAK_TAIL:
+            out[-1] += " " + cur[0]      # never a lone function word
+        else:
+            out.append(" ".join(cur))
     return out
 
 
@@ -102,17 +127,18 @@ def render_pngs(cue_list, width, height, out_dir):
     from PIL import Image, ImageDraw
 
     out_dir.mkdir(parents=True, exist_ok=True)
-    size = round(height * 0.034)
+    size = round(height * 0.044)   # punchy, not a subtitle strip
     font = _font(size)
     strip_h = round(height * 0.20)
     margin_b = round(height * 0.10)
-    stroke = max(3, size // 12)
+    stroke = max(4, size // 9)
 
     paths = []
     for i, (_, _, text) in enumerate(cue_list):
         img = Image.new("RGBA", (width, strip_h), (0, 0, 0, 0))
         draw = ImageDraw.Draw(img)
-        lines = _wrap(text, draw, font, width - 140)
+        # uppercase reads as a title card rather than a subtitle
+        lines = _wrap(text.upper(), draw, font, width - 110)
         line_h = round(size * 1.25)
         y = strip_h - len(lines) * line_h
         for line in lines:
