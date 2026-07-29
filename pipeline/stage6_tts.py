@@ -214,8 +214,14 @@ def run(config, workdir: Path):
         out_dir.mkdir(parents=True, exist_ok=True)
         changed = False
         for i, shot in enumerate(data.get("shots", [])):
-            if shot.get("audio"):
-                continue  # already done
+            existing = shot.get("audio")
+            if existing:
+                # idempotent, but only if the wav is actually still there:
+                # trusting the field alone silently renders the shot mute
+                ep = Path(existing)
+                if (ep if ep.is_absolute() else workdir.parent / ep).exists():
+                    continue
+                print(f"  {short_id} shot{i:03d}: wav missing, re-synthesising")
             line = (shot.get("line") or "").strip()
             if not line:
                 shot["audio"] = None

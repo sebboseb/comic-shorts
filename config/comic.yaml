@@ -41,7 +41,7 @@ shorts:
     triumphant: "output015.mp3"
     action: "output004.mp3"         # loudest
     default: "output021.mp3"
-  voicebox_profile: "Narrator"      # bm_fable; stage 6 default voice;
+  voicebox_profile: "Narrator"      # af_heart; stage 6 default voice;
                                     # per-character
                                     # override with `voicebox_profile` below
 

@@ -29,6 +29,8 @@ W, H = 1080, 1920
 SILENT_FRAMES = round(1.2 * FPS)
 WORDS_PER_SEC = 2.5      # matches the pacing stage 4 writes to
 TAIL_FRAMES = 8          # breath after a line so cuts don't clip the audio
+PRESCALE = 2             # upscale source before zoompan (smaller rounding step)
+SUPERSAMPLE = 2          # render the move at Nx target, then average down
 
 
 def _est_frames(line):
@@ -91,7 +93,9 @@ def _zoompan(motion, n, cx, cy, fw, fh):
         x = f"max(0,min(iw-iw/zoom,{cxc}+14*sin(on*1.7)))"
         y = f"max(0,min(ih-ih/zoom,{cyc}+10*cos(on*2.3)))"
     else:  # hold, and anything unrecognised
-        z, x, y = f"1+0.03*on/{span}", cxc, cyc
+        # genuinely static: a slow creep here bought nothing visually and was
+        # pure jitter, because any changing zoom re-rounds the window origin
+        z, x, y = "1", cxc, cyc
 
     return f"zoompan=z='{z}':x='{x}':y='{y}':d=1:s={fw}x{fh}:fps={FPS}"
 
@@ -107,13 +111,22 @@ def _render_shot(img_path, audio_path, frames, motion, cx, cy,
     else:
         cmd += ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
 
+    # zoompan truncates its window origin to whole INPUT pixels every frame,
+    # so a continuously changing zoom makes the image twitch by a fraction of
+    # an output pixel -- which comic halftone dots turn into visible shimmer.
+    # Two mitigations: pre-scale the source so one input pixel is a smaller
+    # step, and render the move at SS x target then average it back down.
+    ss_w, ss_h = fw * SUPERSAMPLE, fh * SUPERSAMPLE
+
     # background: same art, cropped to fill, blurred and dimmed so the
     # fitted panel reads as the subject on any aspect ratio
     vf = (
         "[0:v]split=2[bg][fg];"
         f"[bg]scale={W}:{H}:force_original_aspect_ratio=increase,"
         f"crop={W}:{H},boxblur=32:2,eq=brightness=-0.22[bgb];"
-        f"[fg]{_zoompan(motion, frames, cx, cy, fw, fh)}[fgz];"
+        f"[fg]scale=iw*{PRESCALE}:ih*{PRESCALE}:flags=lanczos,"
+        f"{_zoompan(motion, frames, cx, cy, ss_w, ss_h)},"
+        f"scale={fw}:{fh}:flags=lanczos[fgz];"
         "[bgb][fgz]overlay=(W-w)/2:(H-h)/2,format=yuv420p[v]"
     )
     cmd += [
