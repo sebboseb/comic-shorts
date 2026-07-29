@@ -36,6 +36,10 @@ def _stage4(config, workdir):
     stage4_story.run(config, workdir)
 
 
+def _stage6(config, workdir):
+    from pipeline import stage6_tts
+    stage6_tts.run(config, workdir)
+
 def _stage5(config, workdir):
     from pipeline import review
     review.run(config, workdir)
@@ -47,6 +51,7 @@ STAGES = {
     3: ("art cleanup", _stage3),
     4: ("story compile", _stage4),
     5: ("review page", _stage5),
+    6: ("tts (voicebox)", _stage6),
 }
 
 
