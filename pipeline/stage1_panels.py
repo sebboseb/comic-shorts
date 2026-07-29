@@ -154,6 +154,13 @@ def run(config, workdir: Path):
                 "reason": f"{len(boxes)} panels found, coverage {coverage:.0%} "
                           "— check for bleed/overlapping layout, crop manually if wrong",
             })
+        elif not manual and coverage > 1.0:
+            flagged_pages.append({
+                "page": page_idx, "file": page_path.name,
+                "reason": f"overlapping panel boxes (coverage {coverage:.0%}) "
+                          "— diagonal/borderless layout or merged detection; "
+                          "crops share content, review before stage 2",
+            })
         elif not manual and len(boxes) == 1 and coverage >= 0.90:
             flagged_pages.append({
                 "page": page_idx, "file": page_path.name,
