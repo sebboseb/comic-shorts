@@ -8,7 +8,7 @@ Fills `audio` and `duration_frames` on every shot in every manifest.
 
 Requires the Voicebox app to be open. Run AFTER the stage-5 review gate.
 """
-import json, subprocess, sys, time, urllib.request, wave
+import json, re, subprocess, sys, time, urllib.request, wave
 from pathlib import Path
 
 FPS = 30
@@ -54,9 +54,31 @@ def _profiles(port):
              p.get("default_engine") or ENGINE)
             for p in plist}
 
+def _speakable(text):
+    """Comic lettering is ALL CAPS, and TTS reads a short all-caps token as
+    an initialism -- "MY PEOPLE" comes out "em-why people". Fold shouty
+    lines to sentence case for synthesis only; the manifest keeps the
+    verbatim comic text for the review page.
+    """
+    letters = [c for c in text if c.isalpha()]
+    if len(letters) < 3:
+        return text
+    if sum(c.isupper() for c in letters) / len(letters) < 0.6:
+        return text  # already mixed case, leave it alone
+
+    out = text.lower()
+    # re-capitalise the first letter of each sentence
+    out = re.sub(r"(^|[.!?]\s+|\.\.\.\s*)([a-z])",
+                 lambda m: m.group(1) + m.group(2).upper(), out)
+    # the pronoun I and its contractions
+    out = re.sub(r"\bi\b", "I", out)
+    out = re.sub(r"\bi'(m|ll|ve|d)\b", lambda m: "I'" + m.group(1), out)
+    return out
+
+
 def _synth(port, profile_id, text, out_path: Path, engine=ENGINE):
     gen = _api(port, "POST", "/generate",
-               {"profile_id": profile_id, "text": text,
+               {"profile_id": profile_id, "text": _speakable(text),
                 "language": "en", "engine": engine})
     gen_id = gen.get("id") or gen.get("generation_id")
     if not gen_id:

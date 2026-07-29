@@ -61,6 +61,16 @@ Rules:
   first time they appear ("the hooded leader, Wad" - not "he"). Never introduce
   a character by an unexplained pronoun.
 - Each short (except the last) must END mid-tension, never at a resolved beat.
+- THE SHORTS ARE ONE CONTINUOUS SERIES, watched back to back in order. Every
+  short after the first must open with a narrator shot that (a) says in one
+  sentence where we left off, and (b) re-identifies by name anyone about to
+  speak. Assume the viewer saw the previous short days ago and remembers only
+  the broad situation. Write the pair so the last shot of short N and the first
+  shot of short N+1 read as a single continuous beat, not two separate videos:
+  if short N ends on "the spirit of Mars descends", short N+1 opens by saying
+  what Mars then does and to whom.
+- Do not restate the same event as a cliffhanger in one short and again as the
+  opening beat of the next. Move the story forward.
 - Write narrator lines to glue panel transitions that don't self-explain. Favour
   clarity over economy: if a jump in place, time, or who-is-speaking would
   confuse a first-time viewer, spend a narrator line on it. Dialogue still
