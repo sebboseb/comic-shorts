@@ -1,0 +1,68 @@
+# Comic project configuration. One file per comic.
+
+comic:
+  title: "My Comic"
+  reading_direction: ltr        # ltr = western, rtl = manga
+  pages_dir: "pages"            # folder of page images, sorted by filename
+
+shorts:
+  target_count: 7               # rough number of shorts to cut the story into
+  min_seconds: 30
+  max_seconds: 60
+  narrator_voice_id: "ELEVENLABS_VOICE_ID_HERE"
+
+# Character roster. The `ref_image` is a face crop you make yourself
+# (config/characters/<file>.png) — this is the 5-minute tagging pass that
+# makes speaker attribution dramatically more accurate.
+characters:
+  - name: "nova"
+    description: "cocky but earnest, wisecracks under pressure"
+    ref_image: "nova.png"
+    voice_id: "ELEVENLABS_VOICE_ID_HERE"
+    speaking_style: "neutral"
+  - name: "drax"
+    description: "blunt, single-minded, driven by vengeance"
+    ref_image: "drax.png"
+    voice_id: "ELEVENLABS_VOICE_ID_HERE"
+    speaking_style: "neutral"
+  - name: "Thanos"
+    description: "calm, imperious, coldly philosophical"
+    ref_image: "thanos.png"
+    voice_id: "ELEVENLABS_VOICE_ID_HERE"
+    speaking_style: "neutral"
+  - name: "Annihilus"
+    description: "cold, ruthless, genocidal"
+    ref_image: "annihilus.png"
+    voice_id: "ELEVENLABS_VOICE_ID_HERE"
+    speaking_style: "neutral"
+  - name: "Nova_nohelmet"
+    description: "tired, unguarded, more human without the mask"
+    ref_image: "nova_nohelmet.png"
+    voice_id: "ELEVENLABS_VOICE_ID_HERE"
+    speaking_style: "neutral"
+  - name: "Gamora"
+    description: "lethal, sharp-tongued, emotionally guarded"
+    ref_image: "gamora.png"
+    voice_id: "ELEVENLABS_VOICE_ID_HERE"
+    speaking_style: "neutral"
+  - name: "Galactus"
+    description: "detached, indifferent, thinks in cosmic scale"
+    ref_image: "galactus.png"
+    voice_id: "ELEVENLABS_VOICE_ID_HERE"
+    speaking_style: "neutral"
+  - name: "Exterpia"
+    description: "loyal, aggressive, follows Annihilus without question"
+    ref_image: "exterpia.png"
+    voice_id: "ELEVENLABS_VOICE_ID_HERE"
+    speaking_style: "neutral"
+
+models:
+  vision_model: "claude-sonnet-4-6"   # stage 2 panel understanding (batched, ~$1/run)
+  story_model: "claude-opus-4-8"      # stage 4 story compilation (one call, quality-critical)
+  esrgan_weights: "weights/RealESRGAN_x4plus_anime_6B.pth"
+  upscale_target_long_side: 2200      # px; panels below this get upscaled
+
+stage1:
+  min_panel_area_ratio: 0.02    # ignore contours smaller than 2% of page
+  white_threshold: 235          # gutter whiteness cutoff
+  crop_margin: 4                # px margin kept around each panel

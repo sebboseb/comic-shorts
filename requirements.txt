@@ -1,0 +1,8 @@
+opencv-python
+numpy
+pillow
+pyyaml
+anthropic
+torch
+simple-lama-inpainting
+spandrel
