@@ -22,11 +22,11 @@
    "hero": true,
    "sfx": "ominous",
    "audio": "work/audio/ep01/shot000.wav",
-   "duration_frames": 244,
+   "duration_frames": 288,
    "segments": [
     {
      "text": "This is Mars, drama queen of the cosmos, and his one hobby is strolling the universe looking for people to murder.",
-     "frames": 223
+     "frames": 267
     }
    ]
   },
@@ -39,11 +39,11 @@
    "hero": false,
    "sfx": "whoosh",
    "audio": "work/audio/ep01/shot001.wav",
-   "duration_frames": 294,
+   "duration_frames": 241,
    "segments": [
     {
      "text": "Meanwhile a ship from Earth is parking on planetoid 206, completely unaware it just booked the worst vacation ever.",
-     "frames": 273
+     "frames": 220
     }
    ]
   },
@@ -56,11 +56,11 @@
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot002.wav",
-   "duration_frames": 252,
+   "duration_frames": 239,
    "segments": [
     {
      "text": "This explodes my theory!",
-     "frames": 79
+     "frames": 82
     },
     {
      "text": "Only human beings have made these.",
@@ -68,7 +68,7 @@
     },
     {
      "text": "I'll take it back and try to decipher it.",
-     "frames": 66
+     "frames": 50
     }
    ]
   },
@@ -81,15 +81,11 @@
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot003.wav",
-   "duration_frames": 163,
+   "duration_frames": 118,
    "segments": [
     {
-     "text": "Enter a crowd of hooded purple guys.",
-     "frames": 92
-    },
-    {
-     "text": "Their opener?",
-     "frames": 51
+     "text": "Enter a crowd of hooded purple guys. Their opener?",
+     "frames": 97
     }
    ]
   },
@@ -102,19 +98,11 @@
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot004.wav",
-   "duration_frames": 157,
+   "duration_frames": 135,
    "segments": [
     {
-     "text": "Stranger!",
-     "frames": 56
-    },
-    {
-     "text": "Stranger!",
-     "frames": 46
-    },
-    {
-     "text": "We are friends!",
-     "frames": 35
+     "text": "Stranger! Stranger! We are friends!",
+     "frames": 114
     }
    ]
   },
@@ -127,15 +115,15 @@
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot005.wav",
-   "duration_frames": 167,
+   "duration_frames": 159,
    "segments": [
     {
      "text": "I'm Dick Warren from Earth.",
-     "frames": 63
+     "frames": 55
     },
     {
      "text": "I never suspected this planetoid was inhabited.",
-     "frames": 83
+     "frames": 82
     }
    ]
   },
@@ -148,11 +136,11 @@
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot006.wav",
-   "duration_frames": 282,
+   "duration_frames": 310,
    "segments": [
     {
      "text": "Big man Wad throws a feast, a girl named Ada serves the food raw, and our boy Dick decides these people simply must be taught fire.",
-     "frames": 261
+     "frames": 289
     }
    ]
   },
@@ -165,19 +153,11 @@
    "hero": true,
    "sfx": "sting",
    "audio": "work/audio/ep01/shot007.wav",
-   "duration_frames": 371,
+   "duration_frames": 169,
    "segments": [
     {
-     "text": "He flicks open his little monogrammed lighter.",
-     "frames": 106
-    },
-    {
-     "text": "Bad.",
-     "frames": 200
-    },
-    {
-     "text": "Idea.",
-     "frames": 44
+     "text": "He flicks open his little monogrammed lighter. Bad. Idea.",
+     "frames": 148
     }
    ]
   },
@@ -190,11 +170,11 @@
    "hero": false,
    "sfx": "impact",
    "audio": "work/audio/ep01/shot008.wav",
-   "duration_frames": 46,
+   "duration_frames": 49,
    "segments": [
     {
      "text": "Put it out!",
-     "frames": 25
+     "frames": 28
     }
    ]
   },
@@ -207,11 +187,11 @@
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot009.wav",
-   "duration_frames": 44,
+   "duration_frames": 42,
    "segments": [
     {
      "text": "What's the matter?",
-     "frames": 23
+     "frames": 21
     }
    ]
   },
@@ -224,23 +204,19 @@
    "hero": true,
    "sfx": "none",
    "audio": "work/audio/ep01/shot010.wav",
-   "duration_frames": 344,
+   "duration_frames": 348,
    "segments": [
     {
      "text": "They cannot stand the smallest flame!",
-     "frames": 88
+     "frames": 91
     },
     {
      "text": "It draws the oxygen from their bodies and strangles them!",
-     "frames": 140
+     "frames": 136
     },
     {
-     "text": "I am different!",
-     "frames": 53
-    },
-    {
-     "text": "Why, I don't know!",
-     "frames": 42
+     "text": "I am different! Why, I don't know!",
+     "frames": 100
     }
    ]
   },
@@ -253,11 +229,11 @@
    "hero": false,
    "sfx": "ominous",
    "audio": "work/audio/ep01/shot011.wav",
-   "duration_frames": 224,
+   "duration_frames": 284,
    "segments": [
     {
      "text": "And right on cue, invisible to everyone, the god of war himself drops into the middle of the crowd.",
-     "frames": 203
+     "frames": 263
     }
    ]
   }
