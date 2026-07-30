@@ -1,197 +1,187 @@
 {
  "short_id": "ep01",
- "title": "He Made a Fire and the Whole Village Panicked",
- "description": "An Earth astronaut lands on a strange planetoid, gets welcomed by hooded locals, and then makes one tiny mistake with a lighter.",
+ "title": "He Made One Fire and Doomed an Entire Planet",
+ "description": "An Earth explorer lands on a strange planetoid, meets some very friendly hooded locals, and immediately makes the worst possible first-contact mistake.",
  "hashtags": [
   "#comic",
-  "#scifi",
+  "#retroscifi",
   "#planetcomics",
-  "#retro",
-  "#godofwar",
-  "#mars"
+  "#marsgodofwar",
+  "#pulp"
  ],
  "music_mood": "ominous",
- "hook_note": "Opens on a cosmic war-god striding across space with a flaming torch, screaming to kill and destroy - impossible not to look.",
+ "hook_note": "Opening on a war god striding through space vowing carnage is pure cosmic doom-bait before we even meet the humans.",
  "shots": [
   {
    "panel": "p01_01",
    "speaker": "narrator",
-   "line": "This is Mars, drama queen of the cosmos, and his one hobby is strolling the universe looking for people to murder.",
-   "emotion": "ominous, delighted",
+   "line": "Somewhere out in the cosmos, this washed-up war god is drifting through the stars, torch in hand, looking for something to ruin.",
+   "emotion": "ominous, amused",
    "motion": "slow_pan",
    "hero": true,
    "sfx": "ominous",
    "audio": "work/audio/ep01/shot000.wav",
-   "duration_frames": 288,
+   "duration_frames": 332,
    "segments": [
     {
-     "text": "This is Mars, drama queen of the cosmos, and his one hobby is strolling the universe looking for people to murder.",
-     "frames": 267
+     "text": "Somewhere out in the cosmos, this washed-up war god is drifting through the stars, torch in hand, looking for something to ruin.",
+     "frames": 311
     }
    ]
   },
   {
    "panel": "p01_01",
    "speaker": "narrator",
-   "line": "Meanwhile a ship from Earth is parking on planetoid 206, completely unaware it just booked the worst vacation ever.",
+   "line": "And a ship from Earth is heading straight for Planetoid 206. Great timing, guys.",
    "emotion": "dry",
    "motion": "zoom_out",
    "hero": false,
    "sfx": "whoosh",
    "audio": "work/audio/ep01/shot001.wav",
-   "duration_frames": 241,
+   "duration_frames": 222,
    "segments": [
     {
-     "text": "Meanwhile a ship from Earth is parking on planetoid 206, completely unaware it just booked the worst vacation ever.",
-     "frames": 220
+     "text": "And a ship from Earth is heading straight for Planetoid 206.",
+     "frames": 159
+    },
+    {
+     "text": "Great timing, guys.",
+     "frames": 42
     }
    ]
   },
   {
    "panel": "p02_01",
    "speaker": "Dick Warren",
-   "line": "This explodes my theory! Only human beings have made these. I'll take it back and try to decipher it.",
+   "line": "Only human beings have made these... I'll take it back and try to decipher it.",
    "emotion": "thoughtful, intrigued",
    "motion": "zoom_face",
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot002.wav",
-   "duration_frames": 239,
+   "duration_frames": 184,
    "segments": [
     {
-     "text": "This explodes my theory!",
-     "frames": 82
-    },
-    {
-     "text": "Only human beings have made these.",
-     "frames": 86
+     "text": "Only human beings have made these...",
+     "frames": 87
     },
     {
      "text": "I'll take it back and try to decipher it.",
-     "frames": 50
+     "frames": 76
     }
    ]
   },
   {
    "panel": "p02_02",
    "speaker": "narrator",
-   "line": "Enter a crowd of hooded purple guys. Their opener?",
-   "emotion": "amused",
+   "line": "That's our boy Dick Warren, level-headed explorer, poking at rocks. And here come the locals.",
+   "emotion": "casual",
    "motion": "slow_pan",
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot003.wav",
-   "duration_frames": 118,
+   "duration_frames": 256,
    "segments": [
     {
-     "text": "Enter a crowd of hooded purple guys. Their opener?",
-     "frames": 97
+     "text": "That's our boy Dick Warren, level-headed explorer, poking at rocks.",
+     "frames": 173
+    },
+    {
+     "text": "And here come the locals.",
+     "frames": 61
     }
    ]
   },
   {
    "panel": "p02_02",
    "speaker": "Wad",
-   "line": "Stranger! Stranger! We are friends!",
+   "line": "STRANGER! STRANGER!.. WE ARE FRIENDS!",
    "emotion": "calling out, welcoming",
    "motion": "hold",
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot004.wav",
-   "duration_frames": 135,
+   "duration_frames": 136,
    "segments": [
     {
-     "text": "Stranger! Stranger! We are friends!",
-     "frames": 114
+     "text": "Stranger! Stranger!.. We are friends!",
+     "frames": 115
     }
    ]
   },
   {
    "panel": "p02_04",
-   "speaker": "Dick Warren",
-   "line": "I'm Dick Warren from Earth. I never suspected this planetoid was inhabited.",
-   "emotion": "plain, surprised",
+   "speaker": "Wad",
+   "line": "My name is Wad. I am leader here.",
+   "emotion": "stern, formal",
    "motion": "zoom_face",
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot005.wav",
-   "duration_frames": 159,
+   "duration_frames": 80,
    "segments": [
     {
-     "text": "I'm Dick Warren from Earth.",
-     "frames": 55
-    },
-    {
-     "text": "I never suspected this planetoid was inhabited.",
-     "frames": 82
+     "text": "My name is Wad. I am leader here.",
+     "frames": 59
     }
    ]
   },
   {
    "panel": "p02_06",
    "speaker": "narrator",
-   "line": "Big man Wad throws a feast, a girl named Ada serves the food raw, and our boy Dick decides these people simply must be taught fire.",
-   "emotion": "dry, foreboding",
+   "line": "Big man Wad throws a feast. And Dick, watching them eat raw meat, has a bright idea that's about to go catastrophically wrong.",
+   "emotion": "foreboding, amused",
    "motion": "slow_pan",
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot006.wav",
-   "duration_frames": 310,
+   "duration_frames": 279,
    "segments": [
     {
-     "text": "Big man Wad throws a feast, a girl named Ada serves the food raw, and our boy Dick decides these people simply must be taught fire.",
-     "frames": 289
+     "text": "Big man Wad throws a feast.",
+     "frames": 84
+    },
+    {
+     "text": "And Dick, watching them eat raw meat, has a bright idea that's about to go catastrophically wrong.",
+     "frames": 174
     }
    ]
   },
   {
-   "panel": "p02_07",
-   "speaker": "narrator",
-   "line": "He flicks open his little monogrammed lighter. Bad. Idea.",
-   "emotion": "wince",
+   "panel": "p02_06",
+   "speaker": "Dick Warren",
+   "line": "They eat their meat raw! I'm going to show them how to make a fire and cook!",
+   "emotion": "determined, thoughtful",
    "motion": "zoom_face",
-   "hero": true,
-   "sfx": "sting",
+   "hero": false,
+   "sfx": "none",
    "audio": "work/audio/ep01/shot007.wav",
-   "duration_frames": 169,
+   "duration_frames": 170,
    "segments": [
     {
-     "text": "He flicks open his little monogrammed lighter. Bad. Idea.",
-     "frames": 148
+     "text": "They eat their meat raw!",
+     "frames": 67
+    },
+    {
+     "text": "I'm going to show them how to make a fire and cook!",
+     "frames": 82
     }
    ]
   },
   {
    "panel": "p02_08",
    "speaker": "Ada",
-   "line": "Put it out!",
+   "line": "PUT IT OUT!",
    "emotion": "desperate, alarmed",
    "motion": "shake",
-   "hero": false,
-   "sfx": "impact",
+   "hero": true,
+   "sfx": "sting",
    "audio": "work/audio/ep01/shot008.wav",
-   "duration_frames": 49,
+   "duration_frames": 44,
    "segments": [
     {
      "text": "Put it out!",
-     "frames": 28
-    }
-   ]
-  },
-  {
-   "panel": "p02_09",
-   "speaker": "Dick Warren",
-   "line": "What's the matter?",
-   "emotion": "concerned, urgent",
-   "motion": "hold",
-   "hero": false,
-   "sfx": "none",
-   "audio": "work/audio/ep01/shot009.wav",
-   "duration_frames": 42,
-   "segments": [
-    {
-     "text": "What's the matter?",
-     "frames": 21
+     "frames": 23
     }
    ]
   },
@@ -201,42 +191,46 @@
    "line": "They cannot stand the smallest flame! It draws the oxygen from their bodies and strangles them! I am different! Why, I don't know!",
    "emotion": "earnest, explaining",
    "motion": "zoom_face",
-   "hero": true,
+   "hero": false,
    "sfx": "none",
-   "audio": "work/audio/ep01/shot010.wav",
-   "duration_frames": 348,
+   "audio": "work/audio/ep01/shot009.wav",
+   "duration_frames": 322,
    "segments": [
     {
      "text": "They cannot stand the smallest flame!",
-     "frames": 91
+     "frames": 80
     },
     {
      "text": "It draws the oxygen from their bodies and strangles them!",
-     "frames": 136
+     "frames": 118
     },
     {
      "text": "I am different! Why, I don't know!",
-     "frames": 100
+     "frames": 104
     }
    ]
   },
   {
    "panel": "p02_10",
    "speaker": "narrator",
-   "line": "And right on cue, invisible to everyone, the god of war himself drops into the middle of the crowd.",
-   "emotion": "ominous, thrilled",
+   "line": "And while everyone's panicking over a lighter, the drama queen of the cosmos picks this exact moment to drop in. Unseen. Uninvited.",
+   "emotion": "gleeful dread",
    "motion": "zoom_out",
-   "hero": false,
-   "sfx": "ominous",
-   "audio": "work/audio/ep01/shot011.wav",
-   "duration_frames": 284,
+   "hero": true,
+   "sfx": "heartbeat",
+   "audio": "work/audio/ep01/shot010.wav",
+   "duration_frames": 380,
    "segments": [
     {
-     "text": "And right on cue, invisible to everyone, the god of war himself drops into the middle of the crowd.",
-     "frames": 263
+     "text": "And while everyone's panicking over a lighter, the drama queen of the cosmos picks this exact moment to drop in.",
+     "frames": 271
+    },
+    {
+     "text": "Unseen. Uninvited.",
+     "frames": 88
     }
    ]
   }
  ],
- "cliffhanger_note": "Mars has arrived unseen among the villagers - what is he about to do with them?"
+ "cliffhanger_note": "Mars has arrived invisibly among Wad's people, and no one knows what he plans to do with them."
 }

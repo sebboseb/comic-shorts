@@ -1,242 +1,253 @@
 {
  "short_id": "ep02",
- "title": "Ada Was the Only One With a Plan the Whole Time",
- "description": "Mars possesses the village leader, Dick gets swarmed, and the enslaved girl Ada finally snaps. It does not go the way anyone expects.",
+ "title": "The War God Possesses the Chief - Then Ada Snaps",
+ "description": "Mars takes over Wad's body to turn the tribe into cannibals, but a slave girl decides she's had enough. The cave that's supposed to be safe has other plans.",
  "hashtags": [
   "#comic",
-  "#scifi",
+  "#retroscifi",
   "#planetcomics",
-  "#retro",
-  "#plottwist",
-  "#mars"
+  "#marsgodofwar",
+  "#pulp"
  ],
  "music_mood": "tense_buildup",
- "hook_note": "Picks up the instant the war-god lands, then immediately shows him hijacking a body - clear stakes, fast.",
+ "hook_note": "Picking up on the invisible war god landing means we open mid-possession, the exact beat the last short teased.",
  "shots": [
   {
    "panel": "p03_01",
    "speaker": "narrator",
-   "line": "So Mars, this washed-up war god, has just landed unseen in the village - and he spots the perfect body to steal. The leader, Wad.",
-   "emotion": "gleeful, ominous",
+   "line": "So this washed-up war god just landed among Wad's tribe, and he's spotted his ride: big man Wad himself.",
+   "emotion": "conspiratorial",
    "motion": "slow_pan",
    "hero": false,
    "sfx": "ominous",
    "audio": "work/audio/ep02/shot000.wav",
-   "duration_frames": 318,
+   "duration_frames": 243,
    "segments": [
     {
-     "text": "So Mars, this washed-up war god, has just landed unseen in the village - and he spots the perfect body to steal. The leader, Wad.",
-     "frames": 297
+     "text": "So this washed-up war god just landed among Wad's tribe, and he's spotted his ride: big man Wad himself.",
+     "frames": 222
     }
    ]
   },
   {
    "panel": "p03_01",
    "speaker": "Mars",
-   "line": "This is my chance to destroy a civilization! I'll enter Wad's body!",
+   "line": "This is my chance to destroy a civilization... I'll enter Wad's body!",
    "emotion": "scheming, theatrical",
    "motion": "zoom_face",
    "hero": true,
    "sfx": "sting",
    "audio": "work/audio/ep02/shot001.wav",
-   "duration_frames": 227,
+   "duration_frames": 321,
    "segments": [
     {
-     "text": "This is my chance to destroy a civilization!",
-     "frames": 125
+     "text": "This is my chance to destroy a civilization...",
+     "frames": 236
     },
     {
      "text": "I'll enter Wad's body!",
-     "frames": 81
+     "frames": 64
     }
    ]
   },
   {
    "panel": "p03_02",
    "speaker": "Wad",
-   "line": "How dare a stranger interfere with my people? Take this!",
+   "line": "HOW DARE A STRANGER INTERFERE WITH MY PEOPLE?... TAKE THIS!",
    "emotion": "angry, threatening",
    "motion": "shake",
    "hero": false,
    "sfx": "impact",
    "audio": "work/audio/ep02/shot002.wav",
-   "duration_frames": 148,
+   "duration_frames": 128,
    "segments": [
     {
-     "text": "How dare a stranger interfere with my people? Take this!",
-     "frames": 127
+     "text": "How dare a stranger interfere with my people?... Take this!",
+     "frames": 107
     }
    ]
   },
   {
    "panel": "p03_03",
    "speaker": "Dick Warren",
-   "line": "Earthman's fist!",
+   "line": "EARTHMAN'S FIST!",
    "emotion": "shouting, triumphant",
    "motion": "shake",
    "hero": true,
    "sfx": "impact",
    "audio": "work/audio/ep02/shot003.wav",
-   "duration_frames": 58,
+   "duration_frames": 65,
    "segments": [
     {
      "text": "Earthman's fist!",
-     "frames": 37
+     "frames": 44
     }
    ]
   },
   {
    "panel": "p03_04",
    "speaker": "narrator",
-   "line": "One good punch, and then about forty hooded guys pile on. Certified problem-solver Dick Warren, overpowered.",
-   "emotion": "dry",
+   "line": "One good punch, and then the whole village piles on our boy Dick. One fist versus a mob was never the move.",
+   "emotion": "wincing",
    "motion": "zoom_out",
    "hero": false,
-   "sfx": "whoosh",
+   "sfx": "impact",
    "audio": "work/audio/ep02/shot004.wav",
-   "duration_frames": 254,
+   "duration_frames": 487,
    "segments": [
     {
-     "text": "One good punch, and then about forty hooded guys pile on.",
-     "frames": 113
+     "text": "One good punch, and then the whole village piles on our boy Dick.",
+     "frames": 164
     },
     {
-     "text": "Certified problem-solver Dick Warren, overpowered.",
-     "frames": 119
+     "text": "One fist versus a mob was never the move.",
+     "frames": 302
     }
    ]
   },
   {
    "panel": "p03_05",
    "speaker": "Wad",
-   "line": "Tonight we feast on your tender Earth-man's flesh! Tomorrow we invade the Hidden People!",
+   "line": "TONIGHT WE FEAST ON YOUR TENDER EARTH-MAN'S FLESH! TOMORROW WE INVADE THE HIDDEN PEOPLE!",
    "emotion": "cruel, menacing",
    "motion": "zoom_face",
    "hero": false,
-   "sfx": "none",
+   "sfx": "sting",
    "audio": "work/audio/ep02/shot005.wav",
-   "duration_frames": 195,
+   "duration_frames": 214,
    "segments": [
     {
-     "text": "Tonight we feast on your tender Earth-man's flesh!",
-     "frames": 106
+     "text": "Tonight we feast on your tender earth-man's flesh!",
+     "frames": 118
     },
     {
-     "text": "Tomorrow we invade the Hidden People!",
-     "frames": 68
-    }
-   ]
-  },
-  {
-   "panel": "p03_05",
-   "speaker": "Dick Warren",
-   "line": "Cannibals!",
-   "emotion": "horrified, exclaiming",
-   "motion": "shake",
-   "hero": false,
-   "sfx": "sting",
-   "audio": "work/audio/ep02/shot006.wav",
-   "duration_frames": 42,
-   "segments": [
-    {
-     "text": "Cannibals!",
-     "frames": 21
+     "text": "Tomorrow we invade the hidden people!",
+     "frames": 76
     }
    ]
   },
   {
    "panel": "p03_07",
    "speaker": "narrator",
-   "line": "But nobody's asked the actual MVP, Ada. She's been a slave to these people for years. And she's done.",
-   "emotion": "hyped",
+   "line": "Cannibals, apparently. But Ada, the girl who's been a slave this whole time? She's carrying this entire comic on her back.",
+   "emotion": "hype",
    "motion": "slow_pan",
    "hero": false,
    "sfx": "none",
-   "audio": "work/audio/ep02/shot007.wav",
-   "duration_frames": 300,
+   "audio": "work/audio/ep02/shot006.wav",
+   "duration_frames": 308,
    "segments": [
     {
-     "text": "But nobody's asked the actual MVP, Ada.",
-     "frames": 149
+     "text": "Cannibals, apparently.",
+     "frames": 97
     },
     {
-     "text": "She's been a slave to these people for years. And she's done.",
-     "frames": 130
+     "text": "But Ada, the girl who's been a slave this whole time?",
+     "frames": 114
+    },
+    {
+     "text": "She's carrying this entire comic on her back.",
+     "frames": 76
     }
    ]
   },
   {
    "panel": "p03_07",
    "speaker": "Ada",
-   "line": "I have been a slave too long! Die!",
+   "line": "I HAVE BEEN A SLAVE TOO LONG! DIE!..",
    "emotion": "fierce, defiant",
    "motion": "shake",
    "hero": true,
    "sfx": "impact",
-   "audio": "work/audio/ep02/shot008.wav",
-   "duration_frames": 106,
+   "audio": "work/audio/ep02/shot007.wav",
+   "duration_frames": 101,
    "segments": [
     {
-     "text": "I have been a slave too long! Die!",
-     "frames": 85
+     "text": "I have been a slave too long! Die!..",
+     "frames": 80
     }
    ]
   },
   {
    "panel": "p03_08",
-   "speaker": "narrator",
-   "line": "She cuts Dick loose and drags him toward the mountain where the Hidden People live, with the whole tribe screaming behind them.",
-   "emotion": "breathless",
+   "speaker": "Ada",
+   "line": "They will follow us! I overheard the hunter tell where the hidden people dwell. We will go there and warn them!",
+   "emotion": "urgent, breathless",
    "motion": "slow_pan",
    "hero": false,
-   "sfx": "whoosh",
-   "audio": "work/audio/ep02/shot009.wav",
-   "duration_frames": 246,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot008.wav",
+   "duration_frames": 257,
    "segments": [
     {
-     "text": "She cuts Dick loose and drags him toward the mountain where the Hidden People live, with the whole tribe screaming behind them.",
-     "frames": 225
+     "text": "They will follow us!",
+     "frames": 55
+    },
+    {
+     "text": "I overheard the hunter tell where the hidden people dwell.",
+     "frames": 129
+    },
+    {
+     "text": "We will go there and warn them!",
+     "frames": 51
     }
    ]
   },
   {
    "panel": "p04_03",
    "speaker": "narrator",
-   "line": "They stop in a cave to catch their breath. What they do not clock is the face watching them from the rocks.",
-   "emotion": "dry, foreboding",
-   "motion": "zoom_face",
+   "line": "They make the cave, they stop to breathe, and they completely fail to notice the face watching them from the rocks.",
+   "emotion": "dry dread",
+   "motion": "slow_pan",
    "hero": false,
    "sfx": "heartbeat",
-   "audio": "work/audio/ep02/shot010.wav",
-   "duration_frames": 260,
+   "audio": "work/audio/ep02/shot009.wav",
+   "duration_frames": 313,
    "segments": [
     {
-     "text": "They stop in a cave to catch their breath.",
-     "frames": 89
-    },
-    {
-     "text": "What they do not clock is the face watching them from the rocks.",
-     "frames": 150
+     "text": "They make the cave, they stop to breathe, and they completely fail to notice the face watching them from the rocks.",
+     "frames": 292
     }
    ]
   },
   {
    "panel": "p04_04",
    "speaker": "Dick Warren",
-   "line": "We're trapped!",
+   "line": "WE'RE TRAPPED!",
    "emotion": "alarmed, urgent",
    "motion": "shake",
-   "hero": false,
-   "sfx": "impact",
-   "audio": "work/audio/ep02/shot011.wav",
-   "duration_frames": 46,
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep02/shot010.wav",
+   "duration_frames": 44,
    "segments": [
     {
      "text": "We're trapped!",
-     "frames": 25
+     "frames": 23
+    }
+   ]
+  },
+  {
+   "panel": "p04_05",
+   "speaker": "narrator",
+   "line": "Hundreds of tiny creatures swarm them, drag them off, and haul them straight to a queen. And that's a problem for another day.",
+   "emotion": "cliffhanger tease",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot011.wav",
+   "duration_frames": 398,
+   "segments": [
+    {
+     "text": "Hundreds of tiny creatures swarm them, drag them off, and haul them straight to a queen.",
+     "frames": 200
+    },
+    {
+     "text": "And that's a problem for another day.",
+     "frames": 177
     }
    ]
   }
  ],
- "cliffhanger_note": "Tiny creatures are swarming Dick and Ada in the dark cave - who lives inside this mountain, and are they friend or foe?"
+ "cliffhanger_note": "Dick and Ada are captured by the dwarf-people and dragged before their queen, with Wad still hunting them and a war god riding along."
 }
