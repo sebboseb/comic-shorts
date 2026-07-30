@@ -22,9 +22,10 @@ shorts:
     sneering at the comic either - the affection has to show.
   # narration pacing (ms). kokoro's own full-stop pause is ~420ms, which
   # reads as rushed; these are inserted by stage 6 instead.
-  pause_ms: 600            # at . ! ?
-  ellipsis_pause_ms: 850   # at ... (trailing off)
-  shot_gap_ms: 700         # after each line, before the next shot
+  pause_ms: 380            # at . ! ?
+  ellipsis_pause_ms: 560   # at ... (trailing off)
+  shot_gap_ms: 420         # after each line, before the next shot
+  speech_tempo: 1.15       # speeds the words only; pauses stay as set above
   captions: true           # burn subtitles into the render (stage 7)
   # A wide panel fitted whole leaves most of a 9:16 frame as blurred margin.
   # Below this fraction of frame height, crop it to fill and pan across
@@ -65,7 +66,7 @@ shorts:
     triumphant: "output015.mp3"
     action: "output004.mp3"         # loudest
     default: "output021.mp3"
-  voicebox_profile: "Narrator"      # qwen Ryan; stage 6 default voice;
+  voicebox_profile: "Narrator"      # qwen Ryan (Mars run used this); default;
                                     # per-character
                                     # override with `voicebox_profile` below
 

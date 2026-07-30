@@ -82,13 +82,15 @@ def cues(shots, fps):
         t = clock
         for seg in segs or []:
             frames = seg.get("frames", 0)
+            # span the words, not the silence after them
+            speech = seg.get("speech_frames") or frames
             pieces = _chunk(seg["text"])
             if pieces:
                 total = sum(len(p) for p in pieces) or 1
                 spent = 0
                 for i, piece in enumerate(pieces):
-                    share = (frames - spent if i == len(pieces) - 1
-                             else round(frames * len(piece) / total))
+                    share = (speech - spent if i == len(pieces) - 1
+                             else round(speech * len(piece) / total))
                     if share > 0:
                         out.append((t + spent, t + spent + share, piece,
                                     shot.get("speaker") or "narrator"))

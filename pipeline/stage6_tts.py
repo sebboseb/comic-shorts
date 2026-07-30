@@ -8,7 +8,7 @@ Fills `audio` and `duration_frames` on every shot in every manifest.
 
 Requires the Voicebox app to be open. Run AFTER the stage-5 review gate.
 """
-import io, json, re, struct, subprocess, sys, time, urllib.request, wave
+import io, json, re, struct, subprocess, sys, tempfile, time, urllib.request, wave
 from pathlib import Path
 
 FPS = 30
@@ -23,6 +23,7 @@ INSTRUCT_ENGINES = {"qwen", "qwen_custom_voice", "chatterbox",
 PAUSE_MS = 600          # silence inserted at . ! ?
 ELLIPSIS_PAUSE_MS = 850  # ... trails off, give it room
 SHOT_GAP_MS = 450        # beat after each line, so cuts don't clip speech
+SPEECH_TEMPO = 1.0       # >1 speeds up the words without touching the pauses
 MIN_SEG_CHARS = 18       # below this, an autoregressive engine loses the plot:
                          # "Bad." alone came back as 6.7s of looped breath
 VOICE_MAP = {}  # e.g. {"Mark": "MarkVoice", "narrator": "Narrator"}
@@ -147,6 +148,30 @@ def _trim(frames, sw, ch, sr, keep_ms=60):
     return frames[a:b]
 
 
+def _retempo(raw, tempo):
+    """Speed the words up without shifting pitch.
+
+    Applied to the spoken audio only, before pauses are inserted, so the
+    beats between sentences stay exactly as configured rather than
+    shrinking along with the speech.
+    """
+    if abs(tempo - 1.0) < 0.01:
+        return raw
+    # ffmpeg cannot seek back to fix the RIFF size when writing wav to a pipe,
+    # so it emits a placeholder length that the wave module rejects. Write a
+    # real file instead.
+    with tempfile.TemporaryDirectory() as d:
+        src, dst = Path(d) / "in.wav", Path(d) / "out.wav"
+        src.write_bytes(raw)
+        r = subprocess.run(
+            ["ffmpeg", "-v", "error", "-y", "-i", str(src),
+             "-filter:a", f"atempo={tempo:.3f}", str(dst)],
+            capture_output=True)
+        if r.returncode == 0 and dst.exists() and dst.stat().st_size > 1000:
+            return dst.read_bytes()
+    return raw
+
+
 def _synth_one(port, profile_id, text, engine, instruct=None):
     body = {"profile_id": profile_id, "text": text,
             "language": "en", "engine": engine}
@@ -179,11 +204,13 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE,
     """
     pieces, params = [], None
     pace = pace or {}
+    tempo = pace.get("speech_tempo", SPEECH_TEMPO)
     segments = []
     for sentence, pause_ms in _sentences(
             _speakable(text), pace.get("pause_ms"), pace.get("ellipsis_pause_ms")):
-        with wave.open(io.BytesIO(_synth_one(port, profile_id, sentence,
-                                             engine, instruct)), "rb") as w:
+        raw = _retempo(_synth_one(port, profile_id, sentence, engine, instruct),
+                       tempo)
+        with wave.open(io.BytesIO(raw), "rb") as w:
             params = params or w.getparams()
             frames = w.readframes(w.getnframes())
         sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
@@ -192,9 +219,14 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE,
         gap_bytes = int(sr * pause_ms / 1000) * sw * ch if pause_ms else 0
         if gap_bytes:
             pieces.append(b"\x00" * gap_bytes)
+        # `frames` is what the video advances by; `speech_frames` is how long
+        # the words actually last. Captions must be apportioned over the
+        # latter, or every chunk after the first drifts into the pause.
+        speech_samples = len(body) // (sw * ch)
         seg_samples = (len(body) + gap_bytes) // (sw * ch)
         segments.append({"text": sentence,
-                         "frames": round(seg_samples / sr * FPS)})
+                         "frames": round(seg_samples / sr * FPS),
+                         "speech_frames": round(speech_samples / sr * FPS)})
 
     # trailing beat: _trim leaves only 60ms, so without this the next
     # shot's first word lands almost on top of this one's last
@@ -231,7 +263,8 @@ def run(config, workdir: Path):
             voice_map[ch["name"]] = ch["voicebox_profile"]
 
     pace = {k: v for k, v in config.get("shorts", {}).items()
-            if k in ("pause_ms", "ellipsis_pause_ms", "shot_gap_ms")}
+            if k in ("pause_ms", "ellipsis_pause_ms", "shot_gap_ms",
+                     "speech_tempo")}
 
     audio_root = workdir / "audio"
     manifests = sorted((workdir / "manifests").glob("ep*.json"))
