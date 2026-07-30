@@ -80,7 +80,7 @@ shorts:
     triumphant: "output015.mp3"
     action: "output004.mp3"         # loudest
     default: "output021.mp3"
-  voicebox_profile: "Narrator"      # qwen Ryan (Mars run used this); default;
+  voicebox_profile: "Narrator"      # qwen Eric; stage 6 default voice;
                                     # per-character
                                     # override with `voicebox_profile` below
 
