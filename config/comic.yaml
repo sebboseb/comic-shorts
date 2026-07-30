@@ -31,7 +31,10 @@ shorts:
   # reads as rushed; these are inserted by stage 6 instead.
   pause_ms: 380            # at . ! ?
   ellipsis_pause_ms: 560   # at ... (trailing off)
-  shot_gap_ms: 420         # after each line, before the next shot
+  # In single_voice mode there is no speaker change to punctuate, and beats
+  # are short, so this gap is paid many more times per episode. Keep it small
+  # or the narration stops feeling continuous the way the references do.
+  shot_gap_ms: 180         # after each line, before the next shot
   speech_tempo: 1.15       # speeds the words only; pauses stay as set above
   captions: true           # burn subtitles into the render (stage 7)
   # A wide panel fitted whole leaves most of a 9:16 frame as blurred margin.
