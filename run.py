@@ -50,6 +50,11 @@ def _stage3p(config, workdir):
     stage3_passthrough.run(config, workdir)
 
 
+def _check(config, workdir):
+    from pipeline import doctor
+    doctor.run(config, workdir)
+
+
 def _stage7(config, workdir):
     from pipeline import stage7_render
     stage7_render.run(config, workdir)
@@ -64,6 +69,7 @@ STAGES = {
     "5": ("review page", _stage5),
     "6": ("tts (voicebox)", _stage6),
     "7": ("render (ffmpeg)", _stage7),
+    "check": ("config check", _check),
 }
 
 

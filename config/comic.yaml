@@ -1,7 +1,7 @@
 # Comic project configuration. One file per comic.
 
 comic:
-  title: "Mars, God of War (Planet Comics 69, 1953)"
+  title: "Annihilation"
   reading_direction: ltr        # ltr = western, rtl = manga
   pages_dir: "pages"            # folder of page images, sorted by filename
 
@@ -37,10 +37,15 @@ shorts:
     # a caption in the speaker's colour reinforces who is talking, which
     # matters when several characters share a register
     speaker_colors:
-      Mars: "#FF5252"
-      "Dick Warren": "#FFD54F"
-      Wad: "#B388FF"
-      Ada: "#FF80AB"
+      Nova: "#4FC3F7"
+      Nova_nohelmet: "#4FC3F7"
+      Drax: "#AED581"
+      Thanos: "#B388FF"
+      Annihilus: "#66BB6A"
+      Gamora: "#4DB6AC"
+      Galactus: "#FFB74D"
+      Exterpia: "#F06292"
+      "Peter Quill": "#FF8A65"
 
   # Background music. Tracks are MPT's royalty-free library, which ships
   # unlabelled (output000.mp3...), so these are first-pass picks bucketed
@@ -65,34 +70,64 @@ shorts:
 # makes speaker attribution dramatically more accurate.
 # Planet Comics 69 test run: no ref crops yet, descriptions only.
 characters:
-  - name: "Mars"
-    epithet: "this washed-up war god / drama queen of the cosmos"
-    voicebox_profile: "Mars"  # qwen Uncle_Fu
-
-    description: "the god of war; bearded warrior in a crested helmet, carries a flaming torch; cruel, theatrical"
-    voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "ancient booming war-god, theatrical and cruel"
-  - name: "Dick Warren"
-    epithet: "our boy Dick / certified problem-solver Dick Warren"
-    voicebox_profile: "DickWarren"  # qwen Aiden
-
-    description: "square-jawed explorer hero in a green tunic and helmet; brave, plainspoken"
-    voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "steady plain-spoken adventurer, level and unfussy"
-  - name: "Wad"
-    epithet: "big man Wad / Wad, worst host in the galaxy"
-    voicebox_profile: "Wad"  # qwen Dylan
-
-    description: "leader of the hooded purple-robed people; bald, stern; possessed by Mars partway through"
-    voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "stern imperious tribal leader, clipped and certain"
-  - name: "Ada"
-    epithet: "the actual MVP Ada / Ada, carrying this entire comic"
-    voicebox_profile: "Ada"
-    description: "young blonde woman enslaved by the hooded people; desperate, then resolute"
-    voice_id: "ELEVENLABS_VOICE_ID_HERE"
-    speaking_style: "young woman, bright and quick, always a little breathless"
-
+  - name: "Nova"
+    principal: true
+    epithet: "our boy Rich / Nova, the galaxy's last space cop"
+    voicebox_profile: "Nova"            # qwen Aiden
+    ref_image: "nova.png"
+    description: "Richard Rider, Nova: gold-and-blue helmeted human hero, Nova Force energy"
+    speaking_style: "young human man, wry under pressure, wearing-thin bravado"
+  - name: "Nova_nohelmet"
+    principal: true
+    epithet: "Rich with the helmet off / just Richard now"
+    voicebox_profile: "Nova"            # same person, same voice
+    ref_image: "nova_nohelmet.png"
+    description: "the same man without the helmet: tired, unguarded, more human"
+    speaking_style: "young human man, quieter and more tired, guard down"
+  - name: "Peter Quill"
+    principal: true
+    epithet: "Quill, who absolutely thinks he's the main character"
+    voicebox_profile: "Quill"           # qwen Eric
+    description: "Peter Quill, Star-Lord: human, dark hair, coat, wry and insubordinate"
+    speaking_style: "wry human smartass, fast and needling, hiding real worry"
+  - name: "Drax"
+    epithet: "Drax, subtlety's natural enemy"
+    voicebox_profile: "Drax"            # qwen Dylan
+    ref_image: "drax.png"
+    description: "Drax the Destroyer: hulking grey-green brute, blades, minimal words"
+    speaking_style: "enormous blunt killer, flat and unhurried, never raises his voice"
+  - name: "Thanos"
+    epithet: "Thanos, the big purple philosopher"
+    voicebox_profile: "Thanos"          # qwen Uncle_Fu
+    ref_image: "thanos.png"
+    description: "Thanos: purple-skinned Titan, chin ridges, calm and imperious"
+    speaking_style: "ancient Titan, unhurried and coldly amused, absolutely certain"
+  - name: "Annihilus"
+    principal: true
+    epithet: "Annihilus, bug guy with a god complex"
+    voicebox_profile: "Annihilus"       # qwen Ono_Anna (only preset left)
+    ref_image: "annihilus.png"
+    description: "Annihilus: insectoid warlord in green armour with the Cosmic Control Rod"
+    speaking_style: "insectoid warlord, hissing and grandiose, allergic to being doubted"
+  - name: "Gamora"
+    principal: true
+    epithet: "Gamora, deadliest woman in the galaxy and aware of it"
+    voicebox_profile: "Gamora"          # qwen Serena
+    ref_image: "gamora.png"
+    description: "Gamora: green-skinned assassin, dark hair, lethal and guarded"
+    speaking_style: "sharp-tongued assassin, clipped and dry, emotionally armoured"
+  - name: "Galactus"
+    epithet: "Galactus, who does not care about you"
+    voicebox_profile: "Galactus"        # qwen Ryan
+    ref_image: "galactus.png"
+    description: "Galactus: colossal purple-armoured devourer of worlds, utterly detached"
+    speaking_style: "vast and detached, thinks in geological time, never hurries"
+  - name: "Exterpia"
+    epithet: "Exterpia, Annihilus's number one fan"
+    voicebox_profile: "Exterpia"        # qwen Sohee
+    ref_image: "exterpia.png"
+    description: "Exterpia: Annihilation Wave officer, loyal to Annihilus without question"
+    speaking_style: "zealous officer, brisk and hard, no doubt in her anywhere"
 models:
   vision_model: "claude-sonnet-4-6"   # stage 2 panel understanding (batched, ~$1/run)
   story_model: "claude-opus-4-8"      # stage 4 story compilation (one call, quality-critical)

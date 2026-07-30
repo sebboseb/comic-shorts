@@ -93,6 +93,19 @@ Rules:
   performance: rhythm and word choice are the only prosody you get.
 - Keep character dialogue verbatim from the panels. You may trim redundant lines
   but never rewrite a character's words.
+- CAST DISCIPLINE. A short can only carry a handful of voices before the viewer
+  loses track of who is who. Only the characters listed as PRINCIPALS may be
+  given a spoken shot. For every other line in the panels:
+    * If it matters to the story, hand the information to the narrator in their
+      own words ("the Kree line breaks" rather than a soldier shouting it).
+    * If it is background noise - crowd chatter, orders barked by unnamed
+      troops, someone reacting off-panel - cut it. It is texture in a comic
+      panel and clutter in a video.
+    * A line whose speaker is 'unknown' is never given a spoken shot. Narrate it
+      or drop it; guessing a speaker puts the wrong voice in the viewer's ear,
+      which is worse than not hearing the line at all.
+  Prefer FEWER speaking characters than the panels contain. Two or three voices
+  plus the narrator is a good short; six is a confusing one.
 - A shot with no line (silent dramatic beat) is allowed: set line to "" and give
   it motion + sfx.
 - 'shake' motion is reserved for impact/action beats. 'zoom_face' for emotional
@@ -114,10 +127,18 @@ def _voice_brief(config):
     style = (shorts.get("narration_style") or "").strip()
     eps = [(c["name"], c["epithet"]) for c in config.get("characters", [])
            if c.get("epithet")]
-    if not style and not eps:
+    principals = [c["name"] for c in config.get("characters", [])
+                  if c.get("principal")]
+    if not style and not eps and not principals:
         return ""
 
-    out = ["\n\n=== NARRATOR VOICE (overrides the general guidance above) ==="]
+    out = []
+    if principals:
+        out.append("\n\n=== PRINCIPALS - the only characters who may speak ===\n"
+                   + ", ".join(principals)
+                   + "\nEvery other character's lines must be narrated or cut, "
+                     "per the cast-discipline rule.")
+    out.append("\n\n=== NARRATOR VOICE (overrides the general guidance above) ===")
     if style:
         out.append("Write every narrator line in this voice:\n" + style)
     if eps:
