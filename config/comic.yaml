@@ -41,6 +41,15 @@ shorts:
   # A full traverse per shot reads as swooping past everything; this keeps the
   # move slow enough to settle on the focus point.
   drift_rate: 0.055
+  # How much room to leave around the subject when framing a shot. The frame
+  # is sized from the panel's focus_box, not from the panel: lower = tighter
+  # on the subject, higher = more of the surrounding art.
+  frame_tightness: 2.4
+  # fit  - whole panel, letterboxed over a blurred copy of itself, Ken Burns
+  #        move aimed at the focus box. Keeps the drawn composition intact.
+  # fill - crop a frame-shaped window around the subject. Fills the screen but
+  #        throws away everything outside it, neighbouring panels included.
+  frame_mode: fit
   # A wide panel fitted whole leaves most of a 9:16 frame as blurred margin.
   # Below this fraction of frame height, crop it to fill and pan across
   # instead. 1.0 = always fill, 0 = always letterbox.
@@ -80,7 +89,7 @@ shorts:
     triumphant: "output015.mp3"
     action: "output004.mp3"         # loudest
     default: "output021.mp3"
-  voicebox_profile: "Narrator"      # qwen Eric; stage 6 default voice;
+  voicebox_profile: "Narrator"      # qwen Dylan; stage 6 default voice;
                                     # per-character
                                     # override with `voicebox_profile` below
 

@@ -56,6 +56,13 @@ Rules:
   panels for the hook is allowed only when the reordered opening is
   self-explanatory; otherwise stay in reading order. Prefer a flash-forward you
   can make legible in one narrator sentence over a cryptic cold open.
+- OPEN ON A PERSON, NOT A PREMISE. The first shot names a specific character
+  and puts a hook on them - who they are and what is about to happen to them
+  ("This is Richard Rider. In six months he is the only Nova Corps officer
+  left alive."). Pick the most striking or most doomed figure available, and
+  prefer a character the audience may already know. Do NOT open on scene
+  setting, on a faction, or on an event with nobody in it; a premise is not a
+  hook, a person in trouble is.
 - Establish the situation fast: within the first two shots the viewer must know
   where we are and who we are following. Name each character in narration the
   first time they appear - give the role and the name together, the way

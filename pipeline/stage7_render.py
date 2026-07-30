@@ -107,6 +107,44 @@ def _fill_coverage(pw, ph):
     return (W / pw * ph) / H
 
 
+def _frame_window(pw, ph, focus, tightness):
+    """A frame-shaped window sized to the SUBJECT, not to the panel.
+
+    The previous approach cropped a window the panel's full height, which
+    filled the screen but left the subject exactly as small as it was in the
+    original art -- the median focus box is 17% of its panel, so nothing was
+    ever actually framed. Sizing the window from the focus box instead means
+    every shot arrives on something.
+
+    Returns (x, y, w, h) in panel pixels, always frame-aspect and always
+    inside the panel, so scaling it to the canvas fills without letterboxing.
+    """
+    aspect = W / H
+    fx, fy, fw, fh = focus if focus else (0, 0, pw, ph)
+    fw, fh = max(fw, 8), max(fh, 8)
+
+    # give the subject room, then force the canvas aspect by growing the
+    # deficient axis (never shrinking, so the subject stays fully inside)
+    tw, th = fw * tightness, fh * tightness
+    if tw / th < aspect:
+        tw = th * aspect
+    else:
+        th = tw / aspect
+
+    # a window can't exceed the panel; clamping either axis re-derives the other
+    if tw > pw:
+        tw, th = pw, pw / aspect
+    if th > ph:
+        th, tw = ph, ph * aspect
+    if tw > pw:                     # panel narrower than one frame of its height
+        tw, th = pw, pw / aspect
+
+    cx, cy = fx + fw / 2, fy + fh / 2
+    x = min(max(cx - tw / 2, 0), max(0, pw - tw))
+    y = min(max(cy - th / 2, 0), max(0, ph - th))
+    return round(x), round(y), round(tw), round(th)
+
+
 def _wide_chain(pw, ph, frames, motion, cx, dur):
     """Full-frame treatment for a panel too wide to fit without huge margins.
 
@@ -147,12 +185,32 @@ def _wide_chain(pw, ph, frames, motion, cx, dur):
             f"scale={W}:{H}:flags=lanczos")
 
 
+def _framed_chain(pw, ph, focus, motion, dur, tightness):
+    """Crop the subject-framed window, drift gently inside it, fill the frame."""
+    x, y, w, h = _frame_window(pw, ph, focus, tightness)
+    s = PRESCALE
+    sx, sy, sw, sh = x * s, y * s, w * s, h * s
+
+    # room to move without leaving the panel
+    room_x = max(0, pw * s - sw)
+    budget = min(room_x, round(DRIFT_RATE * sw * dur))
+    if motion in ("hold", "shake") or budget < 8:
+        xexpr = str(sx)
+    else:
+        start = sx - budget if sx - budget >= 0 else sx + budget
+        start = max(0, min(room_x, start))
+        xexpr = f"{start}+({sx}-{start})*min(1,t/{max(dur, 0.1):.3f})"
+
+    return (f"scale=iw*{s}:ih*{s}:flags=lanczos,"
+            f"crop={sw}:{sh}:x='{xexpr}':y={sy},"
+            f"scale={W}:{H}:flags=lanczos")
+
+
 def _render_shot(img_path, audio_path, frames, motion, cx, cy,
-                 panel_size, out_path, wide_threshold=0.55):
+                 panel_size, out_path, wide_threshold=0.55,
+                 focus=None, tightness=2.4, frame_mode="fit"):
     dur = frames / FPS
-    fw, fh = _fit_size(*panel_size)
     pw, ph = panel_size
-    wide = _fill_coverage(pw, ph) < wide_threshold and pw > ph
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
            "-loop", "1", "-framerate", str(FPS), "-i", str(img_path)]
     if audio_path:
@@ -160,12 +218,16 @@ def _render_shot(img_path, audio_path, frames, motion, cx, cy,
     else:
         cmd += ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
 
-    if wide:
-        # fills the frame, so no blurred backdrop is needed behind it
-        vf = f"[0:v]{_wide_chain(pw, ph, frames, motion, cx, dur)}," \
-             f"format=yuv420p[v]"
+    if frame_mode == "fill":
+        # subject-framed crop: fills the canvas but discards whatever falls
+        # outside the frame-shaped window, including neighbouring panel art
+        vf = (f"[0:v]{_framed_chain(pw, ph, focus, motion, dur, tightness)},"
+              f"format=yuv420p[v]")
     else:
-        vf = _fit_chain(fw, fh, frames, motion, cx, cy)
+        # fit: the whole panel, letterboxed over a blurred copy of itself, with
+        # a Ken Burns move aimed at the focus. Keeps the panel's composition
+        # intact, which is what the art was drawn for.
+        vf = _fit_chain(*_fit_size(pw, ph), frames, motion, cx, cy)
 
     cmd += [
         "-filter_complex", vf,
@@ -236,6 +298,8 @@ def run(config, workdir: Path):
     wide_threshold = config.get("shorts", {}).get("wide_fill_threshold", 0.55)
     global DRIFT_RATE
     DRIFT_RATE = config.get("shorts", {}).get("drift_rate", DRIFT_RATE)
+    tightness = config.get("shorts", {}).get("frame_tightness", 2.4)
+    frame_mode = config.get("shorts", {}).get("frame_mode", "fit")
 
     out_dir = workdir / "renders"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -276,14 +340,19 @@ def run(config, workdir: Path):
                 estimated += 1
 
             cx, cy = _focus_norm(panel)
+            fb, size, csize = (panel.get("focus_box"), panel.get("size"),
+                               panel["clean_size"])
+            focus = None
+            if fb and size and size[0] and size[1]:
+                k = csize[0] / size[0], csize[1] / size[1]
+                focus = (fb[0] * k[0], fb[1] * k[1], fb[2] * k[0], fb[3] * k[1])
             clip = tmp / f"shot{i:03d}.mp4"
             _render_shot(img, audio_path, frames,
                          shot.get("motion", "hold"), cx, cy,
-                         panel["clean_size"], clip, wide_threshold)
+                         csize, clip, wide_threshold, focus, tightness,
+                         frame_mode)
             clips.append(clip)
-            mode = ("FILL" if _fill_coverage(*panel["clean_size"]) < wide_threshold
-                    and panel["clean_size"][0] > panel["clean_size"][1] else "fit ")
-            print(f"  {short_id} shot{i:03d} {mode} {shot.get('motion','hold'):<9} "
+            print(f"  {short_id} shot{i:03d} {shot.get('motion','hold'):<9} "
                   f"{frames:>4}f  {panel['id']}")
 
         if not clips:
