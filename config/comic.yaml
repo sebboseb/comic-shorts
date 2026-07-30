@@ -14,6 +14,13 @@ shorts:
   # The narrator's PERSONA. This is the single biggest lever on how the
   # short feels -- it sets attitude and word choice, not just information.
   # Rewrite it freely; stage 4 is told to obey it over its own instincts.
+  # single_voice: one narrator for the whole episode, character dialogue
+  #   reported rather than performed. Matches how the reference channels work
+  #   and is what lets an episode hold together at any length.
+  # dialogue: characters get their own voices and verbatim lines (needs
+  #   `principal: true` on the 2-4 who should speak).
+  narration_mode: single_voice
+
   narration_style: |
     Irreverent, funny, and opinionated - a mate recapping a comic he loves
     and finds ridiculous. Chronically-online register: casual slang, dry

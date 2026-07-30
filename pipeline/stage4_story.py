@@ -15,7 +15,7 @@ from pathlib import Path
 
 import anthropic
 
-SYSTEM_PROMPT = """You are a shorts editor turning a comic into a numbered series of
+PROMPT_TEMPLATE = """You are a shorts editor turning a comic into a numbered series of
 vertical videos (TikTok/YouTube Shorts/Reels). You receive the comic's panels in
 reading order, each with a scene description and dialogue lines.
 
@@ -91,21 +91,7 @@ Rules:
     * Address nobody. No "you won't believe", no direct address to the viewer.
   The synthesised voice is flat and literal, so the WRITING has to carry the
   performance: rhythm and word choice are the only prosody you get.
-- Keep character dialogue verbatim from the panels. You may trim redundant lines
-  but never rewrite a character's words.
-- CAST DISCIPLINE. A short can only carry a handful of voices before the viewer
-  loses track of who is who. Only the characters listed as PRINCIPALS may be
-  given a spoken shot. For every other line in the panels:
-    * If it matters to the story, hand the information to the narrator in their
-      own words ("the Kree line breaks" rather than a soldier shouting it).
-    * If it is background noise - crowd chatter, orders barked by unnamed
-      troops, someone reacting off-panel - cut it. It is texture in a comic
-      panel and clutter in a video.
-    * A line whose speaker is 'unknown' is never given a spoken shot. Narrate it
-      or drop it; guessing a speaker puts the wrong voice in the viewer's ear,
-      which is worse than not hearing the line at all.
-  Prefer FEWER speaking characters than the panels contain. Two or three voices
-  plus the narrator is a good short; six is a confusing one.
+{DIALOGUE_RULES}
 - A shot with no line (silent dramatic beat) is allowed: set line to "" and give
   it motion + sfx.
 - 'shake' motion is reserved for impact/action beats. 'zoom_face' for emotional
@@ -113,6 +99,46 @@ Rules:
 - Mark at most 2-3 shots per short as hero (the most dramatic single images).
 - Aim for each short to fit the target length: roughly 2.5 words per second of
   spoken text plus ~1.2s per silent shot."""
+
+
+DIALOGUE_RULES = """- Keep character dialogue verbatim from the panels. You may trim redundant lines
+  but never rewrite a character's words.
+- CAST DISCIPLINE. A short can only carry a handful of voices before the viewer
+  loses track of who is who. Only the characters listed as PRINCIPALS may be
+  given a spoken shot. For every other line in the panels:
+    * If it matters to the story, hand the information to the narrator in their
+      own words ("the Kree line breaks" rather than a soldier shouting it).
+    * If it is background noise - crowd chatter, orders barked by unnamed
+      troops, someone reacting off-panel - cut it.
+    * A line whose speaker is 'unknown' is never given a spoken shot. Narrate it
+      or drop it; guessing a speaker puts the wrong voice in the viewer's ear.
+  Prefer FEWER speaking characters than the panels contain."""
+
+
+SINGLE_VOICE_RULES = """- ONE VOICE. Every single shot has speaker "narrator". No character is ever
+  given a spoken shot, not even a principal. The whole episode is one person
+  telling the story, which is what lets it hold together over its full length.
+- REPORT DIALOGUE, DON'T STAGE IT. A character's words become the narrator's
+  report of them, keeping the sense and any wording that is doing real work:
+    * "Quill tells him the force fields will hold, and asks if that is what he
+      wanted to hear."   (not Quill saying it)
+    * "'How could they?' replies Damien."  - a short quote INSIDE a narrator
+      line is fine when the exact words land harder than a paraphrase. The
+      narrator still speaks it; attribute it in the same breath.
+  Never leave a line of dialogue unattributed - always say who said it, or drop
+  it. Unattributed speech is the main way a single-voice recap loses a viewer.
+- ANNOUNCE EVERY MOVE. Any change of place, time or focus gets an explicit
+  marker at the start of the line: "Back on the Kree line", "Elsewhere",
+  "Seconds later", "On the other side of the battlefield", "Just before he
+  leaves". Never let the viewer work out for themselves that we have cut away.
+- ONE BEAT PER SHOT, AND KEEP THEM SHORT. Aim for 8-18 spoken words per shot,
+  each carrying exactly one thing that happens. This is what gives the edit its
+  rhythm: with no speaker changes to honour, the picture can change as often as
+  the story does. Expect MANY MORE shots than there are panels - reusing a panel
+  across two or three consecutive shots is correct and expected.
+- DRIVE FORWARD WITH CONNECTIVES. Chain beats with "until", "but", "then",
+  "before", "and now" so each line sets up the next. Setup then reversal is the
+  engine: state what someone expects, then break it."""
 
 
 def _voice_brief(config):
@@ -127,8 +153,9 @@ def _voice_brief(config):
     style = (shorts.get("narration_style") or "").strip()
     eps = [(c["name"], c["epithet"]) for c in config.get("characters", [])
            if c.get("epithet")]
-    principals = [c["name"] for c in config.get("characters", [])
-                  if c.get("principal")]
+    single_voice = shorts.get("narration_mode", "single_voice") == "single_voice"
+    principals = [] if single_voice else [
+        c["name"] for c in config.get("characters", []) if c.get("principal")]
     if not style and not eps and not principals:
         return ""
 
@@ -165,6 +192,16 @@ def _parse_json(text: str):
     return json.loads(text)
 
 
+def _system_prompt(config):
+    """The dialogue rules differ fundamentally by narration mode, so the prompt
+    is assembled rather than fixed. single_voice matches how the reference
+    channels actually work: one narrator throughout, dialogue reported rather
+    than performed."""
+    mode = config.get("shorts", {}).get("narration_mode", "single_voice")
+    rules = SINGLE_VOICE_RULES if mode == "single_voice" else DIALOGUE_RULES
+    return PROMPT_TEMPLATE.replace("{DIALOGUE_RULES}", rules)
+
+
 def run(config, workdir: Path):
     if "ANTHROPIC_API_KEY" not in os.environ:
         raise SystemExit("Set ANTHROPIC_API_KEY")
@@ -199,7 +236,7 @@ def run(config, workdir: Path):
     resp = client.messages.create(
         model=model,
         max_tokens=16000,
-        system=SYSTEM_PROMPT,
+        system=_system_prompt(config),
         messages=[{"role": "user", "content": user_msg}],
     )
     data = _parse_json(resp.content[0].text)
