@@ -36,7 +36,11 @@ shorts:
   # or the narration stops feeling continuous the way the references do.
   shot_gap_ms: 180         # after each line, before the next shot
   speech_tempo: 1.15       # speeds the words only; pauses stay as set above
-  captions: true           # burn subtitles into the render (stage 7)
+  captions: false          # off until the motion and voice are settled
+  # How far the picture may travel per second, as a fraction of frame width.
+  # A full traverse per shot reads as swooping past everything; this keeps the
+  # move slow enough to settle on the focus point.
+  drift_rate: 0.055
   # A wide panel fitted whole leaves most of a 9:16 frame as blurred margin.
   # Below this fraction of frame height, crop it to fill and pan across
   # instead. 1.0 = always fill, 0 = always letterbox.

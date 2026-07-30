@@ -31,6 +31,8 @@ WORDS_PER_SEC = 2.5      # matches the pacing stage 4 writes to
 TAIL_FRAMES = 8          # breath after a line so cuts don't clip the audio
 PRESCALE = 2             # upscale source before zoompan (smaller rounding step)
 SUPERSAMPLE = 2          # render the move at Nx target, then average down
+DRIFT_RATE = 0.055       # fraction of frame width the picture may travel per
+                         # second; a full traverse per shot reads as swooping
 
 
 def _est_frames(line):
@@ -89,9 +91,9 @@ def _zoompan(motion, n, cx, cy, fw, fh):
         x = f"(iw-iw/zoom)*on/{span}"
         y = cyc
     elif motion == "shake":
-        z = "1.06"
-        x = f"max(0,min(iw-iw/zoom,{cxc}+14*sin(on*1.7)))"
-        y = f"max(0,min(ih-ih/zoom,{cyc}+10*cos(on*2.3)))"
+        # was a sine wobble on both axes, which read as a mechanical shudder
+        # rather than an impact. Hold steady, slightly tighter than a hold.
+        z, x, y = "1.05", cxc, cyc
     else:  # hold, and anything unrecognised
         # genuinely static: a slow creep here bought nothing visually and was
         # pure jitter, because any changing zoom re-rounds the window origin
@@ -121,17 +123,22 @@ def _wide_chain(pw, ph, frames, motion, cx, dur):
     win_w = min(sw, max(2, round(sh * W / H) // 2 * 2))
     travel = sw - win_w
 
-    if motion == "shake" or travel < 8:
-        # an impact beat shouldn't drift; hold on the focus and rattle
-        centre = max(0, min(travel, round(cx * sw - win_w / 2)))
-        x = (f"max(0,min({travel},{centre}+18*sin(t*11)))"
-             if motion == "shake" else str(centre))
+    # Land on the focus. Traversing the whole panel in one shot reads as
+    # swooping past everything without settling on anything, so the drift is
+    # rate-limited and aimed: it ends on the focus point, having covered only
+    # as much ground as DRIFT_RATE allows in the time available.
+    focus = max(0, min(travel, round(cx * sw - win_w / 2)))
+    budget = min(travel, round(DRIFT_RATE * W / H * sh * dur))
+
+    if motion == "shake" or travel < 8 or budget < 8:
+        # no wobble: a sine on the window origin read as a mechanical shudder,
+        # not an impact. Hold the focus instead.
+        x = str(focus)
     else:
-        # pan towards the focus: start on the far side of it so the move ends
-        # on the thing the panel is actually about
-        forward = cx >= 0.5
-        a, b = (0, travel) if forward else (travel, 0)
-        x = f"{a}+({b}-{a})*min(1,t/{max(dur, 0.1):.3f})"
+        # come from whichever side has room, so the move settles on the subject
+        start = focus - budget if focus - budget >= 0 else focus + budget
+        start = max(0, min(travel, start))
+        x = f"{start}+({focus}-{start})*min(1,t/{max(dur, 0.1):.3f})"
 
     return (f"scale=iw*{PRESCALE}:ih*{PRESCALE}:flags=lanczos,"
             # no eval= option in this build; crop's x is flagged runtime-
@@ -227,6 +234,8 @@ def run(config, workdir: Path):
     # below this fraction of frame height, a fitted panel is mostly margin;
     # crop it to fill the frame and pan across instead
     wide_threshold = config.get("shorts", {}).get("wide_fill_threshold", 0.55)
+    global DRIFT_RATE
+    DRIFT_RATE = config.get("shorts", {}).get("drift_rate", DRIFT_RATE)
 
     out_dir = workdir / "renders"
     out_dir.mkdir(parents=True, exist_ok=True)
