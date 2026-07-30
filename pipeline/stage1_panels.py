@@ -14,6 +14,8 @@ from pathlib import Path
 import cv2
 import numpy as np
 
+MIN_ASPECT, MAX_ASPECT = 0.12, 8.0   # anything flatter/thinner is not a panel
+
 
 def _boxes_from_mask(mask, w, h, min_area_ratio):
     kernel = np.ones((5, 5), np.uint8)
@@ -170,6 +172,18 @@ def run(config, workdir: Path):
                                   min_area_ratio=min_area_ratio)
             boxes = reading_order(boxes, direction)
 
+        # A panel is never a hairline. Boxes this lopsided are gutter strips,
+        # black transition bars and border fragments, not art -- they survive
+        # the area test because they are wide, and then cost a vision call in
+        # stage 2 and a shot in the render.
+        slivers = [b for b in boxes
+                   if not (MIN_ASPECT <= (b[2] / b[3] if b[3] else 0) <= MAX_ASPECT)]
+        if slivers:
+            boxes = [b for b in boxes if b not in slivers]
+            print(f"  page {page_idx:02d}: dropped {len(slivers)} sliver "
+                  f"{'box' if len(slivers) == 1 else 'boxes'} "
+                  f"({', '.join(f'{b[2]}x{b[3]}' for b in slivers)})")
+
         coverage = sum(bw * bh for _, _, bw, bh in boxes) / (w * h) if boxes else 0
         if not manual and (len(boxes) == 0 or coverage < 0.45):
             flagged_pages.append({
@@ -198,6 +212,11 @@ def run(config, workdir: Path):
             x1 = min(w, x + bw + margin)
             y1 = min(h, y + bh + margin)
             crop = img[y0:y1, x0:x1]
+            if crop.size == 0:
+                # a box that clamped to nothing, or landed off the page
+                print(f"  page {page_idx:02d}: skipped empty crop at "
+                      f"({x},{y},{bw},{bh})")
+                continue
             name = f"p{page_idx:02d}_{panel_idx:02d}.png"
             cv2.imwrite(str(out_dir / name), crop)
             panels.append({

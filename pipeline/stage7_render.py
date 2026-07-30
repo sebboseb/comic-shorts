@@ -100,10 +100,52 @@ def _zoompan(motion, n, cx, cy, fw, fh):
     return f"zoompan=z='{z}':x='{x}':y='{y}':d=1:s={fw}x{fh}:fps={FPS}"
 
 
+def _fill_coverage(pw, ph):
+    """Fraction of the frame's height a fitted panel would occupy."""
+    return (W / pw * ph) / H
+
+
+def _wide_chain(pw, ph, frames, motion, cx, dur):
+    """Full-frame treatment for a panel too wide to fit without huge margins.
+
+    Crops a frame-shaped window the panel's full height and slides it across,
+    so the panel fills the screen and reveals itself over the shot instead of
+    sitting in a letterbox. A 4:1 panel fitted to width covers 14% of the
+    frame; this covers all of it.
+
+    Cropping is done on a pre-scaled copy for the same reason zoompan is: the
+    window origin lands on whole source pixels, and at 1:1 that quantises to
+    a visible 1px stutter as it moves.
+    """
+    sw, sh = pw * PRESCALE, ph * PRESCALE
+    win_w = min(sw, max(2, round(sh * W / H) // 2 * 2))
+    travel = sw - win_w
+
+    if motion == "shake" or travel < 8:
+        # an impact beat shouldn't drift; hold on the focus and rattle
+        centre = max(0, min(travel, round(cx * sw - win_w / 2)))
+        x = (f"max(0,min({travel},{centre}+18*sin(t*11)))"
+             if motion == "shake" else str(centre))
+    else:
+        # pan towards the focus: start on the far side of it so the move ends
+        # on the thing the panel is actually about
+        forward = cx >= 0.5
+        a, b = (0, travel) if forward else (travel, 0)
+        x = f"{a}+({b}-{a})*min(1,t/{max(dur, 0.1):.3f})"
+
+    return (f"scale=iw*{PRESCALE}:ih*{PRESCALE}:flags=lanczos,"
+            # no eval= option in this build; crop's x is flagged runtime-
+            # evaluated already, verified by frame diff
+            f"crop={win_w}:{sh}:x='{x}':y=0,"
+            f"scale={W}:{H}:flags=lanczos")
+
+
 def _render_shot(img_path, audio_path, frames, motion, cx, cy,
-                 panel_size, out_path):
+                 panel_size, out_path, wide_threshold=0.55):
     dur = frames / FPS
     fw, fh = _fit_size(*panel_size)
+    pw, ph = panel_size
+    wide = _fill_coverage(pw, ph) < wide_threshold and pw > ph
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
            "-loop", "1", "-framerate", str(FPS), "-i", str(img_path)]
     if audio_path:
@@ -111,6 +153,26 @@ def _render_shot(img_path, audio_path, frames, motion, cx, cy,
     else:
         cmd += ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
 
+    if wide:
+        # fills the frame, so no blurred backdrop is needed behind it
+        vf = f"[0:v]{_wide_chain(pw, ph, frames, motion, cx, dur)}," \
+             f"format=yuv420p[v]"
+    else:
+        vf = _fit_chain(fw, fh, frames, motion, cx, cy)
+
+    cmd += [
+        "-filter_complex", vf,
+        "-map", "[v]", "-map", "1:a",
+        "-af", f"apad,atrim=0:{dur:.4f},asetpts=N/SR/TB",
+        "-frames:v", str(frames),
+        "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+        "-r", str(FPS), "-c:a", "aac", "-b:a", "128k", "-ar", "44100",
+        "-ac", "2", str(out_path),
+    ]
+    subprocess.run(cmd, check=True, capture_output=True, text=True)
+
+
+def _fit_chain(fw, fh, frames, motion, cx, cy):
     # zoompan truncates its window origin to whole INPUT pixels every frame,
     # so a continuously changing zoom makes the image twitch by a fraction of
     # an output pixel -- which comic halftone dots turn into visible shimmer.
@@ -129,16 +191,7 @@ def _render_shot(img_path, audio_path, frames, motion, cx, cy,
         f"scale={fw}:{fh}:flags=lanczos[fgz];"
         "[bgb][fgz]overlay=(W-w)/2:(H-h)/2,format=yuv420p[v]"
     )
-    cmd += [
-        "-filter_complex", vf,
-        "-map", "[v]", "-map", "1:a",
-        "-af", f"apad,atrim=0:{dur:.4f},asetpts=N/SR/TB",
-        "-frames:v", str(frames),
-        "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
-        "-r", str(FPS), "-c:a", "aac", "-b:a", "128k", "-ar", "44100",
-        "-ac", "2", str(out_path),
-    ]
-    subprocess.run(cmd, check=True, capture_output=True, text=True)
+    return vf
 
 
 def _music_track(config, mood):
@@ -171,6 +224,9 @@ def run(config, workdir: Path):
         raise SystemExit("no manifests in work/manifests - run stage 4 first")
 
     captions_on = config.get("shorts", {}).get("captions", True)
+    # below this fraction of frame height, a fitted panel is mostly margin;
+    # crop it to fill the frame and pan across instead
+    wide_threshold = config.get("shorts", {}).get("wide_fill_threshold", 0.55)
 
     out_dir = workdir / "renders"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -214,9 +270,11 @@ def run(config, workdir: Path):
             clip = tmp / f"shot{i:03d}.mp4"
             _render_shot(img, audio_path, frames,
                          shot.get("motion", "hold"), cx, cy,
-                         panel["clean_size"], clip)
+                         panel["clean_size"], clip, wide_threshold)
             clips.append(clip)
-            print(f"  {short_id} shot{i:03d} {shot.get('motion','hold'):<9} "
+            mode = ("FILL" if _fill_coverage(*panel["clean_size"]) < wide_threshold
+                    and panel["clean_size"][0] > panel["clean_size"][1] else "fit ")
+            print(f"  {short_id} shot{i:03d} {mode} {shot.get('motion','hold'):<9} "
                   f"{frames:>4}f  {panel['id']}")
 
         if not clips:

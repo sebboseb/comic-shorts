@@ -26,6 +26,10 @@ shorts:
   ellipsis_pause_ms: 850   # at ... (trailing off)
   shot_gap_ms: 700         # after each line, before the next shot
   captions: true           # burn subtitles into the render (stage 7)
+  # A wide panel fitted whole leaves most of a 9:16 frame as blurred margin.
+  # Below this fraction of frame height, crop it to fill and pan across
+  # instead. 1.0 = always fill, 0 = always letterbox.
+  wide_fill_threshold: 0.55
   caption_style:
     font: "/System/Library/Fonts/Supplemental/Impact.ttf"
     size_pct: 0.046        # of frame height
