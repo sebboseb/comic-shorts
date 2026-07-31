@@ -199,6 +199,33 @@ def _parse_json(text: str):
     return json.loads(text)
 
 
+def _response_text(resp):
+    """All text blocks joined; tolerates non-text blocks in content."""
+    return "".join(b.text for b in resp.content if b.type == "text")
+
+
+def _parse_story(text: str, stop_reason, raw_path: Path):
+    """Persist the paid response before parsing so no failure mode loses it."""
+    raw_path.write_text(text)
+    print(f"raw response saved -> {raw_path}")
+    if stop_reason == "max_tokens":
+        raise SystemExit(
+            f"stage 4 response truncated at the token limit; the raw text is "
+            f"at {raw_path}. Raise max_tokens or ask for fewer/shorter "
+            "shorts - do not parse a truncated response.")
+    try:
+        data = _parse_json(text)
+    except json.JSONDecodeError as e:
+        raise SystemExit(
+            f"stage 4 returned JSON that does not parse ({e}). The raw text "
+            f"is at {raw_path} - repair it by hand; nothing was lost.")
+    if "shorts" not in data or not data["shorts"]:
+        raise SystemExit(
+            f"stage 4 JSON parsed but has no 'shorts' list. The raw text is "
+            f"at {raw_path}.")
+    return data
+
+
 def _system_prompt(config):
     """The dialogue rules differ fundamentally by narration mode, so the prompt
     is assembled rather than fixed. single_voice matches how the reference
@@ -246,7 +273,8 @@ def run(config, workdir: Path):
         system=_system_prompt(config),
         messages=[{"role": "user", "content": user_msg}],
     )
-    data = _parse_json(resp.content[0].text)
+    data = _parse_story(_response_text(resp), resp.stop_reason,
+                        workdir / "story_raw.txt")
 
     out_dir = workdir / "manifests"
     out_dir.mkdir(parents=True, exist_ok=True)
