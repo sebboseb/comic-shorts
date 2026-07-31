@@ -205,20 +205,26 @@ VERIFY_RETRIES = 3
 
 
 def _transcribe(port, wav_bytes):
-    """Whisper the clip through Voicebox. Returns text, or None if the
-    endpoint is unavailable - verification degrades to the rate check."""
+    """Whisper the clip through Voicebox. Returns text, or None only after
+    persistent failure. Retries matter: during a stage-6 batch the server
+    is busy generating, one transcribe attempt routinely fails, and a
+    fail-open here is how a laughing take shipped past verification."""
     b = "----vbx-verify"
     body = ((f"--{b}\r\nContent-Disposition: form-data; name=\"file\"; "
              f"filename=\"v.wav\"\r\nContent-Type: audio/wav\r\n\r\n").encode()
             + wav_bytes + f"\r\n--{b}--\r\n".encode())
-    req = urllib.request.Request(
-        f"http://127.0.0.1:{port}/transcribe", data=body,
-        headers={"Content-Type": f"multipart/form-data; boundary={b}"})
-    try:
-        with urllib.request.urlopen(req, timeout=120) as r:
-            return json.loads(r.read()).get("text", "")
-    except Exception:
-        return None
+    for attempt in range(3):
+        req = urllib.request.Request(
+            f"http://127.0.0.1:{port}/transcribe", data=body,
+            headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                return json.loads(r.read()).get("text", "")
+        except Exception:
+            time.sleep(2 * (attempt + 1))
+    print("    WARNING: transcribe unavailable after 3 tries - "
+          "take shipped on the rate check alone")
+    return None
 
 
 def _flag_delivery(port, params, body, sentence):
