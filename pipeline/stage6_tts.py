@@ -196,8 +196,18 @@ def _synth_one(port, profile_id, text, engine, instruct=None):
     raise RuntimeError("synthesis timed out")
 
 
+def _respell(text, mapping):
+    """TTS-only pronunciation respellings (config shorts.tts_pronounce).
+    Applied to what the engine hears, never to segments, so captions keep
+    the comic's true spelling. Exists because qwen degenerates into vocal
+    noise on some proper nouns (House Fiyero -> a laughing fit)."""
+    for word, spoken in (mapping or {}).items():
+        text = text.replace(word, spoken)
+    return text
+
+
 def _synth(port, profile_id, text, out_path: Path, engine=ENGINE,
-           pace=None, instruct=None):
+           pace=None, instruct=None, respell=None):
     """Synthesise a line sentence by sentence, joined with explicit pauses.
 
     Returns the per-sentence segments with their frame counts, which is
@@ -211,7 +221,9 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE,
     segments = []
     for sentence, pause_ms in _sentences(
             _speakable(text), pace.get("pause_ms"), pace.get("ellipsis_pause_ms")):
-        raw = _retempo(_synth_one(port, profile_id, sentence, engine, instruct),
+        raw = _retempo(_synth_one(port, profile_id,
+                                  _respell(sentence, respell),
+                                  engine, instruct),
                        tempo)
         with wave.open(io.BytesIO(raw), "rb") as w:
             params = params or w.getparams()
@@ -312,7 +324,8 @@ def run(config, workdir: Path):
             base = styles.get(speaker)
             emotion = shot.get("emotion")
             instruct = "; ".join(x for x in (base, emotion) if x) or None
-            segments = _synth(port, pid, line, wav, engine, pace, instruct)
+            segments = _synth(port, pid, line, wav, engine, pace, instruct,
+                              config.get("shorts", {}).get("tts_pronounce"))
             shot["audio"] = str(wav.relative_to(workdir.parent)
                                 if wav.is_relative_to(workdir.parent) else wav)
             shot["duration_frames"] = round(_wav_seconds(wav) * FPS)
