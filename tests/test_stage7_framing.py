@@ -1,4 +1,19 @@
-from pipeline.stage7_render import REFRAME, _frame_window, _part_number
+from pipeline.stage7_render import (REFRAME, _band_window, _frame_window,
+                                    _part_number)
+
+
+def test_band_window_centers_on_focus_and_stays_inside():
+    x, w, ncx = _band_window(4000, 1000, 0.5, 1.5)
+    assert w == 1500 and x == 1250
+    assert abs(ncx - 0.5) < 0.01
+    # focus at the far right edge: band clamps, focus lands inside it
+    x, w, ncx = _band_window(4000, 1000, 1.0, 1.5)
+    assert x == 2500 and 0 <= ncx <= 1
+
+
+def test_band_window_narrow_panel_uses_whole_width():
+    x, w, _ = _band_window(1200, 1000, 0.5, 1.5)
+    assert x == 0 and w == 1200
 
 
 def test_part_number():

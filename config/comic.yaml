@@ -45,7 +45,9 @@ shorts:
   # How much room to leave around the subject when framing a shot. The frame
   # is sized from the panel's focus_box, not from the panel: lower = tighter
   # on the subject, higher = more of the surrounding art.
-  frame_tightness: 2.4
+  # 2.4 read as "too zoomed in, hard to tell what's going on" on this comic's
+  # dense panels (seb, 2026-07-31); denser art needs more context per shot
+  frame_tightness: 3.2
   # fit  - whole panel, letterboxed over a blurred copy of itself, Ken Burns
   #        move aimed at the focus box. Keeps the drawn composition intact.
   # fill - crop a frame-shaped window around the subject. Fills the screen but
@@ -54,6 +56,10 @@ shorts:
   #        tiktoks/ analysis): art edge-to-edge, zero letterbox. Repeated
   #        panels re-frame per beat so each shot reads as a cut.
   frame_mode: fill
+  # fill only when the subject window shows at least this fraction of the
+  # panel's width; below it, letterbox the whole panel (wide battle panels
+  # sliced to 9:16 were unreadable - "hard to tell what's going on")
+  fill_min_coverage: 0.5
   caption_style:
     font: "/System/Library/Fonts/Supplemental/Impact.ttf"
     size_pct: 0.046        # of frame height
@@ -93,9 +99,13 @@ shorts:
   voicebox_profile: "aud_qwen_Ryan" # bake-off finalist (2026-07-31); the
                                     # other finalist is Narrator-CB
                                     # (chatterbox_turbo, ignores instruct)
+  # TTS-only pronunciation respellings: what the engine hears, never what
+  # captions show. qwen degenerates into vocal noise on some proper nouns.
+  tts_pronounce:
+    Fiyero: "Fiero"
   # constant delivery direction for the narrator voice (qwen engines only);
   # per-shot manifest `emotion` is appended to this
-  narrator_instruct: "Energetic, sardonic video-recap narrator: deep male voice, quick pace, dry smirk, punchy emphasis on names and reversals, storyteller confidence."
+  narrator_instruct: "Energetic, sardonic video-recap narrator: deep male voice, quick pace, dry smirk, punchy emphasis on names and reversals, storyteller confidence. Speak ONLY the written words - never laugh, giggle, sigh or add any sound that is not in the text."
   # previous default: "Narrator"    # qwen Dylan; stage 6 default voice;
                                     # per-character
                                     # override with `voicebox_profile` below

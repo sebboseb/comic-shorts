@@ -45,8 +45,15 @@ DRIFT_RATE = 0.055       # fraction of frame width the picture may travel per
 # wider again). Each entry is (tightness multiplier, max window fraction of
 # the panel): the multiplier varies subject room, and the cap guarantees a
 # visible punch-in even when the focus box is so large that any tightness
-# clamps to the whole panel.
-REFRAME = ((1.0, 1.0), (0.62, 0.7), (1.5, 1.0), (0.85, 0.55))
+# clamps to the whole panel. Punch-ins are deliberately moderate: harder caps
+# (0.7/0.55) made dense panels unreadable - "hard to tell what's going on".
+REFRAME = ((1.0, 1.0), (0.75, 0.82), (1.5, 1.0), (0.9, 0.68))
+
+# Wide panels that can't fill the frame render as a full-height band this
+# many times wider than tall, letterboxed over blur: wide enough to read
+# the scene, capped so the art stays large (a 1.5:1 band fills ~38% of the
+# frame's height vs ~14% for a whole 4:1 panel).
+BAND_ASPECT = 1.5
 
 
 def _est_frames(line):
@@ -114,6 +121,16 @@ def _zoompan(motion, n, cx, cy, fw, fh):
         z, x, y = "1", cxc, cyc
 
     return f"zoompan=z='{z}':x='{x}':y='{y}':d=1:s={fw}x{fh}:fps={FPS}"
+
+
+def _band_window(pw, ph, cx, band_aspect):
+    """Full-height band around the subject for a wide panel: wider than the
+    frame (context survives) but capped at band_aspect (the subject stays
+    big). Returns (x, w, ncx): the crop and the focus centre within it."""
+    bw = min(pw, max(2, round(ph * band_aspect)))
+    x = min(max(round(cx * pw - bw / 2), 0), pw - bw)
+    ncx = (cx * pw - x) / bw if bw else 0.5
+    return x, bw, min(max(ncx, 0.0), 1.0)
 
 
 def _part_number(short_id):
@@ -185,7 +202,8 @@ def _framed_chain(pw, ph, focus, motion, dur, tightness, max_frac=1.0):
 
 def _render_shot(img_path, audio_path, frames, motion, cx, cy,
                  panel_size, out_path,
-                 focus=None, tightness=2.4, frame_mode="fill", max_frac=1.0):
+                 focus=None, tightness=2.4, frame_mode="fill", max_frac=1.0,
+                 min_coverage=0.5):
     dur = frames / FPS
     pw, ph = panel_size
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
@@ -197,9 +215,22 @@ def _render_shot(img_path, audio_path, frames, motion, cx, cy,
 
     if frame_mode == "fill":
         # subject-framed crop: fills the canvas but discards whatever falls
-        # outside the frame-shaped window, including neighbouring panel art
-        vf = (f"[0:v]{_framed_chain(pw, ph, focus, motion, dur, tightness, max_frac)},"
-              f"format=yuv420p[v]")
+        # outside the frame-shaped window, including neighbouring panel art.
+        # On a WIDE panel that window is a narrow slice of a busy scene -
+        # "hard to tell what's going on" - so when it would show less than
+        # min_coverage of the panel's width, letterbox a full-height band
+        # around the subject instead (the reference channels run wide
+        # panels as bands, faces full-frame). The band is capped at
+        # BAND_ASPECT so it stays tall on screen; whole-panel fit made a
+        # 4:1 battle panel a sliver.
+        w = _frame_window(pw, ph, focus, tightness, max_frac)[2]
+        if w / pw < min_coverage:
+            bx, bw, ncx = _band_window(pw, ph, cx, BAND_ASPECT)
+            vf = _fit_chain(*_fit_size(bw, ph), frames, motion, ncx, cy,
+                            crop=(bw, ph, bx, 0))
+        else:
+            vf = (f"[0:v]{_framed_chain(pw, ph, focus, motion, dur, tightness, max_frac)},"
+                  f"format=yuv420p[v]")
     else:
         # fit: the whole panel, letterboxed over a blurred copy of itself, with
         # a Ken Burns move aimed at the focus. Keeps the panel's composition
@@ -218,7 +249,7 @@ def _render_shot(img_path, audio_path, frames, motion, cx, cy,
     subprocess.run(cmd, check=True, capture_output=True, text=True)
 
 
-def _fit_chain(fw, fh, frames, motion, cx, cy):
+def _fit_chain(fw, fh, frames, motion, cx, cy, crop=None):
     # zoompan truncates its window origin to whole INPUT pixels every frame,
     # so a continuously changing zoom makes the image twitch by a fraction of
     # an output pixel -- which comic halftone dots turn into visible shimmer.
@@ -226,10 +257,14 @@ def _fit_chain(fw, fh, frames, motion, cx, cy):
     # step, and render the move at SS x target then average it back down.
     ss_w, ss_h = fw * SUPERSAMPLE, fh * SUPERSAMPLE
 
+    # crop: letterbox a region of the panel rather than all of it
+    # (wide-panel band), for both the subject and the blurred backdrop
+    src = ("[0:v]" if crop is None else
+           f"[0:v]crop={crop[0]}:{crop[1]}:{crop[2]}:{crop[3]},")
     # background: same art, cropped to fill, blurred and dimmed so the
     # fitted panel reads as the subject on any aspect ratio
     vf = (
-        "[0:v]split=2[bg][fg];"
+        f"{src}split=2[bg][fg];"
         f"[bg]scale={W}:{H}:force_original_aspect_ratio=increase,"
         f"crop={W}:{H},boxblur=32:2,eq=brightness=-0.22[bgb];"
         f"[fg]scale=iw*{PRESCALE}:ih*{PRESCALE}:flags=lanczos,"
@@ -275,6 +310,7 @@ def run(config, workdir: Path):
     DRIFT_RATE = config.get("shorts", {}).get("drift_rate", DRIFT_RATE)
     tightness = config.get("shorts", {}).get("frame_tightness", 2.4)
     frame_mode = config.get("shorts", {}).get("frame_mode", "fill")
+    min_coverage = config.get("shorts", {}).get("fill_min_coverage", 0.5)
 
     out_dir = workdir / "renders"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -329,7 +365,7 @@ def run(config, workdir: Path):
             _render_shot(img, audio_path, frames,
                          shot.get("motion", "hold"), cx, cy,
                          csize, clip, focus,
-                         tightness * tm, frame_mode, max_frac)
+                         tightness * tm, frame_mode, max_frac, min_coverage)
             clips.append(clip)
             print(f"  {short_id} shot{i:03d} {shot.get('motion','hold'):<9} "
                   f"{frames:>4}f  {panel['id']}")
