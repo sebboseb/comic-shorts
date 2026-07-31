@@ -11,6 +11,7 @@ Output: work/manifests/epNN.json (one per short)
 
 import json
 import os
+import re
 from pathlib import Path
 
 import anthropic
@@ -63,6 +64,12 @@ Rules:
   prefer a character the audience may already know. Do NOT open on scene
   setting, on a faction, or on an event with nobody in it; a premise is not a
   hook, a person in trouble is.
+- SHOW WHO YOU NAME. When a line introduces a character - especially the
+  opening hook - its shot must use a panel where that character is VISIBLE
+  (each panel lists characters_visible). "Meet our hero" over a panel he is
+  not in reads as a mistake and breaks the viewer's trust in the first
+  seconds. Mentions of someone off-screen are fine later, once the viewer
+  knows their face.
 - Establish the situation fast: within the first two shots the viewer must know
   where we are and who we are following. Name each character in narration the
   first time they appear - give the role and the name together, the way
@@ -240,6 +247,23 @@ def _parse_story(text: str, stop_reason, raw_path: Path):
     return data
 
 
+def _visibility_warnings(short, panel_chars, names):
+    """(shot_idx, name, panel) for each character whose FIRST narration
+    mention sits on a panel they are not visible in. Introductions must
+    show their subject; later off-screen mentions are normal speech."""
+    seen, warns = set(), []
+    for i, shot in enumerate(short.get("shots", [])):
+        line = (shot.get("line") or "").lower()
+        for name in names:
+            if name in seen:
+                continue
+            if re.search(rf"\b{re.escape(name.lower())}\b", line):
+                seen.add(name)
+                if name not in panel_chars.get(shot.get("panel"), []):
+                    warns.append((i, name, shot.get("panel")))
+    return warns
+
+
 def _system_prompt(config):
     """The dialogue rules differ fundamentally by narration mode, so the prompt
     is assembled rather than fixed. single_voice matches how the reference
@@ -262,6 +286,7 @@ def run(config, workdir: Path):
     panel_lines = []
     for p in panels:
         entry = {"panel": p["id"], "scene": p.get("scene", ""),
+                 "characters_visible": p.get("characters_present", []),
                  "dialogue": [{"speaker": d.get("speaker", "unknown"),
                                "text": d.get("text", ""),
                                "emotion": d.get("emotion", "")}
@@ -294,12 +319,19 @@ def run(config, workdir: Path):
     out_dir.mkdir(parents=True, exist_ok=True)
 
     valid_panels = {p["id"] for p in panels}
+    panel_chars = {p["id"]: p.get("characters_present", []) for p in panels}
+    roster_names = [c["name"] for c in config.get("characters", [])]
     for short in data["shorts"]:
         bad = [s["panel"] for s in short["shots"]
                if s["panel"] not in valid_panels]
         if bad:
             print(f"  WARNING {short['short_id']}: references unknown panels "
                   f"{bad} - fix before rendering")
+        for i, name, panel in _visibility_warnings(short, panel_chars,
+                                                   roster_names):
+            print(f"  WARNING {short['short_id']} shot{i:03d}: introduces "
+                  f"{name!r} on panel {panel}, where they are not visible - "
+                  "swap the panel or the line at review")
         for shot in short["shots"]:
             shot.setdefault("audio", None)
             shot.setdefault("duration_frames", None)
