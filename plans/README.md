@@ -18,9 +18,9 @@ verification — they cost API money.
 
 | Plan | Title | Priority | Effort | Depends on | Status |
 |------|-------|----------|--------|------------|--------|
-| 001 | Verification baseline (git init + pytest suite) | P1 | M | — | TODO |
-| 002 | Never lose a paid stage-4 (Opus) response | P1 | S | 001 | TODO |
-| 003 | Persist and resume stage-2 batches | P1 | S | 001 | TODO |
+| 001 | Verification baseline (git init + pytest suite) | P1 | M | — | DONE (2026-07-31; git already existed with work/ intentionally tracked — kept as-is, tests added: 23 passed, 1 torch-skip) |
+| 002 | Never lose a paid stage-4 (Opus) response | P1 | S | 001 | DONE (2026-07-31; via `_parse_story` helper, raw saved to work/story_raw.txt) |
+| 003 | Persist and resume stage-2 batches | P1 | S | 001 | DONE (2026-07-31; work/batch_id.txt, cleared on success) |
 | 004 | Run stages 4–5 without the GPU stage; full-signal review gate | P2 | M | 001, 002 | TODO |
 | 005 | Character appearance variants (`variant_of`) | P2 | M | 001, 002, 004 | TODO |
 
