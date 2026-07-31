@@ -90,14 +90,19 @@ Rules:
       COSTS, or what is about to go wrong ("He'd crossed a hundred million miles
       to find that stone. It would cost him everything.").
     * Lead with the consequence or the stakes, not the stage direction.
-    * Vary sentence length. Short sentences hit. Let a long one build, then cut
-      it off with a short one.
+    * PRESENT TENSE, always.
+    * ROLL FORWARD. Chain events with subordinate connectives - "when",
+      "after", "to which", "only for", "only to realize", "which causes",
+      "before", "after which", "however", "right on cue" - so each clause
+      hands momentum to the next. A full stop at a tension point is where
+      the viewer leaves; land stops AFTER a reversal, never before one.
+      Do NOT write staccato fragments ("The whole Corps. Gone.") - on a
+      synthesised voice they read as a flat list, not as drama.
     * Use concrete, physical nouns and hard verbs. No "suddenly", no "little did
-      they know", no "meanwhile", no rhetorical questions to camera.
-    * Withhold. Name the threat late in the line, not early.
+      they know", no rhetorical questions to camera.
     * Address nobody. No "you won't believe", no direct address to the viewer.
-  The synthesised voice is flat and literal, so the WRITING has to carry the
-  performance: rhythm and word choice are the only prosody you get.
+  The synthesised voice cannot perform a pause, so the WRITING has to carry
+  the momentum: chained clauses are the only forward pull you get.
 {DIALOGUE_RULES}
 - A shot with no line (silent dramatic beat) is allowed: set line to "" and give
   it motion + sfx.
@@ -129,9 +134,14 @@ SINGLE_VOICE_RULES = """- ONE VOICE. Every single shot has speaker "narrator". N
   report of them, keeping the sense and any wording that is doing real work:
     * "Quill tells him the force fields will hold, and asks if that is what he
       wanted to hear."   (not Quill saying it)
+    * Carry the delivery in an adverb and a varied verb: "Peter irritably
+      replies that he's not a kid", "he casually remarks that he must have
+      overdone it in training". Rotate replies / scoffs / remarks / asks /
+      shouts / mentions / deduces - never "says" twice in a row.
     * "'How could they?' replies Damien."  - a short quote INSIDE a narrator
       line is fine when the exact words land harder than a paraphrase. The
-      narrator still speaks it; attribute it in the same breath.
+      narrator still speaks it; attribute it in the same breath, trailing:
+      "'You must be a Robin,' says Cobblepot."
   Never leave a line of dialogue unattributed - always say who said it, or drop
   it. Unattributed speech is the main way a single-voice recap loses a viewer.
 - ANNOUNCE EVERY MOVE. Any change of place, time or focus gets an explicit
@@ -143,9 +153,13 @@ SINGLE_VOICE_RULES = """- ONE VOICE. Every single shot has speaker "narrator". N
   rhythm: with no speaker changes to honour, the picture can change as often as
   the story does. Expect MANY MORE shots than there are panels - reusing a panel
   across two or three consecutive shots is correct and expected.
-- DRIVE FORWARD WITH CONNECTIVES. Chain beats with "until", "but", "then",
-  "before", "and now" so each line sets up the next. Setup then reversal is the
-  engine: state what someone expects, then break it."""
+- CHAIN THE SHOTS INTO ONE TELLING. The lines are spoken back to back, so
+  consecutive shots must read as one rolling story, not a list of captions:
+  open lines on connectives ("To which...", "Only for...", "However...",
+  "After that...", "Which is when...") so every cut lands mid-momentum.
+  Setup then reversal is the engine: state what someone expects in one shot,
+  break it in the next. End the episode's last shot on a stated intention or
+  incoming threat - a goal, not a mood."""
 
 
 def _voice_brief(config):
