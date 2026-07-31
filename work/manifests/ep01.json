@@ -1,236 +1,333 @@
 {
  "short_id": "ep01",
- "title": "He Made One Fire and Doomed an Entire Planet",
- "description": "An Earth explorer lands on a strange planetoid, meets some very friendly hooded locals, and immediately makes the worst possible first-contact mistake.",
+ "title": "The Last Space Cop in the Galaxy",
+ "description": "Richard Rider is the only Nova Corps officer left alive, and the thing that killed everyone else is punching through the edge of the universe.",
  "hashtags": [
   "#comic",
-  "#retroscifi",
-  "#planetcomics",
-  "#marsgodofwar",
-  "#pulp"
+  "#marvel",
+  "#annihilation",
+  "#nova",
+  "#cosmicmarvel"
  ],
  "music_mood": "ominous",
- "hook_note": "Opening on a war god striding through space vowing carnage is pure cosmic doom-bait before we even meet the humans.",
+ "hook_note": "Opening on a named human hero declared 'last survivor' instantly frames one person in maximum trouble.",
  "shots": [
   {
    "panel": "p01_01",
    "speaker": "narrator",
-   "line": "Somewhere out in the cosmos, this washed-up war god is drifting through the stars, torch in hand, looking for something to ruin.",
-   "emotion": "ominous, amused",
-   "motion": "slow_pan",
+   "line": "Meet our boy Rich - Richard Rider, the last Nova Corps officer left breathing.",
+   "emotion": "grim, hooking",
+   "motion": "zoom_face",
    "hero": true,
-   "sfx": "ominous",
+   "sfx": "heartbeat",
    "audio": "work/audio/ep01/shot000.wav",
-   "duration_frames": 332,
+   "duration_frames": 155,
    "segments": [
     {
-     "text": "Somewhere out in the cosmos, this washed-up war god is drifting through the stars, torch in hand, looking for something to ruin.",
-     "frames": 311
-    }
-   ]
-  },
-  {
-   "panel": "p01_01",
-   "speaker": "narrator",
-   "line": "And a ship from Earth is heading straight for Planetoid 206. Great timing, guys.",
-   "emotion": "dry",
-   "motion": "zoom_out",
-   "hero": false,
-   "sfx": "whoosh",
-   "audio": "work/audio/ep01/shot001.wav",
-   "duration_frames": 222,
-   "segments": [
-    {
-     "text": "And a ship from Earth is heading straight for Planetoid 206.",
-     "frames": 159
-    },
-    {
-     "text": "Great timing, guys.",
-     "frames": 42
+     "text": "Meet our boy Rich - Richard Rider, the last Nova Corps officer left breathing.",
+     "frames": 149,
+     "speech_frames": 149
     }
    ]
   },
   {
    "panel": "p02_01",
-   "speaker": "Dick Warren",
-   "line": "Only human beings have made these... I'll take it back and try to decipher it.",
-   "emotion": "thoughtful, intrigued",
-   "motion": "zoom_face",
-   "hero": false,
-   "sfx": "none",
-   "audio": "work/audio/ep01/shot002.wav",
-   "duration_frames": 184,
-   "segments": [
-    {
-     "text": "Only human beings have made these...",
-     "frames": 87
-    },
-    {
-     "text": "I'll take it back and try to decipher it.",
-     "frames": 76
-    }
-   ]
-  },
-  {
-   "panel": "p02_02",
    "speaker": "narrator",
-   "line": "That's our boy Dick Warren, level-headed explorer, poking at rocks. And here come the locals.",
-   "emotion": "casual",
+   "line": "And the thing that killed the rest? It punched straight through the edge of the universe.",
+   "emotion": "ominous",
    "motion": "slow_pan",
    "hero": false,
    "sfx": "none",
-   "audio": "work/audio/ep01/shot003.wav",
-   "duration_frames": 256,
+   "audio": "work/audio/ep01/shot001.wav",
+   "duration_frames": 150,
    "segments": [
     {
-     "text": "That's our boy Dick Warren, level-headed explorer, poking at rocks.",
-     "frames": 173
+     "text": "And the thing that killed the rest?",
+     "frames": 65,
+     "speech_frames": 53
     },
     {
-     "text": "And here come the locals.",
-     "frames": 61
+     "text": "It punched straight through the edge of the universe.",
+     "frames": 80,
+     "speech_frames": 80
+    }
+   ]
+  },
+  {
+   "panel": "p02_01",
+   "speaker": "narrator",
+   "line": "That edge is called the Crunch, which means these guys came from outside reality itself.",
+   "emotion": "grave",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work/audio/ep01/shot002.wav",
+   "duration_frames": 157,
+   "segments": [
+    {
+     "text": "That edge is called the Crunch, which means these guys came from outside reality itself.",
+     "frames": 152,
+     "speech_frames": 152
     }
    ]
   },
   {
    "panel": "p02_02",
-   "speaker": "Wad",
-   "line": "STRANGER! STRANGER!.. WE ARE FRIENDS!",
-   "emotion": "calling out, welcoming",
+   "speaker": "narrator",
+   "line": "First stop: Xandar, the Corps' homeworld, wiped off the board on day one.",
+   "emotion": "somber",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep01/shot003.wav",
+   "duration_frames": 139,
+   "segments": [
+    {
+     "text": "First stop: Xandar, the Corps' homeworld, wiped off the board on day one.",
+     "frames": 133,
+     "speech_frames": 133
+    }
+   ]
+  },
+  {
+   "panel": "p02_03",
+   "speaker": "narrator",
+   "line": "They call themselves the Annihilation Wave, led by Annihilus, bug guy with a god complex.",
+   "emotion": "dry",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot004.wav",
+   "duration_frames": 171,
+   "segments": [
+    {
+     "text": "They call themselves the Annihilation Wave, led by Annihilus, bug guy with a god complex.",
+     "frames": 165,
+     "speech_frames": 165
+    }
+   ]
+  },
+  {
+   "panel": "p02_03",
+   "speaker": "narrator",
+   "line": "And yeah - Annihilation Wave, Annihilus. Rich admits not everyone connected those dots.",
+   "emotion": "deadpan amused",
    "motion": "hold",
    "hero": false,
    "sfx": "none",
-   "audio": "work/audio/ep01/shot004.wav",
-   "duration_frames": 136,
-   "segments": [
-    {
-     "text": "Stranger! Stranger!.. We are friends!",
-     "frames": 115
-    }
-   ]
-  },
-  {
-   "panel": "p02_04",
-   "speaker": "Wad",
-   "line": "My name is Wad. I am leader here.",
-   "emotion": "stern, formal",
-   "motion": "zoom_face",
-   "hero": false,
-   "sfx": "none",
    "audio": "work/audio/ep01/shot005.wav",
-   "duration_frames": 80,
+   "duration_frames": 261,
    "segments": [
     {
-     "text": "My name is Wad. I am leader here.",
-     "frames": 59
+     "text": "And yeah - Annihilation Wave, Annihilus.",
+     "frames": 105,
+     "speech_frames": 94
+    },
+    {
+     "text": "Rich admits not everyone connected those dots.",
+     "frames": 150,
+     "speech_frames": 150
     }
    ]
   },
   {
-   "panel": "p02_06",
+   "panel": "p02_03",
    "speaker": "narrator",
-   "line": "Big man Wad throws a feast. And Dick, watching them eat raw meat, has a bright idea that's about to go catastrophically wrong.",
-   "emotion": "foreboding, amused",
+   "line": "His whole deal? Our universe is expanding into his Negative Zone, so he's taking it back.",
+   "emotion": "informational, wry",
    "motion": "slow_pan",
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot006.wav",
-   "duration_frames": 279,
+   "duration_frames": 146,
    "segments": [
     {
-     "text": "Big man Wad throws a feast.",
-     "frames": 84
-    },
-    {
-     "text": "And Dick, watching them eat raw meat, has a bright idea that's about to go catastrophically wrong.",
-     "frames": 174
+     "text": "His whole deal? Our universe is expanding into his Negative Zone, so he's taking it back.",
+     "frames": 141,
+     "speech_frames": 141
     }
    ]
   },
   {
-   "panel": "p02_06",
-   "speaker": "Dick Warren",
-   "line": "They eat their meat raw! I'm going to show them how to make a fire and cook!",
-   "emotion": "determined, thoughtful",
-   "motion": "zoom_face",
+   "panel": "p03_01",
+   "speaker": "narrator",
+   "line": "Six months later, Rich and whatever's left are dug in on Daedalus 5.",
+   "emotion": "weary",
+   "motion": "zoom_out",
    "hero": false,
    "sfx": "none",
    "audio": "work/audio/ep01/shot007.wav",
+   "duration_frames": 154,
+   "segments": [
+    {
+     "text": "Six months later, Rich and whatever's left are dug in on Daedalus 5.",
+     "frames": 148,
+     "speech_frames": 148
+    }
+   ]
+  },
+  {
+   "panel": "p03_01",
+   "speaker": "narrator",
+   "line": "For once they're actually holding the line, and Rich says he'll take what he can get.",
+   "emotion": "grimly hopeful",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot008.wav",
+   "duration_frames": 125,
+   "segments": [
+    {
+     "text": "For once they're actually holding the line, and Rich says he'll take what he can get.",
+     "frames": 120,
+     "speech_frames": 120
+    }
+   ]
+  },
+  {
+   "panel": "p03_02",
+   "speaker": "narrator",
+   "line": "His number two is Quill, who absolutely thinks he's the main character.",
+   "emotion": "playful",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot009.wav",
+   "duration_frames": 166,
+   "segments": [
+    {
+     "text": "His number two is Quill, who absolutely thinks he's the main character.",
+     "frames": 160,
+     "speech_frames": 160
+    }
+   ]
+  },
+  {
+   "panel": "p03_02",
+   "speaker": "narrator",
+   "line": "Rich asks him to lie, so Quill dryly promises the force fields will hold - happy now?",
+   "emotion": "sarcastic",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot010.wav",
    "duration_frames": 170,
    "segments": [
     {
-     "text": "They eat their meat raw!",
-     "frames": 67
-    },
-    {
-     "text": "I'm going to show them how to make a fire and cook!",
-     "frames": 82
+     "text": "Rich asks him to lie, so Quill dryly promises the force fields will hold - happy now?",
+     "frames": 164,
+     "speech_frames": 164
     }
    ]
   },
   {
-   "panel": "p02_08",
-   "speaker": "Ada",
-   "line": "PUT IT OUT!",
-   "emotion": "desperate, alarmed",
-   "motion": "shake",
-   "hero": true,
-   "sfx": "sting",
-   "audio": "work/audio/ep01/shot008.wav",
-   "duration_frames": 44,
+   "panel": "p03_03",
+   "speaker": "narrator",
+   "line": "Running her own hit-and-run ops out there is Gamora, deadliest woman in the galaxy and aware of it.",
+   "emotion": "impressed",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot011.wav",
+   "duration_frames": 168,
    "segments": [
     {
-     "text": "Put it out!",
-     "frames": 23
+     "text": "Running her own hit-and-run ops out there is Gamora, deadliest woman in the galaxy and aware of it.",
+     "frames": 163,
+     "speech_frames": 163
     }
    ]
   },
   {
-   "panel": "p02_09",
-   "speaker": "Ada",
-   "line": "They cannot stand the smallest flame! It draws the oxygen from their bodies and strangles them! I am different! Why, I don't know!",
-   "emotion": "earnest, explaining",
+   "panel": "p04_01",
+   "speaker": "narrator",
+   "line": "Quill reports she's still singing the same song - bring the fight to them, in C minor.",
+   "emotion": "wry",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot012.wav",
+   "duration_frames": 149,
+   "segments": [
+    {
+     "text": "Quill reports she's still singing the same song - bring the fight to them, in C minor.",
+     "frames": 144,
+     "speech_frames": 144
+    }
+   ]
+  },
+  {
+   "panel": "p04_01",
+   "speaker": "narrator",
+   "line": "Rich flatly tells him to throw the C minor bit back out. Comedy king, no.",
+   "emotion": "deadpan",
    "motion": "zoom_face",
    "hero": false,
    "sfx": "none",
-   "audio": "work/audio/ep01/shot009.wav",
-   "duration_frames": 322,
+   "audio": "work/audio/ep01/shot013.wav",
+   "duration_frames": 159,
    "segments": [
     {
-     "text": "They cannot stand the smallest flame!",
-     "frames": 80
-    },
-    {
-     "text": "It draws the oxygen from their bodies and strangles them!",
-     "frames": 118
-    },
-    {
-     "text": "I am different! Why, I don't know!",
-     "frames": 104
+     "text": "Rich flatly tells him to throw the C minor bit back out. Comedy king, no.",
+     "frames": 154,
+     "speech_frames": 154
     }
    ]
   },
   {
-   "panel": "p02_10",
+   "panel": "p04_02",
    "speaker": "narrator",
-   "line": "And while everyone's panicking over a lighter, the drama queen of the cosmos picks this exact moment to drop in. Unseen. Uninvited.",
-   "emotion": "gleeful dread",
-   "motion": "zoom_out",
-   "hero": true,
-   "sfx": "heartbeat",
-   "audio": "work/audio/ep01/shot010.wav",
-   "duration_frames": 380,
+   "line": "Then Quill spots something across the battlefield and mutters, 'That can't be good.'",
+   "emotion": "alarmed",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work/audio/ep01/shot014.wav",
+   "duration_frames": 170,
    "segments": [
     {
-     "text": "And while everyone's panicking over a lighter, the drama queen of the cosmos picks this exact moment to drop in.",
-     "frames": 271
-    },
+     "text": "Then Quill spots something across the battlefield and mutters, 'That can't be good. '",
+     "frames": 164,
+     "speech_frames": 164
+    }
+   ]
+  },
+  {
+   "panel": "p04_03",
+   "speaker": "narrator",
+   "line": "Rich yells for a plain answer, so Quill screams the right flank barricades just blew.",
+   "emotion": "urgent",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep01/shot015.wav",
+   "duration_frames": 162,
+   "segments": [
     {
-     "text": "Unseen. Uninvited.",
-     "frames": 88
+     "text": "Rich yells for a plain answer, so Quill screams the right flank barricades just blew.",
+     "frames": 156,
+     "speech_frames": 156
+    }
+   ]
+  },
+  {
+   "panel": "p04_04",
+   "speaker": "narrator",
+   "line": "And when one goes, the whole grid cascades - meaning the force fields are about to fail.",
+   "emotion": "rising panic",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work/audio/ep01/shot016.wav",
+   "duration_frames": 139,
+   "segments": [
+    {
+     "text": "And when one goes, the whole grid cascades - meaning the force fields are about to fail.",
+     "frames": 133,
+     "speech_frames": 133
     }
    ]
   }
  ],
- "cliffhanger_note": "Mars has arrived invisibly among Wad's people, and no one knows what he plans to do with them."
+ "cliffhanger_note": "The force field grid is collapsing and the right flank is wide open - who's holding it?"
 }

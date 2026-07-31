@@ -1,0 +1,434 @@
+[
+  {
+    "id": "p01_02",
+    "page": 1,
+    "panel": 2,
+    "file": "panels/p01_02.png",
+    "bbox_on_page": [
+      963,
+      55,
+      700,
+      603
+    ],
+    "size": [
+      700,
+      603
+    ],
+    "scene": "Jeff the Land Shark is shown wearing snorkel goggles, swim fins, and a Deadpool-logo-covered floaty ring, looking delighted and ready for a swim.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      70,
+      30,
+      560,
+      543
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p01_03",
+    "page": 1,
+    "panel": 3,
+    "file": "panels/p01_03.png",
+    "bbox_on_page": [
+      275,
+      691,
+      1437,
+      2292
+    ],
+    "size": [
+      1437,
+      2292
+    ],
+    "scene": "A wide overhead shot of a superhero pool party with many Marvel characters enjoying the water and poolside, while Jeff the Land Shark (in a tiny Deadpool-masked costume) is spotlighted in a circular inset at the bottom of the panel.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      244,
+      2475,
+      661,
+      871
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_01",
+    "page": 2,
+    "panel": 1,
+    "file": "panels/p02_01.png",
+    "bbox_on_page": [
+      69,
+      71,
+      917,
+      1461
+    ],
+    "size": [
+      917,
+      1461
+    ],
+    "scene": "A group of Marvel heroes in beach/casual attire gather at what appears to be a poolside party, with Jeff the Land Shark dressed in a Deadpool costume and snorkel gear standing in the foreground as Spider-Man looks on from the left.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      321,
+      1096,
+      413,
+      584
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_02",
+    "page": 2,
+    "panel": 2,
+    "file": "panels/p02_02.png",
+    "bbox_on_page": [
+      1001,
+      71,
+      916,
+      1461
+    ],
+    "size": [
+      916,
+      1461
+    ],
+    "scene": "Jeff the Land Shark sits contentedly in a Deadpool-themed inflatable pool ring wearing yellow snorkel goggles, surrounded by onlookers taking photos on their phones, offering ice cream and drinks.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      229,
+      438,
+      458,
+      804
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_03",
+    "page": 2,
+    "panel": 3,
+    "file": "panels/p02_03.png",
+    "bbox_on_page": [
+      68,
+      1602,
+      703,
+      655
+    ],
+    "size": [
+      703,
+      655
+    ],
+    "scene": "A close-up shot of a light-blue inflatable pool ring decorated with Deadpool mask logos and cat paw prints, with a character's wrist/hand visible in the bottom-right corner.",
+    "characters_present": [],
+    "dialogue": [],
+    "focus_box": [
+      35,
+      13,
+      492,
+      341
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_04",
+    "page": 2,
+    "panel": 4,
+    "file": "panels/p02_04.png",
+    "bbox_on_page": [
+      675,
+      1664,
+      1083,
+      519
+    ],
+    "size": [
+      1083,
+      519
+    ],
+    "scene": "A partial panel showing Iceman's ice-form head in the upper left corner and the tops of multiple small shark fins (Jeff) visible along the bottom edge.",
+    "characters_present": [
+      "Iceman",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      0,
+      0,
+      238,
+      197
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_05",
+    "page": 2,
+    "panel": 5,
+    "file": "panels/p02_05.png",
+    "bbox_on_page": [
+      902,
+      2107,
+      887,
+      773
+    ],
+    "size": [
+      887,
+      773
+    ],
+    "scene": "Jeff the Land Shark sits contentedly on the floor, surrounded by scattered items, looking adorable and pleased with himself.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      133,
+      39,
+      621,
+      696
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p03_01",
+    "page": 3,
+    "panel": 1,
+    "file": "panels/p03_01.png",
+    "bbox_on_page": [
+      69,
+      262,
+      790,
+      1259
+    ],
+    "size": [
+      790,
+      1259
+    ],
+    "scene": "A group of Marvel heroes enjoy a pool party, floating on various inflatables including a donut ring, a giant rubber duck, and a bug-shaped float, with a water gun battle in progress.",
+    "characters_present": [],
+    "dialogue": [],
+    "focus_box": [
+      40,
+      126,
+      711,
+      1133
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p03_02",
+    "page": 3,
+    "panel": 2,
+    "file": "panels/p03_02.png",
+    "bbox_on_page": [
+      69,
+      1536,
+      790,
+      1259
+    ],
+    "size": [
+      790,
+      1259
+    ],
+    "scene": "Jeff the Land Shark swims joyfully underwater in a pool surrounded by the legs and bodies of swimmers, looking delighted with his mouth open.",
+    "characters_present": [
+      "Jeff",
+      "Kate Bishop",
+      "Iceman"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      237,
+      478,
+      316,
+      478
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p03_03",
+    "page": 3,
+    "panel": 3,
+    "file": "panels/p03_03.png",
+    "bbox_on_page": [
+      873,
+      262,
+      1052,
+      2533
+    ],
+    "size": [
+      1052,
+      2533
+    ],
+    "scene": "A wide overhead view of a pool party featuring many Marvel heroes relaxing in the water on floaties, including Groot with Rocket, Doctor Strange reading on a Mindless One float, Ghost Rider, Black Panther, Drax, Storm, Spider-Man on a pizza float, Spider-Gwen, and a shark fin visible at the bottom.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      0,
+      0,
+      1052,
+      2533
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_01",
+    "page": 4,
+    "panel": 1,
+    "file": "panels/p04_01.png",
+    "bbox_on_page": [
+      87,
+      48,
+      910,
+      1450
+    ],
+    "size": [
+      910,
+      1450
+    ],
+    "scene": "A large shark fin cuts through a pool as terrified swimmers and bystanders cluster together in panic, while a blue-skinned figure watches calmly from the side.",
+    "characters_present": [
+      "Kate Bishop",
+      "Iceman"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      273,
+      798,
+      364,
+      652
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_02",
+    "page": 4,
+    "panel": 2,
+    "file": "panels/p04_02.png",
+    "bbox_on_page": [
+      1010,
+      48,
+      925,
+      955
+    ],
+    "size": [
+      925,
+      955
+    ],
+    "scene": "Jeff the Land Shark swims happily underwater in a pool, grinning with his mouth wide open and stubby fins paddling.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      231,
+      191,
+      462,
+      430
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_03",
+    "page": 4,
+    "panel": 3,
+    "file": "panels/p04_03.png",
+    "bbox_on_page": [
+      1010,
+      1017,
+      925,
+      481
+    ],
+    "size": [
+      925,
+      481
+    ],
+    "scene": "Jeff the Land Shark bursts joyfully through ocean waves with mouth wide open and eyes squinted happily.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      139,
+      24,
+      648,
+      240
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_04",
+    "page": 4,
+    "panel": 4,
+    "file": "panels/p04_04.png",
+    "bbox_on_page": [
+      87,
+      1511,
+      1030,
+      1545
+    ],
+    "size": [
+      1030,
+      1545
+    ],
+    "scene": "Jeff the Land Shark paddles in a pool surrounded by inflatable toys, looking confused at a unicorn float nearby.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [
+      {
+        "text": "?",
+        "speaker": "Jeff",
+        "emotion": "confused, curious",
+        "bubble_box": [
+          402,
+          572,
+          103,
+          147
+        ]
+      }
+    ],
+    "focus_box": [
+      371,
+      649,
+      206,
+      247
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_05",
+    "page": 4,
+    "panel": 5,
+    "file": "panels/p04_05.png",
+    "bbox_on_page": [
+      1131,
+      1511,
+      804,
+      1363
+    ],
+    "size": [
+      804,
+      1363
+    ],
+    "scene": "A group of Marvel heroes in swimwear look on in alarm from a poolside while Jeff the Land Shark happily paddles in the pool below them.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      40,
+      818,
+      724,
+      545
+    ],
+    "sfx_text": []
+  }
+]

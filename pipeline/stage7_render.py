@@ -63,6 +63,44 @@ def _est_frames(line):
     return max(SILENT_FRAMES, round(words / WORDS_PER_SEC * FPS) + TAIL_FRAMES)
 
 
+# The reference channels cut roughly every 2 seconds: one narration beat,
+# one visual change, even when the picture is the same panel re-framed.
+# A shot longer than MAX_SHOT_FRAMES is therefore split into sub-clips -
+# same wav, sliced - and each sub-clip re-frames via the REFRAME schedule,
+# so a long line reads as several cuts instead of one static hold.
+MAX_SHOT_FRAMES = 78          # ~2.6s; splits aim for ~2.2s pieces
+SPLIT_TARGET = 66
+
+
+def _split_points(shot, frames):
+    """Frame offsets [(start, n), ...] carving a shot into sub-clips.
+
+    Cuts prefer sentence boundaries (stage 6's measured segments) when one
+    lands near the even split point; a cut inside a word is masked by the
+    caption staying put, but a cut on a sentence gap looks intentional.
+    """
+    if frames <= round(MAX_SHOT_FRAMES * 1.35):
+        return [(0, frames)]
+    n = max(2, round(frames / SPLIT_TARGET))
+    targets = [round(frames * i / n) for i in range(1, n)]
+    bounds = []
+    acc = 0
+    for seg in (shot.get("segments") or [])[:-1]:
+        acc += seg.get("frames", 0)
+        bounds.append(acc)
+    cuts = []
+    for t in targets:
+        near = [b for b in bounds if abs(b - t) <= 18 and b not in cuts]
+        cut = min(near, key=lambda b: abs(b - t)) if near else t
+        if 12 < cut < frames - 12 and (not cuts or cut - cuts[-1] > 24):
+            cuts.append(cut)
+    pieces, prev = [], 0
+    for c in cuts + [frames]:
+        pieces.append((prev, c - prev))
+        prev = c
+    return pieces
+
+
 def _focus_norm(panel):
     """focus_box is in original-panel pixels; return its centre as 0-1
     fractions, which are resolution independent."""
@@ -203,13 +241,15 @@ def _framed_chain(pw, ph, focus, motion, dur, tightness, max_frac=1.0):
 def _render_shot(img_path, audio_path, frames, motion, cx, cy,
                  panel_size, out_path,
                  focus=None, tightness=2.4, frame_mode="fill", max_frac=1.0,
-                 min_coverage=0.5):
+                 min_coverage=0.5, audio_offset=0.0):
     dur = frames / FPS
     pw, ph = panel_size
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
            "-loop", "1", "-framerate", str(FPS), "-i", str(img_path)]
     if audio_path:
-        cmd += ["-i", str(audio_path)]
+        # sub-clips of a split shot each carry their slice of the one wav
+        cmd += (["-ss", f"{audio_offset:.4f}"] if audio_offset else []) \
+            + ["-i", str(audio_path)]
     else:
         cmd += ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
 
@@ -333,7 +373,10 @@ def run(config, workdir: Path):
                 print(f"  WARNING: {short_id} shot{i:03d} references unknown "
                       f"panel {shot.get('panel')!r}, skipping")
                 continue
-            repeat = repeat + 1 if shot.get("panel") == prev_panel else 0
+            # the render loop advances `repeat` once per sub-clip; a new
+            # panel resets the re-frame schedule
+            if shot.get("panel") != prev_panel:
+                repeat = 0
             prev_panel = shot.get("panel")
 
             img = workdir / panel["clean_file"]
@@ -360,15 +403,20 @@ def run(config, workdir: Path):
             if fb and size and size[0] and size[1]:
                 k = csize[0] / size[0], csize[1] / size[1]
                 focus = (fb[0] * k[0], fb[1] * k[1], fb[2] * k[0], fb[3] * k[1])
-            clip = tmp / f"shot{i:03d}.mp4"
-            tm, max_frac = REFRAME[repeat % len(REFRAME)]
-            _render_shot(img, audio_path, frames,
-                         shot.get("motion", "hold"), cx, cy,
-                         csize, clip, focus,
-                         tightness * tm, frame_mode, max_frac, min_coverage)
-            clips.append(clip)
+            pieces = _split_points(shot, frames)
+            for j, (off, nf) in enumerate(pieces):
+                clip = tmp / f"shot{i:03d}_{j}.mp4"
+                tm, max_frac = REFRAME[repeat % len(REFRAME)]
+                _render_shot(img, audio_path, nf,
+                             shot.get("motion", "hold"), cx, cy,
+                             csize, clip, focus,
+                             tightness * tm, frame_mode, max_frac,
+                             min_coverage, audio_offset=off / FPS)
+                clips.append(clip)
+                repeat += 1  # next sub-clip (or same-panel shot) re-frames
             print(f"  {short_id} shot{i:03d} {shot.get('motion','hold'):<9} "
-                  f"{frames:>4}f  {panel['id']}")
+                  f"{frames:>4}f  {panel['id']}"
+                  + (f"  ({len(pieces)} cuts)" if len(pieces) > 1 else ""))
 
         if not clips:
             print(f"{short_id}: no renderable shots, skipped")
@@ -391,9 +439,17 @@ def run(config, workdir: Path):
         if captions_on:
             cue_list = captions.cues(data.get("shots", []), FPS)
             style = config.get("shorts", {}).get("caption_style") or {}
-            pngs, y = captions.render_pngs(cue_list, W, H, tmp / "cues", style)
-            overlays += [(p, 0, y, (a / FPS, b / FPS))
-                         for p, (a, b, *_) in zip(pngs, cue_list)]
+            if style.get("highlight_color"):
+                # word-level karaoke: one overlay per word, not per cue
+                entries, y = captions.render_karaoke(cue_list, W, H,
+                                                     tmp / "cues", style)
+                overlays += [(p, 0, y, (a / FPS, b / FPS))
+                             for p, a, b in entries]
+            else:
+                pngs, y = captions.render_pngs(cue_list, W, H, tmp / "cues",
+                                               style)
+                overlays += [(p, 0, y, (a / FPS, b / FPS))
+                             for p, (a, b, *_) in zip(pngs, cue_list)]
 
         if overlays:
             joined = tmp / "joined.mp4"

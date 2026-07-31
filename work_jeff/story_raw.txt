@@ -1,0 +1,213 @@
+{
+  "shorts": [
+    {
+      "short_id": "ep01",
+      "title": "This Shark Ate an X-Man (By Accident)",
+      "description": "Jeff the Land Shark just wanted to cool off on a hot day. His owner Kate Bishop is about to find out how far that went.",
+      "hashtags": ["#comic", "#marvel", "#jeffthelandshark", "#katebishop", "#webcomic"],
+      "music_mood": "playful",
+      "hook_note": "Opens on a tiny sweating shark melting on the kitchen floor - instantly adorable and instantly a problem.",
+      "shots": [
+        {
+          "panel": "p01_02",
+          "speaker": "narrator",
+          "line": "This is Jeff the Land Shark, and today he is melting.",
+          "emotion": "warm, amused",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "none"
+        },
+        {
+          "panel": "p01_03",
+          "speaker": "narrator",
+          "line": "The thermometer's climbing, the little land shark is sweating, and he needs somewhere cold.",
+          "emotion": "sympathetic",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p01_04",
+          "speaker": "narrator",
+          "line": "Which is when he spots the one cold place in the whole apartment: the fridge.",
+          "emotion": "delighted realization",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p01_05",
+          "speaker": "narrator",
+          "line": "His eyes turn to snowflakes, and Jeff decides this is now his home.",
+          "emotion": "gleeful",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p02_01",
+          "speaker": "narrator",
+          "line": "Enter Kate Bishop, his long-suffering owner, who walks into a kitchen turned crime scene.",
+          "emotion": "deadpan shock",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p02_03",
+          "speaker": "narrator",
+          "line": "Broken eggs, spilled wine, and one shark fast asleep on a pillow inside her fridge.",
+          "emotion": "exasperated fondness",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_04",
+          "speaker": "narrator",
+          "line": "So Hawkeye lays down the law, and the fridge, apparently, is now off-limits.",
+          "emotion": "stern but loving",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_05",
+          "speaker": "narrator",
+          "line": "Out back, though, Jeff finds a better idea: a little pool filling up with a hose.",
+          "emotion": "brightening",
+          "motion": "zoom_out",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_06",
+          "speaker": "narrator",
+          "line": "Only for the little land shark to chomp straight through the hose instead.",
+          "emotion": "amused",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p03_01",
+          "speaker": "narrator",
+          "line": "Which leaves him grumpy on the grass beside a pool that will not fill.",
+          "emotion": "sympathetic chuckle",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_03",
+          "speaker": "narrator",
+          "line": "So Jeff makes a phone call, because he knows exactly who to bother.",
+          "emotion": "conspiratorial",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_05",
+          "speaker": "narrator",
+          "line": "Enter Iceman, the X-Man you call when your dog is a shark, who fills the yard with snow.",
+          "emotion": "delighted",
+          "motion": "zoom_out",
+          "hero": true,
+          "sfx": "whoosh"
+        },
+        {
+          "panel": "p03_04",
+          "speaker": "narrator",
+          "line": "The little land shark rolls in it, makes snow angels, and has the best day of his life.",
+          "emotion": "joyful",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p04_02",
+          "speaker": "narrator",
+          "line": "That night, however, Jeff's stomach starts to gurgle in a way that is not good.",
+          "emotion": "concern creeping in",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "heartbeat"
+        },
+        {
+          "panel": "p04_04",
+          "speaker": "narrator",
+          "line": "Until he's rolling on the floor, roaring, clearly in real trouble.",
+          "emotion": "worried",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p04_06",
+          "speaker": "narrator",
+          "line": "Kate finds him collapsed, bundles him in a blanket, and bolts.",
+          "emotion": "alarmed",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p05_01",
+          "speaker": "narrator",
+          "line": "She runs him to the clinic at night, praying it's nothing serious.",
+          "emotion": "urgent",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "heartbeat"
+        },
+        {
+          "panel": "p05_04",
+          "speaker": "narrator",
+          "line": "There, one very confused doctor listens, prods, and cannot figure out what's wrong.",
+          "emotion": "baffled",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p05_05",
+          "speaker": "narrator",
+          "line": "So they take an X-ray of Jeff's stomach, lean in close, and look.",
+          "emotion": "building dread",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "heartbeat"
+        },
+        {
+          "panel": "p06_01",
+          "speaker": "narrator",
+          "line": "Inside is a donut, a burger, a license plate, a whole fish, and, holy hell, Iceman.",
+          "emotion": "astonished delight",
+          "motion": "zoom_out",
+          "hero": true,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p06_02",
+          "speaker": "narrator",
+          "line": "Kate just facepalms and yells one word: 'JEFFREY!'",
+          "emotion": "utterly done",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p10_02",
+          "speaker": "narrator",
+          "line": "Now he's recovering with a fruit platter and a tropical drink, an X-Man still somewhere inside him.",
+          "emotion": "warm, unresolved",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        }
+      ],
+      "cliffhanger_note": "Iceman is still inside Jeff's stomach, and nobody has explained how he's getting out."
+    }
+  ]
+}

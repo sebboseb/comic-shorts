@@ -1,0 +1,168 @@
+{
+  "shorts": [
+    {
+      "short_id": "ep01",
+      "title": "This Land Shark Crashed a Superhero Pool Party",
+      "description": "Jeff the Land Shark gets his floaties on and heads to a pool party full of Marvel heroes. It goes about as well as you'd expect.",
+      "hashtags": ["#comic", "#JeffTheLandShark", "#Marvel", "#shark", "#poolparty"],
+      "music_mood": "playful",
+      "hook_note": "A tiny cartoon shark in a Deadpool costume and snorkel goggles is an instant scroll-stopper before a single word lands.",
+      "shots": [
+        {
+          "panel": "p01_02",
+          "speaker": "narrator",
+          "line": "This is Jeff the Land Shark, and today he is going swimming.",
+          "emotion": "warm, delighted",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "none"
+        },
+        {
+          "panel": "p01_02",
+          "speaker": "narrator",
+          "line": "He has the goggles, the fins, and a Deadpool floaty, and he is ready.",
+          "emotion": "amused",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p01_03",
+          "speaker": "narrator",
+          "line": "The destination is a superhero pool party, packed with half the Marvel roster.",
+          "emotion": "cheerful",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_01",
+          "speaker": "narrator",
+          "line": "And the little land shark walks in dressed head to tail as Deadpool.",
+          "emotion": "delighted",
+          "motion": "zoom_out",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_02",
+          "speaker": "narrator",
+          "line": "Right away he's mobbed, everyone snapping photos and offering him ice cream.",
+          "emotion": "warm",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_03",
+          "speaker": "narrator",
+          "line": "His floaty even has little cat paw prints on it, because of course it does.",
+          "emotion": "affectionate",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_04",
+          "speaker": "narrator",
+          "line": "Watching over him is Iceman, the X-Man you call when your dog is a shark.",
+          "emotion": "amused",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_05",
+          "speaker": "narrator",
+          "line": "For a moment Jeff just sits there, thoroughly pleased with himself.",
+          "emotion": "fond",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_02",
+          "speaker": "narrator",
+          "line": "Then he hits the water, and he is having the time of his life.",
+          "emotion": "gleeful",
+          "motion": "slow_pan",
+          "hero": true,
+          "sfx": "whoosh"
+        },
+        {
+          "panel": "p03_02",
+          "speaker": "narrator",
+          "line": "His owner, Kate Bishop, and Iceman are right there in the pool with him.",
+          "emotion": "warm",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_03",
+          "speaker": "narrator",
+          "line": "Everybody's relaxed, floating on donuts and pizza slices, not a care between them.",
+          "emotion": "easy",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_03",
+          "speaker": "narrator",
+          "line": "And then somebody spots a fin cutting through the water.",
+          "emotion": "shifting, playful dread",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p04_01",
+          "speaker": "narrator",
+          "line": "The whole pool empties in a panic, everyone scrambling for the edge.",
+          "emotion": "amused chaos",
+          "motion": "shake",
+          "hero": true,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p04_01",
+          "speaker": "narrator",
+          "line": "Everyone except Iceman, who just watches, because he knows exactly whose fin that is.",
+          "emotion": "dry, fond",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p04_02",
+          "speaker": "narrator",
+          "line": "Because down below, it's just Jeff, paddling around grinning like a maniac.",
+          "emotion": "delighted",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p04_04",
+          "speaker": "narrator",
+          "line": "He surfaces beside a unicorn float, tilts his head, and wonders what all the fuss is about.",
+          "emotion": "tender, laughing",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p04_05",
+          "speaker": "narrator",
+          "line": "Meanwhile the mightiest heroes on Earth are cowering poolside from one very happy little shark.",
+          "emotion": "warm, incredulous",
+          "motion": "zoom_out",
+          "hero": false,
+          "sfx": "none"
+        }
+      ],
+      "cliffhanger_note": "Will anyone tell the terrified heroes that the monster in their pool is just a delighted pet shark named Jeff?"
+    }
+  ]
+}

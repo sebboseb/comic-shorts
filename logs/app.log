@@ -1,0 +1,677 @@
+2026-07-31 16:39:01 | INFO | Starting server on 0.0.0.0:8083
+2026-07-31 16:39:01 | INFO | Multi-handler server configuration complete.
+2026-07-31 16:39:01 | INFO | Starting Uvicorn server...
+2026-07-31 16:39:01 | INFO | Model registry initialized
+2026-07-31 16:39:01 | INFO | Spawning handler process for model 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' (type=multimodal, path=mlx-community/Qwen2.5-VL-7B-Instruct-4bit)
+2026-07-31 16:39:02 | INFO | Spawned handler process for 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' (pid=85221)
+2026-07-31 16:39:03 | INFO | 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit': Fetching 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' from HuggingFace...
+2026-07-31 16:39:03 | INFO | 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit': Fetched 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit'
+2026-07-31 16:39:16 | INFO | Handler process for 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' is ready
+2026-07-31 16:39:16 | INFO | Registered model: mlx-community/Qwen2.5-VL-7B-Instruct-4bit (type=multimodal, context_length=None)
+2026-07-31 16:39:16 | INFO | Model 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' spawned and registered successfully
+2026-07-31 16:39:16 | INFO | Multi-handler initialization complete. 1 model(s) spawned.
+2026-07-31 16:45:29 | ERROR | Error processing chat completion request: TimeoutError: 
+Traceback (most recent call last):
+
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+                 └ <coroutine object Queue.get at 0x1092a0900>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/queues.py", line 158, in get
+    await getter
+          └ <Future cancelled>
+
+asyncio.exceptions.CancelledError
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/seb/.local/bin/mlx-openai-server", line 10, in <module>
+    sys.exit(cli())
+    │   │    └ <Group cli>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1514, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function Command.main at 0x106de0cc0>
+           └ <Group cli>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1435, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10673eba0>
+         │    └ <function Group.invoke at 0x106de1bc0>
+         └ <Group cli>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1902, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x109137da0>
+           │               │       │       └ <function Command.invoke at 0x106de09a0>
+           │               │       └ <Command launch>
+           │               └ <click.core.Context object at 0x109137da0>
+           └ <function Group.invoke.<locals>._process_result at 0x106775080>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1298, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'model_path': 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit', 'model_type': 'multimodal', 'port': 8083, 'config_file': None, 'c...
+           │   │      │    │           └ <click.core.Context object at 0x109137da0>
+           │   │      │    └ <function launch at 0x109181760>
+           │   │      └ <Command launch>
+           │   └ <function Context.invoke at 0x106ddfba0>
+           └ <click.core.Context object at 0x109137da0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 853, in invoke
+    return callback(*args, **kwargs)
+           │         │       └ {'model_path': 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit', 'model_type': 'multimodal', 'port': 8083, 'config_file': None, 'c...
+           │         └ ()
+           └ <function launch at 0x109181760>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/cli.py", line 529, in launch
+    asyncio.run(start_multi(args.to_multi_model_server_config()))
+    │       │   │           │    └ <function MLXServerConfig.to_multi_model_server_config at 0x106efb420>
+    │       │   │           └ MLXServerConfig(model_path='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', model_type='multimodal', context_length=None, served_...
+    │       │   └ <function start_multi at 0x1090f3880>
+    │       └ <function run at 0x106ccb380>
+    └ <module 'asyncio' from '/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/__init__....
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           │      │   └ <coroutine object start_multi at 0x109148e50>
+           │      └ <function Runner.run at 0x106d00cc0>
+           └ <asyncio.runners.Runner object at 0x108d85c70>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<start_multi() running at /Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x106cfe840>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x108d85c70>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 678, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x106cfe7a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 645, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x106d005e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 1999, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x106c902c0>
+    └ <Handle Task.task_wakeup(<Future cancelled>)>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future cancelled>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future cancelled>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future cancelled>)>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/anyio/_core/_tasks.py", line 278, in _run_coro
+    retval = await self._coro
+                   │    └ <member '_coro' of 'TaskHandle' objects>
+                   └ <TaskHandle pending name='starlette.middleware.base.BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.coro' coro=<corou...
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+          │    │   │      │                      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x109260cc0>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x1091e45f0>
+          └ <starlette.middleware.base.BaseHTTPMiddleware object at 0x109172ae0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x109260cc0>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1091e4530>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x1091e45f0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x109260cc0>
+          │                            │    │    │     │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x10921a6f0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1091e45c0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1091e4530>
+          └ <function wrap_app_handling_exceptions at 0x107b487c0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x109260040>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1091e45c0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x109260040>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x108f58ec0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1091e45c0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x109260040>
+          │    │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x108f58ec0>>
+          └ <fastapi.routing.APIRouter object at 0x108f58ec0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x109260040>
+          │     │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │     └ <function Route.handle at 0x107b49da0>
+          └ APIRoute(path='/v1/chat/completions', name='chat_completions', methods=['POST'])
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x109260040>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <function request_response.<locals>.app at 0x1091805e0>
+          └ APIRoute(path='/v1/chat/completions', name='chat_completions', methods=['POST'])
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x109260040>
+          │                            │    │        │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x10929c350>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x109260860>
+          └ <function wrap_app_handling_exceptions at 0x107b487c0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x109260360>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x109212480>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x109260860>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x10929c350>
+                     └ <function get_request_handler.<locals>.app at 0x109180720>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x107b60180>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 312, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze c...
+                 │         └ <function chat_completions at 0x108e727a0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+> File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/api/endpoints.py", line 619, in chat_completions
+    return await process_multimodal_request(handler, request, request_id)
+                 │                          │        │        └ None
+                 │                          │        └ ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze comic book pa...
+                 │                          └ <app.core.handler_process.HandlerProcessProxy object at 0x1091e4980>
+                 └ <function process_multimodal_request at 0x1090f0180>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/api/endpoints.py", line 1076, in process_multimodal_request
+    result = await handler.generate_multimodal_response(request)
+                   │       │                            └ ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze comic book pa...
+                   │       └ <function HandlerProcessProxy.generate_multimodal_response at 0x1090f2200>
+                   └ <app.core.handler_process.HandlerProcessProxy object at 0x1091e4980>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/core/handler_process.py", line 1144, in generate_multimodal_response
+    return await self._call("generate_multimodal_response", request)
+                 │    │                                     └ ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze comic book pa...
+                 │    └ <function HandlerProcessProxy._call at 0x1090f1bc0>
+                 └ <app.core.handler_process.HandlerProcessProxy object at 0x1091e4980>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/core/handler_process.py", line 909, in _call
+    response = await asyncio.wait_for(result_queue.get(), timeout=self._rpc_timeout)
+                     │       │        │            │              │    └ 300.0
+                     │       │        │            │              └ <app.core.handler_process.HandlerProcessProxy object at 0x1091e4980>
+                     │       │        │            └ <function Queue.get at 0x106d01b20>
+                     │       │        └ <Queue at 0x10929c8f0 maxsize=0>
+                     │       └ <function wait_for at 0x106ceae80>
+                     └ <module 'asyncio' from '/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/__init__....
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               │        │       └ 300.0
+               │        └ <function timeout at 0x106ccb4c0>
+               └ <module 'asyncio.timeouts' from '/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/...
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+                            └ CancelledError()
+
+TimeoutError
+2026-07-31 17:10:20 | INFO | Starting server on 0.0.0.0:8083
+2026-07-31 17:10:20 | INFO | Multi-handler server configuration complete.
+2026-07-31 17:10:20 | INFO | Starting Uvicorn server...
+2026-07-31 17:10:20 | INFO | Model registry initialized
+2026-07-31 17:10:20 | INFO | Spawning handler process for model 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' (type=multimodal, path=mlx-community/Qwen2.5-VL-7B-Instruct-4bit)
+2026-07-31 17:10:20 | INFO | Spawned handler process for 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' (pid=39219)
+2026-07-31 17:10:20 | INFO | 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit': Fetching 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' from HuggingFace...
+2026-07-31 17:10:21 | INFO | 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit': Fetched 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit'
+2026-07-31 17:10:27 | INFO | Handler process for 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' is ready
+2026-07-31 17:10:27 | INFO | Registered model: mlx-community/Qwen2.5-VL-7B-Instruct-4bit (type=multimodal, context_length=None)
+2026-07-31 17:10:27 | INFO | Model 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' spawned and registered successfully
+2026-07-31 17:10:27 | INFO | Multi-handler initialization complete. 1 model(s) spawned.
+2026-07-31 17:15:30 | ERROR | Error processing chat completion request: TimeoutError: 
+Traceback (most recent call last):
+
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+                 └ <coroutine object Queue.get at 0x108dc3ae0>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/queues.py", line 158, in get
+    await getter
+          └ <Future cancelled>
+
+asyncio.exceptions.CancelledError
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/seb/.local/bin/mlx-openai-server", line 10, in <module>
+    sys.exit(cli())
+    │   │    └ <Group cli>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1514, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function Command.main at 0x106964cc0>
+           └ <Group cli>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1435, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x108c33b00>
+         │    └ <function Group.invoke at 0x106965bc0>
+         └ <Group cli>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1902, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x108c6a960>
+           │               │       │       └ <function Command.invoke at 0x1069649a0>
+           │               │       └ <Command launch>
+           │               └ <click.core.Context object at 0x108c6a960>
+           └ <function Group.invoke.<locals>._process_result at 0x105999080>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1298, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'model_path': 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit', 'model_type': 'multimodal', 'port': 8083, 'config_file': None, 'c...
+           │   │      │    │           └ <click.core.Context object at 0x108c6a960>
+           │   │      │    └ <function launch at 0x108d05760>
+           │   │      └ <Command launch>
+           │   └ <function Context.invoke at 0x106963ba0>
+           └ <click.core.Context object at 0x108c6a960>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 853, in invoke
+    return callback(*args, **kwargs)
+           │         │       └ {'model_path': 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit', 'model_type': 'multimodal', 'port': 8083, 'config_file': None, 'c...
+           │         └ ()
+           └ <function launch at 0x108d05760>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/cli.py", line 529, in launch
+    asyncio.run(start_multi(args.to_multi_model_server_config()))
+    │       │   │           │    └ <function MLXServerConfig.to_multi_model_server_config at 0x106a7f420>
+    │       │   │           └ MLXServerConfig(model_path='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', model_type='multimodal', context_length=None, served_...
+    │       │   └ <function start_multi at 0x108c77880>
+    │       └ <function run at 0x10684f380>
+    └ <module 'asyncio' from '/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/__init__....
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           │      │   └ <coroutine object start_multi at 0x108ccce50>
+           │      └ <function Runner.run at 0x106884cc0>
+           └ <asyncio.runners.Runner object at 0x10599c4a0>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<start_multi() running at /Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x106882840>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x10599c4a0>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 678, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x1068827a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 645, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x1068845e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 1999, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x1068142c0>
+    └ <Handle Task.task_wakeup(<Future cancelled>)>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future cancelled>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future cancelled>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future cancelled>)>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/anyio/_core/_tasks.py", line 278, in _run_coro
+    retval = await self._coro
+                   │    └ <member '_coro' of 'TaskHandle' objects>
+                   └ <TaskHandle pending name='starlette.middleware.base.BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.coro' coro=<corou...
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+          │    │   │      │                      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x108d962a0>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x108d68680>
+          └ <starlette.middleware.base.BaseHTTPMiddleware object at 0x108d686b0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x108d962a0>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x108d68650>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x108d68680>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x108d962a0>
+          │                            │    │    │     │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x108dbf320>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x108d685c0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x108d68650>
+          └ <function wrap_app_handling_exceptions at 0x1076c87c0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x108de4040>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x108d685c0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x108de4040>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x108cf9d60>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x108d685c0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x108de4040>
+          │    │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x108cf9d60>>
+          └ <fastapi.routing.APIRouter object at 0x108cf9d60>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x108de4040>
+          │     │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │     └ <function Route.handle at 0x1076c9da0>
+          └ APIRoute(path='/v1/chat/completions', name='chat_completions', methods=['POST'])
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x108de4040>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <function request_response.<locals>.app at 0x108d045e0>
+          └ APIRoute(path='/v1/chat/completions', name='chat_completions', methods=['POST'])
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x108de4040>
+          │                            │    │        │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x108dbf350>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x108de4860>
+          └ <function wrap_app_handling_exceptions at 0x1076c87c0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x108de42c0>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x108d95260>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x108de4860>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x108dbf350>
+                     └ <function get_request_handler.<locals>.app at 0x108d04720>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x1076e4180>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 312, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze c...
+                 │         └ <function chat_completions at 0x1089fa7a0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+> File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/api/endpoints.py", line 619, in chat_completions
+    return await process_multimodal_request(handler, request, request_id)
+                 │                          │        │        └ None
+                 │                          │        └ ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze comic book pa...
+                 │                          └ <app.core.handler_process.HandlerProcessProxy object at 0x108d68a70>
+                 └ <function process_multimodal_request at 0x108c74180>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/api/endpoints.py", line 1076, in process_multimodal_request
+    result = await handler.generate_multimodal_response(request)
+                   │       │                            └ ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze comic book pa...
+                   │       └ <function HandlerProcessProxy.generate_multimodal_response at 0x108c76200>
+                   └ <app.core.handler_process.HandlerProcessProxy object at 0x108d68a70>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/core/handler_process.py", line 1144, in generate_multimodal_response
+    return await self._call("generate_multimodal_response", request)
+                 │    │                                     └ ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze comic book pa...
+                 │    └ <function HandlerProcessProxy._call at 0x108c75bc0>
+                 └ <app.core.handler_process.HandlerProcessProxy object at 0x108d68a70>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/core/handler_process.py", line 909, in _call
+    response = await asyncio.wait_for(result_queue.get(), timeout=self._rpc_timeout)
+                     │       │        │            │              │    └ 300.0
+                     │       │        │            │              └ <app.core.handler_process.HandlerProcessProxy object at 0x108d68a70>
+                     │       │        │            └ <function Queue.get at 0x106885b20>
+                     │       │        └ <Queue at 0x108dbfad0 maxsize=0>
+                     │       └ <function wait_for at 0x10686ee80>
+                     └ <module 'asyncio' from '/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/__init__....
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               │        │       └ 300.0
+               │        └ <function timeout at 0x10684f4c0>
+               └ <module 'asyncio.timeouts' from '/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/...
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+                            └ CancelledError()
+
+TimeoutError
+2026-07-31 17:16:13 | INFO | Shutting down multi-handler application
+2026-07-31 17:16:21 | INFO | Starting server on 0.0.0.0:8083
+2026-07-31 17:16:21 | INFO | Multi-handler server configuration complete.
+2026-07-31 17:16:21 | INFO | Starting Uvicorn server...
+2026-07-31 17:16:21 | INFO | Model registry initialized
+2026-07-31 17:16:21 | INFO | Spawning handler process for model 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' (type=multimodal, path=mlx-community/Qwen2.5-VL-7B-Instruct-4bit)
+2026-07-31 17:16:21 | INFO | Spawned handler process for 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' (pid=48996)
+2026-07-31 17:16:21 | INFO | 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit': Fetching 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' from HuggingFace...
+2026-07-31 17:16:21 | INFO | 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit': Fetched 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit'
+2026-07-31 17:16:49 | INFO | Handler process for 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' is ready
+2026-07-31 17:16:49 | INFO | Registered model: mlx-community/Qwen2.5-VL-7B-Instruct-4bit (type=multimodal, context_length=None)
+2026-07-31 17:16:49 | INFO | Model 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit' spawned and registered successfully
+2026-07-31 17:16:49 | INFO | Multi-handler initialization complete. 1 model(s) spawned.
+2026-07-31 17:21:51 | ERROR | Error processing chat completion request: TimeoutError: 
+Traceback (most recent call last):
+
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+                 └ <coroutine object Queue.get at 0x1055b5c40>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/queues.py", line 158, in get
+    await getter
+          └ <Future cancelled>
+
+asyncio.exceptions.CancelledError
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/seb/.local/bin/mlx-openai-server", line 10, in <module>
+    sys.exit(cli())
+    │   │    └ <Group cli>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1514, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function Command.main at 0x102b20cc0>
+           └ <Group cli>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1435, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1024b3080>
+         │    └ <function Group.invoke at 0x102b21bc0>
+         └ <Group cli>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1902, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x105079100>
+           │               │       │       └ <function Command.invoke at 0x102b209a0>
+           │               │       └ <Command launch>
+           │               └ <click.core.Context object at 0x105079100>
+           └ <function Group.invoke.<locals>._process_result at 0x1024ad300>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 1298, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'model_path': 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit', 'model_type': 'multimodal', 'port': 8083, 'config_file': None, 'c...
+           │   │      │    │           └ <click.core.Context object at 0x105079100>
+           │   │      │    └ <function launch at 0x105451300>
+           │   │      └ <Command launch>
+           │   └ <function Context.invoke at 0x102b17ba0>
+           └ <click.core.Context object at 0x105079100>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/click/core.py", line 853, in invoke
+    return callback(*args, **kwargs)
+           │         │       └ {'model_path': 'mlx-community/Qwen2.5-VL-7B-Instruct-4bit', 'model_type': 'multimodal', 'port': 8083, 'config_file': None, 'c...
+           │         └ ()
+           └ <function launch at 0x105451300>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/cli.py", line 529, in launch
+    asyncio.run(start_multi(args.to_multi_model_server_config()))
+    │       │   │           │    └ <function MLXServerConfig.to_multi_model_server_config at 0x102c33420>
+    │       │   │           └ MLXServerConfig(model_path='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', model_type='multimodal', context_length=None, served_...
+    │       │   └ <function start_multi at 0x1053cb420>
+    │       └ <function run at 0x102a0f380>
+    └ <module 'asyncio' from '/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/__init__....
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           │      │   └ <coroutine object start_multi at 0x1053a7880>
+           │      └ <function Runner.run at 0x102a3ccc0>
+           └ <asyncio.runners.Runner object at 0x1024b3140>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<start_multi() running at /Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x102a3a840>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x1024b3140>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 678, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102a3a7a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 645, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102a3c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 1999, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x1029c82c0>
+    └ <Handle Task.task_wakeup(<Future cancelled>)>
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future cancelled>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future cancelled>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future cancelled>)>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/anyio/_core/_tasks.py", line 275, in _run_coro
+    retval = await self._coro
+                   │    └ <member '_coro' of 'TaskHandle' objects>
+                   └ <TaskHandle pending name='starlette.middleware.base.BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.coro' coro=<corou...
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+          │    │   │      │                      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x1054e3f60>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x1054c0650>
+          └ <starlette.middleware.base.BaseHTTPMiddleware object at 0x1054c0770>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x1054e3f60>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1054c0710>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x1054c0650>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x1054e3f60>
+          │                            │    │    │     │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x1054ee4e0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1054c06e0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1054c0710>
+          └ <function wrap_app_handling_exceptions at 0x10388ca40>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105585440>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1054c06e0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105585440>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x10544a030>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1054c06e0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105585440>
+          │    │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x10544a030>>
+          └ <fastapi.routing.APIRouter object at 0x10544a030>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105585440>
+          │     │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │     └ <function Route.handle at 0x10388e020>
+          └ APIRoute(path='/v1/chat/completions', name='chat_completions', methods=['POST'])
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105585440>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │    └ <function request_response.<locals>.app at 0x1054507c0>
+          └ APIRoute(path='/v1/chat/completions', name='chat_completions', methods=['POST'])
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105585440>
+          │                            │    │        │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x1054eed20>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x1055854e0>
+          └ <function wrap_app_handling_exceptions at 0x10388ca40>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105584f40>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x1054e39c0>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8083), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x1055854e0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x1054eed20>
+                     └ <function get_request_handler.<locals>.app at 0x105450900>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x1038a8400>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/fastapi/routing.py", line 312, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze c...
+                 │         └ <function chat_completions at 0x10523dbc0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+> File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/api/endpoints.py", line 619, in chat_completions
+    return await process_multimodal_request(handler, request, request_id)
+                 │                          │        │        └ None
+                 │                          │        └ ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze comic book pa...
+                 │                          └ <app.core.handler_process.HandlerProcessProxy object at 0x1054c0b30>
+                 └ <function process_multimodal_request at 0x1053a3ce0>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/api/endpoints.py", line 1076, in process_multimodal_request
+    result = await handler.generate_multimodal_response(request)
+                   │       │                            └ ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze comic book pa...
+                   │       └ <function HandlerProcessProxy.generate_multimodal_response at 0x1053c9da0>
+                   └ <app.core.handler_process.HandlerProcessProxy object at 0x1054c0b30>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/core/handler_process.py", line 1144, in generate_multimodal_response
+    return await self._call("generate_multimodal_response", request)
+                 │    │                                     └ ChatCompletionRequest(model='mlx-community/Qwen2.5-VL-7B-Instruct-4bit', messages=[Message(content='You analyze comic book pa...
+                 │    └ <function HandlerProcessProxy._call at 0x1053c9760>
+                 └ <app.core.handler_process.HandlerProcessProxy object at 0x1054c0b30>
+  File "/Users/seb/.local/share/uv/tools/mlx-openai-server/lib/python3.12/site-packages/app/core/handler_process.py", line 909, in _call
+    response = await asyncio.wait_for(result_queue.get(), timeout=self._rpc_timeout)
+                     │       │        │            │              │    └ 300.0
+                     │       │        │            │              └ <app.core.handler_process.HandlerProcessProxy object at 0x1054c0b30>
+                     │       │        │            └ <function Queue.get at 0x102a3db20>
+                     │       │        └ <Queue at 0x1054ef440 maxsize=0>
+                     │       └ <function wait_for at 0x102a22e80>
+                     └ <module 'asyncio' from '/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/__init__....
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               │        │       └ 300.0
+               │        └ <function timeout at 0x102a0f4c0>
+               └ <module 'asyncio.timeouts' from '/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/...
+  File "/Users/seb/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+                            └ CancelledError()
+
+TimeoutError
+2026-07-31 17:22:11 | INFO | Shutting down multi-handler application

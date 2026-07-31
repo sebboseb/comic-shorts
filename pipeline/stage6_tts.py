@@ -252,6 +252,12 @@ def _flag_delivery(port, params, body, sentence):
     ratio = difflib.SequenceMatcher(None, heard[:len(want) + 20], want).ratio()
     if ratio < 0.45:
         return f"output doesn't match text (similarity {ratio:.2f})"
+    # the prefix comparison above deliberately ignores what follows the
+    # sentence -- which is exactly where qwen appends its junk ("...should
+    # not make" + 2s of vocal noise shipped this way). Anything much longer
+    # than the text plus transcription slop is trailing garbage.
+    if len(heard) > len(want) * 1.5 + 30:
+        return f"extra speech after text ({len(heard)} vs {len(want)} chars)"
     return None
 
 

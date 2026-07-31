@@ -1,0 +1,1519 @@
+[
+  {
+    "id": "p01_02",
+    "page": 1,
+    "panel": 2,
+    "file": "panels/p01_02.png",
+    "bbox_on_page": [
+      1003,
+      41,
+      911,
+      1446
+    ],
+    "size": [
+      911,
+      1446
+    ],
+    "scene": "Jeff the Land Shark lies exhausted and sweating on a kitchen floor next to a refrigerator showing a very high thermometer reading, with heat lines rising around him.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      91,
+      839,
+      729,
+      607
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p01_02.png",
+    "clean_size": [
+      1386,
+      2200
+    ]
+  },
+  {
+    "id": "p01_03",
+    "page": 1,
+    "panel": 3,
+    "file": "panels/p01_03.png",
+    "bbox_on_page": [
+      70,
+      1535,
+      913,
+      1450
+    ],
+    "size": [
+      913,
+      1450
+    ],
+    "scene": "Jeff the Land Shark looks up nervously at a wall thermometer showing a very high temperature, sweating visibly.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      274,
+      725,
+      548,
+      725
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p01_03.png",
+    "clean_size": [
+      1385,
+      2200
+    ]
+  },
+  {
+    "id": "p01_04",
+    "page": 1,
+    "panel": 4,
+    "file": "panels/p01_04.png",
+    "bbox_on_page": [
+      1001,
+      1535,
+      913,
+      910
+    ],
+    "size": [
+      913,
+      910
+    ],
+    "scene": "Jeff the Land Shark happily opens and peeks into a full refrigerator, his tail wagging energetically.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      393,
+      318,
+      420,
+      364
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p01_04.png",
+    "clean_size": [
+      2200,
+      2193
+    ]
+  },
+  {
+    "id": "p01_05",
+    "page": 1,
+    "panel": 5,
+    "file": "panels/p01_05.png",
+    "bbox_on_page": [
+      1001,
+      2461,
+      913,
+      524
+    ],
+    "size": [
+      913,
+      524
+    ],
+    "scene": "A close-up of Jeff the Land Shark's face, his eyes replaced by snowflake symbols, surrounded by floating bubbles, looking delighted.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      183,
+      52,
+      548,
+      419
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p01_05.png",
+    "clean_size": [
+      2200,
+      1263
+    ]
+  },
+  {
+    "id": "p02_01",
+    "page": 2,
+    "panel": 1,
+    "file": "panels/p02_01.png",
+    "bbox_on_page": [
+      75,
+      71,
+      496,
+      1560
+    ],
+    "size": [
+      496,
+      1560
+    ],
+    "scene": "Kate Bishop surveys her kitchen in shock, finding the floor completely trashed with scattered food, broken eggs, spilled wine, and various debris.",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      99,
+      156,
+      298,
+      624
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_01.png",
+    "clean_size": [
+      699,
+      2200
+    ]
+  },
+  {
+    "id": "p02_02",
+    "page": 2,
+    "panel": 2,
+    "file": "panels/p02_02.png",
+    "bbox_on_page": [
+      581,
+      71,
+      673,
+      1560
+    ],
+    "size": [
+      673,
+      1560
+    ],
+    "scene": "Kate Bishop peers into the open refrigerator with a surprised expression, while Jeff the Land Shark lies sleeping on a pillow at the bottom of the fridge.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      67,
+      78,
+      538,
+      624
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_02.png",
+    "clean_size": [
+      949,
+      2200
+    ]
+  },
+  {
+    "id": "p02_03",
+    "page": 2,
+    "panel": 3,
+    "file": "panels/p02_03.png",
+    "bbox_on_page": [
+      1264,
+      71,
+      656,
+      505
+    ],
+    "size": [
+      656,
+      505
+    ],
+    "scene": "Kate Bishop peers into the open refrigerator to find Jeff the Land Shark curled up sleeping inside on a pillow.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      197,
+      101,
+      328,
+      252
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_03.png",
+    "clean_size": [
+      2200,
+      1694
+    ]
+  },
+  {
+    "id": "p02_04",
+    "page": 2,
+    "panel": 4,
+    "file": "panels/p02_04.png",
+    "bbox_on_page": [
+      1264,
+      590,
+      656,
+      1040
+    ],
+    "size": [
+      656,
+      1040
+    ],
+    "scene": "Kate Bishop stands with her hand on a green refrigerator covered in notes, looking stern, while Jeff the Land Shark sits on the kitchen floor beside her.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      66,
+      52,
+      328,
+      780
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_04.png",
+    "clean_size": [
+      1388,
+      2200
+    ]
+  },
+  {
+    "id": "p02_05",
+    "page": 2,
+    "panel": 5,
+    "file": "panels/p02_05.png",
+    "bbox_on_page": [
+      185,
+      1688,
+      818,
+      1297
+    ],
+    "size": [
+      818,
+      1297
+    ],
+    "scene": "Jeff the Land Shark stands on a backyard porch step, excitedly noticing a small above-ground pool being filled by a yellow garden hose.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [
+      {
+        "text": "!",
+        "speaker": "Jeff",
+        "emotion": "surprised, delighted",
+        "bubble_box": [
+          481,
+          250,
+          65,
+          104
+        ]
+      }
+    ],
+    "focus_box": [
+      442,
+      233,
+      180,
+      363
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_05.png",
+    "clean_size": [
+      1388,
+      2200
+    ]
+  },
+  {
+    "id": "p02_06",
+    "page": 2,
+    "panel": 6,
+    "file": "panels/p02_06.png",
+    "bbox_on_page": [
+      1013,
+      1688,
+      789,
+      418
+    ],
+    "size": [
+      789,
+      418
+    ],
+    "scene": "Jeff the Land Shark gleefully chomps on a yellow garden hose on a grassy lawn.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      197,
+      21,
+      394,
+      355
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_06.png",
+    "clean_size": [
+      2200,
+      1166
+    ]
+  },
+  {
+    "id": "p02_07",
+    "page": 2,
+    "panel": 7,
+    "file": "panels/p02_07.png",
+    "bbox_on_page": [
+      1013,
+      2118,
+      789,
+      867
+    ],
+    "size": [
+      789,
+      867
+    ],
+    "scene": "Jeff the Land Shark sits happily on the grass next to a garden hose connected to an above-ground pool, with a water spigot nearby and foam/suds on the ground beside him.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      292,
+      373,
+      221,
+      295
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p02_07.png",
+    "clean_size": [
+      2002,
+      2200
+    ]
+  },
+  {
+    "id": "p03_01",
+    "page": 3,
+    "panel": 1,
+    "file": "panels/p03_01.png",
+    "bbox_on_page": [
+      172,
+      71,
+      816,
+      1293
+    ],
+    "size": [
+      816,
+      1293
+    ],
+    "scene": "Jeff the Land Shark sits on the grass looking disgruntled next to a leaky garden hose connected to an above-ground pool, emitting a frustrated scribble-thought.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [
+      {
+        "text": "~scribble~",
+        "speaker": "Jeff",
+        "emotion": "grumpy, frustrated",
+        "bubble_box": [
+          432,
+          737,
+          180,
+          220
+        ]
+      }
+    ],
+    "focus_box": [
+      326,
+      905,
+      343,
+      453
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_01.png",
+    "clean_size": [
+      1388,
+      2200
+    ]
+  },
+  {
+    "id": "p03_02",
+    "page": 3,
+    "panel": 2,
+    "file": "panels/p03_02.png",
+    "bbox_on_page": [
+      999,
+      71,
+      842,
+      486
+    ],
+    "size": [
+      842,
+      486
+    ],
+    "scene": "Jeff the Land Shark grins happily with mouth wide open, with a speech bubble showing an X-Men symbol (indicating excitement about X-Men).",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [
+      {
+        "text": "[X-Men symbol]",
+        "speaker": "Jeff",
+        "emotion": "excited, delighted",
+        "bubble_box": [
+          505,
+          10,
+          278,
+          136
+        ]
+      }
+    ],
+    "focus_box": [
+      0,
+      0,
+      589,
+      340
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_02.png",
+    "clean_size": [
+      2200,
+      1270
+    ]
+  },
+  {
+    "id": "p03_03",
+    "page": 3,
+    "panel": 3,
+    "file": "panels/p03_03.png",
+    "bbox_on_page": [
+      1040,
+      792,
+      801,
+      578
+    ],
+    "size": [
+      801,
+      578
+    ],
+    "scene": "Jeff the Land Shark excitedly holds a telephone handset up to his wide-open mouth, apparently making or receiving a call.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      80,
+      0,
+      641,
+      520
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_03.png",
+    "clean_size": [
+      2200,
+      1588
+    ]
+  },
+  {
+    "id": "p03_04",
+    "page": 3,
+    "panel": 4,
+    "file": "panels/p03_04.png",
+    "bbox_on_page": [
+      107,
+      1403,
+      976,
+      1489
+    ],
+    "size": [
+      976,
+      1489
+    ],
+    "scene": "Jeff the Land Shark, wearing a cozy striped scarf, rolls joyfully in the snow making a snow angel, surrounded by snowflakes and blue ice-paw prints.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      195,
+      521,
+      586,
+      819
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_04.png",
+    "clean_size": [
+      1442,
+      2200
+    ]
+  },
+  {
+    "id": "p03_05",
+    "page": 3,
+    "panel": 5,
+    "file": "panels/p03_05.png",
+    "bbox_on_page": [
+      1095,
+      1405,
+      792,
+      1487
+    ],
+    "size": [
+      792,
+      1487
+    ],
+    "scene": "Iceman lounges on a deck chair in a snowy backyard holding a garden hose that sprays water into a kiddie pool where Jeff the Land Shark happily splashes, with a cat-shaped snow sculpture nearby and a boombox on the ground.",
+    "characters_present": [
+      "Iceman",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      238,
+      818,
+      396,
+      744
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p03_05.png",
+    "clean_size": [
+      1172,
+      2200
+    ]
+  },
+  {
+    "id": "p04_02",
+    "page": 4,
+    "panel": 2,
+    "file": "panels/p04_02.png",
+    "bbox_on_page": [
+      697,
+      508,
+      605,
+      960
+    ],
+    "size": [
+      605,
+      960
+    ],
+    "scene": "Jeff the Land Shark sits on a couch looking unwell, hunched over and clutching his stomach as it makes a gurgling noise.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      91,
+      336,
+      424,
+      480
+    ],
+    "sfx_text": [
+      "GURGLLL"
+    ],
+    "clean_file": "clean/p04_02.png",
+    "clean_size": [
+      1386,
+      2200
+    ]
+  },
+  {
+    "id": "p04_03",
+    "page": 4,
+    "panel": 3,
+    "file": "panels/p04_03.png",
+    "bbox_on_page": [
+      1317,
+      508,
+      605,
+      960
+    ],
+    "size": [
+      605,
+      960
+    ],
+    "scene": "Jeff the Land Shark sits alone on a cream couch, looking worried or anxious with his little fins raised to his face.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      163,
+      288,
+      278,
+      528
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_03.png",
+    "clean_size": [
+      1386,
+      2200
+    ]
+  },
+  {
+    "id": "p04_04",
+    "page": 4,
+    "panel": 4,
+    "file": "panels/p04_04.png",
+    "bbox_on_page": [
+      71,
+      1612,
+      744,
+      1181
+    ],
+    "size": [
+      744,
+      1181
+    ],
+    "scene": "Jeff the Land Shark rolls around on the living room floor with his mouth wide open, making a loud roaring sound.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      223,
+      685,
+      357,
+      449
+    ],
+    "sfx_text": [
+      "Mrrrrrrrraaaa!"
+    ],
+    "clean_file": "clean/p04_04.png",
+    "clean_size": [
+      1386,
+      2200
+    ]
+  },
+  {
+    "id": "p04_05",
+    "page": 4,
+    "panel": 5,
+    "file": "panels/p04_05.png",
+    "bbox_on_page": [
+      825,
+      1612,
+      955,
+      534
+    ],
+    "size": [
+      955,
+      534
+    ],
+    "scene": "Kate Bishop peeks around a doorframe with a shocked, wide-eyed expression, a cartoon impact star near her head suggesting she was startled or bumped.",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      382,
+      53,
+      525,
+      374
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_05.png",
+    "clean_size": [
+      2200,
+      1230
+    ]
+  },
+  {
+    "id": "p04_06",
+    "page": 4,
+    "panel": 6,
+    "file": "panels/p04_06.png",
+    "bbox_on_page": [
+      825,
+      2149,
+      1112,
+      644
+    ],
+    "size": [
+      1112,
+      644
+    ],
+    "scene": "Kate Bishop discovers Jeff the Land Shark collapsed on the floor, then holds him bundled in a blanket with a worried expression.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [
+      {
+        "text": "!!!",
+        "speaker": "Kate Bishop",
+        "emotion": "alarmed, shocked",
+        "bubble_box": [
+          33,
+          58,
+          200,
+          103
+        ]
+      }
+    ],
+    "focus_box": [
+      534,
+      129,
+      578,
+      386
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p04_06.png",
+    "clean_size": [
+      2200,
+      1274
+    ]
+  },
+  {
+    "id": "p05_01",
+    "page": 5,
+    "panel": 1,
+    "file": "panels/p05_01.png",
+    "bbox_on_page": [
+      72,
+      80,
+      918,
+      1457
+    ],
+    "size": [
+      918,
+      1457
+    ],
+    "scene": "Kate Bishop runs urgently toward a hospital/medical clinic entrance at night, carrying Jeff the Land Shark in her arms.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      138,
+      801,
+      367,
+      728
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_01.png",
+    "clean_size": [
+      1386,
+      2200
+    ]
+  },
+  {
+    "id": "p05_02",
+    "page": 5,
+    "panel": 2,
+    "file": "panels/p05_02.png",
+    "bbox_on_page": [
+      998,
+      80,
+      918,
+      1455
+    ],
+    "size": [
+      918,
+      1455
+    ],
+    "scene": "A burly bearded doctor sits in his office chair reviewing Jeff the Land Shark's chart, while Jeff lies on the examination table with a thermometer in his mouth and Kate Bishop stands nearby.",
+    "characters_present": [
+      "Doctor",
+      "Jeff",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      184,
+      146,
+      505,
+      946
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_02.png",
+    "clean_size": [
+      1388,
+      2200
+    ]
+  },
+  {
+    "id": "p05_03",
+    "page": 5,
+    "panel": 3,
+    "file": "panels/p05_03.png",
+    "bbox_on_page": [
+      73,
+      1546,
+      916,
+      741
+    ],
+    "size": [
+      916,
+      741
+    ],
+    "scene": "The Doctor examines Jeff the Land Shark's open mouth with a tongue depressor during a check-up.",
+    "characters_present": [
+      "Jeff",
+      "Doctor"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      46,
+      111,
+      504,
+      445
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_03.png",
+    "clean_size": [
+      2200,
+      1780
+    ]
+  },
+  {
+    "id": "p05_04",
+    "page": 5,
+    "panel": 4,
+    "file": "panels/p05_04.png",
+    "bbox_on_page": [
+      73,
+      2298,
+      916,
+      716
+    ],
+    "size": [
+      916,
+      716
+    ],
+    "scene": "A burly bearded doctor uses a stethoscope to examine Jeff the Land Shark, who lies belly-up on an examination table, while a question mark floats above the doctor's head in confusion.",
+    "characters_present": [
+      "Doctor",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      137,
+      36,
+      641,
+      501
+    ],
+    "sfx_text": [
+      "?"
+    ],
+    "clean_file": "clean/p05_04.png",
+    "clean_size": [
+      2200,
+      1720
+    ]
+  },
+  {
+    "id": "p05_05",
+    "page": 5,
+    "panel": 5,
+    "file": "panels/p05_05.png",
+    "bbox_on_page": [
+      999,
+      1546,
+      917,
+      1468
+    ],
+    "size": [
+      917,
+      1468
+    ],
+    "scene": "Kate Bishop holds up an X-ray of Jeff the Land Shark showing something inside his stomach, while the Doctor leans in to examine it, and Jeff peers over the top of the X-ray film with his mouth open.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff",
+      "Doctor"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      138,
+      587,
+      596,
+      954
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p05_05.png",
+    "clean_size": [
+      1374,
+      2200
+    ]
+  },
+  {
+    "id": "p06_01",
+    "page": 6,
+    "panel": 1,
+    "file": "panels/p06_01.png",
+    "bbox_on_page": [
+      70,
+      0,
+      853,
+      3056
+    ],
+    "size": [
+      853,
+      3056
+    ],
+    "scene": "An X-ray or cross-section view of Jeff the Land Shark's stomach, revealing a chaotic collection of swallowed items including a donut, ice cream, a burger, a license plate reading 'E-616', a fish, and what appears to be Iceman trapped inside, with a large gauntleted hand visible at the bottom.",
+    "characters_present": [
+      "Jeff",
+      "Iceman"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      43,
+      306,
+      768,
+      2598
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p06_01.png",
+    "clean_size": [
+      853,
+      3056
+    ]
+  },
+  {
+    "id": "p06_02",
+    "page": 6,
+    "panel": 2,
+    "file": "panels/p06_02.png",
+    "bbox_on_page": [
+      935,
+      896,
+      981,
+      1998
+    ],
+    "size": [
+      981,
+      1998
+    ],
+    "scene": "Kate Bishop facepalms in exasperation while Jeff the Land Shark peeks over a ledge behind her, apparently having gotten into something he shouldn't have.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [
+      {
+        "text": "JEFFREY!",
+        "speaker": "Kate Bishop",
+        "emotion": "exasperated, scolding",
+        "bubble_box": [
+          118,
+          40,
+          520,
+          440
+        ]
+      }
+    ],
+    "focus_box": [
+      147,
+      559,
+      441,
+      999
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p06_02.png",
+    "clean_size": [
+      1080,
+      2200
+    ]
+  },
+  {
+    "id": "p07_02",
+    "page": 7,
+    "panel": 2,
+    "file": "panels/p07_02.png",
+    "bbox_on_page": [
+      39,
+      711,
+      607,
+      673
+    ],
+    "size": [
+      607,
+      673
+    ],
+    "scene": "Jeff the Land Shark sits contentedly on top of a red doghouse, mimicking the classic Snoopy pose.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      61,
+      34,
+      455,
+      505
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p07_02.png",
+    "clean_size": [
+      1984,
+      2200
+    ]
+  },
+  {
+    "id": "p07_03",
+    "page": 7,
+    "panel": 3,
+    "file": "panels/p07_03.png",
+    "bbox_on_page": [
+      821,
+      559,
+      1101,
+      854
+    ],
+    "size": [
+      1101,
+      854
+    ],
+    "scene": "Jeff the Land Shark lies curled up on a couch, mouth open and drooling, fast asleep on a pink striped pillow.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      165,
+      256,
+      771,
+      470
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p07_03.png",
+    "clean_size": [
+      2200,
+      1706
+    ]
+  },
+  {
+    "id": "p07_04",
+    "page": 7,
+    "panel": 4,
+    "file": "panels/p07_04.png",
+    "bbox_on_page": [
+      70,
+      1426,
+      920,
+      1460
+    ],
+    "size": [
+      920,
+      1460
+    ],
+    "scene": "Jeff the Land Shark jolts awake on a couch, mouth wide open and drooling, startled by someone calling his name.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [
+      {
+        "text": "JEFF!",
+        "speaker": "unknown",
+        "emotion": "shouting, urgent",
+        "bubble_box": [
+          51,
+          44,
+          727,
+          423
+        ]
+      }
+    ],
+    "focus_box": [
+      258,
+      949,
+      460,
+      701
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p07_04.png",
+    "clean_size": [
+      1386,
+      2200
+    ]
+  },
+  {
+    "id": "p07_05",
+    "page": 7,
+    "panel": 5,
+    "file": "panels/p07_05.png",
+    "bbox_on_page": [
+      1003,
+      1426,
+      920,
+      1460
+    ],
+    "size": [
+      920,
+      1460
+    ],
+    "scene": "Kate Bishop proudly presents a dog house labeled 'JEFF' to the land shark, gesturing toward it with a smile.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      442,
+      73,
+      442,
+      876
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p07_05.png",
+    "clean_size": [
+      1386,
+      2200
+    ]
+  },
+  {
+    "id": "p08_01",
+    "page": 8,
+    "panel": 1,
+    "file": "panels/p08_01.png",
+    "bbox_on_page": [
+      73,
+      107,
+      915,
+      1452
+    ],
+    "size": [
+      915,
+      1452
+    ],
+    "scene": "Jeff the Land Shark approaches his own dog house, which has his name written above the entrance.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      412,
+      653,
+      458,
+      799
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p08_01.png",
+    "clean_size": [
+      1386,
+      2200
+    ]
+  },
+  {
+    "id": "p08_02",
+    "page": 8,
+    "panel": 2,
+    "file": "panels/p08_02.png",
+    "bbox_on_page": [
+      1002,
+      107,
+      914,
+      1452
+    ],
+    "size": [
+      914,
+      1452
+    ],
+    "scene": "Kate Bishop sits on the floor of her apartment with a worried expression, watching Jeff the Land Shark lying limp on the ground in front of his doghouse.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      137,
+      726,
+      640,
+      871
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p08_02.png",
+    "clean_size": [
+      1385,
+      2200
+    ]
+  },
+  {
+    "id": "p08_03",
+    "page": 8,
+    "panel": 3,
+    "file": "panels/p08_03.png",
+    "bbox_on_page": [
+      44,
+      1574,
+      1872,
+      1373
+    ],
+    "size": [
+      1872,
+      1373
+    ],
+    "scene": "Jeff the Land Shark happily chews on a Deadpool-logo pizza slice while Kate Bishop lounges on a couch nearby, relaxed and watching him.",
+    "characters_present": [
+      "Jeff",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      0,
+      412,
+      899,
+      618
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p08_03.png",
+    "clean_size": [
+      2200,
+      1614
+    ]
+  },
+  {
+    "id": "p09_01",
+    "page": 9,
+    "panel": 1,
+    "file": "panels/p09_01.png",
+    "bbox_on_page": [
+      69,
+      71,
+      776,
+      596
+    ],
+    "size": [
+      776,
+      596
+    ],
+    "scene": "Jeff the Land Shark nuzzles affectionately against a small red dinosaur toy/creature and a pug dog in the waiting room, all three animals huddled together cutely.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      116,
+      60,
+      504,
+      447
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p09_01.png",
+    "clean_size": [
+      2200,
+      1690
+    ]
+  },
+  {
+    "id": "p09_02",
+    "page": 9,
+    "panel": 2,
+    "file": "panels/p09_02.png",
+    "bbox_on_page": [
+      69,
+      681,
+      776,
+      596
+    ],
+    "size": [
+      776,
+      596
+    ],
+    "scene": "Jeff the Land Shark happily chews on a floral pink pillow on the floor.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      116,
+      30,
+      504,
+      417
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p09_02.png",
+    "clean_size": [
+      2200,
+      1690
+    ]
+  },
+  {
+    "id": "p09_03",
+    "page": 9,
+    "panel": 3,
+    "file": "panels/p09_03.png",
+    "bbox_on_page": [
+      69,
+      1291,
+      776,
+      596
+    ],
+    "size": [
+      776,
+      596
+    ],
+    "scene": "Jeff the Land Shark happily balances a large roasted turkey on a platter on top of his head, eyes closed with a big smile.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      116,
+      119,
+      481,
+      387
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p09_03.png",
+    "clean_size": [
+      2200,
+      1690
+    ]
+  },
+  {
+    "id": "p09_04",
+    "page": 9,
+    "panel": 4,
+    "file": "panels/p09_04.png",
+    "bbox_on_page": [
+      856,
+      71,
+      1063,
+      1816
+    ],
+    "size": [
+      1063,
+      1816
+    ],
+    "scene": "Jeff the Land Shark stands happily in a doorway decorated with colorful bunting, looking at a roasted turkey on a small table surrounded by various cute animal companions at what appears to be a festive gathering.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      244,
+      182,
+      532,
+      944
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p09_04.png",
+    "clean_size": [
+      1288,
+      2200
+    ]
+  },
+  {
+    "id": "p09_05",
+    "page": 9,
+    "panel": 5,
+    "file": "panels/p09_05.png",
+    "bbox_on_page": [
+      69,
+      1900,
+      965,
+      1090
+    ],
+    "size": [
+      965,
+      1090
+    ],
+    "scene": "Jeff the Land Shark happily lounges on a 'Welcome' mat in front of his doghouse as Kate Bishop looks down at him with amusement.",
+    "characters_present": [
+      "Jeff",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      77,
+      632,
+      482,
+      414
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p09_05.png",
+    "clean_size": [
+      1948,
+      2200
+    ]
+  },
+  {
+    "id": "p09_06",
+    "page": 9,
+    "panel": 6,
+    "file": "panels/p09_06.png",
+    "bbox_on_page": [
+      1049,
+      1900,
+      870,
+      1090
+    ],
+    "size": [
+      870,
+      1090
+    ],
+    "scene": "Kate Bishop leans over a table presenting a large roasted turkey to a small red dinosaur toy and other plush animals in a festively decorated room.",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      44,
+      54,
+      479,
+      490
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p09_06.png",
+    "clean_size": [
+      1756,
+      2200
+    ]
+  },
+  {
+    "id": "p10_01",
+    "page": 10,
+    "panel": 1,
+    "file": "panels/p10_01.png",
+    "bbox_on_page": [
+      70,
+      69,
+      1843,
+      909
+    ],
+    "size": [
+      1843,
+      909
+    ],
+    "scene": "Jeff the Land Shark leaps at Kate Bishop, chomping onto her leg as she tries to escape through a doggy door labeled 'JEFF'.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      737,
+      136,
+      1014,
+      454
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p10_01.png",
+    "clean_size": [
+      2200,
+      1085
+    ]
+  },
+  {
+    "id": "p10_02",
+    "page": 10,
+    "panel": 2,
+    "file": "panels/p10_02.png",
+    "bbox_on_page": [
+      70,
+      993,
+      1256,
+      1992
+    ],
+    "size": [
+      1256,
+      1992
+    ],
+    "scene": "Kate Bishop sits beside a small doghouse with a worried expression, watching Jeff the Land Shark resting on a cushioned bed with a medical tube attached, surrounded by a fruit platter and a tropical drink.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      490,
+      1394,
+      502,
+      697
+    ],
+    "sfx_text": [],
+    "clean_file": "clean/p10_02.png",
+    "clean_size": [
+      1387,
+      2200
+    ]
+  }
+]

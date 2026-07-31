@@ -5,74 +5,28 @@
     "panel": 1,
     "file": "panels/p01_01.png",
     "bbox_on_page": [
-      57,
-      134,
-      1560,
-      2366
+      0,
+      140,
+      1054,
+      1460
     ],
     "size": [
-      1560,
-      2366
+      1054,
+      1460
     ],
-    "scene": "Title splash page showing Mars, the God of War, striding through space with a flaming torch while a spaceship approaches Planetoid 206 in an inset panel.",
+    "scene": "Cover art for Annihilation #1 of 6, featuring an ensemble of cosmic Marvel characters posed dramatically against a blue space backdrop with Galactus looming large in the background.",
     "characters_present": [
-      "Mars"
+      "Galactus",
+      "Drax",
+      "Annihilus",
+      "Nova"
     ],
-    "dialogue": [
-      {
-        "text": "With the horrible war-cry of \"Kill and Destroy\" on his blood-flecked lips, Mars, God of War, strides across the universe in his eternal search for more victims to satisfy his lust for carnage.",
-        "speaker": "narrator",
-        "emotion": "ominous, declarative",
-        "bubble_box": [
-          47,
-          1987,
-          484,
-          308
-        ]
-      },
-      {
-        "text": "A huge space-ship from earth approaches the planetoid 206.",
-        "speaker": "narrator",
-        "emotion": "matter-of-fact",
-        "bubble_box": [
-          764,
-          1656,
-          452,
-          142
-        ]
-      }
-    ],
-    "focus_box": [
-      156,
-      426,
-      1092,
-      1467
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p01_02",
-    "page": 1,
-    "panel": 2,
-    "file": "panels/p01_02.png",
-    "bbox_on_page": [
-      859,
-      2234,
-      767,
-      266
-    ],
-    "size": [
-      767,
-      266
-    ],
-    "scene": "A wide establishing shot of dark, jagged mountains under a dim sky, with a partial figure visible at the right edge.",
-    "characters_present": [],
     "dialogue": [],
     "focus_box": [
-      0,
-      0,
-      767,
-      266
+      211,
+      146,
+      632,
+      1022
     ],
     "sfx_text": []
   },
@@ -82,37 +36,68 @@
     "panel": 1,
     "file": "panels/p02_01.png",
     "bbox_on_page": [
-      0,
-      71,
-      380,
-      708
+      15,
+      41,
+      933,
+      360
     ],
     "size": [
-      380,
-      708
+      933,
+      360
     ],
-    "scene": "Dick Warren crouches down to examine an item on the ground, musing aloud about its implications for the theory that Zog was never inhabited by humans.",
-    "characters_present": [
-      "Dick Warren"
-    ],
+    "scene": "A wide establishing shot labeled 'Annihilation Day' shows massive Nova Corps space stations being devastated by an invading force bursting through the cosmic boundary known as the Crunch, accompanied by Richard Rider's verbal log narration.",
+    "characters_present": [],
     "dialogue": [
       {
-        "text": "THIS EXPLODES MY TH-- THAT ZOG WAS NEVER -- ONLY HUMAN BEINGS HAVE MADE THESE MA-- I'LL TAKE IT BACK TO -- AND TRY TO DECIPHER --",
-        "speaker": "Dick Warren",
-        "emotion": "thoughtful, intrigued",
+        "text": "VERBAL LOG. NOVA CORPS OPERATIVE: 11249-44396/RICHARD RIDER-- LAST SURVIVOR OF THE NOVA CORPS.",
+        "speaker": "narrator",
+        "emotion": "clinical, recorded log",
         "bubble_box": [
-          11,
-          60,
-          141,
-          198
+          28,
+          5,
+          275,
+          31
+        ]
+      },
+      {
+        "text": "THE MASSIVE INVADING ENEMY PUNCHED THROUGH THE \"CRUNCH.\"",
+        "speaker": "narrator",
+        "emotion": "grim, matter-of-fact",
+        "bubble_box": [
+          28,
+          40,
+          191,
+          29
+        ]
+      },
+      {
+        "text": "THE CRUNCH IS THE BOUNDARY OF OUR UNIVERSE.",
+        "speaker": "narrator",
+        "emotion": "explanatory, solemn",
+        "bubble_box": [
+          229,
+          40,
+          182,
+          29
+        ]
+      },
+      {
+        "text": "THAT MEANS THEY CAME FROM BEYOND OUR UNIVERSE.",
+        "speaker": "narrator",
+        "emotion": "grave, ominous",
+        "bubble_box": [
+          28,
+          108,
+          191,
+          32
         ]
       }
     ],
     "focus_box": [
-      38,
-      142,
-      114,
-      411
+      327,
+      18,
+      606,
+      144
     ],
     "sfx_text": []
   },
@@ -122,38 +107,57 @@
     "panel": 2,
     "file": "panels/p02_02.png",
     "bbox_on_page": [
-      372,
-      71,
-      564,
-      708
+      15,
+      420,
+      933,
+      368
     ],
     "size": [
-      564,
-      708
+      933,
+      368
     ],
-    "scene": "A group of hooded purple-robed figures approaches Dick Warren, hailing him as a stranger and declaring themselves friends.",
-    "characters_present": [
-      "Dick Warren",
-      "Wad"
-    ],
+    "scene": "A wide space battle scene showing the Annihilation Wave devastating Xandar and the Nova Corps fleet, presented as a retrospective timeline entry for 'Annihilation Day, Plus 7'.",
+    "characters_present": [],
     "dialogue": [
       {
-        "text": "STRANGER! STRANGER!.. WE ARE FRIENDS!",
-        "speaker": "Wad",
-        "emotion": "calling out, welcoming",
+        "text": "THAT'S HOW NOVA CORPS GOT INVOLVED.",
+        "speaker": "Nova_nohelmet",
+        "emotion": "narrating, grim",
         "bubble_box": [
-          152,
-          28,
-          118,
-          85
+          17,
+          17,
+          177,
+          28
+        ]
+      },
+      {
+        "text": "XANDAR, THE CORPS' HOMEWORLD, WAS DEVASTATED BY THEIR ATTACK--WE WERE WIPED OUT.",
+        "speaker": "Nova_nohelmet",
+        "emotion": "narrating, somber",
+        "bubble_box": [
+          17,
+          43,
+          182,
+          59
+        ]
+      },
+      {
+        "text": "THEY CALL THEMSELVES THE ANNIHILATION WAVE THEY",
+        "speaker": "Nova_nohelmet",
+        "emotion": "narrating, tense",
+        "bubble_box": [
+          577,
+          117,
+          289,
+          26
         ]
       }
     ],
     "focus_box": [
-      152,
-      142,
-      175,
-      411
+      0,
+      0,
+      933,
+      114
     ],
     "sfx_text": []
   },
@@ -163,438 +167,81 @@
     "panel": 3,
     "file": "panels/p02_03.png",
     "bbox_on_page": [
-      928,
-      71,
-      474,
-      741
+      15,
+      807,
+      933,
+      733
     ],
     "size": [
-      474,
-      741
+      933,
+      733
     ],
-    "scene": "Dick Warren kneels near a tiger while Wad, the bald leader of the hooded people, introduces himself and explains why his people approached.",
+    "scene": "Narrator captions explain the Annihilation Wave's origins and Annihilus's claim to the universe as the insectoid warlord is shown wielding the Cosmic Control Rod amid destruction and his forces.",
     "characters_present": [
-      "Dick Warren",
-      "Wad"
+      "Annihilus"
     ],
     "dialogue": [
       {
-        "text": "HE STONE, FTS HIM.",
+        "text": "THEM LESS THAN SIX MONTHS TO ERADICATE WHAT WAS LEFT OF THE SKRULL EMPIRE.",
         "speaker": "narrator",
-        "emotion": "neutral narration",
+        "emotion": "informational",
         "bubble_box": [
+          541,
           0,
-          0,
-          57,
-          44
+          392,
+          51
         ]
       },
       {
-        "text": "THIS ERTAINLY INTERESTING... HAT'S THAT?",
-        "speaker": "Dick Warren",
-        "emotion": "curious, surprised",
-        "bubble_box": [
-          0,
-          41,
-          88,
-          130
-        ]
-      },
-      {
-        "text": "WE SAW YOU LAN CAME TO INVESTIO. THAT STONE GIVE DISTANCE TO OUR MY NAME IS WA AM LEADER HER",
-        "speaker": "Wad",
-        "emotion": "stern, formal",
-        "bubble_box": [
-          92,
-          0,
-          232,
-          111
-        ]
-      }
-    ],
-    "focus_box": [
-      109,
-      96,
-      123,
-      274
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p02_04",
-    "page": 2,
-    "panel": 4,
-    "file": "panels/p02_04.png",
-    "bbox_on_page": [
-      1394,
-      71,
-      330,
-      739
-    ],
-    "size": [
-      330,
-      739
-    ],
-    "scene": "Dick Warren introduces himself to Wad, explaining he is from Earth and had no idea the planetoid was inhabited.",
-    "characters_present": [
-      "Dick Warren",
-      "Wad"
-    ],
-    "dialogue": [
-      {
-        "text": "ND AND GATE!... ES THE R VILLAGE. AD!... I RE!",
-        "speaker": "Wad",
-        "emotion": "stern, commanding",
-        "bubble_box": [
-          0,
-          0,
-          66,
-          133
-        ]
-      },
-      {
-        "text": "I'M DICK WARREN FROM EARTH. I NEVER SUSPECTED THIS PLANETOID WAS INHABITED.",
-        "speaker": "Dick Warren",
-        "emotion": "plain, surprised",
-        "bubble_box": [
-          64,
-          0,
-          139,
-          148
-        ]
-      }
-    ],
-    "focus_box": [
-      16,
-      37,
-      132,
-      443
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p02_05",
-    "page": 2,
-    "panel": 5,
-    "file": "panels/p02_05.png",
-    "bbox_on_page": [
-      0,
-      771,
-      389,
-      658
-    ],
-    "size": [
-      389,
-      658
-    ],
-    "scene": "Dick Warren is led into the hooded people's village, with two robed figures welcoming him as they approach the red-walled settlement.",
-    "characters_present": [
-      "Wad",
-      "Dick Warren"
-    ],
-    "dialogue": [
-      {
-        "text": "LATER, THEY TAKE HIM TO THE VILLAGE:",
+        "text": "TRUTH TO TELL, THERE'S MORE THAN A DOZEN SKRULL WORLDS THAT WE CAN'T EVEN LOCATE!",
         "speaker": "narrator",
-        "emotion": "neutral, informational",
+        "emotion": "informational",
         "bubble_box": [
-          44,
-          64,
-          113,
-          36
-        ]
-      },
-      {
-        "text": "THIS IS OUR VILLAGE!...YOU ARE WELCOME!",
-        "speaker": "Wad",
-        "emotion": "welcoming, formal",
-        "bubble_box": [
-          8,
-          97,
-          82,
+          541,
+          48,
+          392,
           66
         ]
       },
       {
-        "text": "I WIL... SEVER... HE...",
-        "speaker": "Dick Warren",
-        "emotion": "speaking, partially cut off",
-        "bubble_box": [
-          117,
-          97,
-          47,
-          53
-        ]
-      }
-    ],
-    "focus_box": [
-      19,
-      316,
-      136,
-      197
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p02_06",
-    "page": 2,
-    "panel": 6,
-    "file": "panels/p02_06.png",
-    "bbox_on_page": [
-      381,
-      771,
-      806,
-      708
-    ],
-    "size": [
-      806,
-      708
-    ],
-    "scene": "Ada serves raw meat at a feast while Dick Warren watches and mentally resolves to teach the hooded people how to cook with fire.",
-    "characters_present": [
-      "Ada",
-      "Wad",
-      "Dick Warren"
-    ],
-    "dialogue": [
-      {
-        "text": "A FEAST IS PREPARED IN HONOR OF THEIR GUEST. A WHITE GIRL SERVES THEM.",
+        "text": "ANNIHILATION WAVE... ANNIHILUS. NOT EVERYONE MADE THE CONNECTION. GO FIGURE.",
         "speaker": "narrator",
-        "emotion": "neutral, expository",
+        "emotion": "dry, matter-of-fact",
         "bubble_box": [
-          176,
-          13,
-          322,
-          67
+          14,
+          249,
+          215,
+          88
         ]
       },
       {
-        "text": "THEY EAT THEIR MEAT RAW!... I'M GOING TO SHOW THEM HOW TO MAKE A FIRE AND COOK!",
-        "speaker": "Dick Warren",
-        "emotion": "determined, thoughtful",
-        "bubble_box": [
-          395,
-          39,
-          258,
-          124
-        ]
-      }
-    ],
-    "focus_box": [
-      314,
-      106,
-      339,
-      340
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p02_07",
-    "page": 2,
-    "panel": 7,
-    "file": "panels/p02_07.png",
-    "bbox_on_page": [
-      1179,
-      804,
-      545,
-      708
-    ],
-    "size": [
-      545,
-      708
-    ],
-    "scene": "A split panel showing Wad holding a staff in a jungle setting on the left, while on the right a close-up shows a hand flicking open a monogrammed lighter with the initials 'DW'.",
-    "characters_present": [
-      "Wad",
-      "Dick Warren"
-    ],
-    "dialogue": [
-      {
-        "text": "ng y o",
-        "speaker": "Wad",
-        "emotion": "stern, threatening",
-        "bubble_box": [
-          0,
-          21,
-          65,
-          85
-        ]
-      }
-    ],
-    "focus_box": [
-      262,
-      106,
-      283,
-      460
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p02_08",
-    "page": 2,
-    "panel": 8,
-    "file": "panels/p02_08.png",
-    "bbox_on_page": [
-      0,
-      1471,
-      595,
-      1016
-    ],
-    "size": [
-      595,
-      1016
-    ],
-    "scene": "As a tiny flame flickers, Ada cries out and the hooded people react in panic while Dick Warren looks on from behind.",
-    "characters_present": [
-      "Ada",
-      "Dick Warren",
-      "Wad"
-    ],
-    "dialogue": [
-      {
-        "text": "AS THE TINY FLAME FLICKERS..",
+        "text": "FROM WHAT WE'VE BEEN ABLE TO PIECE TOGETHER, OUR UNIVERSE IS EXPANDING INTO THE UNIVERSE ANNIHILUS RULES --CALLED THE NEGATIVE ZONE.",
         "speaker": "narrator",
-        "emotion": "neutral, descriptive",
+        "emotion": "informational",
         "bubble_box": [
-          70,
-          99,
-          220,
-          36
+          14,
+          334,
+          215,
+          114
         ]
       },
       {
-        "text": "PUT IT OUT!",
-        "speaker": "Ada",
-        "emotion": "desperate, alarmed",
-        "bubble_box": [
-          256,
-          178,
-          86,
-          86
-        ]
-      },
-      {
-        "text": "EEH!",
-        "speaker": "unknown",
-        "emotion": "frightened, exclaiming",
-        "bubble_box": [
-          256,
-          630,
-          77,
-          56
-        ]
-      },
-      {
-        "text": "OHH!",
-        "speaker": "unknown",
-        "emotion": "pained, alarmed",
-        "bubble_box": [
-          247,
-          691,
-          83,
-          56
-        ]
-      }
-    ],
-    "focus_box": [
-      60,
-      498,
-      226,
-      406
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p02_09",
-    "page": 2,
-    "panel": 9,
-    "file": "panels/p02_09.png",
-    "bbox_on_page": [
-      587,
-      1471,
-      623,
-      1015
-    ],
-    "size": [
-      623,
-      1015
-    ],
-    "scene": "Dick Warren leans toward Ada to ask what is happening as the hooded purple-robed people scatter and flee in the background, apparently driven away by a small flame on the ground.",
-    "characters_present": [
-      "Dick Warren",
-      "Ada"
-    ],
-    "dialogue": [
-      {
-        "text": "WHAT'S THE MATTER?",
-        "speaker": "Dick Warren",
-        "emotion": "concerned, urgent",
-        "bubble_box": [
-          122,
-          218,
-          90,
-          122
-        ]
-      },
-      {
-        "text": "THEY CANNOT STAND THE SMALLEST FLAME! IT DRAWS THE OXYGEN FROM THEIR BODIES AND STRANGLES THEM! I AM DIFFERENT!... WHY, I DON'T KNOW!",
-        "speaker": "Ada",
-        "emotion": "earnest, explaining",
-        "bubble_box": [
-          193,
-          198,
-          181,
-          198
-        ]
-      }
-    ],
-    "focus_box": [
-      118,
-      294,
-      231,
-      426
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p02_10",
-    "page": 2,
-    "panel": 10,
-    "file": "panels/p02_10.png",
-    "bbox_on_page": [
-      1202,
-      1504,
-      522,
-      982
-    ],
-    "size": [
-      522,
-      982
-    ],
-    "scene": "The spirit of Mars, an enormous bearded warrior in a crested helmet and red armor, descends invisibly among a crowd of hooded purple-robed people while Ada and Dick Warren look on from the foreground.",
-    "characters_present": [
-      "Mars",
-      "Ada",
-      "Dick Warren"
-    ],
-    "dialogue": [
-      {
-        "text": "SUDDENLY, UNSEEN BY HUMAN EYES, THE SPIRIT OF MARS DESCENDS IN THEIR MIDST",
+        "text": "ANNIHILUS IS TAKING BACK WHAT HE CONSIDERS HIS.",
         "speaker": "narrator",
-        "emotion": "ominous, declarative",
+        "emotion": "informational",
         "bubble_box": [
-          68,
-          10,
-          193,
-          83
+          14,
+          443,
+          215,
+          59
         ]
       }
     ],
     "focus_box": [
-      52,
-      79,
-      188,
-      570
+      327,
+      220,
+      606,
+      308
     ],
     "sfx_text": []
   },
@@ -604,63 +251,97 @@
     "panel": 1,
     "file": "panels/p03_01.png",
     "bbox_on_page": [
-      18,
-      137,
-      542,
-      642
+      20,
+      14,
+      1580,
+      753
     ],
     "size": [
-      542,
-      642
+      1580,
+      753
     ],
-    "scene": "Dick Warren reports to Wad about discovering a tribe of white people living inside a mountain, while Mars lurks nearby and schemes to possess Wad's body to destroy the civilization.",
+    "scene": "A massive battle at the United Front Command Center on Daedalus 5 as Nova (Richard Rider) and allied forces hold back the Annihilation Wave on the Kree-system periphery, with explosions and combat filling the battlefield.",
     "characters_present": [
-      "Dick Warren",
-      "Wad",
-      "Mars"
+      "Nova_nohelmet",
+      "Peter Quill"
     ],
     "dialogue": [
       {
-        "text": "I'M SORRY I MADE A FIRE! IT WILL NOT HAPPEN AGAIN!",
-        "speaker": "Dick Warren",
-        "emotion": "apologetic, submissive",
+        "text": "WE'RE HOLDING OFF THE WAVE. NOT AS IMPRESSIVE AS WE'RE BEATING THEM BUT I'LL TAKE WHAT I CAN GET.",
+        "speaker": "Nova_nohelmet",
+        "emotion": "determined, weary",
         "bubble_box": [
-          0,
-          0,
-          106,
-          112
+          346,
+          36,
+          253,
+          75
         ]
       },
       {
-        "text": "WAD! WAD! THERE IS A TRIBE OF WHITE PEOPLE LIVING INSIDE A MOUNTAIN!... I ENTERED A CAVE AND SAW THEM!",
-        "speaker": "Dick Warren",
-        "emotion": "excited, urgent",
+        "text": "I'M NOT BEING FAIR. AFTER SIX MONTHS OF BARELY SLOWING THEM DOWN, HOLDING THEM BACK COUNTS FOR A LOT.",
+        "speaker": "Nova_nohelmet",
+        "emotion": "reflective, honest",
         "bubble_box": [
-          100,
-          0,
-          287,
+          553,
+          60,
+          245,
           83
         ]
       },
       {
-        "text": "THIS IS MY CHANCE TO DESTROY A CIVILIZATION... I'LL ENTER WAD'S BODY!",
-        "speaker": "Mars",
-        "emotion": "scheming, theatrical",
+        "text": "THE WAVE IS PUSHING IN HARD. BUT WE'RE FINALLY GETTING ORGANIZED ENOUGH TO FIGHT.",
+        "speaker": "Nova_nohelmet",
+        "emotion": "grim, resolute",
         "bubble_box": [
-          184,
-          83,
-          287,
-          148
+          1090,
+          15,
+          308,
+          56
+        ]
+      },
+      {
+        "text": "YOU ABOUT READY TO START PAYING ATTENTION NOW, RICHIE?",
+        "speaker": "Peter Quill",
+        "emotion": "wry, urgent",
+        "bubble_box": [
+          158,
+          218,
+          261,
+          75
+        ]
+      },
+      {
+        "text": "IF WE DON'T HOLD THEM HERE, IT'S OVER.",
+        "speaker": "Nova_nohelmet",
+        "emotion": "tense, commanding",
+        "bubble_box": [
+          1651,
+          158,
+          284,
+          60
+        ]
+      },
+      {
+        "text": "AND BY \"WE\" I'M TALKING ANYONE OR ANYTHING STILL ABLE TO HOLD A WEAPON.",
+        "speaker": "Nova_nohelmet",
+        "emotion": "grim, desperate",
+        "bubble_box": [
+          1651,
+          256,
+          292,
+          75
         ]
       }
     ],
     "focus_box": [
-      108,
-      96,
-      217,
-      321
+      95,
+      23,
+      442,
+      241
     ],
-    "sfx_text": []
+    "sfx_text": [
+      "BLOOD AND THUNDER"
+    ]
   },
   {
     "id": "p03_02",
@@ -668,49 +349,92 @@
     "panel": 2,
     "file": "panels/p03_02.png",
     "bbox_on_page": [
-      552,
-      134,
-      601,
-      645
+      20,
+      777,
+      632,
+      432
     ],
     "size": [
-      601,
-      645
+      632,
+      432
     ],
-    "scene": "Wad punches Dick Warren in the face while confronting him for interfering with his people.",
+    "scene": "Peter Quill (Star-Lord) stands on a chaotic battlefield structure while multiple characters exchange tactical dialogue about force fields and personnel retreat.",
     "characters_present": [
-      "Wad",
-      "Dick Warren"
+      "Peter Quill"
     ],
     "dialogue": [
       {
-        "text": "HOW DARE A STRANGER INTERFERE WITH MY PEOPLE?... TAKE THIS!",
-        "speaker": "Wad",
-        "emotion": "angry, threatening",
+        "text": "WITH THE SKRULLS GONE, YOU BETTER HAVE AN ACE UP YOUR--",
+        "speaker": "unknown",
+        "emotion": "urgent, demanding",
         "bubble_box": [
-          93,
           0,
-          234,
-          74
+          4,
+          76,
+          52
         ]
       },
       {
-        "text": "UGH!",
-        "speaker": "Dick Warren",
-        "emotion": "pained, reacting to blow",
+        "text": "LIE TO ME.",
+        "speaker": "unknown",
+        "emotion": "resigned, sardonic",
         "bubble_box": [
-          300,
-          19,
-          84,
-          45
+          0,
+          48,
+          63,
+          24
+        ]
+      },
+      {
+        "text": "MR. SUNSHINE'S MY NUMBER TWO, GOES BY THE NAME PETER QUILL. USED TO BE CALLED STARLORD. QUILL SIGNED ON RIGHT AFTER THE TARTUS MINOR DEBACLE.",
+        "speaker": "narrator",
+        "emotion": "informational caption",
+        "bubble_box": [
+          73,
+          2,
+          243,
+          32
+        ]
+      },
+      {
+        "text": "OKAY, TRY THIS--THE FORCE FIELDS WILL HOLD. THAT WHAT YOU WANTED TO HEAR?",
+        "speaker": "Peter Quill",
+        "emotion": "dry, sarcastic",
+        "bubble_box": [
+          38,
+          121,
+          123,
+          52
+        ]
+      },
+      {
+        "text": "TAKES A GOOD BI TO SIGN ON AFTER OF HISTORY'S BLO",
+        "speaker": "narrator",
+        "emotion": "informational caption",
+        "bubble_box": [
+          392,
+          2,
+          117,
+          32
+        ]
+      },
+      {
+        "text": "ALL NONESSENTIAL PERSONNEL ARE FALLING BACK TO THE SECONDARY PERIMETER. THIS IS MASSACRE MAKING. IF WE MAKE A LAST RATHER IT OUR TE",
+        "speaker": "unknown",
+        "emotion": "commanding, urgent",
+        "bubble_box": [
+          373,
+          56,
+          117,
+          95
         ]
       }
     ],
     "focus_box": [
-      180,
-      52,
-      228,
-      206
+      126,
+      26,
+      177,
+      181
     ],
     "sfx_text": []
   },
@@ -720,39 +444,104 @@
     "panel": 3,
     "file": "panels/p03_03.png",
     "bbox_on_page": [
-      1127,
-      134,
-      564,
-      666
+      660,
+      777,
+      640,
+      432
     ],
     "size": [
-      564,
-      666
+      640,
+      432
     ],
-    "scene": "Dick Warren punches a hooded figure (likely Wad) hard enough to knock him down, while Mars and another robed figure watch from behind.",
+    "scene": "Peter Quill speaks while Gamora stands armed with a large rifle amid soldiers in a ruined base, as caption boxes narrate her covert operations role.",
     "characters_present": [
-      "Dick Warren",
-      "Wad",
-      "Mars"
+      "Gamora",
+      "Peter Quill"
     ],
     "dialogue": [
       {
-        "text": "EARTHMAN'S FIST!",
-        "speaker": "Dick Warren",
-        "emotion": "shouting, triumphant",
+        "text": "OF COURAGE WITNESSING ONE OF DIES DEFEATS.",
+        "speaker": "narrator",
+        "emotion": "narration",
         "bubble_box": [
-          87,
           0,
-          164,
-          40
+          0,
+          128,
+          26
+        ]
+      },
+      {
+        "text": "A IN THE RE GONNA BE ON MS.",
+        "speaker": "narrator",
+        "emotion": "narration",
+        "bubble_box": [
+          0,
+          56,
+          64,
+          69
+        ]
+      },
+      {
+        "text": "DOES GAMORA AGREE?",
+        "speaker": "Peter Quill",
+        "emotion": "questioning, casual",
+        "bubble_box": [
+          99,
+          84,
+          93,
+          32
+        ]
+      },
+      {
+        "text": "GAMORA'S GOT HER FULL RUNNING OPS. SHE'S GOT B DOZEN HIT-AND-R OUT THERE TAR COMMAND CE",
+        "speaker": "narrator",
+        "emotion": "narration",
+        "bubble_box": [
+          307,
+          0,
+          147,
+          56
+        ]
+      },
+      {
+        "text": "S RU",
+        "speaker": "narrator",
+        "emotion": "narration",
+        "bubble_box": [
+          390,
+          39,
+          45,
+          17
+        ]
+      },
+      {
+        "text": "MAKES SENSE. SHE HARD COR",
+        "speaker": "Peter Quill",
+        "emotion": "wry, matter-of-fact",
+        "bubble_box": [
+          307,
+          56,
+          128,
+          39
+        ]
+      },
+      {
+        "text": "THEN AGAIN, HE COULD BE CRAZY. LORD KNOWS, CRAZY'S EASY TO COME BY OUT HERE.",
+        "speaker": "narrator",
+        "emotion": "narration",
+        "bubble_box": [
+          125,
+          168,
+          253,
+          24
         ]
       }
     ],
     "focus_box": [
-      56,
-      67,
-      282,
-      366
+      294,
+      65,
+      205,
+      134
     ],
     "sfx_text": []
   },
@@ -762,297 +551,48 @@
     "panel": 4,
     "file": "panels/p03_04.png",
     "bbox_on_page": [
-      18,
-      971,
-      542,
-      783
+      1308,
+      777,
+      292,
+      432
     ],
     "size": [
-      542,
-      783
+      292,
+      432
     ],
-    "scene": "Dick Warren is swarmed and overpowered by a mob of hooded purple-robed figures who grab and restrain him from all sides.",
+    "scene": "A close-up of Richard Rider's face, bearing a fresh scar, as he listens to or delivers a tense, morally charged question about prisoners.",
     "characters_present": [
-      "Dick Warren"
+      "Nova_nohelmet"
     ],
     "dialogue": [
       {
-        "text": "OVERPOWERED",
-        "speaker": "narrator",
-        "emotion": "neutral caption",
-        "bubble_box": [
-          0,
-          0,
-          119,
-          43
-        ]
-      }
-    ],
-    "focus_box": [
-      81,
-      78,
-      206,
-      329
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p03_05",
-    "page": 3,
-    "panel": 5,
-    "file": "panels/p03_05.png",
-    "bbox_on_page": [
-      552,
-      971,
-      583,
-      583
-    ],
-    "size": [
-      583,
-      583
-    ],
-    "scene": "Wad declares to a captive Dick Warren that they will feast on his flesh tonight before invading the Hidden People, while a hooded figure to the left announces they have captured him.",
-    "characters_present": [
-      "Wad",
-      "Dick Warren"
-    ],
-    "dialogue": [
-      {
-        "text": "WE GOT HIM!",
+        "text": "R HANDS BLACK TTER'N A N TEAMS ETING TERS.",
         "speaker": "unknown",
-        "emotion": "triumphant, shouting",
+        "emotion": "tense, accusatory",
         "bubble_box": [
           0,
-          114,
-          85,
-          122
-        ]
-      },
-      {
-        "text": "TONIGHT WE FEAST ON YOUR TENDER EARTH-MAN'S FLESH! TOMOR-ROW WE INVADE THE HIDDEN PEOPLE!",
-        "speaker": "Wad",
-        "emotion": "cruel, menacing",
-        "bubble_box": [
-          85,
-          12,
-          292,
-          128
-        ]
-      },
-      {
-        "text": "CANNIBALS!",
-        "speaker": "Dick Warren",
-        "emotion": "horrified, exclaiming",
-        "bubble_box": [
-          251,
-          163,
-          128,
-          58
-        ]
-      }
-    ],
-    "focus_box": [
-      216,
-      117,
-      204,
-      292
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p03_06",
-    "page": 3,
-    "panel": 6,
-    "file": "panels/p03_06.png",
-    "bbox_on_page": [
-      1127,
-      921,
-      564,
-      683
-    ],
-    "size": [
-      564,
-      683
-    ],
-    "scene": "Dick Warren stands beside Wad outdoors, with Ada visible in the background, as a thought bubble above expresses a partial sentiment about their adventure.",
-    "characters_present": [
-      "Dick Warren",
-      "Wad",
-      "Ada"
-    ],
-    "dialogue": [
-      {
-        "text": "CLUB ABOUT THIS AD- VENTURE!",
-        "speaker": "Dick Warren",
-        "emotion": "thinking, determined",
-        "bubble_box": [
-          96,
           0,
-          226,
-          41
-        ]
-      }
-    ],
-    "focus_box": [
-      152,
-      34,
-      180,
-      287
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p03_07",
-    "page": 3,
-    "panel": 7,
-    "file": "panels/p03_07.png",
-    "bbox_on_page": [
-      18,
-      1746,
-      542,
-      658
-    ],
-    "size": [
-      542,
-      658
-    ],
-    "scene": "Ada strikes down at Wad while declaring her freedom, as he cries out in pain.",
-    "characters_present": [
-      "Ada",
-      "Wad"
-    ],
-    "dialogue": [
-      {
-        "text": "I HAVE BEEN A SLAVE TOO LONG! DIE!..",
-        "speaker": "Ada",
-        "emotion": "fierce, defiant",
-        "bubble_box": [
-          65,
-          20,
-          201,
-          115
+          64,
+          95
         ]
       },
       {
-        "text": "EEEHH!",
-        "speaker": "Wad",
-        "emotion": "screaming, agonized",
+        "text": "CIDE NERS?",
+        "speaker": "unknown",
+        "emotion": "tense, questioning",
         "bubble_box": [
-          201,
-          184,
-          108,
-          86
+          0,
+          95,
+          47,
+          138
         ]
       }
     ],
     "focus_box": [
-      54,
-      184,
-      244,
-      382
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p03_08",
-    "page": 3,
-    "panel": 8,
-    "file": "panels/p03_08.png",
-    "bbox_on_page": [
-      552,
-      1621,
-      583,
-      783
-    ],
-    "size": [
-      583,
-      783
-    ],
-    "scene": "Ada leads Dick Warren away from pursuers toward the mountain where the hidden people dwell, both running urgently through the wilderness.",
-    "characters_present": [
-      "Ada",
-      "Dick Warren"
-    ],
-    "dialogue": [
-      {
-        "text": "HAVING CUT NICK'S BONDS, THE GIRL LEADS HIM TOWARD THE MOUNTAIN...",
-        "speaker": "narrator",
-        "emotion": "neutral, caption",
-        "bubble_box": [
-          35,
-          110,
-          309,
-          59
-        ]
-      },
-      {
-        "text": "THEY WILL FOLLOW US! I OVERHEARD THE HUNTER TELL WHERE THE HIDDEN PEOPLE DWELL. WE WILL GO THERE!",
-        "speaker": "Ada",
-        "emotion": "urgent, breathless",
-        "bubble_box": [
-          85,
-          168,
-          175,
-          137
-        ]
-      },
-      {
-        "text": "...AND WARN THEM! WHAT IS YOUR NAME?",
-        "speaker": "Dick Warren",
-        "emotion": "urgent, curious",
-        "bubble_box": [
-          227,
-          231,
-          114,
-          121
-        ]
-      }
-    ],
-    "focus_box": [
-      70,
-      337,
-      222,
-      219
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p03_09",
-    "page": 3,
-    "panel": 9,
-    "file": "panels/p03_09.png",
-    "bbox_on_page": [
-      1127,
-      1654,
-      564,
-      750
-    ],
-    "size": [
-      564,
-      750
-    ],
-    "scene": "Ada introduces herself and urges haste in a close-up of her face against a dark background.",
-    "characters_present": [
-      "Ada"
-    ],
-    "dialogue": [
-      {
-        "text": "MY NAME IS ADA!...COME, WE MUST HURRY!",
-        "speaker": "Ada",
-        "emotion": "urgent, anxious",
-        "bubble_box": [
-          68,
-          22,
-          209,
-          165
-        ]
-      }
-    ],
-    "focus_box": [
-      169,
-      112,
-      395,
-      638
+      15,
+      22,
+      263,
+      410
     ],
     "sfx_text": []
   },
@@ -1062,49 +602,71 @@
     "panel": 1,
     "file": "panels/p04_01.png",
     "bbox_on_page": [
-      45,
-      114,
-      548,
-      615
+      8,
+      25,
+      940,
+      291
     ],
     "size": [
-      548,
-      615
+      940,
+      291
     ],
-    "scene": "Ada and Dick Warren stand on rocky ground before a cave entrance, urgently warning each other that Wad is in pursuit.",
+    "scene": "Peter Quill and Richard Rider exchange wry banter about Gamora's aggressive strategy, with Quill making a musical quip that Rider shoots down.",
     "characters_present": [
-      "Ada",
-      "Dick Warren"
+      "Peter Quill",
+      "Nova_nohelmet"
     ],
     "dialogue": [
       {
-        "text": "THIS IS THE CAVE! LOOK!... WAD IS AFTER US!",
-        "speaker": "Ada",
-        "emotion": "urgent, frightened",
+        "text": "GAMORA'S STILL SINGING THE SAME OLD SONG. \"BRING THE FIGHT TO THEM\" IN C MINOR.",
+        "speaker": "Peter Quill",
+        "emotion": "dry, sardonic",
         "bubble_box": [
-          0,
-          0,
-          175,
-          98
+          196,
+          3,
+          273,
+          38
         ]
       },
       {
-        "text": "LET'S HURRY!",
-        "speaker": "Dick Warren",
-        "emotion": "alert, determined",
+        "text": "C MINOR?",
+        "speaker": "Nova_nohelmet",
+        "emotion": "skeptical, flat",
         "bubble_box": [
-          214,
-          18,
-          110,
-          74
+          461,
+          35,
+          132,
+          16
+        ]
+      },
+      {
+        "text": "I JUST THREW THAT IN.",
+        "speaker": "Peter Quill",
+        "emotion": "casual, self-amused",
+        "bubble_box": [
+          196,
+          44,
+          141,
+          22
+        ]
+      },
+      {
+        "text": "THROW IT OUT AGAIN.",
+        "speaker": "Nova_nohelmet",
+        "emotion": "deadpan, unamused",
+        "bubble_box": [
+          310,
+          57,
+          150,
+          19
         ]
       }
     ],
     "focus_box": [
-      164,
-      135,
-      208,
-      295
+      517,
+      0,
+      376,
+      90
     ],
     "sfx_text": []
   },
@@ -1114,51 +676,74 @@
     "panel": 2,
     "file": "panels/p04_02.png",
     "bbox_on_page": [
-      585,
-      114,
-      589,
-      615
+      8,
+      308,
+      940,
+      384
     ],
     "size": [
-      589,
-      615
+      940,
+      384
     ],
-    "scene": "Dick Warren and Ada jog through a dark cave tunnel, exchanging words about the strange place and needing to rest.",
+    "scene": "A narrator caption describes Peter Quill's past as Star-Lord while Quill and a large figure observe an energy explosion or battle in the distance, with Quill reacting with alarm.",
     "characters_present": [
-      "Ada",
-      "Dick Warren"
+      "Peter Quill"
     ],
     "dialogue": [
       {
-        "text": "STRANGE PLACE, ISN'T IT?",
-        "speaker": "Ada",
-        "emotion": "uneasy, curious",
+        "text": "LIKE I SAID. HE JUST MIGHT BE CRAZY.",
+        "speaker": "narrator",
+        "emotion": "dry, matter-of-fact",
         "bubble_box": [
-          18,
-          6,
-          147,
-          55
+          733,
+          0,
+          207,
+          27
         ]
       },
       {
-        "text": "WE HAVE COME SEVERAL MILES...LET'S REST HERE!",
-        "speaker": "Dick Warren",
-        "emotion": "steady, practical",
+        "text": "DID I MENTION HE USED TO BE THE STARLORD? GUY WAS A LIVING LEGEND. SOMETHING...HAPPENED. HE WON'T TALK ABOUT IT, BUT IT HAD TO BE BRUTAL.",
+        "speaker": "narrator",
+        "emotion": "reflective, somber",
         "bubble_box": [
-          159,
-          3,
-          171,
-          65
+          207,
+          38,
+          254,
+          67
+        ]
+      },
+      {
+        "text": "ASK HIM ABOUT IT AND HE'LL TELL YOU \"THE STARLORD IS DEAD.\" PERIOD. NO MORE. NO...",
+        "speaker": "narrator",
+        "emotion": "resigned, trailing off",
+        "bubble_box": [
+          113,
+          142,
+          235,
+          50
+        ]
+      },
+      {
+        "text": "THAT CAN'T BE GOOD.",
+        "speaker": "Peter Quill",
+        "emotion": "concerned, alarmed",
+        "bubble_box": [
+          686,
+          127,
+          169,
+          35
         ]
       }
     ],
     "focus_box": [
-      135,
-      92,
-      188,
-      277
+      545,
+      77,
+      357,
+      115
     ],
-    "sfx_text": []
+    "sfx_text": [
+      "THRMM"
+    ]
   },
   {
     "id": "p04_03",
@@ -1166,38 +751,70 @@
     "panel": 3,
     "file": "panels/p04_03.png",
     "bbox_on_page": [
-      1166,
-      84,
-      566,
-      645
+      8,
+      684,
+      940,
+      344
     ],
     "size": [
-      566,
-      645
+      940,
+      344
     ],
-    "scene": "Dick Warren and Ada pause to catch their breath in a cave filled with stalactites, unaware that a face is peering out at them from the rocky formations.",
+    "scene": "Peter Quill shouts urgently about a flank barricade failing while someone demands a simpler explanation in the chaos of battle.",
     "characters_present": [
-      "Dick Warren",
-      "Ada"
+      "Peter Quill"
     ],
     "dialogue": [
       {
-        "text": "PAUSING, TO CATCH THEIR BREATH, THE FAIL TO SEE A FACE PEERING OUT AT THEM.",
+        "text": "PERIOD. NO MORE, NO LESS.",
         "speaker": "narrator",
-        "emotion": "matter-of-fact",
+        "emotion": "declarative, caption",
         "bubble_box": [
+          146,
           0,
-          0,
-          351,
-          61
+          254,
+          19
+        ]
+      },
+      {
+        "text": "TALK TO ME, PETER!",
+        "speaker": "unknown",
+        "emotion": "urgent, shouting",
+        "bubble_box": [
+          367,
+          45,
+          160,
+          29
+        ]
+      },
+      {
+        "text": "RIGHT FLANK O76'S FORCE-BARRICADES JUST BLEW! IT'S GONNA CASCADE!",
+        "speaker": "Peter Quill",
+        "emotion": "alarmed, shouting",
+        "bubble_box": [
+          404,
+          60,
+          226,
+          38
+        ]
+      },
+      {
+        "text": "IN ENGLISH!?",
+        "speaker": "unknown",
+        "emotion": "frustrated, shouting",
+        "bubble_box": [
+          376,
+          95,
+          164,
+          22
         ]
       }
     ],
     "focus_box": [
-      130,
-      213,
-      158,
-      206
+      254,
+      41,
+      301,
+      89
     ],
     "sfx_text": []
   },
@@ -1207,51 +824,53 @@
     "panel": 4,
     "file": "panels/p04_04.png",
     "bbox_on_page": [
-      45,
-      721,
-      1147,
-      1008
+      8,
+      1020,
+      940,
+      296
     ],
     "size": [
-      1147,
-      1008
+      940,
+      296
     ],
-    "scene": "A scream echoes through a cave as hundreds of small misshapen creatures leap upon Dick Warren and his companions, overwhelming them in a chaotic ambush.",
+    "scene": "A group of heroes cling to a crumbling structure as massive pink energy explosions tear through the sky, with one character warning that the force fields are about to fail.",
     "characters_present": [
-      "Dick Warren",
-      "Ada"
+      "Peter Quill",
+      "Nova_nohelmet"
     ],
     "dialogue": [
       {
-        "text": "WHAT'S THAT? OHHH!",
+        "text": "THE FORCE FIELDS ARE GONNA BLOW!",
         "speaker": "unknown",
-        "emotion": "startled, panicked",
+        "emotion": "urgent, shouting",
         "bubble_box": [
-          17,
-          222,
-          149,
-          101
+          367,
+          6,
+          216,
+          27
         ]
       },
       {
-        "text": "WE'RE TRAPPED!",
-        "speaker": "Dick Warren",
-        "emotion": "alarmed, urgent",
+        "text": "WHO'S ON RIGHT",
+        "speaker": "unknown",
+        "emotion": "urgent, calling out",
         "bubble_box": [
-          178,
-          333,
-          161,
-          86
+          733,
+          260,
+          169,
+          21
         ]
       }
     ],
     "focus_box": [
-      0,
-      605,
-      688,
-      403
+      282,
+      3,
+      263,
+      95
     ],
-    "sfx_text": []
+    "sfx_text": [
+      "WHUUMP!"
+    ]
   },
   {
     "id": "p04_05",
@@ -1259,155 +878,53 @@
     "panel": 5,
     "file": "panels/p04_05.png",
     "bbox_on_page": [
-      986,
-      721,
-      746,
-      1008
+      8,
+      1308,
+      940,
+      292
     ],
     "size": [
-      746,
-      1008
+      940,
+      292
     ],
-    "scene": "Dick Warren and Ada are swarmed and overwhelmed by tiny creatures in a cave, fighting back furiously as the creatures pile on and try to grab them.",
+    "scene": "A armored figure studies a tactical display while a dark-coated hero faces a swarm of insectoid Annihilation Wave enemies charging across the battlefield.",
     "characters_present": [
-      "Dick Warren",
-      "Ada"
+      "Peter Quill",
+      "Nova"
     ],
     "dialogue": [
       {
-        "text": "FURIOUSLY, THEY FIGHT BACK, BUT THE TINY CREATURES PILE ON!",
-        "speaker": "narrator",
-        "emotion": "matter-of-fact, narrating",
+        "text": "ON RIGHT FLANK?",
+        "speaker": "unknown",
+        "emotion": "urgent, questioning",
         "bubble_box": [
-          97,
-          96,
-          463,
-          66
+          583,
+          0,
+          188,
+          16
         ]
       },
       {
-        "text": "LITTLE DEVILS!",
-        "speaker": "Dick Warren",
-        "emotion": "shouting, frustrated",
+        "text": "DOES IT MATTER!?",
+        "speaker": "Peter Quill",
+        "emotion": "defiant, exasperated",
         "bubble_box": [
-          276,
           197,
-          172,
-          111
-        ]
-      },
-      {
-        "text": "GRAB HIM!",
-        "speaker": "unknown",
-        "emotion": "commanding, aggressive",
-        "bubble_box": [
-          328,
-          655,
-          142,
-          101
-        ]
-      },
-      {
-        "text": "FINALLY DICK AND ADA ARE OVER-POWERED BY THE...",
-        "speaker": "narrator",
-        "emotion": "matter-of-fact, narrating",
-        "bubble_box": [
-          0,
-          927,
-          545,
-          81
+          42,
+          164,
+          16
         ]
       }
     ],
     "focus_box": [
-      75,
-      282,
-      485,
-      554
+      310,
+      6,
+      263,
+      64
     ],
-    "sfx_text": []
-  },
-  {
-    "id": "p04_06",
-    "page": 4,
-    "panel": 6,
-    "file": "panels/p04_06.png",
-    "bbox_on_page": [
-      18,
-      1721,
-      1408,
-      767
-    ],
-    "size": [
-      1408,
-      767
-    ],
-    "scene": "Robed figures wrestle a captive Ada to the ground, forcing her down while she struggles, as one of them declares she will be a gift for the queen.",
-    "characters_present": [
-      "Ada",
-      "Wad"
-    ],
-    "dialogue": [
-      {
-        "text": "A GIFT FOR THE QUE... SHE WILL SMI... AT US AGAIN!",
-        "speaker": "Wad",
-        "emotion": "triumphant, eager",
-        "bubble_box": [
-          1225,
-          107,
-          183,
-          100
-        ]
-      }
-    ],
-    "focus_box": [
-      141,
-      77,
-      1056,
-      499
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p04_07",
-    "page": 4,
-    "panel": 7,
-    "file": "panels/p04_07.png",
-    "bbox_on_page": [
-      1418,
-      1689,
-      314,
-      799
-    ],
-    "size": [
-      314,
-      799
-    ],
-    "scene": "Dick Warren and Ada are surrounded and escorted by a crowd of small, stout blue-clad figures inside a cave.",
-    "characters_present": [
-      "Dick Warren",
-      "Ada"
-    ],
-    "dialogue": [
-      {
-        "text": "...SEN! ILE ...",
-        "speaker": "unknown",
-        "emotion": "calling out",
-        "bubble_box": [
-          0,
-          216,
-          38,
-          144
-        ]
-      }
-    ],
-    "focus_box": [
-      38,
-      120,
-      195,
-      519
-    ],
-    "sfx_text": []
+    "sfx_text": [
+      "WHOMP"
+    ]
   },
   {
     "id": "p05_01",
@@ -1415,23 +932,112 @@
     "panel": 1,
     "file": "panels/p05_01.png",
     "bbox_on_page": [
-      18,
-      108,
-      1080,
-      840
+      0,
+      60,
+      1054,
+      936
     ],
     "size": [
-      1080,
-      840
+      1054,
+      936
     ],
-    "scene": "A wide aerial establishing shot of an elaborate plaza or courtyard featuring a large circular fountain or pool at its center, surrounded by manicured gardens, pathways, and small figures of people milling about, with mountains and a ornate building visible in the background.",
+    "scene": "Kree battalions on the right flank are overwhelmed and breached by the Annihilation Wave as soldiers shout orders during a chaotic close-quarters battle.",
     "characters_present": [],
-    "dialogue": [],
+    "dialogue": [
+      {
+        "text": "THE RIGHT FLANK. 076.\n2ND AND 3RD KREE BATTALLIONS.\nFIELD COMMANDER: LAR-KA.",
+        "speaker": "narrator",
+        "emotion": "neutral, caption",
+        "bubble_box": [
+          0,
+          0,
+          443,
+          66
+        ]
+      },
+      {
+        "text": "HELL YEAH. IT ALWAYS MATTERS.",
+        "speaker": "narrator",
+        "emotion": "determined, caption",
+        "bubble_box": [
+          0,
+          145,
+          184,
+          215
+        ]
+      },
+      {
+        "text": "WE'RE BREACHED!",
+        "speaker": "unknown",
+        "emotion": "alarmed, shouting",
+        "bubble_box": [
+          137,
+          201,
+          242,
+          262
+        ]
+      },
+      {
+        "text": "LINE OF FIRE!",
+        "speaker": "unknown",
+        "emotion": "urgent, shouting",
+        "bubble_box": [
+          285,
+          234,
+          411,
+          309
+        ]
+      },
+      {
+        "text": "STAND YOUR GROUND!",
+        "speaker": "unknown",
+        "emotion": "commanding, shouting",
+        "bubble_box": [
+          163,
+          365,
+          327,
+          435
+        ]
+      },
+      {
+        "text": "CONTROLLED BURSTS! MAKE THEM COUNT!",
+        "speaker": "unknown",
+        "emotion": "commanding, urgent",
+        "bubble_box": [
+          306,
+          412,
+          527,
+          496
+        ]
+      },
+      {
+        "text": "KREE COMMAND PROTOCOLS, AS WE'VE COME TO UNDERSTAND THEM, HAVE BROKEN DOWN. IT'S LIKE THEY'VE FORGOTTEN HOW TO WAGE WAR, AND THE KREE LIVE FOR WAR.",
+        "speaker": "narrator",
+        "emotion": "analytical, caption",
+        "bubble_box": [
+          105,
+          697,
+          453,
+          791
+        ]
+      },
+      {
+        "text": "...TOO MANY!",
+        "speaker": "unknown",
+        "emotion": "desperate, terrified",
+        "bubble_box": [
+          163,
+          800,
+          306,
+          852
+        ]
+      }
+    ],
     "focus_box": [
-      324,
-      336,
-      540,
-      336
+      422,
+      356,
+      632,
+      468
     ],
     "sfx_text": []
   },
@@ -1441,62 +1047,116 @@
     "panel": 2,
     "file": "panels/p05_02.png",
     "bbox_on_page": [
-      1090,
-      108,
-      663,
-      571
+      0,
+      1004,
+      1054,
+      504
     ],
     "size": [
-      663,
-      571
+      1054,
+      504
     ],
-    "scene": "A queen or ruler seated on a throne questions a group of people, one of whom warns that the crust-people are preparing to attack.",
-    "characters_present": [
-      "Dick Warren",
-      "Ada"
-    ],
+    "scene": "Kree soldiers are being overwhelmed by the Annihilation Wave while a robed commander fires a powerful weapon as narrator captions describe staggering Kree casualties.",
+    "characters_present": [],
     "dialogue": [
       {
-        "text": "WHO ARE THESE PEOPLE?",
+        "text": "STAND YOUR GROUND!",
         "speaker": "unknown",
-        "emotion": "questioning, authoritative",
+        "emotion": "shouting, desperate",
         "bubble_box": [
-          12,
-          6,
-          133,
-          51
+          195,
+          0,
+          169,
+          30
         ]
       },
       {
-        "text": "WE FOUND THEM IN THE FORBIDDEN PASSAGE!",
+        "text": "EVERYWHERE!",
         "speaker": "unknown",
-        "emotion": "reporting, firm",
+        "emotion": "panicked, shouting",
         "bubble_box": [
-          129,
-          6,
-          129,
-          74
+          516,
+          0,
+          158,
+          23
         ]
       },
       {
-        "text": "WE WERE SEARCHING FOR YOU! THE CRUST-PEOPLE ARE PREPARING TO ATTACK!",
-        "speaker": "Dick Warren",
-        "emotion": "urgent, alarmed",
+        "text": "ARGH!",
+        "speaker": "unknown",
+        "emotion": "pained, crying out",
         "bubble_box": [
-          278,
-          57,
-          146,
-          106
+          611,
+          20,
+          105,
+          28
+        ]
+      },
+      {
+        "text": "HOLD POSITIONS!",
+        "speaker": "unknown",
+        "emotion": "commanding, urgent",
+        "bubble_box": [
+          885,
+          15,
+          174,
+          28
+        ]
+      },
+      {
+        "text": "SINCE THE HOUSE OF FIYERO SEIZED CONTROL OF HALA, THEY JUST THROW WARM BODIES AT THE WAVE.",
+        "speaker": "narrator",
+        "emotion": "neutral, informational",
+        "bubble_box": [
+          137,
+          88,
+          253,
+          66
+        ]
+      },
+      {
+        "text": "KREE CASUALTIES HAVE BEEN... STAGGERING.",
+        "speaker": "narrator",
+        "emotion": "neutral, grim",
+        "bubble_box": [
+          422,
+          88,
+          221,
+          50
+        ]
+      },
+      {
+        "text": "FALL BACK! FORM A SECONDARY PERIMETER! ALTERNATE COVERING FIRE! MOVE YOUR BEDRAGGLED SHANKS!",
+        "speaker": "unknown",
+        "emotion": "shouting, commanding",
+        "bubble_box": [
+          206,
+          217,
+          242,
+          71
+        ]
+      },
+      {
+        "text": "WE LUCKED OUT THIS TIME. RONAN WAS ON-SITE.",
+        "speaker": "narrator",
+        "emotion": "neutral, relieved",
+        "bubble_box": [
+          516,
+          247,
+          221,
+          40
         ]
       }
     ],
     "focus_box": [
-      36,
-      114,
-      186,
-      228
+      316,
+      101,
+      474,
+      192
     ],
-    "sfx_text": []
+    "sfx_text": [
+      "ARGH!"
+    ]
   },
   {
     "id": "p05_03",
@@ -1504,302 +1164,802 @@
     "panel": 3,
     "file": "panels/p05_03.png",
     "bbox_on_page": [
-      1090,
-      671,
-      663,
-      658
+      0,
+      1516,
+      1054,
+      84
     ],
     "size": [
-      663,
-      658
+      1054,
+      84
     ],
-    "scene": "A narrator caption announces the queen orders the trial despite Dick's warning, while Ada, Dick Warren, and Wad each speak defiantly about confronting a threat.",
-    "characters_present": [
-      "Ada",
-      "Dick Warren",
-      "Wad"
-    ],
-    "dialogue": [
-      {
-        "text": "IGNORING DICK'S WARNING, THE QUEEN ORDERS THE TRIAL...",
-        "speaker": "narrator",
-        "emotion": "matter-of-fact",
-        "bubble_box": [
-          78,
-          128,
-          338,
-          59
-        ]
-      },
-      {
-        "text": "DON'T LET HIM TOUCH ME!",
-        "speaker": "Ada",
-        "emotion": "frightened, desperate",
-        "bubble_box": [
-          86,
-          201,
-          113,
-          102
-        ]
-      },
-      {
-        "text": "NEVER FEAR! I'LL TAKE CARE OF HIM!",
-        "speaker": "Dick Warren",
-        "emotion": "reassuring, confident",
-        "bubble_box": [
-          176,
-          217,
-          126,
-          112
-        ]
-      },
-      {
-        "text": "I'LL BREAK HIS NECK!",
-        "speaker": "Wad",
-        "emotion": "stern, threatening",
-        "bubble_box": [
-          312,
-          243,
-          113,
-          86
-        ]
-      }
-    ],
+    "scene": "A narrow horizontal strip showing partial figures in a darkened, action-filled environment.",
+    "characters_present": [],
+    "dialogue": [],
     "focus_box": [
-      86,
-      395,
-      351,
-      263
+      0,
+      0,
+      1054,
+      84
     ],
     "sfx_text": []
   },
   {
-    "id": "p05_04",
-    "page": 5,
-    "panel": 4,
-    "file": "panels/p05_04.png",
+    "id": "p06_01",
+    "page": 6,
+    "panel": 1,
+    "file": "panels/p06_01.png",
     "bbox_on_page": [
-      18,
-      934,
-      347,
-      495
+      11,
+      25,
+      937,
+      302
     ],
     "size": [
-      347,
-      495
+      937,
+      302
     ],
-    "scene": "A dark-haired woman with a red headband thinks to herself about a worthy mate and gives orders to dwarfs to warn of approaching people.",
-    "characters_present": [
-      "unknown"
-    ],
+    "scene": "A hooded, blue-skinned warrior (Ronan the Accuser) is confronted by an armored figure urging retreat as explosions and a red energy beam rage in the background.",
+    "characters_present": [],
     "dialogue": [
       {
-        "text": "HE LOOKS WORTHY TO BE MY MATE. THE GIRL IS TOO NEAR TO BE NEAR HIM.",
-        "speaker": "unknown",
-        "emotion": "calculating, possessive",
+        "text": "HE USED TO GO BY RONAN THE ACCUSER--JUDGE, JURY AND EXECUTIONER. ONE-STOP SHOPPING FOR ALL YOUR LAW ENFORCEMENT NEEDS.",
+        "speaker": "narrator",
+        "emotion": "dry, sardonic",
         "bubble_box": [
-          21,
-          0,
-          326,
-          89
+          4,
+          1,
+          251,
+          36
         ]
       },
       {
-        "text": "DWARFS, RETURN TO THE PASSAGE AND WARN US OF THE APPROACH OF THE CRUEL PEOPLE! SEND LOM TO...",
+        "text": "WOULD YOU SEE THEM DEAD, COMMANDER?! FALL BACK! THIS FRONT IS LOST!",
         "speaker": "unknown",
-        "emotion": "commanding, stern",
+        "emotion": "urgent, desperate",
         "bubble_box": [
-          21,
-          84,
-          326,
-          183
+          403,
+          88,
+          234,
+          56
         ]
       }
     ],
     "focus_box": [
-      35,
-      148,
-      278,
+      94,
+      9,
+      394,
+      133
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p06_02",
+    "page": 6,
+    "panel": 2,
+    "file": "panels/p06_02.png",
+    "bbox_on_page": [
+      11,
+      332,
+      937,
+      312
+    ],
+    "size": [
+      937,
+      312
+    ],
+    "scene": "A Kree soldier shouts defiance at Ronan the Accused, declaring allegiance to House Fiyero, while a narrator caption explains Ronan is now a fugitive from Kree justice.",
+    "characters_present": [],
+    "dialogue": [
+      {
+        "text": "THAT WAS THEN. NOW HE'S A FUGITIVE FROM THE SAME KREE JUSTICE HE USED TO ENFORCE.",
+        "speaker": "narrator",
+        "emotion": "neutral, expository",
+        "bubble_box": [
+          0,
+          9,
+          187,
+          34
+        ]
+      },
+      {
+        "text": "RONAN THE ACCUSED! YOU CARRY NO AUTHORITY HERE! OUR ALLEGIANCE IS TO HOUSE FIYERO--",
+        "speaker": "unknown",
+        "emotion": "shouting, defiant",
+        "bubble_box": [
+          431,
+          16,
+          319,
+          62
+        ]
+      },
+      {
+        "text": "Commander...",
+        "speaker": "unknown",
+        "emotion": "urgent, warning",
+        "bubble_box": [
+          403,
+          72,
+          187,
+          19
+        ]
+      }
+    ],
+    "focus_box": [
+      515,
+      25,
+      394,
+      87
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p06_03",
+    "page": 6,
+    "panel": 3,
+    "file": "panels/p06_03.png",
+    "bbox_on_page": [
+      11,
+      649,
+      937,
+      259
+    ],
+    "size": [
+      937,
+      259
+    ],
+    "scene": "Gamora slashes or strikes a large green-skinned figure in a violent confrontation, with caption boxes discussing Ronan's character and a speech bubble declaring someone relieved of duty.",
+    "characters_present": [
+      "Gamora"
+    ],
+    "dialogue": [
+      {
+        "text": "HE WAS CHARGED WITH MASS MURDER. HE SAYS THEY WERE TRUMPED UP, THAT'S WHAT THEY ALL SAY...BUT RONAN, HIM I BELIEVE.",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact",
+        "bubble_box": [
+          0,
+          0,
+          216,
+          28
+        ]
+      },
+      {
+        "text": "I DON'T THINK HE'S CAPABLE OF LYING.",
+        "speaker": "narrator",
+        "emotion": "reflective",
+        "bubble_box": [
+          122,
+          27,
+          187,
+          19
+        ]
+      },
+      {
+        "text": "...YOU'RE RELIEVED OF DUTY.",
+        "speaker": "Gamora",
+        "emotion": "cold, commanding",
+        "bubble_box": [
+          365,
+          0,
+          187,
+          21
+        ]
+      },
+      {
+        "text": "YOU CAN TELL THE RANK-",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact",
+        "bubble_box": [
+          0,
+          111,
+          206,
+          14
+        ]
+      }
+    ],
+    "focus_box": [
+      187,
+      5,
+      468,
+      109
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p06_04",
+    "page": 6,
+    "panel": 4,
+    "file": "panels/p06_04.png",
+    "bbox_on_page": [
+      11,
+      913,
+      937,
+      259
+    ],
+    "size": [
+      937,
+      259
+    ],
+    "scene": "A Kree commander shouts orders to fall back and engage-and-withdraw during a firefight, while caption boxes narrate that rank-and-file Kree soldiers follow his lead.",
+    "characters_present": [],
+    "dialogue": [
+      {
+        "text": "AND-FILE KREE DON'T BUY THE CHARGES EITHER.",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact narration",
+        "bubble_box": [
+          0,
+          0,
+          173,
+          17
+        ]
+      },
+      {
+        "text": "HE TALKS, THEY LISTEN.",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact narration",
+        "bubble_box": [
+          122,
+          12,
+          164,
+          17
+        ]
+      },
+      {
+        "text": "FALL BACK! ENGAGE AND WITH-DRAW! REMEMBER YOU ARE KREE!",
+        "speaker": "unknown",
+        "emotion": "shouting, commanding",
+        "bubble_box": [
+          497,
+          14,
+          206,
+          34
+        ]
+      },
+      {
+        "text": "I DON'T KNOW HOW HE ASSUMED COMMAND AND I DON'T CARE.",
+        "speaker": "narrator",
+        "emotion": "resigned narration",
+        "bubble_box": [
+          0,
+          87,
+          206,
+          26
+        ]
+      }
+    ],
+    "focus_box": [
+      141,
+      5,
+      375,
+      70
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p06_05",
+    "page": 6,
+    "panel": 5,
+    "file": "panels/p06_05.png",
+    "bbox_on_page": [
+      11,
+      1177,
+      937,
+      206
+    ],
+    "size": [
+      937,
+      206
+    ],
+    "scene": "A two-strip panel showing soldiers in a chaotic battlefield retreat in the top half, while colorful combatants fight below, as narrator captions and dialogue discuss Ronan's leadership during the withdrawal.",
+    "characters_present": [],
+    "dialogue": [
+      {
+        "text": "ALL I KNOW IS HE TOOK WHAT COULD HAVE BEEN A BLOODBATH AND TURNED IT INTO AN ORDERLY WITHDRAWAL. HE BOUGHT US SOME DESPERATELY NEEDED TIME.",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact, informational",
+        "bubble_box": [
+          56,
+          1,
+          309,
+          22
+        ]
+      },
+      {
+        "text": "THE KREE POSITIONS WERE HIT HARDEST BUT BECAUSE OF RONAN, THEY SUFFERED THE FEWEST FATALITIES.",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact, informational",
+        "bubble_box": [
+          365,
+          101,
+          290,
+          21
+        ]
+      },
+      {
+        "text": "YEAH...RONAN'S A KEEPER.",
+        "speaker": "unknown",
+        "emotion": "wry, approving",
+        "bubble_box": [
+          581,
+          105,
+          187,
+          11
+        ]
+      }
+    ],
+    "focus_box": [
+      0,
+      0,
+      937,
+      103
+    ],
+    "sfx_text": [
+      "WHUUNK"
+    ]
+  },
+  {
+    "id": "p06_06",
+    "page": 6,
+    "panel": 6,
+    "file": "panels/p06_06.png",
+    "bbox_on_page": [
+      11,
+      1388,
+      937,
+      192
+    ],
+    "size": [
+      937,
+      192
+    ],
+    "scene": "A hooded figure shouts urgently as force field generators fail amid an explosive impact.",
+    "characters_present": [
+      "Peter Quill"
+    ],
+    "dialogue": [
+      {
+        "text": "FORCE FIELD GENERATORS ARE GIVING OUT! MOVE!",
+        "speaker": "Peter Quill",
+        "emotion": "shouting, urgent",
+        "bubble_box": [
+          768,
+          4,
+          164,
+          18
+        ]
+      }
+    ],
+    "focus_box": [
+      515,
+      2,
+      328,
+      19
+    ],
+    "sfx_text": [
+      "WHUMP!"
+    ]
+  },
+  {
+    "id": "p07_01",
+    "page": 7,
+    "panel": 1,
+    "file": "panels/p07_01.png",
+    "bbox_on_page": [
+      15,
+      15,
+      1032,
+      677
+    ],
+    "size": [
+      1032,
+      677
+    ],
+    "scene": "A group of heroes retreats from an overwhelming alien swarm assault, with Peter Quill calling the withdrawal while fighters fire on the advancing Annihilation Wave creatures.",
+    "characters_present": [
+      "Peter Quill",
+      "Nova"
+    ],
+    "dialogue": [
+      {
+        "text": "ALL DUE RESPECT, SIR, BUT WE ARE OUT OF HERE!",
+        "speaker": "Peter Quill",
+        "emotion": "urgent, shouting",
+        "bubble_box": [
+          402,
+          14,
+          217,
+          81
+        ]
+      },
+      {
+        "text": "THAT WAS THE FIRST FORCE-FIELD GENERATOR. THE REST ARE GONNA DOMINO.",
+        "speaker": "unknown",
+        "emotion": "urgent, warning",
+        "bubble_box": [
+          83,
+          102,
+          237,
+          88
+        ]
+      },
+      {
+        "text": "WITHDRAW. PULL BACK TO SECONDARY PERIMETER. TELL EVERYONE, PETER!",
+        "speaker": "Nova",
+        "emotion": "commanding, urgent",
+        "bubble_box": [
+          578,
+          196,
+          206,
+          102
+        ]
+      },
+      {
+        "text": "THIS IS THE THIRD TIME WE'VE BEEN FORCED BACK AND IF YOU THINK IT'S FRUSTRATING FOR US, IMAGINE WHAT IT'S LIKE FOR THE WAVE.",
+        "speaker": "narrator",
+        "emotion": "analytical, narration",
+        "bubble_box": [
+          15,
+          359,
+          351,
+          88
+        ]
+      },
+      {
+        "text": "THEY'RE STILL FIGHTING THE SAME WAR THEY WERE FIGHTING SIX MONTHS AGO. WE'RE NOT.\n\nEVERY CASUALTY WE'VE TAKEN HAS TAUGHT",
+        "speaker": "narrator",
+        "emotion": "analytical, narration",
+        "bubble_box": [
+          372,
+          359,
+          341,
+          108
+        ]
+      },
+      {
+        "text": "WE GOT OUR BUTTS KICKED AT TARTUS MINOR BECAUSE WE WERE STILL WAGING A TWO-DIMENSIONAL WAR. THEY NAILED US FROM ORBIT.",
+        "speaker": "narrator",
+        "emotion": "analytical, narration",
+        "bubble_box": [
+          681,
+          359,
+          351,
+          88
+        ]
+      }
+    ],
+    "focus_box": [
+      361,
+      34,
+      310,
+      318
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p07_02",
+    "page": 7,
+    "panel": 2,
+    "file": "panels/p07_02.png",
+    "bbox_on_page": [
+      15,
+      700,
+      316,
+      888
+    ],
+    "size": [
+      316,
+      888
+    ],
+    "scene": "A group of armoured fighters charges forward through a chaotic, fire-filled battlefield as an explosion interrupts mid-sentence.",
+    "characters_present": [],
+    "dialogue": [
+      {
+        "text": "TIME DO WE HAVE BEFORE--",
+        "speaker": "unknown",
+        "emotion": "urgent, tense",
+        "bubble_box": [
+          54,
+          0,
+          73,
+          44
+        ]
+      },
+      {
+        "text": "NEVER MIN",
+        "speaker": "unknown",
+        "emotion": "resigned, cutting off",
+        "bubble_box": [
+          85,
+          49,
+          41,
+          36
+        ]
+      }
+    ],
+    "focus_box": [
+      41,
+      249,
+      82,
+      337
+    ],
+    "sfx_text": [
+      "WHUMP!"
+    ]
+  },
+  {
+    "id": "p07_03",
+    "page": 7,
+    "panel": 3,
+    "file": "panels/p07_03.png",
+    "bbox_on_page": [
+      331,
+      700,
+      326,
+      888
+    ],
+    "size": [
+      326,
+      888
+    ],
+    "scene": "An insectoid creature unleashes a devastating energy blast that strikes ships, as figures scramble to get clear of the explosion.",
+    "characters_present": [
+      "Annihilus"
+    ],
+    "dialogue": [
+      {
+        "text": "THEY'RE HITTING THE SHIPS! GET CLEAR!",
+        "speaker": "unknown",
+        "emotion": "urgent, shouting",
+        "bubble_box": [
+          140,
+          346,
+          91,
+          98
+        ]
+      }
+    ],
+    "focus_box": [
+      98,
+      89,
+      91,
+      284
+    ],
+    "sfx_text": [
+      "WHUUMP!"
+    ]
+  },
+  {
+    "id": "p07_04",
+    "page": 7,
+    "panel": 4,
+    "file": "panels/p07_04.png",
+    "bbox_on_page": [
+      658,
+      700,
+      389,
+      888
+    ],
+    "size": [
+      389,
+      888
+    ],
+    "scene": "A massive swarm of Annihilation Wave insectoid creatures overwhelms a space station or landing bay as ships fire and soldiers scramble to defend it.",
+    "characters_present": [],
+    "dialogue": [
+      {
+        "text": "NO WAY...",
+        "speaker": "narrator",
+        "emotion": "shocked, disbelieving",
+        "bubble_box": [
+          86,
+          808,
+          62,
+          40
+        ]
+      }
+    ],
+    "focus_box": [
+      0,
+      355,
+      389,
+      533
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p08_01",
+    "page": 8,
+    "panel": 1,
+    "file": "panels/p08_01.png",
+    "bbox_on_page": [
+      0,
+      84,
+      945,
+      768
+    ],
+    "size": [
+      945,
+      768
+    ],
+    "scene": "A narrator describes three former Heralds of Galactus \u2014 Firelord, Red Shift, and Stardust \u2014 battling the Annihilation Wave in space, while warning that Annihilus has prioritized their capture or termination.",
+    "characters_present": [],
+    "dialogue": [
+      {
+        "text": "...DO WE LET THAT HAPPEN AGAIN.",
+        "speaker": "narrator",
+        "emotion": "grim, resolved",
+        "bubble_box": [
+          0,
+          0,
+          208,
+          46
+        ]
+      },
+      {
+        "text": "WE'VE GOT THE FIRELORD, RED SHIFT AND STARDUST TO SEE TO THAT. EACH ONE A FORMER HERALD OF GALACTUS.",
+        "speaker": "narrator",
+        "emotion": "informative, serious",
+        "bubble_box": [
+          0,
+          42,
+          222,
+          119
+        ]
+      },
+      {
+        "text": "INDIVIDUALLY, EACH PACKS ENOUGH FIREPOWER TO HOLD OFF AN ARMY.",
+        "speaker": "narrator",
+        "emotion": "matter-of-fact",
+        "bubble_box": [
+          0,
+          161,
+          208,
+          223
+        ]
+      },
+      {
+        "text": "RUMOR HAS IT THAT ANNIHILUS HAS PRIORITIZED THEIR CAPTURE, THAT OTHER EX-HERALDS HAVE ALREADY BEEN TAKEN.",
+        "speaker": "narrator",
+        "emotion": "concerned, informative",
+        "bubble_box": [
+          567,
+          361,
+          350,
+          100
+        ]
+      },
+      {
+        "text": "I'VE SEEN THE FIREPOWER THE WAVE THROWS AT THEM. MAKES ME THINK \"APPREHEND\" MAY HAVE BEEN UPGRADED TO \"TERMINATE\"-- JUST LIKE THE REST OF US.",
+        "speaker": "narrator",
+        "emotion": "grim, worried",
+        "bubble_box": [
+          567,
+          476,
+          350,
+          115
+        ]
+      }
+    ],
+    "focus_box": [
+      284,
+      77,
+      378,
       346
     ],
     "sfx_text": []
   },
   {
-    "id": "p05_05",
-    "page": 5,
-    "panel": 5,
-    "file": "panels/p05_05.png",
+    "id": "p08_02",
+    "page": 8,
+    "panel": 2,
+    "file": "panels/p08_02.png",
     "bbox_on_page": [
-      357,
-      940,
-      741,
-      489
+      0,
+      852,
+      945,
+      368
     ],
     "size": [
-      741,
-      489
+      945,
+      368
     ],
-    "scene": "A misshapen dwarf lumbers forward toward Dick Warren and Ada as Wad commands silence and offers Ada as a prize if the dwarf defeats Warren.",
-    "characters_present": [
-      "Dick Warren",
-      "Ada",
-      "Wad"
-    ],
+    "scene": "Two split panels show ex-Heralds of Galactus in fierce combat against the Annihilation Wave fleet in deep space, with energy blasts and insectoid ships filling the background.",
+    "characters_present": [],
     "dialogue": [
       {
-        "text": "A MISSHAPEN DWARF LUMBERS FORWARD.",
+        "text": "THE EX-HERALDS HAD BEEN WAGING THEIR OWN PRIVATE WAR, HITTING THE WAVE WHEN THEY COULD AND MAKING THEMSELVES SCARCE WHEN THINGS GOT OUT OF HAND.",
         "speaker": "narrator",
-        "emotion": "neutral, descriptive",
+        "emotion": "neutral, informational",
         "bubble_box": [
-          163,
-          0,
-          230,
-          29
+          9,
+          177,
+          236,
+          81
         ]
       },
       {
-        "text": "THERE IS NO TIME TO WASTE! WE MUST PREPARE!",
-        "speaker": "unknown",
-        "emotion": "urgent, commanding",
+        "text": "THEY FOUND US BY FOLLOWING THE SHOOTING, HOOKED UP WITH US BECAUSE OF SOMETHING STEP DUE TO THE FIRE...",
+        "speaker": "narrator",
+        "emotion": "neutral, informational",
         "bubble_box": [
-          159,
-          27,
-          156,
-          54
+          586,
+          250,
+          359,
+          52
         ]
-      },
+      }
+    ],
+    "focus_box": [
+      265,
+      158,
+      472,
+      121
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p08_03",
+    "page": 8,
+    "panel": 3,
+    "file": "panels/p08_03.png",
+    "bbox_on_page": [
+      0,
+      1220,
+      945,
+      368
+    ],
+    "size": [
+      945,
+      368
+    ],
+    "scene": "A vast cosmic battle unfolds in orbit above a planet as alien ships explode in flames while a massive ice/energy being dominates the foreground of space.",
+    "characters_present": [],
+    "dialogue": [
       {
-        "text": "WHAT A PRIZE!",
-        "speaker": "unknown",
-        "emotion": "leering, greedy",
+        "text": "THEY CAN'T CO... THE ENTIRE PL... BUT THEY CAN... OUR AIRSPACE O...",
+        "speaker": "narrator",
+        "emotion": "informational caption",
         "bubble_box": [
-          393,
-          44,
-          119,
-          34
-        ]
-      },
-      {
-        "text": "SILENCE! LOM, IF YOU PUT HIM ON HIS BACK YOU MAY MARRY THE GIRL!",
-        "speaker": "Wad",
-        "emotion": "commanding, stern",
-        "bubble_box": [
-          319,
-          76,
+          775,
+          57,
           170,
-          68
+          53
         ]
       }
     ],
     "focus_box": [
-      459,
-      64,
-      148,
-      108
+      520,
+      37,
+      425,
+      294
     ],
     "sfx_text": []
   },
   {
-    "id": "p05_06",
-    "page": 5,
-    "panel": 6,
-    "file": "panels/p05_06.png",
+    "id": "p08_04",
+    "page": 8,
+    "panel": 4,
+    "file": "panels/p08_04.png",
     "bbox_on_page": [
-      18,
-      1421,
-      869,
-      1061
+      0,
+      1588,
+      945,
+      12
     ],
     "size": [
-      869,
-      1061
+      945,
+      12
     ],
-    "scene": "Wad lifts Dick Warren off the ground in a powerful bear hug, threatening to crush him.",
-    "characters_present": [
-      "Wad",
-      "Dick Warren"
-    ],
-    "dialogue": [
-      {
-        "text": "POWERFUL ARMS LIFT DICK FROM THE GROUND.",
-        "speaker": "narrator",
-        "emotion": "descriptive caption",
-        "bubble_box": [
-          94,
-          207,
-          426,
-          48
-        ]
-      },
-      {
-        "text": "NOW TO CRUSH HIM!",
-        "speaker": "Wad",
-        "emotion": "threatening, exerting",
-        "bubble_box": [
-          287,
-          249,
-          152,
-          95
-        ]
-      }
-    ],
+    "scene": "A nearly blank panel showing only a dark horizon line or ground, with no visible characters or action.",
+    "characters_present": [],
+    "dialogue": [],
     "focus_box": [
-      87,
-      371,
-      608,
-      637
-    ],
-    "sfx_text": []
-  },
-  {
-    "id": "p05_07",
-    "page": 5,
-    "panel": 7,
-    "file": "panels/p05_07.png",
-    "bbox_on_page": [
-      879,
-      1421,
-      874,
-      1061
-    ],
-    "size": [
-      874,
-      1061
-    ],
-    "scene": "A bald, muscular opponent looms triumphantly over Dick Warren, who has been knocked down to the ground during a combat match.",
-    "characters_present": [
-      "Wad",
-      "Dick Warren"
-    ],
-    "dialogue": [
-      {
-        "text": "I'VE WON! THE PRIZE IS MINE!",
-        "speaker": "Wad",
-        "emotion": "shouting, triumphant",
-        "bubble_box": [
-          168,
-          207,
-          227,
-          122
-        ]
-      },
-      {
-        "text": "UGH!",
-        "speaker": "Dick Warren",
-        "emotion": "pained, defeated",
-        "bubble_box": [
-          135,
-          589,
-          105,
-          80
-        ]
-      }
-    ],
-    "focus_box": [
-      153,
-      308,
-      323,
-      446
+      0,
+      0,
+      945,
+      12
     ],
     "sfx_text": []
   }

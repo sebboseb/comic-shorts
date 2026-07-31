@@ -1,0 +1,511 @@
+{
+ "short_id": "ep02",
+ "title": "Ronan Shows Up and Turns a Massacre Into a Retreat",
+ "description": "The line is breaking, the Kree are dying in droves, and the one man who can stop it is a wanted mass murderer.",
+ "hashtags": [
+  "#comic",
+  "#marvel",
+  "#annihilation",
+  "#ronan",
+  "#cosmicmarvel"
+ ],
+ "music_mood": "action",
+ "hook_note": "Picks up exactly at the collapsing flank, then drops in a fugitive war criminal as the only hope.",
+ "shots": [
+  {
+   "panel": "p05_01",
+   "speaker": "narrator",
+   "line": "That right flank Quill was screaming about? Two Kree battalions, and it just broke.",
+   "emotion": "grim recap",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot000.wav",
+   "duration_frames": 154,
+   "segments": [
+    {
+     "text": "That right flank Quill was screaming about?",
+     "frames": 75,
+     "speech_frames": 64
+    },
+    {
+     "text": "Two Kree battalions, and it just broke.",
+     "frames": 73,
+     "speech_frames": 73
+    }
+   ]
+  },
+  {
+   "panel": "p05_01",
+   "speaker": "narrator",
+   "line": "\"We're breached!\" they yell. \"Too many!\" And they're not wrong.",
+   "emotion": "desperate",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot001.wav",
+   "duration_frames": 156,
+   "segments": [
+    {
+     "text": "\"We're breached! \" they yell.",
+     "frames": 80,
+     "speech_frames": 68
+    },
+    {
+     "text": "\"Too many! \" And they're not wrong.",
+     "frames": 71,
+     "speech_frames": 71
+    }
+   ]
+  },
+  {
+   "panel": "p05_01",
+   "speaker": "narrator",
+   "line": "Here's the mad part. The Kree live for war. And they've forgotten how to fight it.",
+   "emotion": "analytical, dry",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot002.wav",
+   "duration_frames": 150,
+   "segments": [
+    {
+     "text": "Here's the mad part.",
+     "frames": 45,
+     "speech_frames": 33
+    },
+    {
+     "text": "The Kree live for war.",
+     "frames": 45,
+     "speech_frames": 33
+    },
+    {
+     "text": "And they've forgotten how to fight it.",
+     "frames": 56,
+     "speech_frames": 56
+    }
+   ]
+  },
+  {
+   "panel": "p05_02",
+   "speaker": "narrator",
+   "line": "Ever since House Fiyero grabbed Hala, their whole plan is: throw bodies.",
+   "emotion": "disgusted",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot003.wav",
+   "duration_frames": 148,
+   "segments": [
+    {
+     "text": "Ever since House Fiyero grabbed Hala, their whole plan is: throw bodies.",
+     "frames": 142,
+     "speech_frames": 142
+    }
+   ]
+  },
+  {
+   "panel": "p05_02",
+   "speaker": "narrator",
+   "line": "Casualties: staggering. But this time, Rich says, they got lucky.",
+   "emotion": "grim relief",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot004.wav",
+   "duration_frames": 151,
+   "segments": [
+    {
+     "text": "Casualties: staggering.",
+     "frames": 75,
+     "speech_frames": 64
+    },
+    {
+     "text": "But this time, Rich says, they got lucky.",
+     "frames": 70,
+     "speech_frames": 70
+    }
+   ]
+  },
+  {
+   "panel": "p06_01",
+   "speaker": "narrator",
+   "line": "Because Ronan was on-site. Used to be Ronan the Accuser. Judge, jury, executioner.",
+   "emotion": "dry, sardonic",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep02/shot005.wav",
+   "duration_frames": 182,
+   "segments": [
+    {
+     "text": "Because Ronan was on-site.",
+     "frames": 55,
+     "speech_frames": 44
+    },
+    {
+     "text": "Used to be Ronan the Accuser.",
+     "frames": 57,
+     "speech_frames": 46
+    },
+    {
+     "text": "Judge, jury, executioner.",
+     "frames": 64,
+     "speech_frames": 64
+    }
+   ]
+  },
+  {
+   "panel": "p06_02",
+   "speaker": "narrator",
+   "line": "Now? He's a fugitive from the exact same Kree justice he used to hand out.",
+   "emotion": "wry",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot006.wav",
+   "duration_frames": 135,
+   "segments": [
+    {
+     "text": "Now? He's a fugitive from the exact same Kree justice he used to hand out.",
+     "frames": 129,
+     "speech_frames": 129
+    }
+   ]
+  },
+  {
+   "panel": "p06_02",
+   "speaker": "narrator",
+   "line": "So naturally a Kree commander screams he carries no authority here.",
+   "emotion": "mock-outrage",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot007.wav",
+   "duration_frames": 124,
+   "segments": [
+    {
+     "text": "So naturally a Kree commander screams he carries no authority here.",
+     "frames": 119,
+     "speech_frames": 119
+    }
+   ]
+  },
+  {
+   "panel": "p06_03",
+   "speaker": "narrator",
+   "line": "Charged with mass murder. Rich reckons the charges were trumped up.",
+   "emotion": "matter-of-fact",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot008.wav",
+   "duration_frames": 117,
+   "segments": [
+    {
+     "text": "Charged with mass murder.",
+     "frames": 60,
+     "speech_frames": 48
+    },
+    {
+     "text": "Rich reckons the charges were trumped up.",
+     "frames": 52,
+     "speech_frames": 52
+    }
+   ]
+  },
+  {
+   "panel": "p06_03",
+   "speaker": "narrator",
+   "line": "His reasoning? He doesn't think Ronan is even capable of lying.",
+   "emotion": "reflective",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot009.wav",
+   "duration_frames": 107,
+   "segments": [
+    {
+     "text": "His reasoning? He doesn't think Ronan is even capable of lying.",
+     "frames": 102,
+     "speech_frames": 102
+    }
+   ]
+  },
+  {
+   "panel": "p06_04",
+   "speaker": "narrator",
+   "line": "The rank-and-file Kree don't buy the charges either. He talks, they listen.",
+   "emotion": "matter-of-fact",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot010.wav",
+   "duration_frames": 140,
+   "segments": [
+    {
+     "text": "The rank-and-file Kree don't buy the charges either.",
+     "frames": 88,
+     "speech_frames": 77
+    },
+    {
+     "text": "He talks, they listen.",
+     "frames": 46,
+     "speech_frames": 46
+    }
+   ]
+  },
+  {
+   "panel": "p06_04",
+   "speaker": "narrator",
+   "line": "\"Fall back! Remember you are Kree!\" he orders. And somehow they hold.",
+   "emotion": "commanding",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot011.wav",
+   "duration_frames": 137,
+   "segments": [
+    {
+     "text": "\"Fall back! Remember you are Kree!",
+     "frames": 64,
+     "speech_frames": 52
+    },
+    {
+     "text": "\" he orders. And somehow they hold.",
+     "frames": 67,
+     "speech_frames": 67
+    }
+   ]
+  },
+  {
+   "panel": "p06_05",
+   "speaker": "narrator",
+   "line": "A bloodbath turned into an orderly withdrawal. Fewest deaths of anyone.",
+   "emotion": "impressed",
+   "motion": "slow_pan",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot012.wav",
+   "duration_frames": 134,
+   "segments": [
+    {
+     "text": "A bloodbath turned into an orderly withdrawal.",
+     "frames": 82,
+     "speech_frames": 71
+    },
+    {
+     "text": "Fewest deaths of anyone.",
+     "frames": 46,
+     "speech_frames": 46
+    }
+   ]
+  },
+  {
+   "panel": "p06_05",
+   "speaker": "narrator",
+   "line": "Rich's verdict on the wanted war criminal? \"Ronan's a keeper.\"",
+   "emotion": "wry approval",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot013.wav",
+   "duration_frames": 116,
+   "segments": [
+    {
+     "text": "Rich's verdict on the wanted war criminal?",
+     "frames": 77,
+     "speech_frames": 65
+    },
+    {
+     "text": "\"Ronan's a keeper. \"",
+     "frames": 33,
+     "speech_frames": 33
+    }
+   ]
+  },
+  {
+   "panel": "p06_06",
+   "speaker": "narrator",
+   "line": "But then Quill yells the generators are giving out. Move.",
+   "emotion": "urgent",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot014.wav",
+   "duration_frames": 93,
+   "segments": [
+    {
+     "text": "But then Quill yells the generators are giving out. Move.",
+     "frames": 87,
+     "speech_frames": 87
+    }
+   ]
+  },
+  {
+   "panel": "p07_01",
+   "speaker": "narrator",
+   "line": "Rich calls it. Pull back to the secondary perimeter. Third time they've been shoved.",
+   "emotion": "commanding, weary",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot015.wav",
+   "duration_frames": 136,
+   "segments": [
+    {
+     "text": "Rich calls it. Pull back to the secondary perimeter.",
+     "frames": 95,
+     "speech_frames": 84
+    },
+    {
+     "text": "Third time they've been shoved.",
+     "frames": 35,
+     "speech_frames": 35
+    }
+   ]
+  },
+  {
+   "panel": "p07_01",
+   "speaker": "narrator",
+   "line": "Here's Rich's cope, and honestly it's a good one.",
+   "emotion": "dry",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot016.wav",
+   "duration_frames": 87,
+   "segments": [
+    {
+     "text": "Here's Rich's cope, and honestly it's a good one.",
+     "frames": 81,
+     "speech_frames": 81
+    }
+   ]
+  },
+  {
+   "panel": "p07_01",
+   "speaker": "narrator",
+   "line": "The Wave's fighting the same war it was six months ago. His side learns from every death.",
+   "emotion": "analytical",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot017.wav",
+   "duration_frames": 174,
+   "segments": [
+    {
+     "text": "The Wave's fighting the same war it was six months ago.",
+     "frames": 112,
+     "speech_frames": 100
+    },
+    {
+     "text": "His side learns from every death.",
+     "frames": 57,
+     "speech_frames": 57
+    }
+   ]
+  },
+  {
+   "panel": "p07_03",
+   "speaker": "narrator",
+   "line": "Then the bugs start hitting the ships. \"Get clear!\"",
+   "emotion": "alarmed",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot018.wav",
+   "duration_frames": 88,
+   "segments": [
+    {
+     "text": "Then the bugs start hitting the ships. \"Get clear! \"",
+     "frames": 83,
+     "speech_frames": 83
+    }
+   ]
+  },
+  {
+   "panel": "p07_04",
+   "speaker": "narrator",
+   "line": "A swarm rolls over the landing bay, and Rich just breathes: \"No way.\"",
+   "emotion": "shocked",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep02/shot019.wav",
+   "duration_frames": 147,
+   "segments": [
+    {
+     "text": "A swarm rolls over the landing bay, and Rich just breathes: \"No way. \"",
+     "frames": 142,
+     "speech_frames": 142
+    }
+   ]
+  },
+  {
+   "panel": "p08_01",
+   "speaker": "narrator",
+   "line": "His last cards? Firelord, Red Shift and Stardust. Three former Heralds of Galactus.",
+   "emotion": "grim hope",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot020.wav",
+   "duration_frames": 201,
+   "segments": [
+    {
+     "text": "His last cards? Firelord, Red Shift and Stardust.",
+     "frames": 130,
+     "speech_frames": 119
+    },
+    {
+     "text": "Three former Heralds of Galactus.",
+     "frames": 65,
+     "speech_frames": 65
+    }
+   ]
+  },
+  {
+   "panel": "p08_01",
+   "speaker": "narrator",
+   "line": "Each one can hold off an army. Rich's problem: Annihilus wants them captured.",
+   "emotion": "worried",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot021.wav",
+   "duration_frames": 183,
+   "segments": [
+    {
+     "text": "Each one can hold off an army.",
+     "frames": 80,
+     "speech_frames": 69
+    },
+    {
+     "text": "Rich's problem: Annihilus wants them captured.",
+     "frames": 97,
+     "speech_frames": 97
+    }
+   ]
+  },
+  {
+   "panel": "p08_01",
+   "speaker": "narrator",
+   "line": "And judging by the firepower thrown at them, \"capture\" just got upgraded to \"kill.\"",
+   "emotion": "ominous",
+   "motion": "zoom_out",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep02/shot022.wav",
+   "duration_frames": 212,
+   "segments": [
+    {
+     "text": "And judging by the firepower thrown at them, \"capture\" just got upgraded to \"kill. \"",
+     "frames": 207,
+     "speech_frames": 207
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": "The last super-weapons Rich has left are the exact targets Annihilus most wants dead."
+}

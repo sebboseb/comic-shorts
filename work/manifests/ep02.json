@@ -1,253 +1,425 @@
 {
  "short_id": "ep02",
- "title": "The War God Possesses the Chief - Then Ada Snaps",
- "description": "Mars takes over Wad's body to turn the tribe into cannibals, but a slave girl decides she's had enough. The cave that's supposed to be safe has other plans.",
+ "title": "Ronan Saves the Kree (Everyone's Shocked)",
+ "description": "With the force fields dying and the Kree flank overrun, a wanted fugitive turns a slaughter into a retreat - right before something worse shows up.",
  "hashtags": [
   "#comic",
-  "#retroscifi",
-  "#planetcomics",
-  "#marsgodofwar",
-  "#pulp"
+  "#marvel",
+  "#annihilation",
+  "#ronan",
+  "#cosmicmarvel"
  ],
- "music_mood": "tense_buildup",
- "hook_note": "Picking up on the invisible war god landing means we open mid-possession, the exact beat the last short teased.",
+ "music_mood": "action",
+ "hook_note": "Picks up on the exact collapse we left on, naming who's caught in it so the panic lands instantly.",
  "shots": [
   {
-   "panel": "p03_01",
+   "panel": "p04_05",
    "speaker": "narrator",
-   "line": "So this washed-up war god just landed among Wad's tribe, and he's spotted his ride: big man Wad himself.",
-   "emotion": "conspiratorial",
-   "motion": "slow_pan",
+   "line": "So the force fields are dying and everyone's screaming about the right flank.",
+   "emotion": "urgent recap",
+   "motion": "shake",
    "hero": false,
-   "sfx": "ominous",
+   "sfx": "impact",
    "audio": "work/audio/ep02/shot000.wav",
-   "duration_frames": 243,
+   "duration_frames": 124,
    "segments": [
     {
-     "text": "So this washed-up war god just landed among Wad's tribe, and he's spotted his ride: big man Wad himself.",
-     "frames": 222
-    }
-   ]
-  },
-  {
-   "panel": "p03_01",
-   "speaker": "Mars",
-   "line": "This is my chance to destroy a civilization... I'll enter Wad's body!",
-   "emotion": "scheming, theatrical",
-   "motion": "zoom_face",
-   "hero": true,
-   "sfx": "sting",
-   "audio": "work/audio/ep02/shot001.wav",
-   "duration_frames": 321,
-   "segments": [
-    {
-     "text": "This is my chance to destroy a civilization...",
-     "frames": 236
-    },
-    {
-     "text": "I'll enter Wad's body!",
-     "frames": 64
-    }
-   ]
-  },
-  {
-   "panel": "p03_02",
-   "speaker": "Wad",
-   "line": "HOW DARE A STRANGER INTERFERE WITH MY PEOPLE?... TAKE THIS!",
-   "emotion": "angry, threatening",
-   "motion": "shake",
-   "hero": false,
-   "sfx": "impact",
-   "audio": "work/audio/ep02/shot002.wav",
-   "duration_frames": 128,
-   "segments": [
-    {
-     "text": "How dare a stranger interfere with my people?... Take this!",
-     "frames": 107
-    }
-   ]
-  },
-  {
-   "panel": "p03_03",
-   "speaker": "Dick Warren",
-   "line": "EARTHMAN'S FIST!",
-   "emotion": "shouting, triumphant",
-   "motion": "shake",
-   "hero": true,
-   "sfx": "impact",
-   "audio": "work/audio/ep02/shot003.wav",
-   "duration_frames": 65,
-   "segments": [
-    {
-     "text": "Earthman's fist!",
-     "frames": 44
-    }
-   ]
-  },
-  {
-   "panel": "p03_04",
-   "speaker": "narrator",
-   "line": "One good punch, and then the whole village piles on our boy Dick. One fist versus a mob was never the move.",
-   "emotion": "wincing",
-   "motion": "zoom_out",
-   "hero": false,
-   "sfx": "impact",
-   "audio": "work/audio/ep02/shot004.wav",
-   "duration_frames": 487,
-   "segments": [
-    {
-     "text": "One good punch, and then the whole village piles on our boy Dick.",
-     "frames": 164
-    },
-    {
-     "text": "One fist versus a mob was never the move.",
-     "frames": 302
-    }
-   ]
-  },
-  {
-   "panel": "p03_05",
-   "speaker": "Wad",
-   "line": "TONIGHT WE FEAST ON YOUR TENDER EARTH-MAN'S FLESH! TOMORROW WE INVADE THE HIDDEN PEOPLE!",
-   "emotion": "cruel, menacing",
-   "motion": "zoom_face",
-   "hero": false,
-   "sfx": "sting",
-   "audio": "work/audio/ep02/shot005.wav",
-   "duration_frames": 214,
-   "segments": [
-    {
-     "text": "Tonight we feast on your tender earth-man's flesh!",
-     "frames": 118
-    },
-    {
-     "text": "Tomorrow we invade the hidden people!",
-     "frames": 76
-    }
-   ]
-  },
-  {
-   "panel": "p03_07",
-   "speaker": "narrator",
-   "line": "Cannibals, apparently. But Ada, the girl who's been a slave this whole time? She's carrying this entire comic on her back.",
-   "emotion": "hype",
-   "motion": "slow_pan",
-   "hero": false,
-   "sfx": "none",
-   "audio": "work/audio/ep02/shot006.wav",
-   "duration_frames": 308,
-   "segments": [
-    {
-     "text": "Cannibals, apparently.",
-     "frames": 97
-    },
-    {
-     "text": "But Ada, the girl who's been a slave this whole time?",
-     "frames": 114
-    },
-    {
-     "text": "She's carrying this entire comic on her back.",
-     "frames": 76
-    }
-   ]
-  },
-  {
-   "panel": "p03_07",
-   "speaker": "Ada",
-   "line": "I HAVE BEEN A SLAVE TOO LONG! DIE!..",
-   "emotion": "fierce, defiant",
-   "motion": "shake",
-   "hero": true,
-   "sfx": "impact",
-   "audio": "work/audio/ep02/shot007.wav",
-   "duration_frames": 101,
-   "segments": [
-    {
-     "text": "I have been a slave too long! Die!..",
-     "frames": 80
-    }
-   ]
-  },
-  {
-   "panel": "p03_08",
-   "speaker": "Ada",
-   "line": "They will follow us! I overheard the hunter tell where the hidden people dwell. We will go there and warn them!",
-   "emotion": "urgent, breathless",
-   "motion": "slow_pan",
-   "hero": false,
-   "sfx": "none",
-   "audio": "work/audio/ep02/shot008.wav",
-   "duration_frames": 257,
-   "segments": [
-    {
-     "text": "They will follow us!",
-     "frames": 55
-    },
-    {
-     "text": "I overheard the hunter tell where the hidden people dwell.",
-     "frames": 129
-    },
-    {
-     "text": "We will go there and warn them!",
-     "frames": 51
-    }
-   ]
-  },
-  {
-   "panel": "p04_03",
-   "speaker": "narrator",
-   "line": "They make the cave, they stop to breathe, and they completely fail to notice the face watching them from the rocks.",
-   "emotion": "dry dread",
-   "motion": "slow_pan",
-   "hero": false,
-   "sfx": "heartbeat",
-   "audio": "work/audio/ep02/shot009.wav",
-   "duration_frames": 313,
-   "segments": [
-    {
-     "text": "They make the cave, they stop to breathe, and they completely fail to notice the face watching them from the rocks.",
-     "frames": 292
-    }
-   ]
-  },
-  {
-   "panel": "p04_04",
-   "speaker": "Dick Warren",
-   "line": "WE'RE TRAPPED!",
-   "emotion": "alarmed, urgent",
-   "motion": "shake",
-   "hero": true,
-   "sfx": "sting",
-   "audio": "work/audio/ep02/shot010.wav",
-   "duration_frames": 44,
-   "segments": [
-    {
-     "text": "We're trapped!",
-     "frames": 23
+     "text": "So the force fields are dying and everyone's screaming about the right flank.",
+     "frames": 118,
+     "speech_frames": 118
     }
    ]
   },
   {
    "panel": "p04_05",
    "speaker": "narrator",
-   "line": "Hundreds of tiny creatures swarm them, drag them off, and haul them straight to a queen. And that's a problem for another day.",
-   "emotion": "cliffhanger tease",
-   "motion": "zoom_out",
+   "line": "Somebody asks who's even on the right flank. Quill snaps back, 'Does it matter?'",
+   "emotion": "exasperated",
+   "motion": "zoom_face",
    "hero": false,
-   "sfx": "impact",
-   "audio": "work/audio/ep02/shot011.wav",
-   "duration_frames": 398,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot001.wav",
+   "duration_frames": 140,
    "segments": [
     {
-     "text": "Hundreds of tiny creatures swarm them, drag them off, and haul them straight to a queen.",
-     "frames": 200
+     "text": "Somebody asks who's even on the right flank.",
+     "frames": 82,
+     "speech_frames": 71
     },
     {
-     "text": "And that's a problem for another day.",
-     "frames": 177
+     "text": "Quill snaps back, 'Does it matter? '",
+     "frames": 52,
+     "speech_frames": 52
+    }
+   ]
+  },
+  {
+   "panel": "p05_01",
+   "speaker": "narrator",
+   "line": "Spoiler: it does. The right flank is two Kree battalions, and they've just been breached.",
+   "emotion": "grim",
+   "motion": "slow_pan",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot002.wav",
+   "duration_frames": 160,
+   "segments": [
+    {
+     "text": "Spoiler: it does. The right flank is two Kree battalions, and they've just been breached.",
+     "frames": 155,
+     "speech_frames": 155
+    }
+   ]
+  },
+  {
+   "panel": "p05_01",
+   "speaker": "narrator",
+   "line": "And here's the thing - the Kree live for war, but their command has completely fallen apart.",
+   "emotion": "analytical, disbelieving",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot003.wav",
+   "duration_frames": 130,
+   "segments": [
+    {
+     "text": "And here's the thing - the Kree live for war, but their command has completely fallen apart.",
+     "frames": 125,
+     "speech_frames": 125
+    }
+   ]
+  },
+  {
+   "panel": "p05_02",
+   "speaker": "narrator",
+   "line": "Ever since House Fiyero took Hala, they just throw warm bodies at the Wave.",
+   "emotion": "dark",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot004.wav",
+   "duration_frames": 142,
+   "segments": [
+    {
+     "text": "Ever since House Fiyero took Hala, they just throw warm bodies at the Wave.",
+     "frames": 137,
+     "speech_frames": 137
+    }
+   ]
+  },
+  {
+   "panel": "p05_02",
+   "speaker": "narrator",
+   "line": "Casualties: staggering. But Rich says they lucked out, because one guy was on-site.",
+   "emotion": "building",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot005.wav",
+   "duration_frames": 196,
+   "segments": [
+    {
+     "text": "Casualties: staggering.",
+     "frames": 65,
+     "speech_frames": 54
+    },
+    {
+     "text": "But Rich says they lucked out, because one guy was on-site.",
+     "frames": 125,
+     "speech_frames": 125
+    }
+   ]
+  },
+  {
+   "panel": "p06_01",
+   "speaker": "narrator",
+   "line": "That guy is Ronan - used to be the Accuser, judge, jury and executioner of the Kree.",
+   "emotion": "dramatic",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep02/shot006.wav",
+   "duration_frames": 208,
+   "segments": [
+    {
+     "text": "That guy is Ronan - used to be the Accuser, judge, jury and executioner of the Kree.",
+     "frames": 203,
+     "speech_frames": 203
+    }
+   ]
+  },
+  {
+   "panel": "p06_02",
+   "speaker": "narrator",
+   "line": "Small problem: now he's a fugitive from the exact justice he used to hand out.",
+   "emotion": "wry",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot007.wav",
+   "duration_frames": 147,
+   "segments": [
+    {
+     "text": "Small problem: now he's a fugitive from the exact justice he used to hand out.",
+     "frames": 142,
+     "speech_frames": 142
+    }
+   ]
+  },
+  {
+   "panel": "p06_02",
+   "speaker": "narrator",
+   "line": "A Kree officer sneers that Ronan carries no authority, their loyalty's to House Fiyero.",
+   "emotion": "defiant",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot008.wav",
+   "duration_frames": 172,
+   "segments": [
+    {
+     "text": "A Kree officer sneers that Ronan carries no authority, their loyalty's to House Fiyero.",
+     "frames": 166,
+     "speech_frames": 166
+    }
+   ]
+  },
+  {
+   "panel": "p06_03",
+   "speaker": "narrator",
+   "line": "Ronan's answer is short and cold: 'You're relieved of duty.'",
+   "emotion": "menacing",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot009.wav",
+   "duration_frames": 128,
+   "segments": [
+    {
+     "text": "Ronan's answer is short and cold: 'You're relieved of duty. '",
+     "frames": 123,
+     "speech_frames": 123
+    }
+   ]
+  },
+  {
+   "panel": "p06_04",
+   "speaker": "narrator",
+   "line": "And the rank-and-file Kree? They don't buy the charges. He talks, they listen.",
+   "emotion": "respectful",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot010.wav",
+   "duration_frames": 205,
+   "segments": [
+    {
+     "text": "And the rank-and-file Kree?",
+     "frames": 69,
+     "speech_frames": 58
+    },
+    {
+     "text": "They don't buy the charges.",
+     "frames": 72,
+     "speech_frames": 61
+    },
+    {
+     "text": "He talks, they listen.",
+     "frames": 58,
+     "speech_frames": 58
+    }
+   ]
+  },
+  {
+   "panel": "p06_05",
+   "speaker": "narrator",
+   "line": "So he takes a guaranteed bloodbath and turns it into a clean, orderly withdrawal.",
+   "emotion": "impressed",
+   "motion": "slow_pan",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot011.wav",
+   "duration_frames": 136,
+   "segments": [
+    {
+     "text": "So he takes a guaranteed bloodbath and turns it into a clean, orderly withdrawal.",
+     "frames": 130,
+     "speech_frames": 130
+    }
+   ]
+  },
+  {
+   "panel": "p06_05",
+   "speaker": "narrator",
+   "line": "Hardest-hit positions, fewest deaths. Rich's verdict? 'Ronan's a keeper.'",
+   "emotion": "approving",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot012.wav",
+   "duration_frames": 172,
+   "segments": [
+    {
+     "text": "Hardest-hit positions, fewest deaths.",
+     "frames": 100,
+     "speech_frames": 88
+    },
+    {
+     "text": "Rich's verdict? 'Ronan's a keeper. '",
+     "frames": 67,
+     "speech_frames": 67
+    }
+   ]
+  },
+  {
+   "panel": "p06_06",
+   "speaker": "narrator",
+   "line": "Right on cue, Quill screams the generators are giving out - move.",
+   "emotion": "urgent",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot013.wav",
+   "duration_frames": 116,
+   "segments": [
+    {
+     "text": "Right on cue, Quill screams the generators are giving out - move.",
+     "frames": 111,
+     "speech_frames": 111
+    }
+   ]
+  },
+  {
+   "panel": "p07_01",
+   "speaker": "narrator",
+   "line": "Rich calls the third full retreat in this fight, pulling everyone to the secondary perimeter.",
+   "emotion": "commanding",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot014.wav",
+   "duration_frames": 145,
+   "segments": [
+    {
+     "text": "Rich calls the third full retreat in this fight, pulling everyone to the secondary perimeter.",
+     "frames": 139,
+     "speech_frames": 139
+    }
+   ]
+  },
+  {
+   "panel": "p07_01",
+   "speaker": "narrator",
+   "line": "But here's his edge: the Wave's still fighting the same war they fought six months ago. He isn't.",
+   "emotion": "sharp, hopeful",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot015.wav",
+   "duration_frames": 169,
+   "segments": [
+    {
+     "text": "But here's his edge: the Wave's still fighting the same war they fought six months ago. He isn't.",
+     "frames": 164,
+     "speech_frames": 164
+    }
+   ]
+  },
+  {
+   "panel": "p07_03",
+   "speaker": "narrator",
+   "line": "Then the Wave starts hammering the ships, and the order becomes just 'get clear.'",
+   "emotion": "panic",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep02/shot016.wav",
+   "duration_frames": 143,
+   "segments": [
+    {
+     "text": "Then the Wave starts hammering the ships, and the order becomes just 'get clear. '",
+     "frames": 138,
+     "speech_frames": 138
+    }
+   ]
+  },
+  {
+   "panel": "p07_04",
+   "speaker": "narrator",
+   "line": "A swarm this size floods the landing bay, and Rich can only manage two words: 'No way.'",
+   "emotion": "shocked",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep02/shot017.wav",
+   "duration_frames": 195,
+   "segments": [
+    {
+     "text": "A swarm this size floods the landing bay, and Rich can only manage two words: 'No way. '",
+     "frames": 190,
+     "speech_frames": 190
+    }
+   ]
+  },
+  {
+   "panel": "p08_01",
+   "speaker": "narrator",
+   "line": "Holding that airspace are three ex-Heralds of Galactus, who does not care about you.",
+   "emotion": "grand",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep02/shot018.wav",
+   "duration_frames": 182,
+   "segments": [
+    {
+     "text": "Holding that airspace are three ex-Heralds of Galactus, who does not care about you.",
+     "frames": 177,
+     "speech_frames": 177
+    }
+   ]
+  },
+  {
+   "panel": "p08_01",
+   "speaker": "narrator",
+   "line": "Each one can hold off an army - but Annihilus wants them captured, maybe already terminated.",
+   "emotion": "ominous",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "heartbeat",
+   "audio": "work/audio/ep02/shot019.wav",
+   "duration_frames": 166,
+   "segments": [
+    {
+     "text": "Each one can hold off an army - but Annihilus wants them captured, maybe already terminated.",
+     "frames": 161,
+     "speech_frames": 161
+    }
+   ]
+  },
+  {
+   "panel": "p08_03",
+   "speaker": "narrator",
+   "line": "Because the firepower the Wave is throwing at these gods? It means the war's about to get so much bigger.",
+   "emotion": "dread, forward-leaning",
+   "motion": "zoom_out",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep02/shot020.wav",
+   "duration_frames": 214,
+   "segments": [
+    {
+     "text": "Because the firepower the Wave is throwing at these gods?",
+     "frames": 94,
+     "speech_frames": 83
+    },
+    {
+     "text": "It means the war's about to get so much bigger.",
+     "frames": 115,
+     "speech_frames": 115
     }
    ]
   }
  ],
- "cliffhanger_note": "Dick and Ada are captured by the dwarf-people and dragged before their queen, with Wad still hunting them and a war god riding along."
+ "cliffhanger_note": "The ex-Heralds are being hunted and possibly killed, and Annihilus is escalating far beyond anything Rich's crew can hold."
 }

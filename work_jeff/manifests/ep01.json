@@ -1,0 +1,395 @@
+{
+ "short_id": "ep01",
+ "title": "This Shark Swallowed the Infinity Gauntlet",
+ "description": "Jeff the Land Shark just wanted to cool off during a heat wave. It ends with an X-ray nobody at the clinic was ready for.",
+ "hashtags": [
+  "#comic",
+  "#marvel",
+  "#jeffthelandshark",
+  "#katebishop",
+  "#webcomic"
+ ],
+ "music_mood": "playful",
+ "hook_note": "Opens on a tiny sweating shark melting on the kitchen floor - instantly adorable and instantly a problem.",
+ "shots": [
+  {
+   "panel": "p01_02",
+   "speaker": "narrator",
+   "line": "This is Jeff the Land Shark, and today he is melting.",
+   "emotion": "warm, amused",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot000.wav",
+   "duration_frames": 101,
+   "segments": [
+    {
+     "text": "This is Jeff the Land Shark, and today he is melting.",
+     "frames": 97,
+     "speech_frames": 97
+    }
+   ]
+  },
+  {
+   "panel": "p01_03",
+   "speaker": "narrator",
+   "line": "A heat wave is cooking him alive, and he needs somewhere cold, fast.",
+   "emotion": "sympathetic",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot001.wav",
+   "duration_frames": 116,
+   "segments": [
+    {
+     "text": "A heat wave is cooking him alive, and he needs somewhere cold, fast.",
+     "frames": 112,
+     "speech_frames": 112
+    }
+   ]
+  },
+  {
+   "panel": "p01_04",
+   "speaker": "narrator",
+   "line": "Which is when he spots the coldest place in the house.",
+   "emotion": "delighted realization",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot002.wav",
+   "duration_frames": 81,
+   "segments": [
+    {
+     "text": "Which is when he spots the coldest place in the house.",
+     "frames": 76,
+     "speech_frames": 76
+    }
+   ]
+  },
+  {
+   "panel": "p01_05",
+   "speaker": "narrator",
+   "line": "His eyes turn to snowflakes, and Jeff moves in.",
+   "emotion": "gleeful",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work_jeff/audio/ep01/shot003.wav",
+   "duration_frames": 68,
+   "segments": [
+    {
+     "text": "His eyes turn to snowflakes, and Jeff moves in.",
+     "frames": 63,
+     "speech_frames": 63
+    }
+   ]
+  },
+  {
+   "panel": "p02_01",
+   "speaker": "narrator",
+   "line": "Enter Kate Bishop, his long-suffering owner, who walks into a crime scene,",
+   "emotion": "deadpan shock",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work_jeff/audio/ep01/shot004.wav",
+   "duration_frames": 127,
+   "segments": [
+    {
+     "text": "Enter Kate Bishop, his long-suffering owner, who walks into a crime scene,",
+     "frames": 123,
+     "speech_frames": 123
+    }
+   ]
+  },
+  {
+   "panel": "p02_03",
+   "speaker": "narrator",
+   "line": "and finds one shark fast asleep inside her fridge.",
+   "emotion": "exasperated fondness",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot005.wav",
+   "duration_frames": 88,
+   "segments": [
+    {
+     "text": "and finds one shark fast asleep inside her fridge.",
+     "frames": 84,
+     "speech_frames": 84
+    }
+   ]
+  },
+  {
+   "panel": "p02_04",
+   "speaker": "narrator",
+   "line": "Hawkeye lays down the law: the fridge is off-limits.",
+   "emotion": "stern but loving",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot006.wav",
+   "duration_frames": 67,
+   "segments": [
+    {
+     "text": "Hawkeye lays down the law: the fridge is off-limits.",
+     "frames": 63,
+     "speech_frames": 63
+    }
+   ]
+  },
+  {
+   "panel": "p02_05",
+   "speaker": "narrator",
+   "line": "Out back, Jeff finds a pool, and a hose to fill it with.",
+   "emotion": "brightening",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot007.wav",
+   "duration_frames": 84,
+   "segments": [
+    {
+     "text": "Out back, Jeff finds a pool, and a hose to fill it with.",
+     "frames": 80,
+     "speech_frames": 80
+    }
+   ]
+  },
+  {
+   "panel": "p02_06",
+   "speaker": "narrator",
+   "line": "Only for the little land shark to chomp straight through it.",
+   "emotion": "amused",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work_jeff/audio/ep01/shot008.wav",
+   "duration_frames": 67,
+   "segments": [
+    {
+     "text": "Only for the little land shark to chomp straight through it.",
+     "frames": 63,
+     "speech_frames": 63
+    }
+   ]
+  },
+  {
+   "panel": "p03_03",
+   "speaker": "narrator",
+   "line": "So Jeff makes a phone call, to exactly the right friend.",
+   "emotion": "conspiratorial",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot009.wav",
+   "duration_frames": 83,
+   "segments": [
+    {
+     "text": "So Jeff makes a phone call, to exactly the right friend.",
+     "frames": 79,
+     "speech_frames": 79
+    }
+   ]
+  },
+  {
+   "panel": "p03_05",
+   "speaker": "narrator",
+   "line": "Enter Iceman, the X-Man you call when your dog is a shark, who buries the yard in snow.",
+   "emotion": "delighted",
+   "motion": "zoom_out",
+   "hero": true,
+   "sfx": "whoosh",
+   "audio": "work_jeff/audio/ep01/shot010.wav",
+   "duration_frames": 118,
+   "segments": [
+    {
+     "text": "Enter Iceman, the X-Man you call when your dog is a shark, who buries the yard in snow.",
+     "frames": 113,
+     "speech_frames": 113
+    }
+   ]
+  },
+  {
+   "panel": "p03_04",
+   "speaker": "narrator",
+   "line": "And Jeff gets the best day of his life, snow angels included.",
+   "emotion": "joyful",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot011.wav",
+   "duration_frames": 187,
+   "segments": [
+    {
+     "text": "And Jeff gets the best day of his life, snow angels included.",
+     "frames": 183,
+     "speech_frames": 183
+    }
+   ]
+  },
+  {
+   "panel": "p04_02",
+   "speaker": "narrator",
+   "line": "That night, however, Jeff's stomach starts making sounds a stomach should not make,",
+   "emotion": "concern creeping in",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "heartbeat",
+   "audio": "work_jeff/audio/ep01/shot012.wav",
+   "duration_frames": 123,
+   "segments": [
+    {
+     "text": "That night, however, Jeff's stomach starts making sounds a stomach should not make,",
+     "frames": 119,
+     "speech_frames": 119
+    }
+   ]
+  },
+  {
+   "panel": "p04_06",
+   "speaker": "narrator",
+   "line": "and Kate finds him collapsed, bundles him up, and bolts for the clinic.",
+   "emotion": "alarmed",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work_jeff/audio/ep01/shot013.wav",
+   "duration_frames": 101,
+   "segments": [
+    {
+     "text": "and Kate finds him collapsed, bundles him up, and bolts for the clinic.",
+     "frames": 97,
+     "speech_frames": 97
+    }
+   ]
+  },
+  {
+   "panel": "p05_05",
+   "speaker": "narrator",
+   "line": "One very confused doctor finds nothing, so they take an X-ray.",
+   "emotion": "building dread",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "heartbeat",
+   "audio": "work_jeff/audio/ep01/shot014.wav",
+   "duration_frames": 83,
+   "segments": [
+    {
+     "text": "One very confused doctor finds nothing, so they take an X-ray.",
+     "frames": 79,
+     "speech_frames": 79
+    }
+   ]
+  },
+  {
+   "panel": "p06_01",
+   "speaker": "narrator",
+   "line": "Inside is a donut, a burger, a license plate, and, holy hell, the Infinity Gauntlet.",
+   "emotion": "astonished delight",
+   "motion": "zoom_out",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work_jeff/audio/ep01/shot015.wav",
+   "duration_frames": 156,
+   "segments": [
+    {
+     "text": "Inside is a donut, a burger, a license plate, and, holy hell, the Infinity Gauntlet.",
+     "frames": 152,
+     "speech_frames": 152
+    }
+   ]
+  },
+  {
+   "panel": "p06_02",
+   "speaker": "narrator",
+   "line": "Kate facepalms and yells one word: 'JEFFREY!'",
+   "emotion": "utterly done",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work_jeff/audio/ep01/shot016.wav",
+   "duration_frames": 67,
+   "segments": [
+    {
+     "text": "Kate facepalms and yells one word: 'JEFFREY! '",
+     "frames": 62,
+     "speech_frames": 62
+    }
+   ]
+  },
+  {
+   "panel": "p07_05",
+   "speaker": "narrator",
+   "line": "She still feels bad for him, so she builds Jeff his own house.",
+   "emotion": "softening",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot017.wav",
+   "duration_frames": 93,
+   "segments": [
+    {
+     "text": "She still feels bad for him, so she builds Jeff his own house.",
+     "frames": 89,
+     "speech_frames": 89
+    }
+   ]
+  },
+  {
+   "panel": "p09_05",
+   "speaker": "narrator",
+   "line": "He moves in, parks on the welcome mat, and invites Kate over.",
+   "emotion": "proud",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot018.wav",
+   "duration_frames": 93,
+   "segments": [
+    {
+     "text": "He moves in, parks on the welcome mat, and invites Kate over.",
+     "frames": 89,
+     "speech_frames": 89
+    }
+   ]
+  },
+  {
+   "panel": "p10_01",
+   "speaker": "narrator",
+   "line": "And the second she peeks inside, Jeff punts her straight through the door,",
+   "emotion": "gleeful mischief",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work_jeff/audio/ep01/shot019.wav",
+   "duration_frames": 93,
+   "segments": [
+    {
+     "text": "And the second she peeks inside, Jeff punts her straight through the door,",
+     "frames": 89,
+     "speech_frames": 89
+    }
+   ]
+  },
+  {
+   "panel": "p10_02",
+   "speaker": "narrator",
+   "line": "leaving her stuck in the doghouse, while Jeff enjoys a tropical drink.",
+   "emotion": "warm, satisfied",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff/audio/ep01/shot020.wav",
+   "duration_frames": 124,
+   "segments": [
+    {
+     "text": "leaving her stuck in the doghouse, while Jeff enjoys a tropical drink.",
+     "frames": 120,
+     "speech_frames": 120
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": "Kate is stuck in the doghouse and Jeff is not letting her out."
+}

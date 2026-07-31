@@ -1,0 +1,102 @@
+# It's Jeff! #1 (Kelly Thompson / Gurihiru) — target: replicate the Comicfy
+# 60s Jeff short (tiktoks/snaptik_7659058234422086943_v3.mp4) from pages
+# 31-39 of the issue (heat wave -> hospital/X-ray -> doghouse strips).
+# BLIND RUN: no reference consulted; review gate uses panels only.
+
+comic:
+  title: "It's Jeff!"
+  reading_direction: ltr
+  pages_dir: "pages_jeff_pool"
+
+shorts:
+  target_count: 1
+  min_seconds: 55
+  max_seconds: 75
+  narrator_voice_id: "unused"
+
+  # Comicfy's register, not the Annihilation persona: a warm, amused
+  # storyteller recapping an adorable disaster. Plain words, present tense,
+  # rolling chains ("only for", "after which", "which is when"). The comedy
+  # is in the events, so report them straight and let the absurdity land;
+  # no sneering, no chronically-online slang. At most ONE mild profanity in
+  # the whole episode, reserved for the single most absurd reveal (the
+  # reference drops exactly one at the Infinity Gauntlet X-ray).
+  narration_mode: single_voice
+
+  narration_style: |
+    A warm, amused storyteller recapping an adorable disaster he clearly
+    loves. Plain everyday words, present tense, momentum from chained
+    clauses rather than jokes. Report the cute chaos completely straight -
+    the absurdity IS the comedy. Affectionate exasperation, never snark.
+    You may use exactly one mild swear in the whole episode, at the single
+    most absurd reveal, nowhere else.
+  pause_ms: 320
+  ellipsis_pause_ms: 560
+  shot_gap_ms: 140
+  speech_tempo: 1.45
+  captions: true
+  part_badge: false          # the Comicfy Jeff shorts carry no Part-N chip
+  drift_rate: 0.055
+  # Gurihiru's art is clean and sparse (one subject, lots of air), the
+  # opposite of Annihilation's dense battle panels - tighter framing reads
+  # fine here and matches Comicfy's punch-ins.
+  frame_tightness: 2.6
+  frame_mode: fill
+  fill_min_coverage: 0.22
+  caption_style:
+    font: "/System/Library/Fonts/Supplemental/Impact.ttf"
+    size_pct: 0.046
+    uppercase: true
+    outline_ratio: 9
+    shadow: true
+    color: "#FFFFFF"
+    highlight_color: "#FFD54A"   # Comicfy-style karaoke: spoken word in yellow
+    position: center
+    center_pct: 0.55
+    speaker_colors: {}
+
+  music_dir: "~/Dev/comicops/mpt-comic-kit/MoneyPrinterTurbo/resource/songs"
+  music_volume: 0.11
+  music_by_mood:
+    ominous: "output029.mp3"
+    melancholy: "output025.mp3"
+    tense_buildup: "output017.mp3"
+    playful: "output012.mp3"
+    triumphant: "output015.mp3"
+    action: "output004.mp3"
+    default: "output012.mp3"   # default playful: it's a comedy short
+  voicebox_profile: "aud_qwen_Ryan"
+  tts_pronounce: {}
+  narrator_instruct: "Energetic, warm video-recap narrator: deep male voice, quick pace, amused and affectionate, punchy emphasis on names and reversals, storyteller confidence. Speak ONLY the written words - never laugh, giggle, sigh or add any sound that is not in the text."
+
+# No ref face crops yet (descriptions only, like the Planet Comics run).
+# Jeff is unmistakable; Kate is the only recurring human.
+characters:
+  - name: "Jeff"
+    epithet: "Jeff the Land Shark / the little land shark"
+    description: "Jeff the Land Shark: small grey baby-shark pet with stubby legs, big black eyes, permanently delighted. Walks on land, acts like a dog."
+    speaking_style: "does not speak; communicates in happy shark noises"
+  - name: "Kate Bishop"
+    epithet: "Kate Bishop, his long-suffering owner / Hawkeye, the one with actual responsibilities"
+    description: "Kate Bishop, Hawkeye: young woman, long black hair, purple sleeveless outfit with black gloves"
+    speaking_style: "exasperated but loving pet owner"
+  - name: "Iceman"
+    epithet: "Iceman, the X-Man you call when your dog is a shark"
+    description: "Iceman (Bobby Drake): X-Man made of translucent blue ice"
+    speaking_style: "easygoing"
+  - name: "Doctor"
+    epithet: "one very confused doctor"
+    description: "burly bearded human doctor in a white coat at an animal-friendly clinic"
+    speaking_style: "professional, baffled"
+
+models:
+  vision_model: "claude-sonnet-4-6"
+  story_model: "claude-opus-4-8"
+  esrgan_weights: "weights/RealESRGAN_x4plus_anime_6B.pth"
+  upscale_target_long_side: 2200
+
+stage1:
+  detector: floodfill        # local + free; Gurihiru pages are clean white
+                             # gutters, exactly what floodfill wants
+  min_panel_area_ratio: 0.02
+  crop_margin: 4

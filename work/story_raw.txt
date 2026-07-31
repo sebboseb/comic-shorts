@@ -1,0 +1,368 @@
+{
+  "shorts": [
+    {
+      "short_id": "ep01",
+      "title": "The Last Space Cop in the Galaxy",
+      "description": "Richard Rider is the only Nova Corps officer left alive, and the thing that killed everyone else is punching through the edge of the universe.",
+      "hashtags": ["#comic", "#marvel", "#annihilation", "#nova", "#cosmicmarvel"],
+      "music_mood": "ominous",
+      "hook_note": "Opening on a named human hero declared 'last survivor' instantly frames one person in maximum trouble.",
+      "shots": [
+        {
+          "panel": "p02_01",
+          "speaker": "narrator",
+          "line": "Meet our boy Rich - Richard Rider, the last Nova Corps officer left breathing.",
+          "emotion": "grim, hooking",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "heartbeat"
+        },
+        {
+          "panel": "p02_01",
+          "speaker": "narrator",
+          "line": "And the thing that killed the rest? It punched straight through the edge of the universe.",
+          "emotion": "ominous",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_01",
+          "speaker": "narrator",
+          "line": "That edge is called the Crunch, which means these guys came from outside reality itself.",
+          "emotion": "grave",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p02_02",
+          "speaker": "narrator",
+          "line": "First stop: Xandar, the Corps' homeworld, wiped off the board on day one.",
+          "emotion": "somber",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p02_03",
+          "speaker": "narrator",
+          "line": "They call themselves the Annihilation Wave, led by Annihilus, bug guy with a god complex.",
+          "emotion": "dry",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_03",
+          "speaker": "narrator",
+          "line": "And yeah - Annihilation Wave, Annihilus. Rich admits not everyone connected those dots.",
+          "emotion": "deadpan amused",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p02_03",
+          "speaker": "narrator",
+          "line": "His whole deal? Our universe is expanding into his Negative Zone, so he's taking it back.",
+          "emotion": "informational, wry",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_01",
+          "speaker": "narrator",
+          "line": "Six months later, Rich and whatever's left are dug in on Daedalus 5.",
+          "emotion": "weary",
+          "motion": "zoom_out",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_01",
+          "speaker": "narrator",
+          "line": "For once they're actually holding the line, and Rich says he'll take what he can get.",
+          "emotion": "grimly hopeful",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_02",
+          "speaker": "narrator",
+          "line": "His number two is Quill, who absolutely thinks he's the main character.",
+          "emotion": "playful",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_02",
+          "speaker": "narrator",
+          "line": "Rich asks him to lie, so Quill dryly promises the force fields will hold - happy now?",
+          "emotion": "sarcastic",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_03",
+          "speaker": "narrator",
+          "line": "Running her own hit-and-run ops out there is Gamora, deadliest woman in the galaxy and aware of it.",
+          "emotion": "impressed",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p04_01",
+          "speaker": "narrator",
+          "line": "Quill reports she's still singing the same song - bring the fight to them, in C minor.",
+          "emotion": "wry",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p04_01",
+          "speaker": "narrator",
+          "line": "Rich flatly tells him to throw the C minor bit back out. Comedy king, no.",
+          "emotion": "deadpan",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p04_02",
+          "speaker": "narrator",
+          "line": "Then Quill spots something across the battlefield and mutters, 'That can't be good.'",
+          "emotion": "alarmed",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p04_03",
+          "speaker": "narrator",
+          "line": "Rich yells for a plain answer, so Quill screams the right flank barricades just blew.",
+          "emotion": "urgent",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p04_04",
+          "speaker": "narrator",
+          "line": "And when one goes, the whole grid cascades - meaning the force fields are about to fail.",
+          "emotion": "rising panic",
+          "motion": "shake",
+          "hero": true,
+          "sfx": "impact"
+        }
+      ],
+      "cliffhanger_note": "The force field grid is collapsing and the right flank is wide open - who's holding it?"
+    },
+    {
+      "short_id": "ep02",
+      "title": "Ronan Saves the Kree (Everyone's Shocked)",
+      "description": "With the force fields dying and the Kree flank overrun, a wanted fugitive turns a slaughter into a retreat - right before something worse shows up.",
+      "hashtags": ["#comic", "#marvel", "#annihilation", "#ronan", "#cosmicmarvel"],
+      "music_mood": "action",
+      "hook_note": "Picks up on the exact collapse we left on, naming who's caught in it so the panic lands instantly.",
+      "shots": [
+        {
+          "panel": "p04_05",
+          "speaker": "narrator",
+          "line": "So the force fields are dying and everyone's screaming about the right flank.",
+          "emotion": "urgent recap",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p04_05",
+          "speaker": "narrator",
+          "line": "Somebody asks who's even on the right flank. Quill snaps back, 'Does it matter?'",
+          "emotion": "exasperated",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p05_01",
+          "speaker": "narrator",
+          "line": "Spoiler: it does. The right flank is two Kree battalions, and they've just been breached.",
+          "emotion": "grim",
+          "motion": "slow_pan",
+          "hero": true,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p05_01",
+          "speaker": "narrator",
+          "line": "And here's the thing - the Kree live for war, but their command has completely fallen apart.",
+          "emotion": "analytical, disbelieving",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p05_02",
+          "speaker": "narrator",
+          "line": "Ever since House Fiyero took Hala, they just throw warm bodies at the Wave.",
+          "emotion": "dark",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p05_02",
+          "speaker": "narrator",
+          "line": "Casualties: staggering. But Rich says they lucked out, because one guy was on-site.",
+          "emotion": "building",
+          "motion": "zoom_out",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p06_01",
+          "speaker": "narrator",
+          "line": "That guy is Ronan - used to be the Accuser, judge, jury and executioner of the Kree.",
+          "emotion": "dramatic",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p06_02",
+          "speaker": "narrator",
+          "line": "Small problem: now he's a fugitive from the exact justice he used to hand out.",
+          "emotion": "wry",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p06_02",
+          "speaker": "narrator",
+          "line": "A Kree officer sneers that Ronan carries no authority, their loyalty's to House Fiyero.",
+          "emotion": "defiant",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p06_03",
+          "speaker": "narrator",
+          "line": "Ronan's answer is short and cold: 'You're relieved of duty.'",
+          "emotion": "menacing",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p06_04",
+          "speaker": "narrator",
+          "line": "And the rank-and-file Kree? They don't buy the charges. He talks, they listen.",
+          "emotion": "respectful",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p06_05",
+          "speaker": "narrator",
+          "line": "So he takes a guaranteed bloodbath and turns it into a clean, orderly withdrawal.",
+          "emotion": "impressed",
+          "motion": "slow_pan",
+          "hero": true,
+          "sfx": "none"
+        },
+        {
+          "panel": "p06_05",
+          "speaker": "narrator",
+          "line": "Hardest-hit positions, fewest deaths. Rich's verdict? 'Ronan's a keeper.'",
+          "emotion": "approving",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p06_06",
+          "speaker": "narrator",
+          "line": "Right on cue, Quill screams the generators are giving out - move.",
+          "emotion": "urgent",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p07_01",
+          "speaker": "narrator",
+          "line": "Rich calls the third full retreat in this fight, pulling everyone to the secondary perimeter.",
+          "emotion": "commanding",
+          "motion": "zoom_out",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p07_01",
+          "speaker": "narrator",
+          "line": "But here's his edge: the Wave's still fighting the same war they fought six months ago. He isn't.",
+          "emotion": "sharp, hopeful",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p07_03",
+          "speaker": "narrator",
+          "line": "Then the Wave starts hammering the ships, and the order becomes just 'get clear.'",
+          "emotion": "panic",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p07_04",
+          "speaker": "narrator",
+          "line": "A swarm this size floods the landing bay, and Rich can only manage two words: 'No way.'",
+          "emotion": "shocked",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p08_01",
+          "speaker": "narrator",
+          "line": "Holding that airspace are three ex-Heralds of Galactus, who does not care about you.",
+          "emotion": "grand",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p08_01",
+          "speaker": "narrator",
+          "line": "Each one can hold off an army - but Annihilus wants them captured, maybe already terminated.",
+          "emotion": "ominous",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "heartbeat"
+        },
+        {
+          "panel": "p08_03",
+          "speaker": "narrator",
+          "line": "Because the firepower the Wave is throwing at these gods? It means the war's about to get so much bigger.",
+          "emotion": "dread, forward-leaning",
+          "motion": "zoom_out",
+          "hero": true,
+          "sfx": "sting"
+        }
+      ],
+      "cliffhanger_note": "The ex-Heralds are being hunted and possibly killed, and Annihilus is escalating far beyond anything Rich's crew can hold."
+    }
+  ]
+}

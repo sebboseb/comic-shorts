@@ -6,22 +6,10 @@
       "panel": 1,
       "file": "panels/p01_01.png",
       "bbox_on_page": [
-        57,
-        134,
-        1560,
-        2366
-      ]
-    },
-    {
-      "id": "p01_02",
-      "page": 1,
-      "panel": 2,
-      "file": "panels/p01_02.png",
-      "bbox_on_page": [
-        859,
-        2234,
-        767,
-        266
+        0,
+        140,
+        1054,
+        1460
       ]
     },
     {
@@ -30,10 +18,10 @@
       "panel": 1,
       "file": "panels/p02_01.png",
       "bbox_on_page": [
-        0,
-        71,
-        380,
-        708
+        15,
+        41,
+        933,
+        360
       ]
     },
     {
@@ -42,10 +30,10 @@
       "panel": 2,
       "file": "panels/p02_02.png",
       "bbox_on_page": [
-        372,
-        71,
-        564,
-        708
+        15,
+        420,
+        933,
+        368
       ]
     },
     {
@@ -54,94 +42,10 @@
       "panel": 3,
       "file": "panels/p02_03.png",
       "bbox_on_page": [
-        928,
-        71,
-        474,
-        741
-      ]
-    },
-    {
-      "id": "p02_04",
-      "page": 2,
-      "panel": 4,
-      "file": "panels/p02_04.png",
-      "bbox_on_page": [
-        1394,
-        71,
-        330,
-        739
-      ]
-    },
-    {
-      "id": "p02_05",
-      "page": 2,
-      "panel": 5,
-      "file": "panels/p02_05.png",
-      "bbox_on_page": [
-        0,
-        771,
-        389,
-        658
-      ]
-    },
-    {
-      "id": "p02_06",
-      "page": 2,
-      "panel": 6,
-      "file": "panels/p02_06.png",
-      "bbox_on_page": [
-        381,
-        771,
-        806,
-        708
-      ]
-    },
-    {
-      "id": "p02_07",
-      "page": 2,
-      "panel": 7,
-      "file": "panels/p02_07.png",
-      "bbox_on_page": [
-        1179,
-        804,
-        545,
-        708
-      ]
-    },
-    {
-      "id": "p02_08",
-      "page": 2,
-      "panel": 8,
-      "file": "panels/p02_08.png",
-      "bbox_on_page": [
-        0,
-        1471,
-        595,
-        1016
-      ]
-    },
-    {
-      "id": "p02_09",
-      "page": 2,
-      "panel": 9,
-      "file": "panels/p02_09.png",
-      "bbox_on_page": [
-        587,
-        1471,
-        623,
-        1015
-      ]
-    },
-    {
-      "id": "p02_10",
-      "page": 2,
-      "panel": 10,
-      "file": "panels/p02_10.png",
-      "bbox_on_page": [
-        1202,
-        1504,
-        522,
-        982
+        15,
+        807,
+        933,
+        733
       ]
     },
     {
@@ -150,10 +54,10 @@
       "panel": 1,
       "file": "panels/p03_01.png",
       "bbox_on_page": [
-        18,
-        137,
-        542,
-        642
+        20,
+        14,
+        1580,
+        753
       ]
     },
     {
@@ -162,10 +66,10 @@
       "panel": 2,
       "file": "panels/p03_02.png",
       "bbox_on_page": [
-        552,
-        134,
-        601,
-        645
+        20,
+        777,
+        632,
+        432
       ]
     },
     {
@@ -174,10 +78,10 @@
       "panel": 3,
       "file": "panels/p03_03.png",
       "bbox_on_page": [
-        1127,
-        134,
-        564,
-        666
+        660,
+        777,
+        640,
+        432
       ]
     },
     {
@@ -186,70 +90,10 @@
       "panel": 4,
       "file": "panels/p03_04.png",
       "bbox_on_page": [
-        18,
-        971,
-        542,
-        783
-      ]
-    },
-    {
-      "id": "p03_05",
-      "page": 3,
-      "panel": 5,
-      "file": "panels/p03_05.png",
-      "bbox_on_page": [
-        552,
-        971,
-        583,
-        583
-      ]
-    },
-    {
-      "id": "p03_06",
-      "page": 3,
-      "panel": 6,
-      "file": "panels/p03_06.png",
-      "bbox_on_page": [
-        1127,
-        921,
-        564,
-        683
-      ]
-    },
-    {
-      "id": "p03_07",
-      "page": 3,
-      "panel": 7,
-      "file": "panels/p03_07.png",
-      "bbox_on_page": [
-        18,
-        1746,
-        542,
-        658
-      ]
-    },
-    {
-      "id": "p03_08",
-      "page": 3,
-      "panel": 8,
-      "file": "panels/p03_08.png",
-      "bbox_on_page": [
-        552,
-        1621,
-        583,
-        783
-      ]
-    },
-    {
-      "id": "p03_09",
-      "page": 3,
-      "panel": 9,
-      "file": "panels/p03_09.png",
-      "bbox_on_page": [
-        1127,
-        1654,
-        564,
-        750
+        1308,
+        777,
+        292,
+        432
       ]
     },
     {
@@ -258,10 +102,10 @@
       "panel": 1,
       "file": "panels/p04_01.png",
       "bbox_on_page": [
-        45,
-        114,
-        548,
-        615
+        8,
+        25,
+        940,
+        291
       ]
     },
     {
@@ -270,10 +114,10 @@
       "panel": 2,
       "file": "panels/p04_02.png",
       "bbox_on_page": [
-        585,
-        114,
-        589,
-        615
+        8,
+        308,
+        940,
+        384
       ]
     },
     {
@@ -282,10 +126,10 @@
       "panel": 3,
       "file": "panels/p04_03.png",
       "bbox_on_page": [
-        1166,
-        84,
-        566,
-        645
+        8,
+        684,
+        940,
+        344
       ]
     },
     {
@@ -294,10 +138,10 @@
       "panel": 4,
       "file": "panels/p04_04.png",
       "bbox_on_page": [
-        45,
-        721,
-        1147,
-        1008
+        8,
+        1020,
+        940,
+        296
       ]
     },
     {
@@ -306,34 +150,10 @@
       "panel": 5,
       "file": "panels/p04_05.png",
       "bbox_on_page": [
-        986,
-        721,
-        746,
-        1008
-      ]
-    },
-    {
-      "id": "p04_06",
-      "page": 4,
-      "panel": 6,
-      "file": "panels/p04_06.png",
-      "bbox_on_page": [
-        18,
-        1721,
-        1408,
-        767
-      ]
-    },
-    {
-      "id": "p04_07",
-      "page": 4,
-      "panel": 7,
-      "file": "panels/p04_07.png",
-      "bbox_on_page": [
-        1418,
-        1689,
-        314,
-        799
+        8,
+        1308,
+        940,
+        292
       ]
     },
     {
@@ -342,10 +162,10 @@
       "panel": 1,
       "file": "panels/p05_01.png",
       "bbox_on_page": [
-        18,
-        108,
-        1080,
-        840
+        0,
+        60,
+        1054,
+        936
       ]
     },
     {
@@ -354,10 +174,10 @@
       "panel": 2,
       "file": "panels/p05_02.png",
       "bbox_on_page": [
-        1090,
-        108,
-        663,
-        571
+        0,
+        1004,
+        1054,
+        504
       ]
     },
     {
@@ -366,66 +186,201 @@
       "panel": 3,
       "file": "panels/p05_03.png",
       "bbox_on_page": [
-        1090,
-        671,
-        663,
-        658
+        0,
+        1516,
+        1054,
+        84
       ]
     },
     {
-      "id": "p05_04",
-      "page": 5,
+      "id": "p06_01",
+      "page": 6,
+      "panel": 1,
+      "file": "panels/p06_01.png",
+      "bbox_on_page": [
+        11,
+        25,
+        937,
+        302
+      ]
+    },
+    {
+      "id": "p06_02",
+      "page": 6,
+      "panel": 2,
+      "file": "panels/p06_02.png",
+      "bbox_on_page": [
+        11,
+        332,
+        937,
+        312
+      ]
+    },
+    {
+      "id": "p06_03",
+      "page": 6,
+      "panel": 3,
+      "file": "panels/p06_03.png",
+      "bbox_on_page": [
+        11,
+        649,
+        937,
+        259
+      ]
+    },
+    {
+      "id": "p06_04",
+      "page": 6,
       "panel": 4,
-      "file": "panels/p05_04.png",
+      "file": "panels/p06_04.png",
       "bbox_on_page": [
-        18,
-        934,
-        347,
-        495
+        11,
+        913,
+        937,
+        259
       ]
     },
     {
-      "id": "p05_05",
-      "page": 5,
+      "id": "p06_05",
+      "page": 6,
       "panel": 5,
-      "file": "panels/p05_05.png",
+      "file": "panels/p06_05.png",
       "bbox_on_page": [
-        357,
-        940,
-        741,
-        489
+        11,
+        1177,
+        937,
+        206
       ]
     },
     {
-      "id": "p05_06",
-      "page": 5,
+      "id": "p06_06",
+      "page": 6,
       "panel": 6,
-      "file": "panels/p05_06.png",
+      "file": "panels/p06_06.png",
       "bbox_on_page": [
-        18,
-        1421,
-        869,
-        1061
+        11,
+        1388,
+        937,
+        192
       ]
     },
     {
-      "id": "p05_07",
-      "page": 5,
-      "panel": 7,
-      "file": "panels/p05_07.png",
+      "id": "p07_01",
+      "page": 7,
+      "panel": 1,
+      "file": "panels/p07_01.png",
       "bbox_on_page": [
-        879,
-        1421,
-        874,
-        1061
+        15,
+        15,
+        1032,
+        677
+      ]
+    },
+    {
+      "id": "p07_02",
+      "page": 7,
+      "panel": 2,
+      "file": "panels/p07_02.png",
+      "bbox_on_page": [
+        15,
+        700,
+        316,
+        888
+      ]
+    },
+    {
+      "id": "p07_03",
+      "page": 7,
+      "panel": 3,
+      "file": "panels/p07_03.png",
+      "bbox_on_page": [
+        331,
+        700,
+        326,
+        888
+      ]
+    },
+    {
+      "id": "p07_04",
+      "page": 7,
+      "panel": 4,
+      "file": "panels/p07_04.png",
+      "bbox_on_page": [
+        658,
+        700,
+        389,
+        888
+      ]
+    },
+    {
+      "id": "p08_01",
+      "page": 8,
+      "panel": 1,
+      "file": "panels/p08_01.png",
+      "bbox_on_page": [
+        0,
+        84,
+        945,
+        768
+      ]
+    },
+    {
+      "id": "p08_02",
+      "page": 8,
+      "panel": 2,
+      "file": "panels/p08_02.png",
+      "bbox_on_page": [
+        0,
+        852,
+        945,
+        368
+      ]
+    },
+    {
+      "id": "p08_03",
+      "page": 8,
+      "panel": 3,
+      "file": "panels/p08_03.png",
+      "bbox_on_page": [
+        0,
+        1220,
+        945,
+        368
+      ]
+    },
+    {
+      "id": "p08_04",
+      "page": 8,
+      "panel": 4,
+      "file": "panels/p08_04.png",
+      "bbox_on_page": [
+        0,
+        1588,
+        945,
+        12
       ]
     }
   ],
   "flagged_pages": [
     {
       "page": 1,
-      "file": "p01.png",
-      "reason": "overlapping panel boxes (coverage 104%) \u2014 diagonal/borderless layout or merged detection; crops share content, review before stage 2"
+      "file": "page_01.jpg",
+      "reason": "overlapping panel boxes (coverage 118%) \u2014 diagonal/borderless layout or merged detection; crops share content, review before stage 2"
+    },
+    {
+      "page": 3,
+      "file": "page_03.jpg",
+      "reason": "overlapping panel boxes (coverage 114%) \u2014 diagonal/borderless layout or merged detection; crops share content, review before stage 2"
+    },
+    {
+      "page": 5,
+      "file": "page_05.jpg",
+      "reason": "overlapping panel boxes (coverage 120%) \u2014 diagonal/borderless layout or merged detection; crops share content, review before stage 2"
+    },
+    {
+      "page": 8,
+      "file": "page_08.jpg",
+      "reason": "overlapping panel boxes (coverage 102%) \u2014 diagonal/borderless layout or merged detection; crops share content, review before stage 2"
     }
   ]
 }

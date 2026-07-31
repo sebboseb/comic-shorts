@@ -1,0 +1,488 @@
+{
+ "short_id": "ep01",
+ "title": "The Last Space Cop and the Bug With a God Complex",
+ "description": "Something punched a hole in the universe, and the Nova Corps caught the whole invasion in the face. Meet the last man standing.",
+ "hashtags": [
+  "#comic",
+  "#marvel",
+  "#annihilation",
+  "#nova",
+  "#cosmicmarvel"
+ ],
+ "music_mood": "ominous",
+ "hook_note": "Opens on a named man declared the last of an entire galactic police force before we even see the enemy.",
+ "shots": [
+  {
+   "panel": "p02_01",
+   "speaker": "narrator",
+   "line": "This is Richard Rider. Nova. The last living officer of the Nova Corps.",
+   "emotion": "cold open, grim",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work/audio/ep01/shot000.wav",
+   "duration_frames": 152,
+   "segments": [
+    {
+     "text": "This is Richard Rider.",
+     "frames": 48,
+     "speech_frames": 37
+    },
+    {
+     "text": "Nova. The last living officer of the Nova Corps.",
+     "frames": 98,
+     "speech_frames": 98
+    }
+   ]
+  },
+  {
+   "panel": "p02_01",
+   "speaker": "narrator",
+   "line": "The whole Corps. Gone. And it started when something punched through the Crunch.",
+   "emotion": "grim",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot001.wav",
+   "duration_frames": 127,
+   "segments": [
+    {
+     "text": "The whole Corps. Gone.",
+     "frames": 55,
+     "speech_frames": 43
+    },
+    {
+     "text": "And it started when something punched through the Crunch.",
+     "frames": 67,
+     "speech_frames": 67
+    }
+   ]
+  },
+  {
+   "panel": "p02_01",
+   "speaker": "narrator",
+   "line": "The Crunch being the literal edge of our universe. So yeah.",
+   "emotion": "dry",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot002.wav",
+   "duration_frames": 108,
+   "segments": [
+    {
+     "text": "The Crunch being the literal edge of our universe. So yeah.",
+     "frames": 102,
+     "speech_frames": 102
+    }
+   ]
+  },
+  {
+   "panel": "p02_01",
+   "speaker": "narrator",
+   "line": "Whatever came through it came from outside everything we know.",
+   "emotion": "ominous",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "whoosh",
+   "audio": "work/audio/ep01/shot003.wav",
+   "duration_frames": 104,
+   "segments": [
+    {
+     "text": "Whatever came through it came from outside everything we know.",
+     "frames": 98,
+     "speech_frames": 98
+    }
+   ]
+  },
+  {
+   "panel": "p02_02",
+   "speaker": "narrator",
+   "line": "First stop, Xandar. Home of the Corps. Wiped off the map.",
+   "emotion": "somber",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work/audio/ep01/shot004.wav",
+   "duration_frames": 147,
+   "segments": [
+    {
+     "text": "First stop, Xandar.",
+     "frames": 42,
+     "speech_frames": 31
+    },
+    {
+     "text": "Home of the Corps.",
+     "frames": 74,
+     "speech_frames": 62
+    },
+    {
+     "text": "Wiped off the map.",
+     "frames": 26,
+     "speech_frames": 26
+    }
+   ]
+  },
+  {
+   "panel": "p02_03",
+   "speaker": "narrator",
+   "line": "They call themselves the Annihilation Wave. Subtle.",
+   "emotion": "dry",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot005.wav",
+   "duration_frames": 137,
+   "segments": [
+    {
+     "text": "They call themselves the Annihilation Wave. Subtle.",
+     "frames": 132,
+     "speech_frames": 132
+    }
+   ]
+  },
+  {
+   "panel": "p02_03",
+   "speaker": "narrator",
+   "line": "And leading them, Annihilus. Bug guy with a full god complex.",
+   "emotion": "amused, wary",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot006.wav",
+   "duration_frames": 175,
+   "segments": [
+    {
+     "text": "And leading them, Annihilus.",
+     "frames": 122,
+     "speech_frames": 111
+    },
+    {
+     "text": "Bug guy with a full god complex.",
+     "frames": 47,
+     "speech_frames": 47
+    }
+   ]
+  },
+  {
+   "panel": "p02_03",
+   "speaker": "narrator",
+   "line": "In six months he'd already erased what was left of the Skrull Empire.",
+   "emotion": "grim",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot007.wav",
+   "duration_frames": 128,
+   "segments": [
+    {
+     "text": "In six months he'd already erased what was left of the Skrull Empire.",
+     "frames": 123,
+     "speech_frames": 123
+    }
+   ]
+  },
+  {
+   "panel": "p02_03",
+   "speaker": "narrator",
+   "line": "His logic? Our universe is expanding into his. He's just taking it back.",
+   "emotion": "dry, ominous",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot008.wav",
+   "duration_frames": 168,
+   "segments": [
+    {
+     "text": "His logic? Our universe is expanding into his.",
+     "frames": 128,
+     "speech_frames": 116
+    },
+    {
+     "text": "He's just taking it back.",
+     "frames": 35,
+     "speech_frames": 35
+    }
+   ]
+  },
+  {
+   "panel": "p03_01",
+   "speaker": "narrator",
+   "line": "Now it's Daedalus 5, the Kree periphery, and Rich is actually holding the line.",
+   "emotion": "tense buildup",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot009.wav",
+   "duration_frames": 166,
+   "segments": [
+    {
+     "text": "Now it's Daedalus 5, the Kree periphery, and Rich is actually holding the line.",
+     "frames": 161,
+     "speech_frames": 161
+    }
+   ]
+  },
+  {
+   "panel": "p03_01",
+   "speaker": "narrator",
+   "line": "Not winning, mind. But after six months, holding counts for a lot.",
+   "emotion": "weary honesty",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot010.wav",
+   "duration_frames": 175,
+   "segments": [
+    {
+     "text": "Not winning, mind.",
+     "frames": 55,
+     "speech_frames": 44
+    },
+    {
+     "text": "But after six months, holding counts for a lot.",
+     "frames": 114,
+     "speech_frames": 114
+    }
+   ]
+  },
+  {
+   "panel": "p03_02",
+   "speaker": "narrator",
+   "line": "Enter his number two, Quill, who absolutely thinks he's the main character.",
+   "emotion": "wry",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot011.wav",
+   "duration_frames": 145,
+   "segments": [
+    {
+     "text": "Enter his number two, Quill, who absolutely thinks he's the main character.",
+     "frames": 140,
+     "speech_frames": 140
+    }
+   ]
+  },
+  {
+   "panel": "p03_02",
+   "speaker": "narrator",
+   "line": "Rich asks him to lie. So Quill tells him the force fields will hold.",
+   "emotion": "dry, sardonic",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot012.wav",
+   "duration_frames": 141,
+   "segments": [
+    {
+     "text": "Rich asks him to lie.",
+     "frames": 55,
+     "speech_frames": 43
+    },
+    {
+     "text": "So Quill tells him the force fields will hold.",
+     "frames": 81,
+     "speech_frames": 81
+    }
+   ]
+  },
+  {
+   "panel": "p03_02",
+   "speaker": "narrator",
+   "line": "\"That what you wanted to hear?\" he adds. Comforting.",
+   "emotion": "sarcastic",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot013.wav",
+   "duration_frames": 105,
+   "segments": [
+    {
+     "text": "\"That what you wanted to hear?",
+     "frames": 47,
+     "speech_frames": 36
+    },
+    {
+     "text": "\" he adds. Comforting.",
+     "frames": 52,
+     "speech_frames": 52
+    }
+   ]
+  },
+  {
+   "panel": "p03_03",
+   "speaker": "narrator",
+   "line": "Then there's Gamora, deadliest woman in the galaxy and fully aware of it.",
+   "emotion": "impressed",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot014.wav",
+   "duration_frames": 126,
+   "segments": [
+    {
+     "text": "Then there's Gamora, deadliest woman in the galaxy and fully aware of it.",
+     "frames": 121,
+     "speech_frames": 121
+    }
+   ]
+  },
+  {
+   "panel": "p03_03",
+   "speaker": "narrator",
+   "line": "Her plan hasn't changed once. Bring the fight to them. Always.",
+   "emotion": "matter-of-fact",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot015.wav",
+   "duration_frames": 147,
+   "segments": [
+    {
+     "text": "Her plan hasn't changed once.",
+     "frames": 68,
+     "speech_frames": 57
+    },
+    {
+     "text": "Bring the fight to them. Always.",
+     "frames": 73,
+     "speech_frames": 73
+    }
+   ]
+  },
+  {
+   "panel": "p04_01",
+   "speaker": "narrator",
+   "line": "Quill scores her strategy \"C minor.\" Rich tells him to throw that out again.",
+   "emotion": "deadpan",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot016.wav",
+   "duration_frames": 172,
+   "segments": [
+    {
+     "text": "Quill scores her strategy \"C minor.",
+     "frames": 116,
+     "speech_frames": 104
+    },
+    {
+     "text": "\" Rich tells him to throw that out again.",
+     "frames": 51,
+     "speech_frames": 51
+    }
+   ]
+  },
+  {
+   "panel": "p04_02",
+   "speaker": "narrator",
+   "line": "Fun fact, Quill used to be Star-Lord. A living legend. Then something happened.",
+   "emotion": "reflective",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot017.wav",
+   "duration_frames": 188,
+   "segments": [
+    {
+     "text": "Fun fact, Quill used to be Star-Lord.",
+     "frames": 76,
+     "speech_frames": 65
+    },
+    {
+     "text": "A living legend. Then something happened.",
+     "frames": 106,
+     "speech_frames": 106
+    }
+   ]
+  },
+  {
+   "panel": "p04_02",
+   "speaker": "narrator",
+   "line": "He won't say what. Ask, and all you get is: \"The Star-Lord is dead.\"",
+   "emotion": "somber",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work/audio/ep01/shot018.wav",
+   "duration_frames": 144,
+   "segments": [
+    {
+     "text": "He won't say what.",
+     "frames": 41,
+     "speech_frames": 29
+    },
+    {
+     "text": "Ask, and all you get is: \"The Star-Lord is dead. \"",
+     "frames": 98,
+     "speech_frames": 98
+    }
+   ]
+  },
+  {
+   "panel": "p04_02",
+   "speaker": "narrator",
+   "line": "Mid-story, the sky lights up. And even Quill goes quiet.",
+   "emotion": "alarmed",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep01/shot019.wav",
+   "duration_frames": 131,
+   "segments": [
+    {
+     "text": "Mid-story, the sky lights up.",
+     "frames": 81,
+     "speech_frames": 69
+    },
+    {
+     "text": "And even Quill goes quiet.",
+     "frames": 45,
+     "speech_frames": 45
+    }
+   ]
+  },
+  {
+   "panel": "p04_03",
+   "speaker": "narrator",
+   "line": "Right flank barricades just blew, he shouts. It's gonna cascade.",
+   "emotion": "alarmed",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work/audio/ep01/shot020.wav",
+   "duration_frames": 178,
+   "segments": [
+    {
+     "text": "Right flank barricades just blew, he shouts.",
+     "frames": 80,
+     "speech_frames": 68
+    },
+    {
+     "text": "It's gonna cascade.",
+     "frames": 93,
+     "speech_frames": 93
+    }
+   ]
+  },
+  {
+   "panel": "p04_04",
+   "speaker": "narrator",
+   "line": "Translation: the force fields Quill promised would hold are about to blow.",
+   "emotion": "grim, ironic",
+   "motion": "zoom_out",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work/audio/ep01/shot021.wav",
+   "duration_frames": 118,
+   "segments": [
+    {
+     "text": "Translation: the force fields Quill promised would hold are about to blow.",
+     "frames": 113,
+     "speech_frames": 113
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": "The force fields are failing on the right flank and nobody knows who's holding it."
+}

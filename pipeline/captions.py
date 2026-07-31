@@ -61,8 +61,31 @@ def _chunk(text):
     return out
 
 
+def _word_spans(piece, start, span):
+    """Apportion a chunk's frames across its words by character weight.
+
+    The same approximation the chunks themselves use: within one sentence
+    the wav is one take, so word boundaries are estimated, not measured.
+    Good enough for a karaoke highlight, whose job is to feel synced, not
+    to be a phoneme aligner. Returns [(w_start, w_end), ...] per word.
+    """
+    words = piece.split()
+    weights = [len(w) + 1 for w in words]
+    total = sum(weights) or 1
+    spans, spent = [], 0
+    for i, wt in enumerate(weights):
+        share = (span - spent if i == len(words) - 1
+                 else round(span * wt / total))
+        spans.append((start + spent, start + spent + max(share, 0)))
+        spent += share
+    return spans
+
+
 def cues(shots, fps):
-    """(start_frame, end_frame, text, speaker) over the episode timeline.
+    """(start_frame, end_frame, text, speaker, word_spans) over the episode
+    timeline. word_spans has one (start, end) per word of text, for the
+    karaoke highlight; consumers that unpack only the first four fields
+    keep working.
 
     The shot's duration_frames is authoritative for where the video is:
     it covers the whole wav, including the trailing shot-gap silence that
@@ -93,7 +116,8 @@ def cues(shots, fps):
                              else round(speech * len(piece) / total))
                     if share > 0:
                         out.append((t + spent, t + spent + share, piece,
-                                    shot.get("speaker") or "narrator"))
+                                    shot.get("speaker") or "narrator",
+                                    _word_spans(piece, t + spent, share)))
                     spent += share
             t += frames
         clock += dur  # never the segment sum
@@ -115,6 +139,9 @@ DEFAULTS = {
     "outline_ratio": 9,       # size // ratio
     "shadow": True,
     "color": "#FFFFFF",
+    "highlight_color": None,  # set (e.g. "#FFD54A") for word-level karaoke:
+                              # the word being spoken renders in this colour,
+                              # one overlay per word (how Comicfy captions work)
     "speaker_colors": {},     # {"Ada": "#FF80AB", ...}; narrator falls to color
     # where the text block sits. The reference channels all keep captions in
     # the middle band of the frame, where the thumb doesn't cover them and
@@ -170,28 +197,88 @@ def render_pngs(cue_list, width, height, out_dir, style=None):
     for i, cue in enumerate(cue_list):
         text, speaker = cue[2], (cue[3] if len(cue) > 3 else "narrator")
         fill = by_speaker.get(speaker, base)
-        img = Image.new("RGBA", (width, strip_h), (0, 0, 0, 0))
-        draw = ImageDraw.Draw(img)
-        # uppercase reads as a title card rather than a subtitle
-        lines = _wrap(text.upper() if st["uppercase"] else text,
-                      draw, font, width - 110)
-        line_h = round(size * 1.22)
-        y = strip_h - len(lines) * line_h
-        for line in lines:
-            w = draw.textlength(line, font=font)
-            x = (width - w) / 2
-            if st["shadow"]:
-                off = max(2, size // 14)
-                draw.text((x + off, y + off), line, font=font,
-                          fill=(0, 0, 0, 150), stroke_width=stroke,
-                          stroke_fill=(0, 0, 0, 150))
-            draw.text((x, y), line, font=font, fill=fill,
-                      stroke_width=stroke, stroke_fill=(0, 0, 0, 255))
-            y += line_h
+        img = _cue_image(text, width, strip_h, font, size, st, stroke, fill)
         p = out_dir / f"cue{i:04d}.png"
         img.save(p)
         paths.append(p)
     return paths, height - strip_h - margin_b
+
+
+def _cue_image(text, width, strip_h, font, size, st, stroke, fill,
+               highlight_idx=None, highlight=None):
+    """Draw one caption strip. With highlight_idx, that word (by position
+    in text.split()) renders in the highlight colour - drawing word by
+    word with a running x offset, so the layout is identical across all
+    of a cue's karaoke variants and only the colour changes."""
+    from PIL import Image, ImageDraw
+
+    img = Image.new("RGBA", (width, strip_h), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    # uppercase reads as a title card rather than a subtitle
+    shown = text.upper() if st["uppercase"] else text
+    lines = _layout(shown.split(), draw, font, width - 110)
+    line_h = round(size * 1.22)
+    y = strip_h - len(lines) * line_h
+    space_w = draw.textlength(" ", font=font)
+    word_i = 0
+    for line_words in lines:
+        line = " ".join(line_words)
+        x = (width - draw.textlength(line, font=font)) / 2
+        if st["shadow"]:
+            off = max(2, size // 14)
+            draw.text((x + off, y + off), line, font=font,
+                      fill=(0, 0, 0, 150), stroke_width=stroke,
+                      stroke_fill=(0, 0, 0, 150))
+        for w in line_words:
+            colour = (highlight if highlight is not None
+                      and word_i == highlight_idx else fill)
+            draw.text((x, y), w, font=font, fill=colour,
+                      stroke_width=stroke, stroke_fill=(0, 0, 0, 255))
+            x += draw.textlength(w, font=font) + space_w
+            word_i += 1
+        y += line_h
+    return img
+
+
+def render_karaoke(cue_list, width, height, out_dir, style=None):
+    """Word-level karaoke variant of render_pngs: one PNG per WORD, each
+    shown for that word's span from cues(). Same strip geometry as
+    render_pngs, so the two are drop-in alternatives for stage 7.
+
+    Returns ([(path, start_frame, end_frame)], y).
+    """
+    st = {**DEFAULTS, **(style or {})}
+    out_dir.mkdir(parents=True, exist_ok=True)
+    size = round(height * st["size_pct"])
+    font = _font(size, st.get("font"))
+    strip_h = round(height * 0.22)
+    if st.get("position", "center") == "center":
+        margin_b = height - round(height * st["center_pct"])
+    else:
+        margin_b = round(height * st["bottom_pct"])
+    stroke = max(4, size // st["outline_ratio"])
+    base = _hex(st["color"])
+    highlight = _hex(st["highlight_color"] or "#FFD54A")
+    by_speaker = {k: _hex(v) for k, v in (st.get("speaker_colors") or {}).items()}
+
+    entries = []
+    for i, cue in enumerate(cue_list):
+        start, end, text = cue[0], cue[1], cue[2]
+        speaker = cue[3] if len(cue) > 3 else "narrator"
+        spans = cue[4] if len(cue) > 4 else None
+        fill = by_speaker.get(speaker, base)
+        words = text.split()
+        if not spans or len(spans) != len(words):
+            spans = _word_spans(text, start, end - start)
+        for j, (w0, w1) in enumerate(spans):
+            if w1 <= w0:
+                continue
+            img = _cue_image(text, width, strip_h, font, size, st, stroke,
+                             fill, highlight_idx=j, highlight=highlight)
+            p = out_dir / f"cue{i:04d}_w{j:02d}.png"
+            img.save(p)
+            entries.append((p, w0, w1))
+    return entries, height - strip_h - margin_b
 
 
 def render_badge(text, height, out_path, style=None):
@@ -222,15 +309,16 @@ def render_badge(text, height, out_path, style=None):
     return out_path, margin, margin
 
 
-def _wrap(text, draw, font, max_w):
-    words, lines, cur = text.split(), [], []
+def _layout(words, draw, font, max_w):
+    """Greedy wrap, kept as word lists so callers can address single words."""
+    lines, cur = [], []
     for word in words:
         trial = " ".join(cur + [word])
         if cur and draw.textlength(trial, font=font) > max_w:
-            lines.append(" ".join(cur))
+            lines.append(cur)
             cur = [word]
         else:
             cur.append(word)
     if cur:
-        lines.append(" ".join(cur))
+        lines.append(cur)
     return lines
