@@ -8,7 +8,7 @@ Fills `audio` and `duration_frames` on every shot in every manifest.
 
 Requires the Voicebox app to be open. Run AFTER the stage-5 review gate.
 """
-import io, json, re, struct, subprocess, sys, tempfile, time, urllib.request, wave
+import difflib, io, json, random, re, struct, subprocess, sys, tempfile, time, urllib.request, wave
 from pathlib import Path
 
 FPS = 30
@@ -175,9 +175,11 @@ def _retempo(raw, tempo):
     return raw
 
 
-def _synth_one(port, profile_id, text, engine, instruct=None):
+def _synth_one(port, profile_id, text, engine, instruct=None, seed=None):
     body = {"profile_id": profile_id, "text": text,
             "language": "en", "engine": engine}
+    if seed is not None:
+        body["seed"] = seed
     if instruct and engine in INSTRUCT_ENGINES:
         body["instruct"] = instruct
     gen = _api(port, "POST", "/generate", body)
@@ -194,6 +196,57 @@ def _synth_one(port, profile_id, text, engine, instruct=None):
             pass
         time.sleep(1.5)
     raise RuntimeError("synthesis timed out")
+
+
+LAUGH_MARKERS = ("haha", "ha ha", "ha-ha", "huhu", "hu hu", "hehe",
+                 "heh heh", "hah hah")
+MAX_SEC_PER_WORD = 0.85   # a laughing fit or stall runs far slower than speech
+VERIFY_RETRIES = 3
+
+
+def _transcribe(port, wav_bytes):
+    """Whisper the clip through Voicebox. Returns text, or None if the
+    endpoint is unavailable - verification degrades to the rate check."""
+    b = "----vbx-verify"
+    body = ((f"--{b}\r\nContent-Disposition: form-data; name=\"file\"; "
+             f"filename=\"v.wav\"\r\nContent-Type: audio/wav\r\n\r\n").encode()
+            + wav_bytes + f"\r\n--{b}--\r\n".encode())
+    req = urllib.request.Request(
+        f"http://127.0.0.1:{port}/transcribe", data=body,
+        headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return json.loads(r.read()).get("text", "")
+    except Exception:
+        return None
+
+
+def _flag_delivery(port, params, body, sentence):
+    """Why this take can't ship, or None. qwen occasionally breaks into
+    laughter or vocal noise mid-sentence (stochastic - a clean text can fail
+    on the next run), so every take is checked: words-per-second first
+    (a laughing fit runs far slower than speech), then a whisper pass for
+    laugh sounds and for the words being unrecognizably wrong."""
+    sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
+    seconds = len(body) / (sw * ch) / sr
+    words = max(len(sentence.split()), 1)
+    if seconds / words > MAX_SEC_PER_WORD:
+        return f"speech rate anomaly ({seconds / words:.2f}s/word)"
+    buf = io.BytesIO()
+    with wave.open(buf, "wb") as w:
+        w.setparams(params)
+        w.writeframes(body)
+    heard = _transcribe(port, buf.getvalue())
+    if heard is None:
+        return None
+    heard = heard.strip().lower()
+    if any(m in heard for m in LAUGH_MARKERS):
+        return "laughter in output"
+    want = sentence.strip().lower()
+    ratio = difflib.SequenceMatcher(None, heard[:len(want) + 20], want).ratio()
+    if ratio < 0.45:
+        return f"output doesn't match text (similarity {ratio:.2f})"
+    return None
 
 
 def _respell(text, mapping):
@@ -221,15 +274,28 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE,
     segments = []
     for sentence, pause_ms in _sentences(
             _speakable(text), pace.get("pause_ms"), pace.get("ellipsis_pause_ms")):
-        raw = _retempo(_synth_one(port, profile_id,
-                                  _respell(sentence, respell),
-                                  engine, instruct),
-                       tempo)
-        with wave.open(io.BytesIO(raw), "rb") as w:
-            params = params or w.getparams()
-            frames = w.readframes(w.getnframes())
-        sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
-        body = _trim(frames, sw, ch, sr)
+        # every take is verified; qwen's failure mode (laughter, vocal noise)
+        # is stochastic, so a bad take gets a fresh seed rather than a rerun
+        # of the same one
+        for attempt in range(VERIFY_RETRIES):
+            seed = None if attempt == 0 else random.randrange(1 << 31)
+            raw = _retempo(_synth_one(port, profile_id,
+                                      _respell(sentence, respell),
+                                      engine, instruct, seed),
+                           tempo)
+            with wave.open(io.BytesIO(raw), "rb") as w:
+                params = params or w.getparams()
+                frames = w.readframes(w.getnframes())
+            sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
+            body = _trim(frames, sw, ch, sr)
+            problem = _flag_delivery(port, params, body, sentence)
+            if not problem:
+                break
+            print(f"    take {attempt + 1} rejected ({problem}): "
+                  f"{sentence[:50]!r}")
+        else:
+            print(f"    WARNING: no clean take after {VERIFY_RETRIES} tries, "
+                  f"keeping the last one: {sentence[:50]!r}")
         pieces.append(body)
         gap_bytes = int(sr * pause_ms / 1000) * sw * ch if pause_ms else 0
         if gap_bytes:
