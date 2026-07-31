@@ -14,7 +14,10 @@ from pathlib import Path
 FPS = 30
 SILENT_S = 1.2
 DEFAULT_PROFILE = "Narrator"
-ENGINE = "kokoro"
+# fallback only - profiles carry their own default_engine. kokoro is retired
+# as a narrator voice (flat delivery, ignores instruct); qwen_custom_voice is
+# voicebox's default engine and honors delivery direction.
+ENGINE = "qwen_custom_voice"
 # engines that actually act a delivery direction. kokoro accepts `instruct`
 # and ignores it; qwen visibly changes pace and register (a "whispered,
 # afraid" reading of the same line ran 69% longer than a plain one).
