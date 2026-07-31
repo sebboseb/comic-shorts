@@ -90,7 +90,13 @@ shorts:
     triumphant: "output015.mp3"
     action: "output004.mp3"         # loudest
     default: "output021.mp3"
-  voicebox_profile: "Narrator"      # qwen Dylan; stage 6 default voice;
+  voicebox_profile: "aud_qwen_Ryan" # bake-off finalist (2026-07-31); the
+                                    # other finalist is Narrator-CB
+                                    # (chatterbox_turbo, ignores instruct)
+  # constant delivery direction for the narrator voice (qwen engines only);
+  # per-shot manifest `emotion` is appended to this
+  narrator_instruct: "Energetic, sardonic video-recap narrator: deep male voice, quick pace, dry smirk, punchy emphasis on names and reversals, storyteller confidence."
+  # previous default: "Narrator"    # qwen Dylan; stage 6 default voice;
                                     # per-character
                                     # override with `voicebox_profile` below
 

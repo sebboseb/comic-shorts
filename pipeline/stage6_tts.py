@@ -260,6 +260,11 @@ def run(config, workdir: Path):
     # enough that one character reads as several
     styles = {c["name"]: c.get("speaking_style")
               for c in config.get("characters", []) if c.get("speaking_style")}
+    # the narrator isn't a character; its constant delivery direction gets
+    # its own key so per-shot emotion rides on a stable persona
+    if config.get("shorts", {}).get("narrator_instruct"):
+        styles.setdefault("narrator",
+                          config["shorts"]["narrator_instruct"])
     voice_map = dict(VOICE_MAP)
     for ch in config.get("characters", []):
         if ch.get("voicebox_profile"):
