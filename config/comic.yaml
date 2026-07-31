@@ -36,7 +36,8 @@ shorts:
   # or the narration stops feeling continuous the way the references do.
   shot_gap_ms: 180         # after each line, before the next shot
   speech_tempo: 1.15       # speeds the words only; pauses stay as set above
-  captions: false          # off until the motion and voice are settled
+  captions: true           # every reference channel burns captions in
+  part_badge: true         # "Part - N" chip top-left, from the short_id
   # How far the picture may travel per second, as a fraction of frame width.
   # A full traverse per shot reads as swooping past everything; this keeps the
   # move slow enough to settle on the focus point.
@@ -49,11 +50,10 @@ shorts:
   #        move aimed at the focus box. Keeps the drawn composition intact.
   # fill - crop a frame-shaped window around the subject. Fills the screen but
   #        throws away everything outside it, neighbouring panels included.
-  frame_mode: fit
-  # A wide panel fitted whole leaves most of a 9:16 frame as blurred margin.
-  # Below this fraction of frame height, crop it to fill and pan across
-  # instead. 1.0 = always fill, 0 = always letterbox.
-  wide_fill_threshold: 0.55
+  #        This is how every reference channel frames every shot (2026-07-31
+  #        tiktoks/ analysis): art edge-to-edge, zero letterbox. Repeated
+  #        panels re-frame per beat so each shot reads as a cut.
+  frame_mode: fill
   caption_style:
     font: "/System/Library/Fonts/Supplemental/Impact.ttf"
     size_pct: 0.046        # of frame height
@@ -61,7 +61,8 @@ shorts:
     outline_ratio: 9       # smaller number = thicker black outline
     shadow: true
     color: "#FFFFFF"       # narrator and anything unlisted
-    bottom_pct: 0.10
+    position: center       # mid-frame, where the reference channels put them
+    center_pct: 0.55       # text bottom lands at this fraction of height
     # a caption in the speaker's colour reinforces who is talking, which
     # matters when several characters share a register
     speaker_colors:

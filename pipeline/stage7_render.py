@@ -1,10 +1,13 @@
 """Stage 7: render manifests to vertical video with ffmpeg.
 
-One clip per shot: the panel art fitted onto a 1080x1920 canvas over a
-blurred, darkened copy of itself, with a per-shot Ken Burns move driven by
-the manifest's `motion` intent and aimed at the panel's `focus_box`. Clips
-carry their own audio (the stage-6 wav, or generated silence), so
-concatenating them keeps A/V in sync without a global offset.
+One clip per shot: a frame-shaped window cropped around the panel's
+`focus_box` fills the whole 1080x1920 canvas (frame_mode=fill, how the
+reference channels frame everything), with a gentle drift driven by the
+manifest's `motion` intent. Consecutive shots on the same panel re-frame
+(tighter, wider) so every beat reads as a cut. frame_mode=fit keeps the
+old letterbox-over-blur look. Clips carry their own audio (the stage-6
+wav, or generated silence), so concatenating them keeps A/V in sync
+without a global offset.
 
 Captions are burned in from stage 6's per-sentence timings (see
 captions.py), and a music bed is mixed under the narration per the
@@ -18,6 +21,7 @@ Output: work/renders/epNN.mp4
 """
 
 import json
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -33,6 +37,16 @@ PRESCALE = 2             # upscale source before zoompan (smaller rounding step)
 SUPERSAMPLE = 2          # render the move at Nx target, then average down
 DRIFT_RATE = 0.055       # fraction of frame width the picture may travel per
                          # second; a full traverse per shot reads as swooping
+
+# Re-framing for consecutive shots on the SAME panel. Stage 4 deliberately
+# reuses a panel across beats; rendering those beats with the same window
+# makes them one long static shot on screen, and the felt cut rate collapses
+# (the reference channels re-frame on every beat: wide, then the face, then
+# wider again). Each entry is (tightness multiplier, max window fraction of
+# the panel): the multiplier varies subject room, and the cap guarantees a
+# visible punch-in even when the focus box is so large that any tightness
+# clamps to the whole panel.
+REFRAME = ((1.0, 1.0), (0.62, 0.7), (1.5, 1.0), (0.85, 0.55))
 
 
 def _est_frames(line):
@@ -102,12 +116,13 @@ def _zoompan(motion, n, cx, cy, fw, fh):
     return f"zoompan=z='{z}':x='{x}':y='{y}':d=1:s={fw}x{fh}:fps={FPS}"
 
 
-def _fill_coverage(pw, ph):
-    """Fraction of the frame's height a fitted panel would occupy."""
-    return (W / pw * ph) / H
+def _part_number(short_id):
+    """ep01 -> 1, for the series badge. None when the id carries no number."""
+    m = re.search(r"(\d+)", short_id or "")
+    return int(m.group(1)) if m else None
 
 
-def _frame_window(pw, ph, focus, tightness):
+def _frame_window(pw, ph, focus, tightness, max_frac=1.0):
     """A frame-shaped window sized to the SUBJECT, not to the panel.
 
     The previous approach cropped a window the panel's full height, which
@@ -131,13 +146,15 @@ def _frame_window(pw, ph, focus, tightness):
     else:
         th = tw / aspect
 
-    # a window can't exceed the panel; clamping either axis re-derives the other
-    if tw > pw:
-        tw, th = pw, pw / aspect
-    if th > ph:
-        th, tw = ph, ph * aspect
-    if tw > pw:                     # panel narrower than one frame of its height
-        tw, th = pw, pw / aspect
+    # a window can't exceed the panel (or, on a re-framed repeat, max_frac of
+    # it); clamping either axis re-derives the other
+    lw, lh = pw * max_frac, ph * max_frac
+    if tw > lw:
+        tw, th = lw, lw / aspect
+    if th > lh:
+        th, tw = lh, lh * aspect
+    if tw > lw:                     # panel narrower than one frame of its height
+        tw, th = lw, lw / aspect
 
     cx, cy = fx + fw / 2, fy + fh / 2
     x = min(max(cx - tw / 2, 0), max(0, pw - tw))
@@ -145,49 +162,9 @@ def _frame_window(pw, ph, focus, tightness):
     return round(x), round(y), round(tw), round(th)
 
 
-def _wide_chain(pw, ph, frames, motion, cx, dur):
-    """Full-frame treatment for a panel too wide to fit without huge margins.
-
-    Crops a frame-shaped window the panel's full height and slides it across,
-    so the panel fills the screen and reveals itself over the shot instead of
-    sitting in a letterbox. A 4:1 panel fitted to width covers 14% of the
-    frame; this covers all of it.
-
-    Cropping is done on a pre-scaled copy for the same reason zoompan is: the
-    window origin lands on whole source pixels, and at 1:1 that quantises to
-    a visible 1px stutter as it moves.
-    """
-    sw, sh = pw * PRESCALE, ph * PRESCALE
-    win_w = min(sw, max(2, round(sh * W / H) // 2 * 2))
-    travel = sw - win_w
-
-    # Land on the focus. Traversing the whole panel in one shot reads as
-    # swooping past everything without settling on anything, so the drift is
-    # rate-limited and aimed: it ends on the focus point, having covered only
-    # as much ground as DRIFT_RATE allows in the time available.
-    focus = max(0, min(travel, round(cx * sw - win_w / 2)))
-    budget = min(travel, round(DRIFT_RATE * W / H * sh * dur))
-
-    if motion == "shake" or travel < 8 or budget < 8:
-        # no wobble: a sine on the window origin read as a mechanical shudder,
-        # not an impact. Hold the focus instead.
-        x = str(focus)
-    else:
-        # come from whichever side has room, so the move settles on the subject
-        start = focus - budget if focus - budget >= 0 else focus + budget
-        start = max(0, min(travel, start))
-        x = f"{start}+({focus}-{start})*min(1,t/{max(dur, 0.1):.3f})"
-
-    return (f"scale=iw*{PRESCALE}:ih*{PRESCALE}:flags=lanczos,"
-            # no eval= option in this build; crop's x is flagged runtime-
-            # evaluated already, verified by frame diff
-            f"crop={win_w}:{sh}:x='{x}':y=0,"
-            f"scale={W}:{H}:flags=lanczos")
-
-
-def _framed_chain(pw, ph, focus, motion, dur, tightness):
+def _framed_chain(pw, ph, focus, motion, dur, tightness, max_frac=1.0):
     """Crop the subject-framed window, drift gently inside it, fill the frame."""
-    x, y, w, h = _frame_window(pw, ph, focus, tightness)
+    x, y, w, h = _frame_window(pw, ph, focus, tightness, max_frac)
     s = PRESCALE
     sx, sy, sw, sh = x * s, y * s, w * s, h * s
 
@@ -207,8 +184,8 @@ def _framed_chain(pw, ph, focus, motion, dur, tightness):
 
 
 def _render_shot(img_path, audio_path, frames, motion, cx, cy,
-                 panel_size, out_path, wide_threshold=0.55,
-                 focus=None, tightness=2.4, frame_mode="fit"):
+                 panel_size, out_path,
+                 focus=None, tightness=2.4, frame_mode="fill", max_frac=1.0):
     dur = frames / FPS
     pw, ph = panel_size
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
@@ -221,7 +198,7 @@ def _render_shot(img_path, audio_path, frames, motion, cx, cy,
     if frame_mode == "fill":
         # subject-framed crop: fills the canvas but discards whatever falls
         # outside the frame-shaped window, including neighbouring panel art
-        vf = (f"[0:v]{_framed_chain(pw, ph, focus, motion, dur, tightness)},"
+        vf = (f"[0:v]{_framed_chain(pw, ph, focus, motion, dur, tightness, max_frac)},"
               f"format=yuv420p[v]")
     else:
         # fit: the whole panel, letterboxed over a blurred copy of itself, with
@@ -293,13 +270,11 @@ def run(config, workdir: Path):
         raise SystemExit("no manifests in work/manifests - run stage 4 first")
 
     captions_on = config.get("shorts", {}).get("captions", True)
-    # below this fraction of frame height, a fitted panel is mostly margin;
-    # crop it to fill the frame and pan across instead
-    wide_threshold = config.get("shorts", {}).get("wide_fill_threshold", 0.55)
+    part_badge = config.get("shorts", {}).get("part_badge", False)
     global DRIFT_RATE
     DRIFT_RATE = config.get("shorts", {}).get("drift_rate", DRIFT_RATE)
     tightness = config.get("shorts", {}).get("frame_tightness", 2.4)
-    frame_mode = config.get("shorts", {}).get("frame_mode", "fit")
+    frame_mode = config.get("shorts", {}).get("frame_mode", "fill")
 
     out_dir = workdir / "renders"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -315,12 +290,15 @@ def run(config, workdir: Path):
 
         clips = []
         estimated = 0
+        prev_panel, repeat = None, 0
         for i, shot in enumerate(data.get("shots", [])):
             panel = panels.get(shot.get("panel"))
             if panel is None:
                 print(f"  WARNING: {short_id} shot{i:03d} references unknown "
                       f"panel {shot.get('panel')!r}, skipping")
                 continue
+            repeat = repeat + 1 if shot.get("panel") == prev_panel else 0
+            prev_panel = shot.get("panel")
 
             img = workdir / panel["clean_file"]
             audio = shot.get("audio")
@@ -347,10 +325,11 @@ def run(config, workdir: Path):
                 k = csize[0] / size[0], csize[1] / size[1]
                 focus = (fb[0] * k[0], fb[1] * k[1], fb[2] * k[0], fb[3] * k[1])
             clip = tmp / f"shot{i:03d}.mp4"
+            tm, max_frac = REFRAME[repeat % len(REFRAME)]
             _render_shot(img, audio_path, frames,
                          shot.get("motion", "hold"), cx, cy,
-                         csize, clip, wide_threshold, focus, tightness,
-                         frame_mode)
+                         csize, clip, focus,
+                         tightness * tm, frame_mode, max_frac)
             clips.append(clip)
             print(f"  {short_id} shot{i:03d} {shot.get('motion','hold'):<9} "
                   f"{frames:>4}f  {panel['id']}")
@@ -363,28 +342,38 @@ def run(config, workdir: Path):
         listing.write_text("".join(f"file '{c.resolve()}'\n" for c in clips))
         out_path = out_dir / f"{short_id}.mp4"
 
+        # burned-in overlays: (png, x, y, enable-window or None for always).
+        # One pass over the joined video: doing it per-shot would re-encode
+        # every clip and still need the join.
+        overlays = []
+        n_part = _part_number(short_id)
+        if part_badge and n_part is not None:
+            badge = captions.render_badge(
+                f"Part - {n_part}", H, tmp / "badge.png",
+                config.get("shorts", {}).get("badge_style"))
+            overlays.append(badge + (None,))
         if captions_on:
-            # burn captions in one pass over the joined video: doing it
-            # per-shot would re-encode every clip and still need this join
+            cue_list = captions.cues(data.get("shots", []), FPS)
+            style = config.get("shorts", {}).get("caption_style") or {}
+            pngs, y = captions.render_pngs(cue_list, W, H, tmp / "cues", style)
+            overlays += [(p, 0, y, (a / FPS, b / FPS))
+                         for p, (a, b, *_) in zip(pngs, cue_list)]
+
+        if overlays:
             joined = tmp / "joined.mp4"
             subprocess.run(
                 ["ffmpeg", "-y", "-loglevel", "error", "-f", "concat",
                  "-safe", "0", "-i", str(listing), "-c", "copy", str(joined)],
                 check=True, capture_output=True, text=True)
-            cue_list = captions.cues(data.get("shots", []), FPS)
-            style = config.get("shorts", {}).get("caption_style") or {}
-            pngs, y = captions.render_pngs(cue_list, W, H, tmp / "cues", style)
             cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(joined)]
-            for p in pngs:
+            for p, _, _, _ in overlays:
                 cmd += ["-i", str(p)]
             chain, prev = [], "0:v"
-            for n, cue in enumerate(cue_list):
-                a, b = cue[0], cue[1]
-                label = f"v{n}"
-                chain.append(
-                    f"[{prev}][{n+1}:v]overlay=0:{y}:"
-                    f"enable='between(t,{a/FPS:.3f},{b/FPS:.3f})'[{label}]")
-                prev = label
+            for n, (_, x, y, window) in enumerate(overlays):
+                enable = ("" if window is None else
+                          f":enable='between(t,{window[0]:.3f},{window[1]:.3f})'")
+                chain.append(f"[{prev}][{n+1}:v]overlay={x}:{y}{enable}[v{n}]")
+                prev = f"v{n}"
             cmd += ["-filter_complex", ";".join(chain),
                     "-map", f"[{prev}]", "-map", "0:a",
                     "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",

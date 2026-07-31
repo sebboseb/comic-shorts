@@ -116,7 +116,12 @@ DEFAULTS = {
     "shadow": True,
     "color": "#FFFFFF",
     "speaker_colors": {},     # {"Ada": "#FF80AB", ...}; narrator falls to color
-    "bottom_pct": 0.10,
+    # where the text block sits. The reference channels all keep captions in
+    # the middle band of the frame, where the thumb doesn't cover them and
+    # the eye is already parked; "bottom" is the classic subtitle position.
+    "position": "center",     # center | bottom
+    "center_pct": 0.55,       # position=center: text bottom lands here
+    "bottom_pct": 0.10,       # position=bottom: margin under the text
 }
 
 
@@ -151,7 +156,12 @@ def render_pngs(cue_list, width, height, out_dir, style=None):
     size = round(height * st["size_pct"])
     font = _font(size, st.get("font"))
     strip_h = round(height * 0.22)
-    margin_b = round(height * st["bottom_pct"])
+    if st.get("position", "center") == "center":
+        # text is drawn bottom-aligned inside the strip, so placing the
+        # strip's bottom edge at center_pct puts the block mid-frame
+        margin_b = height - round(height * st["center_pct"])
+    else:
+        margin_b = round(height * st["bottom_pct"])
     stroke = max(4, size // st["outline_ratio"])
     base = _hex(st["color"])
     by_speaker = {k: _hex(v) for k, v in (st.get("speaker_colors") or {}).items()}
@@ -182,6 +192,34 @@ def render_pngs(cue_list, width, height, out_dir, style=None):
         img.save(p)
         paths.append(p)
     return paths, height - strip_h - margin_b
+
+
+def render_badge(text, height, out_path, style=None):
+    """The episode tag the reference channels put top-left ("Part - 33"):
+    a small rounded amber chip with dark text, present for the whole video.
+    It is what tells a mid-scroll viewer this is a series worth following.
+
+    Returns (path, x, y) for the overlay.
+    """
+    from PIL import Image, ImageDraw
+
+    st = {"chip": "#F5B301", "text": "#1A1A1A", **(style or {})}
+    size = round(height * 0.017)
+    font = _font(size, st.get("font"))
+    pad_x, pad_y = round(size * 0.9), round(size * 0.55)
+
+    probe = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
+    tw = round(probe.textlength(text, font=font))
+    w, h = tw + 2 * pad_x, size + 2 * pad_y
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    draw.rounded_rectangle((0, 0, w - 1, h - 1), radius=h // 4,
+                           fill=_hex(st["chip"]))
+    draw.text((pad_x, pad_y - round(size * 0.12)), text, font=font,
+              fill=_hex(st["text"]))
+    img.save(out_path)
+    margin = round(height * 0.018)
+    return out_path, margin, margin
 
 
 def _wrap(text, draw, font, max_w):
