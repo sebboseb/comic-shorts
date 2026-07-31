@@ -24,6 +24,8 @@ from PIL import Image
 
 MAX_SEND_PX = 1400  # long side sent to the vision model
 
+BATCH_STATE_FILE = "batch_id.txt"
+
 SYSTEM_PROMPT = """You analyze comic book panels for an automated video pipeline.
 You are given reference images of the recurring characters first, then one panel.
 Respond with ONLY a JSON object, no markdown fences, no commentary:
@@ -70,6 +72,25 @@ def _parse_json(text: str):
         if text.startswith("json"):
             text = text[4:]
     return json.loads(text)
+
+
+def _get_or_create_batch(client, requests, workdir: Path):
+    """Resume a previously submitted batch if its id is on disk and still
+    retrievable; otherwise submit a new one and persist its id."""
+    state = workdir / BATCH_STATE_FILE
+    if state.exists():
+        batch_id = state.read_text().strip()
+        try:
+            batch = client.messages.batches.retrieve(batch_id)
+            print(f"resuming batch {batch_id} ({batch.processing_status})")
+            return batch
+        except anthropic.NotFoundError:
+            print(f"stale batch id {batch_id} (not found on API), "
+                  "submitting fresh")
+    batch = client.messages.batches.create(requests=requests)
+    state.write_text(batch.id)
+    print(f"batch {batch.id} submitted ({len(requests)} panels), polling...")
+    return batch
 
 
 def _norm_to_px(box, width, height):
@@ -133,8 +154,7 @@ def run(config, workdir: Path):
             ),
         ))
 
-    batch = client.messages.batches.create(requests=requests)
-    print(f"batch {batch.id} submitted ({len(requests)} panels), polling...")
+    batch = _get_or_create_batch(client, requests, workdir)
 
     while True:
         batch = client.messages.batches.retrieve(batch.id)
@@ -190,5 +210,6 @@ def run(config, workdir: Path):
     unknowns = sum(1 for p in results for d in p.get("dialogue", [])
                    if d.get("speaker") == "unknown")
     (workdir / "understanding.json").write_text(json.dumps(results, indent=2))
+    (workdir / BATCH_STATE_FILE).unlink(missing_ok=True)
     print(f"\nDone -> understanding.json"
           f" ({unknowns} lines with unknown speaker to fix at review)")

@@ -44,6 +44,9 @@ LaMa inpainting weights auto-download on the first stage-3 run.
 ```bash
 python run.py --stage 1        # panels -> work/panels/, check flagged pages
 python run.py --stage 2        # vision pass -> work/understanding.json (API cost: cents)
+                               # interrupted? just rerun - it re-attaches to the
+                               # submitted batch via work/batch_id.txt instead of
+                               # paying again; delete that file to force a fresh submit
 python run.py --stage 3        # inpaint + upscale -> work/clean/ (GPU, local)
 python run.py --stage 4        # story compile -> work/manifests/ep*.json
 python run.py --stage 5        # review page -> work/review/index.html
