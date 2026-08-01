@@ -1,347 +1,347 @@
 {
-  "short_id": "ep01",
-  "title": "This Land Shark Crashed a Superhero Pool Party",
-  "description": "Jeff the Land Shark gets his floaties on and heads to a pool party full of Marvel heroes. It goes about as well as you'd expect.",
-  "hashtags": [
-    "#comic",
-    "#JeffTheLandShark",
-    "#Marvel",
-    "#shark",
-    "#poolparty"
-  ],
-  "music_mood": "playful",
-  "hook_note": "A tiny cartoon shark in a Deadpool costume and snorkel goggles is an instant scroll-stopper before a single word lands.",
-  "shots": [
+ "short_id": "ep01",
+ "title": "This Land Shark Crashed a Superhero Pool Party",
+ "description": "Jeff the Land Shark gets his floaties on and heads to a pool party full of Marvel heroes. It goes about as well as you'd expect.",
+ "hashtags": [
+  "#comic",
+  "#JeffTheLandShark",
+  "#Marvel",
+  "#shark",
+  "#poolparty"
+ ],
+ "music_mood": "playful",
+ "hook_note": "A tiny cartoon shark in a Deadpool costume and snorkel goggles is an instant scroll-stopper before a single word lands.",
+ "shots": [
+  {
+   "panel": "p01_02",
+   "speaker": "narrator",
+   "line": "The motherfucking GOAT Jeff the Land Shark, and today he is going swimming.",
+   "emotion": "warm, dry, pleased",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot000.wav",
+   "duration_frames": 107,
+   "segments": [
     {
-      "panel": "p01_02",
-      "speaker": "narrator",
-      "line": "This is Jeff the Land Shark, certified GOAT, and today he is going swimming.",
-      "emotion": "warm, dry, pleased",
-      "motion": "zoom_face",
-      "hero": true,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot000.wav",
-      "duration_frames": 121,
-      "segments": [
-        {
-          "text": "This is Jeff the Land Shark, certified GOAT, and today he is going swimming.",
-          "frames": 117,
-          "speech_frames": 117
-        }
-      ]
-    },
-    {
-      "panel": "p01_02",
-      "speaker": "narrator",
-      "line": "He has the goggles, the fins, and a Deadpool floaty, because the man has taste.",
-      "emotion": "dry",
-      "motion": "hold",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot001.wav",
-      "duration_frames": 99,
-      "segments": [
-        {
-          "text": "He has the goggles, the fins, and a Deadpool floaty, because the man has taste.",
-          "frames": 95,
-          "speech_frames": 95
-        }
-      ]
-    },
-    {
-      "panel": "p01_03",
-      "speaker": "narrator",
-      "line": "The destination is a superhero pool party, packed with half the Marvel roster.",
-      "emotion": "cheerful",
-      "motion": "slow_pan",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot002.wav",
-      "duration_frames": 115,
-      "segments": [
-        {
-          "text": "The destination is a superhero pool party, packed with half the Marvel roster.",
-          "frames": 110,
-          "speech_frames": 110
-        }
-      ]
-    },
-    {
-      "panel": "p02_01",
-      "speaker": "narrator",
-      "line": "And the little land shark pulls up dressed head to tail as Deadpool.",
-      "emotion": "dry, pleased",
-      "motion": "zoom_out",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot003.wav",
-      "duration_frames": 86,
-      "segments": [
-        {
-          "text": "And the little land shark pulls up dressed head to tail as Deadpool.",
-          "frames": 81,
-          "speech_frames": 81
-        }
-      ]
-    },
-    {
-      "panel": "p02_02",
-      "speaker": "narrator",
-      "line": "Right away he's mobbed like a celebrity, photos, ice cream, the works.",
-      "emotion": "warm",
-      "motion": "slow_pan",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot004.wav",
-      "duration_frames": 120,
-      "segments": [
-        {
-          "text": "Right away he's mobbed like a celebrity, photos, ice cream, the works.",
-          "frames": 116,
-          "speech_frames": 116
-        }
-      ]
-    },
-    {
-      "panel": "p02_03",
-      "speaker": "narrator",
-      "line": "His floaty even has little Gwenpool logos on it, because of course it does.",
-      "emotion": "affectionate",
-      "motion": "zoom_face",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot005.wav",
-      "duration_frames": 101,
-      "segments": [
-        {
-          "text": "His floaty even has little Gwenpool logos on it, because of course it does.",
-          "frames": 97,
-          "speech_frames": 97
-        }
-      ]
-    },
-    {
-      "panel": "p02_04",
-      "speaker": "narrator",
-      "line": "Then the gear comes off, and a little fin slips into the water.",
-      "emotion": "quiet setup",
-      "motion": "hold",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot006.wav",
-      "duration_frames": 93,
-      "segments": [
-        {
-          "text": "Then the gear comes off, and a little fin slips into the water.",
-          "frames": 89,
-          "speech_frames": 89
-        }
-      ]
-    },
-    {
-      "panel": "p02_05",
-      "speaker": "narrator",
-      "line": "For a moment Jeff just sits there, thoroughly pleased with himself.",
-      "emotion": "fond",
-      "motion": "hold",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot007.wav",
-      "duration_frames": 95,
-      "segments": [
-        {
-          "text": "For a moment Jeff just sits there, thoroughly pleased with himself.",
-          "frames": 91,
-          "speech_frames": 91
-        }
-      ]
-    },
-    {
-      "panel": "p03_02",
-      "speaker": "narrator",
-      "line": "Then he hits the water, and he is having the time of his life.",
-      "emotion": "dry, quick",
-      "motion": "slow_pan",
-      "hero": true,
-      "sfx": "whoosh",
-      "audio": "work_jeff_pool/audio/ep01/shot008.wav",
-      "duration_frames": 84,
-      "segments": [
-        {
-          "text": "Then he hits the water, and he is having the time of his life.",
-          "frames": 80,
-          "speech_frames": 80
-        }
-      ]
-    },
-    {
-      "panel": "p03_02",
-      "speaker": "narrator",
-      "line": "Nobody down there notices the tiny shark weaving between their legs.",
-      "emotion": "conspiratorial",
-      "motion": "hold",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot009.wav",
-      "duration_frames": 107,
-      "segments": [
-        {
-          "text": "Nobody down there notices the tiny shark weaving between their legs.",
-          "frames": 103,
-          "speech_frames": 103
-        }
-      ]
-    },
-    {
-      "panel": "p03_03",
-      "speaker": "narrator",
-      "line": "Everybody's relaxed, floating on donuts and pizza slices, not a care between them.",
-      "emotion": "easy",
-      "motion": "slow_pan",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot010.wav",
-      "duration_frames": 117,
-      "segments": [
-        {
-          "text": "Everybody's relaxed, floating on donuts and pizza slices, not a care between them.",
-          "frames": 112,
-          "speech_frames": 112
-        }
-      ]
-    },
-    {
-      "panel": "p03_03",
-      "speaker": "narrator",
-      "line": "And then somebody spots a fin cutting through the water.",
-      "emotion": "shifting, playful dread",
-      "motion": "zoom_face",
-      "hero": false,
-      "sfx": "sting",
-      "audio": "work_jeff_pool/audio/ep01/shot011.wav",
-      "duration_frames": 76,
-      "segments": [
-        {
-          "text": "And then somebody spots a fin cutting through the water.",
-          "frames": 71,
-          "speech_frames": 71
-        }
-      ]
-    },
-    {
-      "panel": "p04_01",
-      "speaker": "narrator",
-      "line": "The whole pool empties in a panic, grown superheroes scrambling for the edge.",
-      "emotion": "dry chaos",
-      "motion": "shake",
-      "hero": true,
-      "sfx": "impact",
-      "audio": "work_jeff_pool/audio/ep01/shot012.wav",
-      "duration_frames": 121,
-      "segments": [
-        {
-          "text": "The whole pool empties in a panic, grown superheroes scrambling for the edge.",
-          "frames": 117,
-          "speech_frames": 117
-        }
-      ]
-    },
-    {
-      "panel": "p04_01",
-      "speaker": "narrator",
-      "line": "These people fight Galactus, and one baby shark fin has them climbing out of the pool.",
-      "emotion": "dry, fond",
-      "motion": "hold",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot013.wav",
-      "duration_frames": 104,
-      "segments": [
-        {
-          "text": "These people fight Galactus, and one baby shark fin has them climbing out of the pool.",
-          "frames": 100,
-          "speech_frames": 100
-        }
-      ]
-    },
-    {
-      "panel": "p04_02",
-      "speaker": "narrator",
-      "line": "Because down below, it's just Jeff, paddling around grinning like a maniac.",
-      "emotion": "dry, matter-of-fact",
-      "motion": "slow_pan",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot014.wav",
-      "duration_frames": 137,
-      "segments": [
-        {
-          "text": "Because down below, it's just Jeff, paddling around grinning like a maniac.",
-          "frames": 133,
-          "speech_frames": 133
-        }
-      ]
-    },
-    {
-      "panel": "p04_04",
-      "speaker": "narrator",
-      "line": "He surfaces beside a unicorn float, tilts his head, and wonders what all the fuss is about.",
-      "emotion": "tender, laughing",
-      "motion": "zoom_face",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot015.wav",
-      "duration_frames": 120,
-      "segments": [
-        {
-          "text": "He surfaces beside a unicorn float, tilts his head, and wonders what all the fuss is about.",
-          "frames": 116,
-          "speech_frames": 116
-        }
-      ]
-    },
-    {
-      "panel": "p04_05",
-      "speaker": "narrator",
-      "line": "Meanwhile the mightiest heroes on Earth are cowering poolside from one very happy little shark.",
-      "emotion": "warm, incredulous",
-      "motion": "zoom_out",
-      "hero": false,
-      "sfx": "none",
-      "audio": "work_jeff_pool/audio/ep01/shot016.wav",
-      "duration_frames": 146,
-      "segments": [
-        {
-          "text": "Meanwhile the mightiest heroes on Earth are cowering poolside from one very happy little shark.",
-          "frames": 142,
-          "speech_frames": 142
-        }
-      ]
-    },
-    {
-      "panel": "p04_05",
-      "speaker": "narrator",
-      "line": "Even the fucking Hulk.",
-      "emotion": "deadpan, savoring it",
-      "motion": "slomo",
-      "hero": true,
-      "sfx": "sting",
-      "focus_box": [
-        306,
-        68,
-        195,
-        260
-      ],
-      "audio": "work_jeff_pool/audio/ep01/shot017.wav",
-      "duration_frames": 66,
-      "segments": [
-        {
-          "text": "Even the fucking Hulk.",
-          "frames": 59,
-          "speech_frames": 59
-        }
-      ]
+     "text": "The motherfucking GOAT Jeff the Land Shark, and today he is going swimming.",
+     "frames": 103,
+     "speech_frames": 103
     }
-  ],
-  "cliffhanger_note": "Will anyone tell the terrified heroes that the monster in their pool is just a delighted pet shark named Jeff?"
+   ]
+  },
+  {
+   "panel": "p01_02",
+   "speaker": "narrator",
+   "line": "He has the goggles, the fins, and a Deadpool floaty, because the man has taste.",
+   "emotion": "dry",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot001.wav",
+   "duration_frames": 99,
+   "segments": [
+    {
+     "text": "He has the goggles, the fins, and a Deadpool floaty, because the man has taste.",
+     "frames": 95,
+     "speech_frames": 95
+    }
+   ]
+  },
+  {
+   "panel": "p01_03",
+   "speaker": "narrator",
+   "line": "The destination is a superhero pool party, packed with half the Marvel roster.",
+   "emotion": "cheerful",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot002.wav",
+   "duration_frames": 115,
+   "segments": [
+    {
+     "text": "The destination is a superhero pool party, packed with half the Marvel roster.",
+     "frames": 110,
+     "speech_frames": 110
+    }
+   ]
+  },
+  {
+   "panel": "p02_01",
+   "speaker": "narrator",
+   "line": "And the little land shark pulls up dressed head to tail as Deadpool.",
+   "emotion": "dry, pleased",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot003.wav",
+   "duration_frames": 86,
+   "segments": [
+    {
+     "text": "And the little land shark pulls up dressed head to tail as Deadpool.",
+     "frames": 81,
+     "speech_frames": 81
+    }
+   ]
+  },
+  {
+   "panel": "p02_02",
+   "speaker": "narrator",
+   "line": "Right away he's mobbed like a celebrity, photos, ice cream, the works.",
+   "emotion": "warm",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot004.wav",
+   "duration_frames": 120,
+   "segments": [
+    {
+     "text": "Right away he's mobbed like a celebrity, photos, ice cream, the works.",
+     "frames": 116,
+     "speech_frames": 116
+    }
+   ]
+  },
+  {
+   "panel": "p02_03",
+   "speaker": "narrator",
+   "line": "His floaty even has little Gwenpool logos on it, because of course it does.",
+   "emotion": "affectionate",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot005.wav",
+   "duration_frames": 101,
+   "segments": [
+    {
+     "text": "His floaty even has little Gwenpool logos on it, because of course it does.",
+     "frames": 97,
+     "speech_frames": 97
+    }
+   ]
+  },
+  {
+   "panel": "p02_04",
+   "speaker": "narrator",
+   "line": "Then the gear comes off, and a little fin slips into the water.",
+   "emotion": "quiet setup",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot006.wav",
+   "duration_frames": 93,
+   "segments": [
+    {
+     "text": "Then the gear comes off, and a little fin slips into the water.",
+     "frames": 89,
+     "speech_frames": 89
+    }
+   ]
+  },
+  {
+   "panel": "p02_05",
+   "speaker": "narrator",
+   "line": "For a moment Jeff just sits there, thoroughly pleased with himself.",
+   "emotion": "fond",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot007.wav",
+   "duration_frames": 95,
+   "segments": [
+    {
+     "text": "For a moment Jeff just sits there, thoroughly pleased with himself.",
+     "frames": 91,
+     "speech_frames": 91
+    }
+   ]
+  },
+  {
+   "panel": "p03_02",
+   "speaker": "narrator",
+   "line": "Then he hits the water, and he is having the time of his life.",
+   "emotion": "dry, quick",
+   "motion": "slow_pan",
+   "hero": true,
+   "sfx": "whoosh",
+   "audio": "work_jeff_pool/audio/ep01/shot008.wav",
+   "duration_frames": 84,
+   "segments": [
+    {
+     "text": "Then he hits the water, and he is having the time of his life.",
+     "frames": 80,
+     "speech_frames": 80
+    }
+   ]
+  },
+  {
+   "panel": "p03_02",
+   "speaker": "narrator",
+   "line": "Nobody down there notices the tiny shark weaving between their legs.",
+   "emotion": "conspiratorial",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot009.wav",
+   "duration_frames": 107,
+   "segments": [
+    {
+     "text": "Nobody down there notices the tiny shark weaving between their legs.",
+     "frames": 103,
+     "speech_frames": 103
+    }
+   ]
+  },
+  {
+   "panel": "p03_03",
+   "speaker": "narrator",
+   "line": "Everybody's relaxed, floating on donuts and pizza slices, not a care between them.",
+   "emotion": "easy",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot010.wav",
+   "duration_frames": 117,
+   "segments": [
+    {
+     "text": "Everybody's relaxed, floating on donuts and pizza slices, not a care between them.",
+     "frames": 112,
+     "speech_frames": 112
+    }
+   ]
+  },
+  {
+   "panel": "p03_03",
+   "speaker": "narrator",
+   "line": "And then somebody spots a fin cutting through the water.",
+   "emotion": "shifting, playful dread",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work_jeff_pool/audio/ep01/shot011.wav",
+   "duration_frames": 76,
+   "segments": [
+    {
+     "text": "And then somebody spots a fin cutting through the water.",
+     "frames": 71,
+     "speech_frames": 71
+    }
+   ]
+  },
+  {
+   "panel": "p04_01",
+   "speaker": "narrator",
+   "line": "The whole pool empties in a panic, grown superheroes scrambling for the edge.",
+   "emotion": "dry chaos",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work_jeff_pool/audio/ep01/shot012.wav",
+   "duration_frames": 121,
+   "segments": [
+    {
+     "text": "The whole pool empties in a panic, grown superheroes scrambling for the edge.",
+     "frames": 117,
+     "speech_frames": 117
+    }
+   ]
+  },
+  {
+   "panel": "p04_01",
+   "speaker": "narrator",
+   "line": "These people fight Galactus, and one baby shark fin has them climbing out of the pool.",
+   "emotion": "dry, fond",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot013.wav",
+   "duration_frames": 104,
+   "segments": [
+    {
+     "text": "These people fight Galactus, and one baby shark fin has them climbing out of the pool.",
+     "frames": 100,
+     "speech_frames": 100
+    }
+   ]
+  },
+  {
+   "panel": "p04_02",
+   "speaker": "narrator",
+   "line": "Because down below, it's just Jeff, paddling around grinning like a maniac.",
+   "emotion": "dry, matter-of-fact",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot014.wav",
+   "duration_frames": 137,
+   "segments": [
+    {
+     "text": "Because down below, it's just Jeff, paddling around grinning like a maniac.",
+     "frames": 133,
+     "speech_frames": 133
+    }
+   ]
+  },
+  {
+   "panel": "p04_04",
+   "speaker": "narrator",
+   "line": "He surfaces beside a unicorn float, tilts his head, and wonders what all the fuss is about.",
+   "emotion": "tender, laughing",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot015.wav",
+   "duration_frames": 120,
+   "segments": [
+    {
+     "text": "He surfaces beside a unicorn float, tilts his head, and wonders what all the fuss is about.",
+     "frames": 116,
+     "speech_frames": 116
+    }
+   ]
+  },
+  {
+   "panel": "p04_05",
+   "speaker": "narrator",
+   "line": "Meanwhile the mightiest heroes on Earth are cowering poolside from one very happy little shark.",
+   "emotion": "warm, incredulous",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_pool/audio/ep01/shot016.wav",
+   "duration_frames": 146,
+   "segments": [
+    {
+     "text": "Meanwhile the mightiest heroes on Earth are cowering poolside from one very happy little shark.",
+     "frames": 142,
+     "speech_frames": 142
+    }
+   ]
+  },
+  {
+   "panel": "p04_05",
+   "speaker": "narrator",
+   "line": "Even the fucking Hulk.",
+   "emotion": "deadpan, savoring it",
+   "motion": "slomo",
+   "hero": true,
+   "sfx": "sting",
+   "focus_box": [
+    306,
+    68,
+    195,
+    260
+   ],
+   "audio": "work_jeff_pool/audio/ep01/shot017.wav",
+   "duration_frames": 66,
+   "segments": [
+    {
+     "text": "Even the fucking Hulk.",
+     "frames": 59,
+     "speech_frames": 59
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": "Will anyone tell the terrified heroes that the monster in their pool is just a delighted pet shark named Jeff?"
 }

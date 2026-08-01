@@ -1,0 +1,31 @@
+
+=== stage notes: apply review notes ===
+  ep01 shot000: line updated
+ep01: notes applied
+notes archived; run --stage 6 7 to hear and see the changes
+
+=== stage 6: tts (voicebox) ===
+  ep01 shot000 [narrator] 'The motherfucking GOAT Jeff the Land Shark, and to'
+ep01.json: updated
+
+=== stage 7: render (ffmpeg) ===
+  ep01 shot000 zoom_face  107f  p01_02  (2 cuts)
+  ep01 shot001 hold        99f  p01_02
+  ep01 shot002 slow_pan   115f  p01_03  (2 cuts)
+  ep01 shot003 zoom_out    86f  p02_01
+  ep01 shot004 slow_pan   120f  p02_02  (2 cuts)
+  ep01 shot005 zoom_face  101f  p02_03
+  ep01 shot006 hold        93f  p02_04
+  ep01 shot007 hold        95f  p02_05
+  ep01 shot008 slow_pan    84f  p03_02
+  ep01 shot009 hold       107f  p03_02  (2 cuts)
+  ep01 shot010 slow_pan   117f  p03_03  (2 cuts)
+  ep01 shot011 zoom_face   76f  p03_03
+  ep01 shot012 shake      121f  p04_01  (2 cuts)
+  ep01 shot013 hold       104f  p04_01
+  ep01 shot014 slow_pan   137f  p04_02  (2 cuts)
+  ep01 shot015 zoom_face  120f  p04_04  (2 cuts)
+  ep01 shot016 zoom_out   146f  p04_05  (2 cuts)
+  ep01 shot017 slomo       66f  p04_05
+ep01: 27 shots, 63.2s -> work_jeff_pool/renders/ep01.mp4
+

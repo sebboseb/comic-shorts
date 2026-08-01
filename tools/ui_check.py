@@ -53,7 +53,17 @@ def main():
         with sync_playwright() as pw:
             browser = pw.chromium.launch()
             page = browser.new_page(viewport={"width": 1600, "height": 1000})
+            # gallery: cards for every workdir/episode, statuses shown
             page.goto(f"http://127.0.0.1:{port}/")
+            page.wait_for_selector(".card")
+            n_cards = page.locator(".card").count()
+            if n_cards < 2:
+                failures.append(f"gallery: expected cards, got {n_cards}")
+            if page.locator(".badge.rendered").count() < 1:
+                failures.append("gallery: no rendered badge shown")
+            page.screenshot(path=out / "00_gallery.png")
+
+            page.goto(f"http://127.0.0.1:{port}/review?wd={workdir.name}")
             page.wait_for_selector(".shot")
             page.screenshot(path=out / "01_loaded.png")
 

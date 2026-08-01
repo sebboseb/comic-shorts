@@ -115,18 +115,23 @@ def write_notes(flagged, eps="ep01"):
     suspicions land in the review GUI queue for the human to confirm or
     dismiss. Hard problems arrive pre-tagged as re-rolls; soft warns arrive
     as notes only. Merge-only: never clobbers or removes an operator's own
-    annotations."""
+    annotations. Accepts (wd, i, problems[, warns]) tuples (legacy, uses
+    `eps`) or (wd, ep, i, problems, warns)."""
     by_wd = {}
     for entry in flagged:
-        wd, i, problems = entry[0], entry[1], entry[2]
-        warns = entry[3] if len(entry) > 3 else []
-        by_wd.setdefault(wd, []).append((i, problems, warns))
+        if len(entry) == 5:
+            wd, ep, i, problems, warns = entry
+        else:
+            wd, i, problems = entry[0], entry[1], entry[2]
+            warns = entry[3] if len(entry) > 3 else []
+            ep = eps
+        by_wd.setdefault(wd, []).append((ep, i, problems, warns))
     for wd, items in by_wd.items():
         path = Path(wd) / "review_notes.json"
         notes = json.loads(path.read_text()) if path.exists() else {}
-        ep = notes.setdefault(eps, {})
-        for i, problems, warns in items:
-            entry = ep.setdefault(str(i), {"tags": [], "note": ""})
+        for ep, i, problems, warns in items:
+            entry = notes.setdefault(ep, {}).setdefault(
+                str(i), {"tags": [], "note": ""})
             if problems and "reroll" not in entry["tags"]:
                 entry["tags"].append("reroll")
             qa = "QA: " + "; ".join(problems + warns)
@@ -142,14 +147,16 @@ def main():
     port = _find_port()
     flagged = []
     for wd in workdirs or ["work_jeff"]:
-        d = json.loads(Path(f"{wd}/manifests/ep01.json").read_text())
-        print(f"--- {wd}")
+      for mpath in sorted(Path(f"{wd}/manifests").glob("ep*.json")):
+        ep = mpath.stem
+        d = json.loads(mpath.read_text())
+        print(f"--- {wd} {ep}")
         # episode median rate for the relative slow check (slomo excluded)
         rates = []
         for i, shot in enumerate(d["shots"]):
             if not shot.get("audio") or shot.get("motion") == "slomo":
                 continue
-            with wave.open(f"{wd}/audio/ep01/shot{i:03d}.wav", "rb") as w:
+            with wave.open(f"{wd}/audio/{ep}/shot{i:03d}.wav", "rb") as w:
                 sec = w.getnframes() / w.getframerate()
             rates.append(sec / max(len(shot["line"].split()), 1))
         rates.sort()
@@ -157,7 +164,7 @@ def main():
         for i, shot in enumerate(d["shots"]):
             if not shot.get("audio"):
                 continue
-            wav = Path(f"{wd}/audio/ep01/shot{i:03d}.wav")
+            wav = Path(f"{wd}/audio/{ep}/shot{i:03d}.wav")
             slomo = shot.get("motion") == "slomo"
             src = _restore_slomo(wav) if slomo else wav
             with wave.open(str(src), "rb") as w:
@@ -165,7 +172,8 @@ def main():
             words = max(len(shot["line"].split()), 1)
             spw = sec / words
             problems, warns = [], []
-            if spw > MAX_SPW or (not slomo and spw > REL_HARD * median):
+            if not slomo and (spw > MAX_SPW or spw > REL_HARD * median):
+                # slomo shots are exempt: their delivery is DIRECTED slow
                 problems.append(f"slow ({spw:.2f}s/w vs median {median:.2f})")
             elif not slomo and spw > REL_SOFT * median:
                 warns.append(f"slowish ({spw:.2f}s/w vs median {median:.2f})")
@@ -200,7 +208,7 @@ def main():
                       ("check " + "; ".join(warns) if warns else "ok"))
             print(f"shot{i:03d} {sec:5.2f}s {spw:.2f}s/w  {status}")
             if problems or warns:
-                flagged.append((wd, i, problems, warns))
+                flagged.append((wd, ep, i, problems, warns))
             if slomo:
                 src.unlink()
     if flagged:

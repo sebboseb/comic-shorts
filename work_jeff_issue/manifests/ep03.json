@@ -1,0 +1,215 @@
+{
+ "short_id": "ep03",
+ "title": "This baby shark stole Captain America's shield",
+ "description": "Jeff's snow day ends with him swiping Cap's shield, then he charms a whole tulip field.",
+ "hashtags": [
+  "#itsjeff",
+  "#landshark",
+  "#captainamerica",
+  "#marvel",
+  "#comic"
+ ],
+ "music_mood": "playful",
+ "hook_note": "A tiny shark biting Captain America's iconic shield is an absurd image that demands explanation.",
+ "shots": [
+  {
+   "panel": "p10_01",
+   "speaker": "narrator",
+   "line": "This is Jeff the Land Shark, and today the little menace discovers snow.",
+   "emotion": "warm",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep03/shot000.wav",
+   "duration_frames": 97,
+   "segments": [
+    {
+     "text": "This is Jeff the Land Shark, and today the little menace discovers snow.",
+     "frames": 93,
+     "speech_frames": 93
+    }
+   ]
+  },
+  {
+   "panel": "p10_05",
+   "speaker": "narrator",
+   "line": "Everyone's sledding down the hill, and the little guy is determined to keep up.",
+   "emotion": "excited",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "whoosh",
+   "audio": "work_jeff_issue/audio/ep03/shot001.wav",
+   "duration_frames": 102,
+   "segments": [
+    {
+     "text": "Everyone's sledding down the hill, and the little guy is determined to keep up.",
+     "frames": 98,
+     "speech_frames": 98
+    }
+   ]
+  },
+  {
+   "panel": "p11_01",
+   "speaker": "narrator",
+   "line": "His first attempt on a surfboard ends in a full explosion and a mid-air spin.",
+   "emotion": "amused",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work_jeff_issue/audio/ep03/shot002.wav",
+   "duration_frames": 110,
+   "segments": [
+    {
+     "text": "His first attempt on a surfboard ends in a full explosion and a mid-air spin.",
+     "frames": 105,
+     "speech_frames": 105
+    }
+   ]
+  },
+  {
+   "panel": "p11_07",
+   "speaker": "narrator",
+   "line": "But the GOAT figures it out, hits a snowboard, and absolutely sends it down the slope.",
+   "emotion": "triumphant",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "whoosh",
+   "audio": "work_jeff_issue/audio/ep03/shot003.wav",
+   "duration_frames": 134,
+   "segments": [
+    {
+     "text": "But the GOAT figures it out, hits a snowboard, and absolutely sends it down the slope.",
+     "frames": 130,
+     "speech_frames": 130
+    }
+   ]
+  },
+  {
+   "panel": "p12_01",
+   "speaker": "narrator",
+   "line": "Meanwhile in the city, Captain America corners a thief mid-robbery.",
+   "emotion": "tense",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work_jeff_issue/audio/ep03/shot004.wav",
+   "duration_frames": 92,
+   "segments": [
+    {
+     "text": "Meanwhile in the city, Captain America corners a thief mid-robbery.",
+     "frames": 87,
+     "speech_frames": 87
+    }
+   ]
+  },
+  {
+   "panel": "p12_03",
+   "speaker": "narrator",
+   "line": "The crook bolts, and Cap suddenly can't figure out where his shield went.",
+   "emotion": "baffled",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep03/shot005.wav",
+   "duration_frames": 127,
+   "segments": [
+    {
+     "text": "The crook bolts, and Cap suddenly can't figure out where his shield went.",
+     "frames": 123,
+     "speech_frames": 123
+    }
+   ]
+  },
+  {
+   "panel": "p12_04",
+   "speaker": "narrator",
+   "line": "Because Jeff the Land Shark has snuck off with it, chomping down like it's a snack.",
+   "emotion": "delighted",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work_jeff_issue/audio/ep03/shot006.wav",
+   "duration_frames": 119,
+   "segments": [
+    {
+     "text": "Because Jeff the Land Shark has snuck off with it, chomping down like it's a snack.",
+     "frames": 114,
+     "speech_frames": 114
+    }
+   ]
+  },
+  {
+   "panel": "p12_05",
+   "speaker": "narrator",
+   "line": "And off he swims with a frying pan too, the most successful thief in the whole comic.",
+   "emotion": "warm, defeated",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep03/shot007.wav",
+   "duration_frames": 109,
+   "segments": [
+    {
+     "text": "And off he swims with a frying pan too, the most successful thief in the whole comic.",
+     "frames": 105,
+     "speech_frames": 105
+    }
+   ]
+  },
+  {
+   "panel": "p13_04",
+   "speaker": "narrator",
+   "line": "Another day, the little menace stands at the end of a tulip path while a crowd gathers.",
+   "emotion": "amused",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep03/shot008.wav",
+   "duration_frames": 118,
+   "segments": [
+    {
+     "text": "Another day, the little menace stands at the end of a tulip path while a crowd gathers.",
+     "frames": 113,
+     "speech_frames": 113
+    }
+   ]
+  },
+  {
+   "panel": "p14_03",
+   "speaker": "narrator",
+   "line": "He keeps popping up out of the flowers, scaring the daylights out of everyone.",
+   "emotion": "playful",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work_jeff_issue/audio/ep03/shot009.wav",
+   "duration_frames": 90,
+   "segments": [
+    {
+     "text": "He keeps popping up out of the flowers, scaring the daylights out of everyone.",
+     "frames": 86,
+     "speech_frames": 86
+    }
+   ]
+  },
+  {
+   "panel": "p15_02",
+   "speaker": "narrator",
+   "line": "Then he gathers a giant bouquet and wins the entire crowd over, GOAT behavior only.",
+   "emotion": "affectionate",
+   "motion": "zoom_out",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep03/shot010.wav",
+   "duration_frames": 129,
+   "segments": [
+    {
+     "text": "Then he gathers a giant bouquet and wins the entire crowd over, GOAT behavior only.",
+     "frames": 125,
+     "speech_frames": 125
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": ""
+}

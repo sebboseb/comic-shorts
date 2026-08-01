@@ -1,0 +1,408 @@
+{
+  "shorts": [
+    {
+      "short_id": "ep01",
+      "title": "This baby shark bakes cookies and ruins a kitchen",
+      "description": "Jeff the Land Shark tries his hand at baking, then goes full travel influencer. Chaos ensues.",
+      "hashtags": ["#itsjeff", "#landshark", "#marvel", "#comic", "#katebishop"],
+      "music_mood": "playful",
+      "hook_note": "A tiny shark in a chef's hat staring down a lump of dough is instantly disarming and funny.",
+      "shots": [
+        {
+          "panel": "p01_02",
+          "speaker": "narrator",
+          "line": "This is Jeff the Land Shark, and today the little menace has decided he's a baker.",
+          "emotion": "warm, amused",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "none"
+        },
+        {
+          "panel": "p01_03",
+          "speaker": "narrator",
+          "line": "Chef's hat on, he loads the oven with a tray of superhero-shaped cookies.",
+          "emotion": "delighted",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p01_04",
+          "speaker": "narrator",
+          "line": "Somehow it works, and Spider-Man pulls up for a fresh basket of golden treats.",
+          "emotion": "impressed",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p01_05",
+          "speaker": "narrator",
+          "line": "The whole animal kingdom shows up to eat, and the kitchen ends up an absolute warzone.",
+          "emotion": "affectionate exasperation",
+          "motion": "zoom_out",
+          "hero": true,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p02_02",
+          "speaker": "narrator",
+          "line": "Another day, the GOAT reinvents himself as a travel influencer, going live from the pyramids.",
+          "emotion": "amused",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "whoosh"
+        },
+        {
+          "panel": "p02_02",
+          "speaker": "narrator",
+          "line": "Then the Eiffel Tower, then a pagoda, then posing at the Leaning Tower of Pisa.",
+          "emotion": "building",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p03_01",
+          "speaker": "narrator",
+          "line": "Back home, his owner Kate Bishop and a very tired Iceman watch the livestream in disbelief.",
+          "emotion": "baffled",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p03_02",
+          "speaker": "narrator",
+          "line": "Except Jeff never left the apartment, so Kate just hangs a Pisa poster and calls it even.",
+          "emotion": "loving, defeated",
+          "motion": "hold",
+          "hero": true,
+          "sfx": "none"
+        }
+      ],
+      "cliffhanger_note": ""
+    },
+    {
+      "short_id": "ep02",
+      "title": "Kate put her baby shark in the washing machine",
+      "description": "Laundry day takes a dark turn, and later Jeff dreams up a Halloween scheme for treats.",
+      "hashtags": ["#itsjeff", "#landshark", "#marvel", "#katebishop", "#comic"],
+      "music_mood": "playful",
+      "hook_note": "A sleepy baby shark about to get accidentally washed is pure adorable dread.",
+      "shots": [
+        {
+          "panel": "p04_03",
+          "speaker": "narrator",
+          "line": "This is Jeff the Land Shark, curled up asleep in a laundry basket, sweet as can be.",
+          "emotion": "tender",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "none"
+        },
+        {
+          "panel": "p04_05",
+          "speaker": "narrator",
+          "line": "His owner Kate Bishop, humming away, starts loading up the wash without looking.",
+          "emotion": "cheerful, oblivious",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p05_01",
+          "speaker": "narrator",
+          "line": "Which is when we find the little guy already inside the machine, absolutely losing it.",
+          "emotion": "alarmed",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p05_02",
+          "speaker": "narrator",
+          "line": "And before she notices, Kate hits the button.",
+          "emotion": "tense",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p05_03",
+          "speaker": "narrator",
+          "line": "She walks back in to find Jeff happily swimming laps in a full-blown whirlpool.",
+          "emotion": "horrified",
+          "motion": "zoom_out",
+          "hero": false,
+          "sfx": "whoosh"
+        },
+        {
+          "panel": "p06_01",
+          "speaker": "narrator",
+          "line": "The machine overflows, Kate panics, and the GOAT just keeps singing through the flood.",
+          "emotion": "chaotic delight",
+          "motion": "shake",
+          "hero": true,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p08_04",
+          "speaker": "narrator",
+          "line": "Later, our menace gets a bright idea outside a Halloween costume shop.",
+          "emotion": "scheming",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p08_05",
+          "speaker": "narrator",
+          "line": "So he goes trick-or-treating as himself, and a whole family waves at the adorable shark.",
+          "emotion": "warm",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p09_03",
+          "speaker": "narrator",
+          "line": "Then he trots back to the beach and cannonballs past Kate mid-wave, a certified menace to the end.",
+          "emotion": "gleeful",
+          "motion": "slomo",
+          "hero": true,
+          "sfx": "impact"
+        }
+      ],
+      "cliffhanger_note": ""
+    },
+    {
+      "short_id": "ep03",
+      "title": "This baby shark stole Captain America's shield",
+      "description": "Jeff's snow day ends with him swiping Cap's shield, then he charms a whole tulip field.",
+      "hashtags": ["#itsjeff", "#landshark", "#captainamerica", "#marvel", "#comic"],
+      "music_mood": "playful",
+      "hook_note": "A tiny shark biting Captain America's iconic shield is an absurd image that demands explanation.",
+      "shots": [
+        {
+          "panel": "p10_03",
+          "speaker": "narrator",
+          "line": "This is Jeff the Land Shark, out for a snow day with Kate Bishop, Iceman and the crew.",
+          "emotion": "warm",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p10_05",
+          "speaker": "narrator",
+          "line": "Everyone's sledding down the hill, and the little guy is determined to keep up.",
+          "emotion": "excited",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "whoosh"
+        },
+        {
+          "panel": "p11_01",
+          "speaker": "narrator",
+          "line": "His first attempt on a surfboard ends in a full explosion and a mid-air spin.",
+          "emotion": "amused",
+          "motion": "shake",
+          "hero": true,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p11_07",
+          "speaker": "narrator",
+          "line": "But the GOAT figures it out, hits a snowboard, and absolutely sends it down the slope.",
+          "emotion": "triumphant",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "whoosh"
+        },
+        {
+          "panel": "p12_01",
+          "speaker": "narrator",
+          "line": "Meanwhile in the city, Captain America corners a thief mid-robbery.",
+          "emotion": "tense",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p12_03",
+          "speaker": "narrator",
+          "line": "The crook bolts, and Cap suddenly can't figure out where his shield went.",
+          "emotion": "baffled",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p12_04",
+          "speaker": "narrator",
+          "line": "Because Jeff the Land Shark has snuck off with it, chomping down like it's a snack.",
+          "emotion": "delighted",
+          "motion": "zoom_face",
+          "hero": true,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p12_05",
+          "speaker": "narrator",
+          "line": "And off he swims with a frying pan too, the most successful thief in the whole comic.",
+          "emotion": "warm, defeated",
+          "motion": "zoom_out",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p13_04",
+          "speaker": "narrator",
+          "line": "Another day, the little menace stands at the end of a tulip path while a crowd gathers.",
+          "emotion": "amused",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p14_03",
+          "speaker": "narrator",
+          "line": "He keeps popping up out of the flowers, scaring the daylights out of everyone.",
+          "emotion": "playful",
+          "motion": "shake",
+          "hero": false,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p15_02",
+          "speaker": "narrator",
+          "line": "Then he gathers a giant bouquet and wins the entire crowd over, GOAT behavior only.",
+          "emotion": "affectionate",
+          "motion": "zoom_out",
+          "hero": true,
+          "sfx": "none"
+        }
+      ],
+      "cliffhanger_note": ""
+    },
+    {
+      "short_id": "ep04",
+      "title": "This baby shark adopted a whole family of cats",
+      "description": "Jeff faces down an alley cat, then Kate almost serves him at Sharksgiving dinner.",
+      "hashtags": ["#itsjeff", "#landshark", "#marvel", "#cats", "#comic"],
+      "music_mood": "playful",
+      "hook_note": "A tiny shark scratching his head next to a fish sets up the softest, weirdest cat rescue arc.",
+      "shots": [
+        {
+          "panel": "p22_03",
+          "speaker": "narrator",
+          "line": "This is Jeff the Land Shark, making his usual pilgrimage to the fish shop.",
+          "emotion": "warm",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p22_04",
+          "speaker": "narrator",
+          "line": "The owner slips him a fish, and the little guy is down bad in love with it.",
+          "emotion": "delighted",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p22_05",
+          "speaker": "narrator",
+          "line": "But an alley cat pulls up and eyes that fish like it's already hers.",
+          "emotion": "tense",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p23_01",
+          "speaker": "narrator",
+          "line": "So the GOAT roars, and the cat and a dog both scatter for their lives.",
+          "emotion": "fierce, funny",
+          "motion": "shake",
+          "hero": true,
+          "sfx": "impact"
+        },
+        {
+          "panel": "p24_01",
+          "speaker": "narrator",
+          "line": "But then he finds that same cat curled up cold in the alley, and softens right up.",
+          "emotion": "tender",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p24_05",
+          "speaker": "narrator",
+          "line": "Turns out she's got three kittens, so the little menace starts feeding them all.",
+          "emotion": "warm",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p24_07",
+          "speaker": "narrator",
+          "line": "And the whole family ends up asleep on Jeff himself, an absolute clutch of a shark.",
+          "emotion": "affectionate",
+          "motion": "zoom_out",
+          "hero": true,
+          "sfx": "none"
+        },
+        {
+          "panel": "p25_04",
+          "speaker": "narrator",
+          "line": "Later, it's Sharksgiving, and Jeff keeps trying to raid Kate's roasting oven.",
+          "emotion": "amused",
+          "motion": "slow_pan",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p25_05",
+          "speaker": "narrator",
+          "line": "His owner Kate Bishop keeps pointing at the no-chicken sign, breaking his little heart.",
+          "emotion": "loving exasperation",
+          "motion": "zoom_face",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p27_02",
+          "speaker": "narrator",
+          "line": "So the menace sneaks onto a serving plate and passes out among the roasted vegetables.",
+          "emotion": "amused",
+          "motion": "hold",
+          "hero": false,
+          "sfx": "none"
+        },
+        {
+          "panel": "p27_01",
+          "speaker": "narrator",
+          "line": "The whole table of heroes absolutely loses it thinking Jeff is dinner.",
+          "emotion": "chaotic",
+          "motion": "shake",
+          "hero": true,
+          "sfx": "sting"
+        },
+        {
+          "panel": "p28_03",
+          "speaker": "narrator",
+          "line": "But the GOAT was just here for the food, mouth stuffed, happiest shark alive.",
+          "emotion": "warm, triumphant",
+          "motion": "slomo",
+          "hero": true,
+          "sfx": "impact"
+        }
+      ],
+      "cliffhanger_note": ""
+    }
+  ]
+}

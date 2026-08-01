@@ -1,0 +1,161 @@
+{
+ "short_id": "ep01",
+ "title": "This baby shark bakes cookies and ruins a kitchen",
+ "description": "Jeff the Land Shark tries his hand at baking, then goes full travel influencer. Chaos ensues.",
+ "hashtags": [
+  "#itsjeff",
+  "#landshark",
+  "#marvel",
+  "#comic",
+  "#katebishop"
+ ],
+ "music_mood": "playful",
+ "hook_note": "A tiny shark in a chef's hat staring down a lump of dough is instantly disarming and funny.",
+ "shots": [
+  {
+   "panel": "p01_02",
+   "speaker": "narrator",
+   "line": "This is Jeff the Land Shark, and today the little menace has decided he's a baker.",
+   "emotion": "warm, amused",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep01/shot000.wav",
+   "duration_frames": 125,
+   "segments": [
+    {
+     "text": "This is Jeff the Land Shark, and today the little menace has decided he's a baker.",
+     "frames": 121,
+     "speech_frames": 121
+    }
+   ]
+  },
+  {
+   "panel": "p01_03",
+   "speaker": "narrator",
+   "line": "Chef's hat on, he loads the oven with a tray of superhero-shaped cookies.",
+   "emotion": "delighted",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep01/shot001.wav",
+   "duration_frames": 121,
+   "segments": [
+    {
+     "text": "Chef's hat on, he loads the oven with a tray of superhero-shaped cookies.",
+     "frames": 117,
+     "speech_frames": 117
+    }
+   ]
+  },
+  {
+   "panel": "p01_04",
+   "speaker": "narrator",
+   "line": "Somehow it works, and Spider-Man pulls up for a fresh basket of golden treats.",
+   "emotion": "impressed",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep01/shot002.wav",
+   "duration_frames": 115,
+   "segments": [
+    {
+     "text": "Somehow it works, and Spider-Man pulls up for a fresh basket of golden treats.",
+     "frames": 111,
+     "speech_frames": 111
+    }
+   ]
+  },
+  {
+   "panel": "p01_05",
+   "speaker": "narrator",
+   "line": "The whole animal kingdom shows up to eat, and the kitchen ends up an absolute warzone.",
+   "emotion": "affectionate exasperation",
+   "motion": "zoom_out",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work_jeff_issue/audio/ep01/shot003.wav",
+   "duration_frames": 137,
+   "segments": [
+    {
+     "text": "The whole animal kingdom shows up to eat, and the kitchen ends up an absolute warzone.",
+     "frames": 133,
+     "speech_frames": 133
+    }
+   ]
+  },
+  {
+   "panel": "p02_02",
+   "speaker": "narrator",
+   "line": "Another day, the GOAT reinvents himself as a travel influencer, going live from the pyramids.",
+   "emotion": "amused",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "whoosh",
+   "audio": "work_jeff_issue/audio/ep01/shot004.wav",
+   "duration_frames": 119,
+   "segments": [
+    {
+     "text": "Another day, the GOAT reinvents himself as a travel influencer, going live from the pyramids.",
+     "frames": 115,
+     "speech_frames": 115
+    }
+   ]
+  },
+  {
+   "panel": "p02_02",
+   "speaker": "narrator",
+   "line": "Then the Eiffel Tower, then a pagoda, then posing at the Leaning Tower of Pisa.",
+   "emotion": "building",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep01/shot005.wav",
+   "duration_frames": 107,
+   "segments": [
+    {
+     "text": "Then the Eiffel Tower, then a pagoda, then posing at the Leaning Tower of Pisa.",
+     "frames": 103,
+     "speech_frames": 103
+    }
+   ]
+  },
+  {
+   "panel": "p03_01",
+   "speaker": "narrator",
+   "line": "The likes roll in, and the comments absolutely lose their minds.",
+   "emotion": "dry, building",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work_jeff_issue/audio/ep01/shot006.wav",
+   "duration_frames": 104,
+   "segments": [
+    {
+     "text": "The likes roll in, and the comments absolutely lose their minds.",
+     "frames": 100,
+     "speech_frames": 100
+    }
+   ]
+  },
+  {
+   "panel": "p03_02",
+   "speaker": "narrator",
+   "line": "Except Jeff never left the apartment, so Kate just hangs a Pisa poster and calls it even.",
+   "emotion": "loving, defeated",
+   "motion": "hold",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep01/shot007.wav",
+   "duration_frames": 118,
+   "segments": [
+    {
+     "text": "Except Jeff never left the apartment, so Kate just hangs a Pisa poster and calls it even.",
+     "frames": 114,
+     "speech_frames": 114
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": ""
+}

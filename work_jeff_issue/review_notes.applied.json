@@ -1,0 +1,43 @@
+[
+  {
+    "applied_at": "2026-08-01 18:17",
+    "notes": {
+      "ep02": {
+        "2": {
+          "tags": [],
+          "note": "QA: slowish (0.34s/w vs median 0.25)"
+        }
+      },
+      "ep03": {
+        "4": {
+          "tags": [],
+          "note": "QA: slowish (0.31s/w vs median 0.24)"
+        },
+        "5": {
+          "tags": [
+            "reroll"
+          ],
+          "note": "QA: laughter"
+        },
+        "10": {
+          "tags": [
+            "reroll"
+          ],
+          "note": "QA: laughter; mismatch (sim 0.40: 'Then he gathers a Giuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuh')"
+        }
+      },
+      "ep04": {
+        "1": {
+          "tags": [
+            "reroll"
+          ],
+          "note": "QA: mismatch (sim 0.53: 'to own or slip some of fish and the little guys down bat in ')"
+        },
+        "7": {
+          "tags": [],
+          "note": "QA: slowish (0.35s/w vs median 0.26)"
+        }
+      }
+    }
+  }
+]

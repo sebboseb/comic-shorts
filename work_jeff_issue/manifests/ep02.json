@@ -1,0 +1,197 @@
+{
+ "short_id": "ep02",
+ "title": "Kate put her baby shark in the washing machine",
+ "description": "Laundry day takes a dark turn, and later Jeff dreams up a Halloween scheme for treats.",
+ "hashtags": [
+  "#itsjeff",
+  "#landshark",
+  "#marvel",
+  "#katebishop",
+  "#comic"
+ ],
+ "music_mood": "playful",
+ "hook_note": "A sleepy baby shark about to get accidentally washed is pure adorable dread.",
+ "shots": [
+  {
+   "panel": "p04_03",
+   "speaker": "narrator",
+   "line": "This is Jeff the Land Shark, curled up asleep in a laundry basket, sweet as can be.",
+   "emotion": "tender",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep02/shot000.wav",
+   "duration_frames": 116,
+   "segments": [
+    {
+     "text": "This is Jeff the Land Shark, curled up asleep in a laundry basket, sweet as can be.",
+     "frames": 112,
+     "speech_frames": 112
+    }
+   ]
+  },
+  {
+   "panel": "p04_05",
+   "speaker": "narrator",
+   "line": "His owner Kate Bishop, humming away, starts loading up the wash without looking.",
+   "emotion": "cheerful, oblivious",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep02/shot001.wav",
+   "duration_frames": 101,
+   "segments": [
+    {
+     "text": "His owner Kate Bishop, humming away, starts loading up the wash without looking.",
+     "frames": 97,
+     "speech_frames": 97
+    }
+   ]
+  },
+  {
+   "panel": "p05_01",
+   "speaker": "narrator",
+   "line": "Which is when we find the little guy already inside the machine, absolutely losing it.",
+   "emotion": "alarmed",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work_jeff_issue/audio/ep02/shot002.wav",
+   "duration_frames": 154,
+   "segments": [
+    {
+     "text": "Which is when we find the little guy already inside the machine, absolutely losing it.",
+     "frames": 150,
+     "speech_frames": 150
+    }
+   ]
+  },
+  {
+   "panel": "p05_02",
+   "speaker": "narrator",
+   "line": "And before she notices, Kate hits the button.",
+   "emotion": "tense",
+   "motion": "shake",
+   "hero": false,
+   "sfx": "impact",
+   "audio": "work_jeff_issue/audio/ep02/shot003.wav",
+   "duration_frames": 60,
+   "segments": [
+    {
+     "text": "And before she notices, Kate hits the button.",
+     "frames": 55,
+     "speech_frames": 55
+    }
+   ]
+  },
+  {
+   "panel": "p05_03",
+   "speaker": "narrator",
+   "line": "She walks back in to find Jeff happily swimming laps in a full-blown whirlpool.",
+   "emotion": "horrified",
+   "motion": "zoom_out",
+   "hero": false,
+   "sfx": "whoosh",
+   "audio": "work_jeff_issue/audio/ep02/shot004.wav",
+   "duration_frames": 101,
+   "segments": [
+    {
+     "text": "She walks back in to find Jeff happily swimming laps in a full-blown whirlpool.",
+     "frames": 97,
+     "speech_frames": 97
+    }
+   ]
+  },
+  {
+   "panel": "p06_01",
+   "speaker": "narrator",
+   "line": "The machine overflows, Kate panics, and the GOAT just keeps singing through the flood.",
+   "emotion": "chaotic delight",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work_jeff_issue/audio/ep02/shot005.wav",
+   "duration_frames": 103,
+   "segments": [
+    {
+     "text": "The machine overflows, Kate panics, and the GOAT just keeps singing through the flood.",
+     "frames": 99,
+     "speech_frames": 99
+    }
+   ]
+  },
+  {
+   "panel": "p07_03",
+   "speaker": "narrator",
+   "line": "Later, everyone's out surfing, and the little guy knows exactly what one shark fin does to a beach.",
+   "emotion": "dry, wistful",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep02/shot006.wav",
+   "duration_frames": 133,
+   "segments": [
+    {
+     "text": "Later, everyone's out surfing, and the little guy knows exactly what one shark fin does to a beach.",
+     "frames": 129,
+     "speech_frames": 129
+    }
+   ]
+  },
+  {
+   "panel": "p08_04",
+   "speaker": "narrator",
+   "line": "So he finds a costume shop, and walks out with the perfect disguise.",
+   "emotion": "dry, scheming",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep02/shot007.wav",
+   "duration_frames": 117,
+   "segments": [
+    {
+     "text": "So he finds a costume shop, and walks out with the perfect disguise.",
+     "frames": 113,
+     "speech_frames": 113
+    }
+   ]
+  },
+  {
+   "panel": "p09_02",
+   "speaker": "narrator",
+   "line": "A dolphin. He spends the whole day surfing as the world's happiest fake dolphin.",
+   "emotion": "dry, pleased",
+   "motion": "zoom_face",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep02/shot008.wav",
+   "duration_frames": 107,
+   "segments": [
+    {
+     "text": "A dolphin. He spends the whole day surfing as the world's happiest fake dolphin.",
+     "frames": 103,
+     "speech_frames": 103
+    }
+   ]
+  },
+  {
+   "panel": "p09_03",
+   "speaker": "narrator",
+   "line": "And not one person suspects a thing.",
+   "emotion": "slow deadpan satisfaction",
+   "motion": "slomo",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work_jeff_issue/audio/ep02/shot009.wav",
+   "duration_frames": 154,
+   "segments": [
+    {
+     "text": "And not one person suspects a thing.",
+     "frames": 147,
+     "speech_frames": 147
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": ""
+}

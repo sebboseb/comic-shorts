@@ -42,7 +42,7 @@ def main():
         prompt = apply_chat_template(processor, model.config, messages,
                                      num_images=1)
         out = generate(model, processor, prompt, image=[panel["path"]],
-                       max_tokens=900, temperature=0.0, verbose=False)
+                       max_tokens=1600, temperature=0.0, verbose=False)
         text = (out.text if hasattr(out, "text") else str(out)).strip()
         if text.startswith("```"):
             text = text.split("```")[1]

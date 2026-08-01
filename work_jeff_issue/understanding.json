@@ -1,0 +1,3534 @@
+[
+  {
+    "id": "p01_02",
+    "page": 1,
+    "panel": 2,
+    "file": "panels/p01_02.png",
+    "bbox_on_page": [
+      189,
+      637,
+      658,
+      1043
+    ],
+    "size": [
+      658,
+      1043
+    ],
+    "scene": "A baby shark wearing a chef's hat and apron stands in a kitchen, looking down at a piece of dough on a cutting board.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      194,
+      410,
+      463,
+      848
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p01_03",
+    "page": 1,
+    "panel": 3,
+    "file": "panels/p01_03.png",
+    "bbox_on_page": [
+      866,
+      77,
+      1011,
+      1603
+    ],
+    "size": [
+      1011,
+      1603
+    ],
+    "scene": "Jeff the Land Shark, wearing a chef's hat, looks excitedly at a tray of superhero-themed cookies baking inside an oven.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      185,
+      313,
+      837,
+      845
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p01_04",
+    "page": 1,
+    "panel": 4,
+    "file": "panels/p01_04.png",
+    "bbox_on_page": [
+      221,
+      1721,
+      779,
+      1180
+    ],
+    "size": [
+      779,
+      1180
+    ],
+    "scene": "Spider-Man stands holding a mug, while a basket of golden coins sits on a small shark-like creature's back.",
+    "characters_present": [
+      "Spider-Man",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      68,
+      7,
+      426,
+      1109
+    ],
+    "sfx_text": [
+      "steam lines rising from the basket"
+    ]
+  },
+  {
+    "id": "p01_05",
+    "page": 1,
+    "panel": 5,
+    "file": "panels/p01_05.png",
+    "bbox_on_page": [
+      1111,
+      1696,
+      766,
+      1214
+    ],
+    "size": [
+      766,
+      1214
+    ],
+    "scene": "Spider-Man stands in a messy kitchen, holding a cup, while a group of anthropomorphic animal characters eat at a table in the background.",
+    "characters_present": [
+      "Spider-Man",
+      "Jeff the Land Shark",
+      "Dinosaur",
+      "Lion",
+      "Shark",
+      "Crocodile",
+      "Lizard",
+      "Bat"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      248,
+      506,
+      493,
+      988
+    ],
+    "sfx_text": [
+      "splat"
+    ]
+  },
+  {
+    "id": "p02_02",
+    "page": 2,
+    "panel": 2,
+    "file": "panels/p02_02.png",
+    "bbox_on_page": [
+      231,
+      637,
+      1548,
+      2367
+    ],
+    "size": [
+      1548,
+      2367
+    ],
+    "scene": "Four vertical panels show Jeff the Land Shark on a live video stream, posing in front of famous landmarks: the pyramids, the Eiffel Tower, a Japanese pagoda, and the Leaning Tower of Pisa.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      57,
+      509,
+      608,
+      1082
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p03_01",
+    "page": 3,
+    "panel": 1,
+    "file": "panels/p03_01.png",
+    "bbox_on_page": [
+      70,
+      282,
+      1849,
+      1470
+    ],
+    "size": [
+      1849,
+      1470
+    ],
+    "scene": "A split-panel social media post shows Jeff the Land Shark excitedly posing in front of the Leaning Tower of Pisa, while Kate Bishop stands with a tired Iceman in the other panel.",
+    "characters_present": [
+      "Jeff",
+      "Kate Bishop",
+      "Iceman"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      943,
+      41,
+      1651,
+      1201
+    ],
+    "sfx_text": [
+      "!!",
+      "!?!"
+    ]
+  },
+  {
+    "id": "p03_02",
+    "page": 3,
+    "panel": 2,
+    "file": "panels/p03_02.png",
+    "bbox_on_page": [
+      66,
+      1828,
+      1859,
+      953
+    ],
+    "size": [
+      1859,
+      953
+    ],
+    "scene": "A young woman with blonde hair hangs a poster of the Leaning Tower of Pisa while a small grey shark sits on a stool, surrounded by speech bubbles with various emojis expressing surprise, confusion, and laughter.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      788,
+      436,
+      1022,
+      652
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_01",
+    "page": 4,
+    "panel": 1,
+    "file": "panels/p04_01.png",
+    "bbox_on_page": [
+      93,
+      91,
+      692,
+      1454
+    ],
+    "size": [
+      692,
+      1454
+    ],
+    "scene": "A title card for a Marvel comic titled 'It's Jeff! 'shark cycle'' showing a small shark character sleeping on a patterned cushion.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      33,
+      955,
+      570,
+      1328
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_02",
+    "page": 4,
+    "panel": 2,
+    "file": "panels/p04_02.png",
+    "bbox_on_page": [
+      802,
+      198,
+      1141,
+      1813
+    ],
+    "size": [
+      1141,
+      1813
+    ],
+    "scene": "A baby shark character stands in a laundry room, yawning widely in front of a washing machine and a basket of clothes.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      114,
+      1149,
+      728,
+      1719
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_03",
+    "page": 4,
+    "panel": 3,
+    "file": "panels/p04_03.png",
+    "bbox_on_page": [
+      94,
+      2042,
+      639,
+      965
+    ],
+    "size": [
+      639,
+      965
+    ],
+    "scene": "Jeff the Land Shark is sleeping soundly in a purple basket, covered by a blue blanket with ZZZs above his head.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      120,
+      148,
+      504,
+      296
+    ],
+    "sfx_text": [
+      "ZZZ..."
+    ]
+  },
+  {
+    "id": "p04_04",
+    "page": 4,
+    "panel": 4,
+    "file": "panels/p04_04.png",
+    "bbox_on_page": [
+      747,
+      2069,
+      591,
+      938
+    ],
+    "size": [
+      591,
+      938
+    ],
+    "scene": "Kate Bishop stands in a laundry room, holding a bundle of clothes, looking surprised.",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      34,
+      107,
+      276,
+      851
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_05",
+    "page": 4,
+    "panel": 5,
+    "file": "panels/p04_05.png",
+    "bbox_on_page": [
+      1351,
+      2069,
+      592,
+      938
+    ],
+    "size": [
+      592,
+      938
+    ],
+    "scene": "Kate Bishop is loading clothes into a washing machine while humming a tune.",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      6,
+      194,
+      491,
+      929
+    ],
+    "sfx_text": [
+      "\u266a"
+    ]
+  },
+  {
+    "id": "p05_01",
+    "page": 5,
+    "panel": 1,
+    "file": "panels/p05_01.png",
+    "bbox_on_page": [
+      93,
+      57,
+      936,
+      705
+    ],
+    "size": [
+      936,
+      705
+    ],
+    "scene": "Jeff the Land Shark is shown inside a washing machine, looking distressed with his mouth open and eyes wide.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      374,
+      235,
+      618,
+      489
+    ],
+    "sfx_text": [
+      "!"
+    ]
+  },
+  {
+    "id": "p05_02",
+    "page": 5,
+    "panel": 2,
+    "file": "panels/p05_02.png",
+    "bbox_on_page": [
+      1044,
+      57,
+      886,
+      705
+    ],
+    "size": [
+      886,
+      705
+    ],
+    "scene": "A hand wearing a black glove presses a button on a washing machine.",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      354,
+      240,
+      769,
+      415
+    ],
+    "sfx_text": [
+      "ZAP"
+    ]
+  },
+  {
+    "id": "p05_03",
+    "page": 5,
+    "panel": 3,
+    "file": "panels/p05_03.png",
+    "bbox_on_page": [
+      0,
+      788,
+      1961,
+      2239
+    ],
+    "size": [
+      1961,
+      2239
+    ],
+    "scene": "Kate Bishop walks into a laundry room where Jeff the Land Shark is inside a washing machine, while a series of inset panels show him swimming underwater and a swirling vortex.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      75,
+      405,
+      535,
+      1988
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p06_01",
+    "page": 6,
+    "panel": 1,
+    "file": "panels/p06_01.png",
+    "bbox_on_page": [
+      116,
+      0,
+      1831,
+      2944
+    ],
+    "size": [
+      1831,
+      2944
+    ],
+    "scene": "Jeff the Land Shark is shown singing in a whirlpool, then inside a washing machine, while Kate Bishop reacts in shock and panic as the machine overflows with water and sharks.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      623,
+      1304,
+      1260,
+      1928
+    ],
+    "sfx_text": [
+      "SPLOOSH",
+      "CRACKLE"
+    ]
+  },
+  {
+    "id": "p07_02",
+    "page": 7,
+    "panel": 2,
+    "file": "panels/p07_02.png",
+    "bbox_on_page": [
+      668,
+      36,
+      789,
+      1321
+    ],
+    "size": [
+      789,
+      1321
+    ],
+    "scene": "A baby shark wearing sunglasses sits on a beach next to a surfboard with a Deadpool logo, under a palm tree.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      144,
+      876,
+      452,
+      1308
+    ],
+    "sfx_text": [
+      "!"
+    ]
+  },
+  {
+    "id": "p07_03",
+    "page": 7,
+    "panel": 3,
+    "file": "panels/p07_03.png",
+    "bbox_on_page": [
+      113,
+      1374,
+      1027,
+      1633
+    ],
+    "size": [
+      1027,
+      1633
+    ],
+    "scene": "Three surfers walk on a beach toward the ocean, while a small grey shark with legs sits on the sand in the foreground.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Iceman"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      35,
+      1164,
+      548,
+      1546
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p07_04",
+    "page": 7,
+    "panel": 4,
+    "file": "panels/p07_04.png",
+    "bbox_on_page": [
+      1155,
+      1374,
+      761,
+      1208
+    ],
+    "size": [
+      761,
+      1208
+    ],
+    "scene": "Two surfers ride waves in the ocean, with a large shark's head visible in the foreground.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      14,
+      806,
+      349,
+      1196
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p07_05",
+    "page": 7,
+    "panel": 5,
+    "file": "panels/p07_05.png",
+    "bbox_on_page": [
+      1155,
+      2597,
+      761,
+      410
+    ],
+    "size": [
+      761,
+      410
+    ],
+    "scene": "A small grey baby shark with stubby legs is running on a sandy beach with its mouth open.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      114,
+      64,
+      566,
+      328
+    ],
+    "sfx_text": [
+      "GRRR"
+    ]
+  },
+  {
+    "id": "p08_01",
+    "page": 8,
+    "panel": 1,
+    "file": "panels/p08_01.png",
+    "bbox_on_page": [
+      87,
+      174,
+      1067,
+      1244
+    ],
+    "size": [
+      1067,
+      1244
+    ],
+    "scene": "A baby shark named Jeff the Land Shark lies on a sandy beach, dreaming of a group of superheroes including the Hulk, Captain America, Spider-Man, and others, while a pink dinosaur looms behind them.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Hulk",
+      "Captain America",
+      "Spider-Man",
+      "Black Panther",
+      "Doctor Strange",
+      "Wolverine",
+      "Kate Bishop",
+      "Iceman",
+      "Dinosaur"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      200,
+      458,
+      808,
+      1136
+    ],
+    "sfx_text": [
+      "ZAP"
+    ]
+  },
+  {
+    "id": "p08_02",
+    "page": 8,
+    "panel": 2,
+    "file": "panels/p08_02.png",
+    "bbox_on_page": [
+      1170,
+      174,
+      766,
+      415
+    ],
+    "size": [
+      766,
+      415
+    ],
+    "scene": "A large baby shark named Jeff rests on a sandy beach while Kate Bishop surfs in the ocean nearby.",
+    "characters_present": [
+      "Jeff",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      230,
+      54,
+      463,
+      311
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p08_03",
+    "page": 8,
+    "panel": 3,
+    "file": "panels/p08_03.png",
+    "bbox_on_page": [
+      1170,
+      604,
+      766,
+      814
+    ],
+    "size": [
+      766,
+      814
+    ],
+    "scene": "A cheerful baby shark with a lightbulb thought bubble above its head.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      23,
+      120,
+      532,
+      792
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p08_04",
+    "page": 8,
+    "panel": 4,
+    "file": "panels/p08_04.png",
+    "bbox_on_page": [
+      87,
+      1537,
+      835,
+      1327
+    ],
+    "size": [
+      835,
+      1327
+    ],
+    "scene": "A shark character walks on a sidewalk in front of a costume shop decorated for Halloween.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      418,
+      840,
+      750,
+      1151
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p08_05",
+    "page": 8,
+    "panel": 5,
+    "file": "panels/p08_05.png",
+    "bbox_on_page": [
+      936,
+      1537,
+      1000,
+      1327
+    ],
+    "size": [
+      1000,
+      1327
+    ],
+    "scene": "A man in a green dragon costume and a young girl in a pink and white outfit stand on a porch, waving at a small grey shark-like creature walking on the sidewalk. A purple A-frame sign reading 'Happy Halloween' is in the foreground.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Doctor"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      330,
+      564,
+      510,
+      763
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p09_01",
+    "page": 9,
+    "panel": 1,
+    "file": "panels/p09_01.png",
+    "bbox_on_page": [
+      0,
+      321,
+      1988,
+      1029
+    ],
+    "size": [
+      1988,
+      1029
+    ],
+    "scene": "A baby shark character runs on a beach with a music note above its head, then swims in the ocean with a dolphin.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      278,
+      254,
+      732,
+      754
+    ],
+    "sfx_text": [
+      "\u266a"
+    ]
+  },
+  {
+    "id": "p09_02",
+    "page": 9,
+    "panel": 2,
+    "file": "panels/p09_02.png",
+    "bbox_on_page": [
+      93,
+      1433,
+      919,
+      1465
+    ],
+    "size": [
+      919,
+      1465
+    ],
+    "scene": "A woman in a wetsuit sits on a surfboard in the water, smiling at a dolphin, while a man in a wetsuit stands in the background pointing at the dolphin.",
+    "characters_present": [
+      "Dolphin",
+      "Woman in wetsuit",
+      "Man in wetsuit"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      545,
+      290,
+      868,
+      854
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p09_03",
+    "page": 9,
+    "panel": 3,
+    "file": "panels/p09_03.png",
+    "bbox_on_page": [
+      1029,
+      1433,
+      918,
+      1467
+    ],
+    "size": [
+      918,
+      1467
+    ],
+    "scene": "A woman in a wetsuit rides a surfboard on a wave while a large, cartoonish shark with legs leaps out of the water beside her.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      294,
+      489,
+      885,
+      1058
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p10_01",
+    "page": 10,
+    "panel": 1,
+    "file": "panels/p10_01.png",
+    "bbox_on_page": [
+      103,
+      1041,
+      837,
+      604
+    ],
+    "size": [
+      837,
+      604
+    ],
+    "scene": "Jeff the Land Shark peers over a green pet food dish that is empty.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      126,
+      0,
+      681,
+      259
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p10_02",
+    "page": 10,
+    "panel": 2,
+    "file": "panels/p10_02.png",
+    "bbox_on_page": [
+      150,
+      318,
+      601,
+      401
+    ],
+    "size": [
+      601,
+      401
+    ],
+    "scene": "A title card showing the logo for the comic 'It's Jeff!' with a small shark character peeking out of the letter 'J'.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      131,
+      167,
+      267,
+      301
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p10_03",
+    "page": 10,
+    "panel": 3,
+    "file": "panels/p10_03.png",
+    "bbox_on_page": [
+      970,
+      125,
+      953,
+      1523
+    ],
+    "size": [
+      953,
+      1523
+    ],
+    "scene": "A group of superheroes stands together in a snowy landscape with a large blue fidget spinner behind them.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Iceman",
+      "Spider-Man",
+      "Doctor"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      362,
+      624,
+      457,
+      762
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p10_04",
+    "page": 10,
+    "panel": 4,
+    "file": "panels/p10_04.png",
+    "bbox_on_page": [
+      86,
+      1741,
+      668,
+      1257
+    ],
+    "size": [
+      668,
+      1257
+    ],
+    "scene": "A small grey baby shark with white hair and a yellow-black striped bandana stands on a green circular platform in water, looking down at a grey object on the platform.",
+    "characters_present": [
+      "Jeff - Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      200,
+      431,
+      301,
+      691
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p10_05",
+    "page": 10,
+    "panel": 5,
+    "file": "panels/p10_05.png",
+    "bbox_on_page": [
+      768,
+      1741,
+      788,
+      1257
+    ],
+    "size": [
+      788,
+      1257
+    ],
+    "scene": "Three characters race down a snowy slope on sleds: a young woman in a winter costume, a masked figure in a futuristic sled, and a shark-like creature on a green sled.",
+    "characters_present": [
+      "Kate Bishop",
+      "Spider-Man",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      102,
+      147,
+      602,
+      716
+    ],
+    "sfx_text": [
+      "WHOOSH"
+    ]
+  },
+  {
+    "id": "p10_06",
+    "page": 10,
+    "panel": 6,
+    "file": "panels/p10_06.png",
+    "bbox_on_page": [
+      1570,
+      1741,
+      382,
+      1257
+    ],
+    "size": [
+      382,
+      1257
+    ],
+    "scene": "Multiple characters are sledding down a snowy hill in a forest.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Iceman",
+      "Doctor"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      38,
+      613,
+      191,
+      865
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p11_01",
+    "page": 11,
+    "panel": 1,
+    "file": "panels/p11_01.png",
+    "bbox_on_page": [
+      87,
+      53,
+      652,
+      1045
+    ],
+    "size": [
+      652,
+      1045
+    ],
+    "scene": "Jeff the Land Shark is shown upside down in the air, spinning with a circular motion line, above a green surfboard that has crashed into the water, creating a splash and a yellow explosion effect.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      276,
+      143,
+      611,
+      519
+    ],
+    "sfx_text": [
+      "BOOM"
+    ]
+  },
+  {
+    "id": "p11_02",
+    "page": 11,
+    "panel": 2,
+    "file": "panels/p11_02.png",
+    "bbox_on_page": [
+      1291,
+      188,
+      643,
+      317
+    ],
+    "size": [
+      643,
+      317
+    ],
+    "scene": "Jeff the Land Shark is on a snowy surface, looking at a green frisbee with a confused expression, while a thought bubble shows a scribble.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      302,
+      32,
+      563,
+      238
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p11_03",
+    "page": 11,
+    "panel": 3,
+    "file": "panels/p11_03.png",
+    "bbox_on_page": [
+      1292,
+      512,
+      642,
+      698
+    ],
+    "size": [
+      642,
+      698
+    ],
+    "scene": "Several characters sled down a snowy hill, with a close-up of Jeff the Land Shark in the foreground watching them.",
+    "characters_present": [
+      "Jeff",
+      "Kate Bishop",
+      "Iceman",
+      "Doctor"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      9,
+      284,
+      343,
+      690
+    ],
+    "sfx_text": [
+      "CRACK"
+    ]
+  },
+  {
+    "id": "p11_04",
+    "page": 11,
+    "panel": 4,
+    "file": "panels/p11_04.png",
+    "bbox_on_page": [
+      67,
+      1285,
+      794,
+      1267
+    ],
+    "size": [
+      794,
+      1267
+    ],
+    "scene": "A small shark character named Jeff is shown in a snowy forest, first in a thought bubble with a lightbulb indicating an idea, then in the main panel sliding on a green lid while holding a stick.",
+    "characters_present": [
+      "Jeff - Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      148,
+      169,
+      519,
+      435
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p11_05",
+    "page": 11,
+    "panel": 5,
+    "file": "panels/p11_05.png",
+    "bbox_on_page": [
+      875,
+      1285,
+      542,
+      1700
+    ],
+    "size": [
+      542,
+      1700
+    ],
+    "scene": "Multiple characters are sledding down a snowy hill in a winter landscape.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Iceman"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      8,
+      889,
+      367,
+      1671
+    ],
+    "sfx_text": [
+      "WHOOSH"
+    ]
+  },
+  {
+    "id": "p11_06",
+    "page": 11,
+    "panel": 6,
+    "file": "panels/p11_06.png",
+    "bbox_on_page": [
+      1431,
+      1285,
+      524,
+      314
+    ],
+    "size": [
+      524,
+      314
+    ],
+    "scene": "A small character is sledding down a snowy hill, leaving a trail of snow and ice behind.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      445,
+      254,
+      472,
+      276
+    ],
+    "sfx_text": [
+      "WHOOSH"
+    ]
+  },
+  {
+    "id": "p11_07",
+    "page": 11,
+    "panel": 7,
+    "file": "panels/p11_07.png",
+    "bbox_on_page": [
+      1431,
+      1607,
+      524,
+      834
+    ],
+    "size": [
+      524,
+      834
+    ],
+    "scene": "Jeff the Land Shark rides a snowboard down a snowy slope, laughing with his mouth wide open.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      63,
+      356,
+      383,
+      620
+    ],
+    "sfx_text": [
+      "WHOOO!"
+    ]
+  },
+  {
+    "id": "p11_08",
+    "page": 11,
+    "panel": 8,
+    "file": "panels/p11_08.png",
+    "bbox_on_page": [
+      69,
+      2559,
+      793,
+      426
+    ],
+    "size": [
+      793,
+      426
+    ],
+    "scene": "Jeff the Land Shark rides a surfboard through a wave, looking excited and happy.",
+    "characters_present": [
+      "Jeff - Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      265,
+      35,
+      653,
+      399
+    ],
+    "sfx_text": [
+      "SPLASH"
+    ]
+  },
+  {
+    "id": "p11_09",
+    "page": 11,
+    "panel": 9,
+    "file": "panels/p11_09.png",
+    "bbox_on_page": [
+      1431,
+      2448,
+      524,
+      537
+    ],
+    "size": [
+      524,
+      537
+    ],
+    "scene": "A close-up of Jeff the Land Shark with his mouth wide open, showing sharp teeth and a pink tongue, against a background of blue speed lines.",
+    "characters_present": [
+      "Jeff - Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      18,
+      63,
+      434,
+      476
+    ],
+    "sfx_text": [
+      "SPLOOSH"
+    ]
+  },
+  {
+    "id": "p12_01",
+    "page": 12,
+    "panel": 1,
+    "file": "panels/p12_01.png",
+    "bbox_on_page": [
+      70,
+      71,
+      898,
+      1725
+    ],
+    "size": [
+      898,
+      1725
+    ],
+    "scene": "Captain America confronts a thief stealing money bags in a city street.",
+    "characters_present": [
+      "Captain America",
+      "thief"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      291,
+      31,
+      614,
+      448
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p12_02",
+    "page": 12,
+    "panel": 2,
+    "file": "panels/p12_02.png",
+    "bbox_on_page": [
+      981,
+      451,
+      860,
+      1345
+    ],
+    "size": [
+      860,
+      1345
+    ],
+    "scene": "A person in a green ski mask and blue jacket runs away while holding two green bags marked with dollar signs, leaving a broken green object behind.",
+    "characters_present": [
+      "unknown"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      9,
+      78,
+      636,
+      1009
+    ],
+    "sfx_text": [
+      "BOOM"
+    ]
+  },
+  {
+    "id": "p12_03",
+    "page": 12,
+    "panel": 3,
+    "file": "panels/p12_03.png",
+    "bbox_on_page": [
+      70,
+      1852,
+      976,
+      556
+    ],
+    "size": [
+      976,
+      556
+    ],
+    "scene": "Captain America looks concerned with a speech bubble containing scribbles.",
+    "characters_present": [
+      "Captain America"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      427,
+      37,
+      739,
+      383
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p12_04",
+    "page": 12,
+    "panel": 4,
+    "file": "panels/p12_04.png",
+    "bbox_on_page": [
+      1108,
+      1969,
+      703,
+      717
+    ],
+    "size": [
+      703,
+      717
+    ],
+    "scene": "Jeff the Land Shark, a small grey shark with white fur, is shown biting into Captain America's shield while surrounded by snowflakes.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      224,
+      7,
+      657,
+      404
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p12_05",
+    "page": 12,
+    "panel": 5,
+    "file": "panels/p12_05.png",
+    "bbox_on_page": [
+      70,
+      2422,
+      1578,
+      634
+    ],
+    "size": [
+      1578,
+      634
+    ],
+    "scene": "A baby shark character named Jeff the Land Shark is swimming in water while holding a frying pan, with a Captain America shield visible in the background.",
+    "characters_present": [
+      "Jeff - Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      117,
+      15,
+      568,
+      443
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p13_01",
+    "page": 13,
+    "panel": 1,
+    "file": "panels/p13_01.png",
+    "bbox_on_page": [
+      198,
+      992,
+      544,
+      443
+    ],
+    "size": [
+      544,
+      443
+    ],
+    "scene": "A close-up of Jeff the Land Shark, a small grey baby shark with a content expression, looking slightly to the right.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      16,
+      8,
+      539,
+      434
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p13_02",
+    "page": 13,
+    "panel": 2,
+    "file": "panels/p13_02.png",
+    "bbox_on_page": [
+      210,
+      423,
+      601,
+      400
+    ],
+    "size": [
+      601,
+      400
+    ],
+    "scene": "A title card showing the logo for the comic 'It's Jeff!' with a small shark character inside the letter J.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      131,
+      167,
+      269,
+      311
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p13_03",
+    "page": 13,
+    "panel": 3,
+    "file": "panels/p13_03.png",
+    "bbox_on_page": [
+      965,
+      0,
+      875,
+      1561
+    ],
+    "size": [
+      875,
+      1561
+    ],
+    "scene": "A woman and a young girl walk through a tulip field with a windmill in the background, while a small grey shark-like creature stands on the path in the foreground.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      453,
+      629,
+      686,
+      1503
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p13_04",
+    "page": 13,
+    "panel": 4,
+    "file": "panels/p13_04.png",
+    "bbox_on_page": [
+      142,
+      1609,
+      873,
+      1386
+    ],
+    "size": [
+      873,
+      1386
+    ],
+    "scene": "A small grey shark-like creature with a delighted expression stands at the end of a path of pink tulips, surrounded by a crowd of people observing it.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      425,
+      301,
+      491,
+      370
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p13_05",
+    "page": 13,
+    "panel": 5,
+    "file": "panels/p13_05.png",
+    "bbox_on_page": [
+      1027,
+      1609,
+      859,
+      372
+    ],
+    "size": [
+      859,
+      372
+    ],
+    "scene": "A close-up of Jeff the Land Shark's face, showing his large eyes and a neutral expression.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      134,
+      190,
+      601,
+      361
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p13_06",
+    "page": 13,
+    "panel": 6,
+    "file": "panels/p13_06.png",
+    "bbox_on_page": [
+      1027,
+      1992,
+      859,
+      1002
+    ],
+    "size": [
+      859,
+      1002
+    ],
+    "scene": "A large grey shark with a delighted expression emerges from a field of pink and yellow tulips, while several people in the background react with surprise.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      292,
+      294,
+      676,
+      775
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p14_01",
+    "page": 14,
+    "panel": 1,
+    "file": "panels/p14_01.png",
+    "bbox_on_page": [
+      87,
+      71,
+      892,
+      1499
+    ],
+    "size": [
+      892,
+      1499
+    ],
+    "scene": "Jeff the Land Shark sits among orange tulips, looking up with a content expression.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      107,
+      490,
+      800,
+      1481
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p14_02",
+    "page": 14,
+    "panel": 2,
+    "file": "panels/p14_02.png",
+    "bbox_on_page": [
+      995,
+      71,
+      945,
+      1500
+    ],
+    "size": [
+      945,
+      1500
+    ],
+    "scene": "A field of colorful tulips in rows, with a grey shark fin emerging from the pink tulips in the foreground.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      420,
+      928,
+      849,
+      1354
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p14_03",
+    "page": 14,
+    "panel": 3,
+    "file": "panels/p14_03.png",
+    "bbox_on_page": [
+      204,
+      1640,
+      1784,
+      1335
+    ],
+    "size": [
+      1784,
+      1335
+    ],
+    "scene": "A giant shark emerges from a field of colorful tulips, startling a group of people, while a smaller inset shows the shark's fin disappearing into the flowers.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      892,
+      227,
+      1766,
+      774
+    ],
+    "sfx_text": [
+      "!"
+    ]
+  },
+  {
+    "id": "p15_01",
+    "page": 15,
+    "panel": 1,
+    "file": "panels/p15_01.png",
+    "bbox_on_page": [
+      174,
+      84,
+      775,
+      2823
+    ],
+    "size": [
+      775,
+      2823
+    ],
+    "scene": "A baby shark named Jeff explores a field of colorful tulips, smelling them with delight and eventually gathering a bouquet.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      166,
+      2027,
+      620,
+      2464
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p15_02",
+    "page": 15,
+    "panel": 2,
+    "file": "panels/p15_02.png",
+    "bbox_on_page": [
+      1016,
+      84,
+      845,
+      2823
+    ],
+    "size": [
+      845,
+      2823
+    ],
+    "scene": "A crowd of people, including children and adults, gather around a small grey shark character named Jeff the Land Shark, who is surrounded by a large bouquet of colorful flowers. The scene is depicted in a main panel and a smaller inset panel showing the same moment from a different angle.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Doctor",
+      "Iceman"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      406,
+      734,
+      659,
+      1355
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p16_01",
+    "page": 16,
+    "panel": 1,
+    "file": "panels/p16_01.png",
+    "bbox_on_page": [
+      90,
+      94,
+      931,
+      447
+    ],
+    "size": [
+      931,
+      447
+    ],
+    "scene": "A solid blue background with no characters or objects visible.",
+    "characters_present": [],
+    "dialogue": [],
+    "focus_box": [
+      0,
+      0,
+      931,
+      447
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p16_02",
+    "page": 16,
+    "panel": 2,
+    "file": "panels/p16_02.png",
+    "bbox_on_page": [
+      90,
+      555,
+      932,
+      1993
+    ],
+    "size": [
+      932,
+      1993
+    ],
+    "scene": "A title card for a Marvel comic titled 'It's Jeff!' with the subtitle 'scourge of the seven seas', featuring a cartoon shark swimming in the ocean below.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      149,
+      1258,
+      722,
+      1927
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p16_03",
+    "page": 16,
+    "panel": 3,
+    "file": "panels/p16_03.png",
+    "bbox_on_page": [
+      1037,
+      94,
+      899,
+      1429
+    ],
+    "size": [
+      899,
+      1429
+    ],
+    "scene": "Two yellow rubber ducks float in blue water alongside a small grey baby shark.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      309,
+      464,
+      740,
+      955
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p16_04",
+    "page": 16,
+    "panel": 4,
+    "file": "panels/p16_04.png",
+    "bbox_on_page": [
+      90,
+      2562,
+      931,
+      447
+    ],
+    "size": [
+      931,
+      447
+    ],
+    "scene": "A solid blue background with no characters or objects visible.",
+    "characters_present": [],
+    "dialogue": [],
+    "focus_box": [
+      0,
+      0,
+      931,
+      447
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p16_05",
+    "page": 16,
+    "panel": 5,
+    "file": "panels/p16_05.png",
+    "bbox_on_page": [
+      1037,
+      1539,
+      899,
+      1470
+    ],
+    "size": [
+      899,
+      1470
+    ],
+    "scene": "Two yellow rubber ducks are floating on a large wave in the ocean, with a shark swimming below and a school of fish in the lower left corner.",
+    "characters_present": [
+      "duck"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      52,
+      413,
+      214,
+      579
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p17_01",
+    "page": 17,
+    "panel": 1,
+    "file": "panels/p17_01.png",
+    "bbox_on_page": [
+      101,
+      181,
+      606,
+      2455
+    ],
+    "size": [
+      606,
+      2455
+    ],
+    "scene": "An underwater scene showing a diver in a vintage suit surrounded by sea creatures including sharks, an octopus, a squid, and a school of fish, with a sunken shipwreck at the bottom.",
+    "characters_present": [],
+    "dialogue": [],
+    "focus_box": [
+      32,
+      1073,
+      404,
+      1554
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p17_02",
+    "page": 17,
+    "panel": 2,
+    "file": "panels/p17_02.png",
+    "bbox_on_page": [
+      722,
+      325,
+      605,
+      2455
+    ],
+    "size": [
+      605,
+      2455
+    ],
+    "scene": "An underwater scene in a narrow canyon with mermaids, a man swimming, and a shark, with close-ups of the shark's face showing different expressions.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "mermaid",
+      "mermaid",
+      "man"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      109,
+      1750,
+      513,
+      1883
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p17_03",
+    "page": 17,
+    "panel": 3,
+    "file": "panels/p17_03.png",
+    "bbox_on_page": [
+      1341,
+      499,
+      607,
+      2455
+    ],
+    "size": [
+      607,
+      2455
+    ],
+    "scene": "A character in a yellow and purple diving suit is underwater, looking up in anger as a small grey shark-like creature swims upward, leaving a trail of bubbles.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      84,
+      1664,
+      600,
+      2401
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p18_01",
+    "page": 18,
+    "panel": 1,
+    "file": "panels/p18_01.png",
+    "bbox_on_page": [
+      93,
+      110,
+      902,
+      522
+    ],
+    "size": [
+      902,
+      522
+    ],
+    "scene": "A close-up of Jeff the Land Shark biting the nose of a large man with a furious expression.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "unknown"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      334,
+      13,
+      888,
+      508
+    ],
+    "sfx_text": [
+      "CRACK"
+    ]
+  },
+  {
+    "id": "p18_02",
+    "page": 18,
+    "panel": 2,
+    "file": "panels/p18_02.png",
+    "bbox_on_page": [
+      93,
+      639,
+      1895,
+      2417
+    ],
+    "size": [
+      1895,
+      2417
+    ],
+    "scene": "A chaotic scene in a bathtub filled with bubbles, toys, and sea creatures, with a character in a mechanical suit being pulled into a whirlpool and a shark biting another character's arm.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Iceman",
+      "Doctor"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      57,
+      1885,
+      758,
+      2364
+    ],
+    "sfx_text": [
+      "BOOM"
+    ]
+  },
+  {
+    "id": "p19_02",
+    "page": 19,
+    "panel": 2,
+    "file": "panels/p19_02.png",
+    "bbox_on_page": [
+      1006,
+      72,
+      913,
+      1449
+    ],
+    "size": [
+      913,
+      1449
+    ],
+    "scene": "Captain America lifts a blue armchair above his head while holding his shield, standing in a living room with a bookshelf and a couch.",
+    "characters_present": [
+      "Captain America"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      249,
+      314,
+      533,
+      706
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p19_03",
+    "page": 19,
+    "panel": 3,
+    "file": "panels/p19_03.png",
+    "bbox_on_page": [
+      36,
+      1352,
+      947,
+      757
+    ],
+    "size": [
+      947,
+      757
+    ],
+    "scene": "A circular emblem featuring a cartoon shark with its mouth open, surrounded by a golden banner with text.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      177,
+      157,
+      760,
+      558
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p19_04",
+    "page": 19,
+    "panel": 4,
+    "file": "panels/p19_04.png",
+    "bbox_on_page": [
+      1006,
+      1535,
+      913,
+      1449
+    ],
+    "size": [
+      913,
+      1449
+    ],
+    "scene": "Captain America stands in a room, shouting with his hand to his mouth, while a small shark-like creature with a Captain America shield on its back peeks from behind a door.",
+    "characters_present": [
+      "Captain America",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      395,
+      439,
+      678,
+      739
+    ],
+    "sfx_text": [
+      "HOLY SHARKS!"
+    ]
+  },
+  {
+    "id": "p20_01",
+    "page": 20,
+    "panel": 1,
+    "file": "panels/p20_01.png",
+    "bbox_on_page": [
+      70,
+      71,
+      609,
+      964
+    ],
+    "size": [
+      609,
+      964
+    ],
+    "scene": "Kate Bishop stands in a bedroom, holding a quiver and looking confused at a thought bubble showing arrows and a question mark.",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      262,
+      128,
+      455,
+      386
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_02",
+    "page": 20,
+    "panel": 2,
+    "file": "panels/p20_02.png",
+    "bbox_on_page": [
+      689,
+      71,
+      609,
+      964
+    ],
+    "size": [
+      609,
+      964
+    ],
+    "scene": "Kate Bishop stands in a doorway holding a purple cylindrical device, while Jeff the Land Shark walks through the room carrying a bundle of arrows in his mouth.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      203,
+      405,
+      102,
+      161
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_03",
+    "page": 20,
+    "panel": 3,
+    "file": "panels/p20_03.png",
+    "bbox_on_page": [
+      1310,
+      71,
+      609,
+      964
+    ],
+    "size": [
+      609,
+      964
+    ],
+    "scene": "Spider-Man kneels on the floor of a bedroom, holding a jacket and a book, while a shark-like creature in a Spider-Man mask peeks out from a closet.",
+    "characters_present": [
+      "Spider-Man",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      91,
+      328,
+      572,
+      939
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_04",
+    "page": 20,
+    "panel": 4,
+    "file": "panels/p20_04.png",
+    "bbox_on_page": [
+      70,
+      1046,
+      609,
+      964
+    ],
+    "size": [
+      609,
+      964
+    ],
+    "scene": "Doctor Strange stands in a cluttered room, looking down with a determined expression.",
+    "characters_present": [
+      "Doctor Strange"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      197,
+      441,
+      328,
+      608
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_05",
+    "page": 20,
+    "panel": 5,
+    "file": "panels/p20_05.png",
+    "bbox_on_page": [
+      689,
+      1046,
+      609,
+      964
+    ],
+    "size": [
+      609,
+      964
+    ],
+    "scene": "A superhero in a red and black suit with a yellow mask stands in a storage room, looking surprised as a red fabric object lies on the floor.",
+    "characters_present": [
+      "unknown"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      61,
+      128,
+      394,
+      925
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_06",
+    "page": 20,
+    "panel": 6,
+    "file": "panels/p20_06.png",
+    "bbox_on_page": [
+      1310,
+      1046,
+      609,
+      964
+    ],
+    "size": [
+      609,
+      964
+    ],
+    "scene": "A woman with red hair in a black suit stands in a cluttered room, reaching into a cabinet, while a small blue shark-like creature sleeps under a table.",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      328,
+      223,
+      145,
+      289
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_07",
+    "page": 20,
+    "panel": 7,
+    "file": "panels/p20_07.png",
+    "bbox_on_page": [
+      70,
+      2064,
+      609,
+      241
+    ],
+    "size": [
+      609,
+      241
+    ],
+    "scene": "A close-up of Captain America's face, showing his intense expression.",
+    "characters_present": [
+      "Captain America"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      267,
+      7,
+      579,
+      229
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_08",
+    "page": 20,
+    "panel": 8,
+    "file": "panels/p20_08.png",
+    "bbox_on_page": [
+      690,
+      2064,
+      609,
+      239
+    ],
+    "size": [
+      609,
+      239
+    ],
+    "scene": "a close-up profile of a man with a mustache and blue eyes, looking off to the right.",
+    "characters_present": [
+      "Doctor"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      61,
+      5,
+      365,
+      234
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_09",
+    "page": 20,
+    "panel": 9,
+    "file": "panels/p20_09.png",
+    "bbox_on_page": [
+      69,
+      2317,
+      609,
+      241
+    ],
+    "size": [
+      609,
+      241
+    ],
+    "scene": "a close-up of Kate Bishop's face showing a shocked expression",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      11,
+      6,
+      384,
+      233
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_10",
+    "page": 20,
+    "panel": 10,
+    "file": "panels/p20_10.png",
+    "bbox_on_page": [
+      69,
+      2572,
+      609,
+      240
+    ],
+    "size": [
+      609,
+      240
+    ],
+    "scene": "a close-up of a character's face with a serious expression",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      236,
+      6,
+      571,
+      234
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p20_11",
+    "page": 20,
+    "panel": 11,
+    "file": "panels/p20_11.png",
+    "bbox_on_page": [
+      690,
+      2315,
+      1298,
+      741
+    ],
+    "size": [
+      1298,
+      741
+    ],
+    "scene": "Deadpool holds a bowl of popcorn and a small object while looking at the viewer, with inset panels showing a close-up of a character in a gold helmet and Kate Bishop's face.",
+    "characters_present": [
+      "Deadpool",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      450,
+      7,
+      1295,
+      740
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p21_01",
+    "page": 21,
+    "panel": 1,
+    "file": "panels/p21_01.png",
+    "bbox_on_page": [
+      70,
+      250,
+      1918,
+      2806
+    ],
+    "size": [
+      1918,
+      2806
+    ],
+    "scene": "A chaotic scene where a shark-like character with wings and a shield attacks a group of superheroes, causing them to fall to the ground.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Captain America",
+      "Deadpool",
+      "Kate Bishop",
+      "Doctor Strange",
+      "Iceman",
+      "Spider-Man",
+      "Black Widow"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      35,
+      1030,
+      648,
+      1684
+    ],
+    "sfx_text": [
+      "POW",
+      "ZAP"
+    ]
+  },
+  {
+    "id": "p22_01",
+    "page": 22,
+    "panel": 1,
+    "file": "panels/p22_01.png",
+    "bbox_on_page": [
+      126,
+      1161,
+      703,
+      447
+    ],
+    "size": [
+      703,
+      447
+    ],
+    "scene": "A large shark with a content expression stands on land, scratching its head with its fin, while a small fish lies on the ground nearby.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      211,
+      13,
+      492,
+      224
+    ],
+    "sfx_text": [
+      "SCRATCH"
+    ]
+  },
+  {
+    "id": "p22_02",
+    "page": 22,
+    "panel": 2,
+    "file": "panels/p22_02.png",
+    "bbox_on_page": [
+      187,
+      604,
+      601,
+      400
+    ],
+    "size": [
+      601,
+      400
+    ],
+    "scene": "A logo-style image with the text 'It's Jeff!' in large blue letters, with a small grey shark character peeking out from the letter 'J'.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      108,
+      164,
+      270,
+      312
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p22_03",
+    "page": 22,
+    "panel": 3,
+    "file": "panels/p22_03.png",
+    "bbox_on_page": [
+      899,
+      118,
+      1022,
+      1622
+    ],
+    "size": [
+      1022,
+      1622
+    ],
+    "scene": "A small grey shark with stubby legs is walking on a sidewalk in front of a brick building with a red awning that reads 'FISH SHOP'.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      68,
+      1200,
+      371,
+      1432
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p22_04",
+    "page": 22,
+    "panel": 4,
+    "file": "panels/p22_04.png",
+    "bbox_on_page": [
+      66,
+      1833,
+      610,
+      981
+    ],
+    "size": [
+      610,
+      981
+    ],
+    "scene": "A fishmonger gives a thumbs-up while standing behind a display of fish, as a small blue shark looks up at him with a heart-shaped thought bubble containing a fish.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Fish Shop Owner"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      396,
+      655,
+      549,
+      945
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p22_05",
+    "page": 22,
+    "panel": 5,
+    "file": "panels/p22_05.png",
+    "bbox_on_page": [
+      686,
+      1833,
+      619,
+      981
+    ],
+    "size": [
+      619,
+      981
+    ],
+    "scene": "A cat looks down at a small blue shark on the floor, which is making a surprised expression.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "cat"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      310,
+      346,
+      578,
+      690
+    ],
+    "sfx_text": [
+      "!!!"
+    ]
+  },
+  {
+    "id": "p22_06",
+    "page": 22,
+    "panel": 6,
+    "file": "panels/p22_06.png",
+    "bbox_on_page": [
+      1316,
+      1833,
+      605,
+      316
+    ],
+    "size": [
+      605,
+      316
+    ],
+    "scene": "A calico cat with a yellow eye looks up at a small grey shark with a grumpy expression, both standing in front of a brick wall.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      293,
+      43,
+      589,
+      308
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p22_07",
+    "page": 22,
+    "panel": 7,
+    "file": "panels/p22_07.png",
+    "bbox_on_page": [
+      1316,
+      2160,
+      605,
+      654
+    ],
+    "size": [
+      605,
+      654
+    ],
+    "scene": "A close-up of Jeff the Land Shark with a determined expression, surrounded by cracked ground.",
+    "characters_present": [
+      "Jeff - Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      102,
+      38,
+      583,
+      600
+    ],
+    "sfx_text": [
+      "CRACK"
+    ]
+  },
+  {
+    "id": "p23_01",
+    "page": 23,
+    "panel": 1,
+    "file": "panels/p23_01.png",
+    "bbox_on_page": [
+      141,
+      124,
+      848,
+      1347
+    ],
+    "size": [
+      848,
+      1347
+    ],
+    "scene": "Jeff the Land Shark roars with his mouth wide open while a cat runs away in fear.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      438,
+      572,
+      800,
+      1001
+    ],
+    "sfx_text": [
+      "MRRRRR!!"
+    ]
+  },
+  {
+    "id": "p23_02",
+    "page": 23,
+    "panel": 2,
+    "file": "panels/p23_02.png",
+    "bbox_on_page": [
+      1004,
+      124,
+      849,
+      1347
+    ],
+    "size": [
+      849,
+      1347
+    ],
+    "scene": "Jeff the Land Shark sits on a tiled floor inside a building, looking out the open door where a dog is running away.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      85,
+      651,
+      754,
+      1181
+    ],
+    "sfx_text": [
+      "POOF"
+    ]
+  },
+  {
+    "id": "p23_03",
+    "page": 23,
+    "panel": 3,
+    "file": "panels/p23_03.png",
+    "bbox_on_page": [
+      0,
+      1524,
+      1988,
+      1632
+    ],
+    "size": [
+      1988,
+      1632
+    ],
+    "scene": "A small shark character named Jeff the Land Shark is shown in a series of panels: first, he is offered a fish with a heart-shaped thought bubble indicating affection; second, he walks on a city street past a fish shop; third, he walks through an alley with a fish in his mouth.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      596,
+      163,
+      994,
+      636
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p24_01",
+    "page": 24,
+    "panel": 1,
+    "file": "panels/p24_01.png",
+    "bbox_on_page": [
+      78,
+      71,
+      1042,
+      1654
+    ],
+    "size": [
+      1042,
+      1654
+    ],
+    "scene": "A small shark-like creature stands in a dim alleyway, holding a fish in its mouth, while a cat lies curled up on the ground nearby.",
+    "characters_present": [
+      "Jeff - Jeff the Land Shark",
+      "cat"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      651,
+      111,
+      938,
+      418
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p24_02",
+    "page": 24,
+    "panel": 2,
+    "file": "panels/p24_02.png",
+    "bbox_on_page": [
+      1137,
+      71,
+      773,
+      383
+    ],
+    "size": [
+      773,
+      383
+    ],
+    "scene": "A close-up of Jeff the Land Shark's face, showing a calm and content expression.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      103,
+      9,
+      657,
+      373
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p24_03",
+    "page": 24,
+    "panel": 3,
+    "file": "panels/p24_03.png",
+    "bbox_on_page": [
+      1137,
+      468,
+      773,
+      385
+    ],
+    "size": [
+      773,
+      385
+    ],
+    "scene": "A close-up of Jeff the Land Shark's face, showing a content expression with closed eyes and a slight smile.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      103,
+      9,
+      662,
+      376
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p24_04",
+    "page": 24,
+    "panel": 4,
+    "file": "panels/p24_04.png",
+    "bbox_on_page": [
+      1137,
+      868,
+      773,
+      858
+    ],
+    "size": [
+      773,
+      858
+    ],
+    "scene": "A cat lies on the ground while a fish is held above it by a hand.",
+    "characters_present": [
+      "cat"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      14,
+      166,
+      557,
+      848
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p24_05",
+    "page": 24,
+    "panel": 5,
+    "file": "panels/p24_05.png",
+    "bbox_on_page": [
+      78,
+      1765,
+      711,
+      1126
+    ],
+    "size": [
+      711,
+      1126
+    ],
+    "scene": "A group of four cats, including a large calico cat and three kittens, stand in the rain looking down at a fish on the ground.",
+    "characters_present": [
+      "calico cat",
+      "grey kitten",
+      "striped kitten",
+      "black-and-white kitten"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      53,
+      274,
+      493,
+      859
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p24_06",
+    "page": 24,
+    "panel": 6,
+    "file": "panels/p24_06.png",
+    "bbox_on_page": [
+      802,
+      1765,
+      709,
+      1124
+    ],
+    "size": [
+      709,
+      1124
+    ],
+    "scene": "A small, grey baby shark with a happy expression stands in a cluttered alley, while the tails of three cats are visible in the foreground.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      147,
+      143,
+      662,
+      756
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p24_07",
+    "page": 24,
+    "panel": 7,
+    "file": "panels/p24_07.png",
+    "bbox_on_page": [
+      1523,
+      1765,
+      387,
+      1123
+    ],
+    "size": [
+      387,
+      1123
+    ],
+    "scene": "A group of cats are sleeping on a large, gray shark-shaped pillow in a cluttered room with cardboard boxes and a fish skeleton hanging on the wall.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      183,
+      820,
+      348,
+      983
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p25_02",
+    "page": 25,
+    "panel": 2,
+    "file": "panels/p25_02.png",
+    "bbox_on_page": [
+      985,
+      71,
+      852,
+      514
+    ],
+    "size": [
+      852,
+      514
+    ],
+    "scene": "A close-up of Jeff the Land Shark smiling widely with his arms raised, against a background of peach-colored diagonal stripes.",
+    "characters_present": [
+      "Jeff - Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      118,
+      9,
+      733,
+      503
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p25_03",
+    "page": 25,
+    "panel": 3,
+    "file": "panels/p25_03.png",
+    "bbox_on_page": [
+      126,
+      741,
+      756,
+      676
+    ],
+    "size": [
+      756,
+      676
+    ],
+    "scene": "A close-up of Jeff the Land Shark wearing a purple and white polka-dotted outfit with ruffles, drooling happily.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      363,
+      68,
+      741,
+      541
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p25_04",
+    "page": 25,
+    "panel": 4,
+    "file": "panels/p25_04.png",
+    "bbox_on_page": [
+      985,
+      600,
+      852,
+      843
+    ],
+    "size": [
+      852,
+      843
+    ],
+    "scene": "A baby shark wearing an apron stands in a kitchen, looking at a roasted chicken in the oven while holding a fish that is dripping liquid onto the floor.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      119,
+      293,
+      590,
+      820
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p25_05",
+    "page": 25,
+    "panel": 5,
+    "file": "panels/p25_05.png",
+    "bbox_on_page": [
+      102,
+      1457,
+      968,
+      1528
+    ],
+    "size": [
+      968,
+      1528
+    ],
+    "scene": "Kate Bishop stands in a kitchen, pointing at a no-chicken sign while a small shark pet, Jeff the Land Shark, looks up at her.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      322,
+      428,
+      445,
+      581
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p25_06",
+    "page": 25,
+    "panel": 6,
+    "file": "panels/p25_06.png",
+    "bbox_on_page": [
+      1084,
+      1457,
+      868,
+      552
+    ],
+    "size": [
+      868,
+      552
+    ],
+    "scene": "A small grey baby shark character lies on the ground, looking sad while clutching a broken heart symbol.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      55,
+      73,
+      637,
+      523
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p25_07",
+    "page": 25,
+    "panel": 7,
+    "file": "panels/p25_07.png",
+    "bbox_on_page": [
+      1084,
+      2023,
+      841,
+      962
+    ],
+    "size": [
+      841,
+      962
+    ],
+    "scene": "Jeff the Land Shark sits on a kitchen floor, looking up at Kate Bishop who is standing over him, while a thought bubble shows a broken heart with a bandage.",
+    "characters_present": [
+      "Jeff",
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      112,
+      469,
+      490,
+      830
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p26_01",
+    "page": 26,
+    "panel": 1,
+    "file": "panels/p26_01.png",
+    "bbox_on_page": [
+      70,
+      71,
+      1016,
+      768
+    ],
+    "size": [
+      1016,
+      768
+    ],
+    "scene": "Jeff the Land Shark, wearing a white apron with a pink Gwenpool mask emblem, is jumping toward an open oven in a kitchen.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      305,
+      164,
+      714,
+      664
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p26_02",
+    "page": 26,
+    "panel": 2,
+    "file": "panels/p26_02.png",
+    "bbox_on_page": [
+      70,
+      853,
+      1016,
+      879
+    ],
+    "size": [
+      1016,
+      879
+    ],
+    "scene": "Kate Bishop stands in a kitchen wearing an apron, looking down at Jeff the Land Shark who is standing on his hind legs and holding a towel.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      305,
+      44,
+      481,
+      833
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p26_03",
+    "page": 26,
+    "panel": 3,
+    "file": "panels/p26_03.png",
+    "bbox_on_page": [
+      70,
+      1745,
+      1016,
+      1175
+    ],
+    "size": [
+      1016,
+      1175
+    ],
+    "scene": "Kate Bishop stands in a kitchen wearing an apron, pointing angrily at a small grey shark pet on the floor while a roasted turkey sits in the oven.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      234,
+      55,
+      424,
+      352
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p26_04",
+    "page": 26,
+    "panel": 4,
+    "file": "panels/p26_04.png",
+    "bbox_on_page": [
+      1125,
+      71,
+      794,
+      2850
+    ],
+    "size": [
+      794,
+      2850
+    ],
+    "scene": "A group of superheroes and allies are gathered around a long dining table for a Sharksgiving meal, while Kate Bishop serves a dish from a covered platter.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      0,
+      0,
+      794,
+      2850
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p27_01",
+    "page": 27,
+    "panel": 1,
+    "file": "panels/p27_01.png",
+    "bbox_on_page": [
+      56,
+      347,
+      979,
+      2394
+    ],
+    "size": [
+      979,
+      2394
+    ],
+    "scene": "A collage of multiple comic panels showing various superheroes and characters reacting with shock, fear, and distress.",
+    "characters_present": [
+      "Spider-Man",
+      "Kate Bishop",
+      "Iceman",
+      "Doctor",
+      "Jeff the Land Shark",
+      "Hawkeye",
+      "She-Hulk",
+      "Captain America",
+      "Ms. Marvel",
+      "Wolverine",
+      "Gwenpool"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      490,
+      1197,
+      979,
+      1676
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p27_02",
+    "page": 27,
+    "panel": 2,
+    "file": "panels/p27_02.png",
+    "bbox_on_page": [
+      1049,
+      347,
+      879,
+      824
+    ],
+    "size": [
+      879,
+      824
+    ],
+    "scene": "Jeff the Land Shark is curled up asleep on a white plate surrounded by roasted vegetables and a sprig of rosemary, placed on a wooden table.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      183,
+      58,
+      681,
+      746
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p27_03",
+    "page": 27,
+    "panel": 3,
+    "file": "panels/p27_03.png",
+    "bbox_on_page": [
+      1049,
+      1184,
+      879,
+      567
+    ],
+    "size": [
+      879,
+      567
+    ],
+    "scene": "Kate Bishop looks surprised and excited, holding up her hands which are covered in purple gloves with a grid pattern.",
+    "characters_present": [
+      "Kate Bishop"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      240,
+      8,
+      642,
+      333
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p27_04",
+    "page": 27,
+    "panel": 4,
+    "file": "panels/p27_04.png",
+    "bbox_on_page": [
+      1049,
+      1765,
+      879,
+      973
+    ],
+    "size": [
+      879,
+      973
+    ],
+    "scene": "A baby shark character lies on its back on a white plate, surrounded by food and a sprig of rosemary, appearing to be served as a meal.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      126,
+      149,
+      772,
+      727
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p28_01",
+    "page": 28,
+    "panel": 1,
+    "file": "panels/p28_01.png",
+    "bbox_on_page": [
+      77,
+      71,
+      1060,
+      1636
+    ],
+    "size": [
+      1060,
+      1636
+    ],
+    "scene": "A group of superheroes and characters gather around a large purple shark-like creature on a table, with one character hanging from a web above.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Iceman",
+      "Doctor",
+      "Miles Morales",
+      "Gwen Stacy",
+      "She-Hulk",
+      "Kamala Khan",
+      "Spider-Gwen",
+      "Spider-Man",
+      "Captain Marvel"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      403,
+      1063,
+      541,
+      1219
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p28_02",
+    "page": 28,
+    "panel": 2,
+    "file": "panels/p28_02.png",
+    "bbox_on_page": [
+      1152,
+      71,
+      762,
+      399
+    ],
+    "size": [
+      762,
+      399
+    ],
+    "scene": "Kate Bishop looks at a roasted chicken in a thought bubble while Jeff the Land Shark lies on the ground.",
+    "characters_present": [
+      "Kate Bishop",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      14,
+      7,
+      418,
+      391
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p28_03",
+    "page": 28,
+    "panel": 3,
+    "file": "panels/p28_03.png",
+    "bbox_on_page": [
+      1152,
+      483,
+      762,
+      1223
+    ],
+    "size": [
+      762,
+      1223
+    ],
+    "scene": "A baby shark character with a wide-open mouth full of food, surrounded by a plate of food and a sprig of rosemary.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      76,
+      135,
+      648,
+      991
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p28_04",
+    "page": 28,
+    "panel": 4,
+    "file": "panels/p28_04.png",
+    "bbox_on_page": [
+      197,
+      1721,
+      798,
+      1266
+    ],
+    "size": [
+      798,
+      1266
+    ],
+    "scene": "A group of superheroes and allies gather around a large purple shark-like creature on a plate, while a character in a Spider-Man suit hangs from a string above.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Iceman",
+      "Spider-Man",
+      "Captain America",
+      "Star-Lord",
+      "Miles Morales",
+      "Gwenpool",
+      "Doctor"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      413,
+      139,
+      543,
+      228
+    ],
+    "sfx_text": [
+      "SPLAT"
+    ]
+  },
+  {
+    "id": "p28_05",
+    "page": 28,
+    "panel": 5,
+    "file": "panels/p28_05.png",
+    "bbox_on_page": [
+      1009,
+      1721,
+      796,
+      1264
+    ],
+    "size": [
+      796,
+      1264
+    ],
+    "scene": "A cute baby shark sits on a plate of food, looking delighted with a bone and vegetables, while a small shark fin appears in the water below.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      245,
+      307,
+      647,
+      895
+    ],
+    "sfx_text": [
+      "fin"
+    ]
+  }
+]

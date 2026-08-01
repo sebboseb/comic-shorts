@@ -74,17 +74,7 @@ Rules:
   where we are and who we are following. Name each character in narration the
   first time they appear - give the role and the name together, the way
   "the tribe's leader, <name>" does, never a bare "he" or "they".
-- Each short (except the last) must END mid-tension, never at a resolved beat.
-- THE SHORTS ARE ONE CONTINUOUS SERIES, watched back to back in order. Every
-  short after the first must open with a narrator shot that (a) says in one
-  sentence where we left off, and (b) re-identifies by name anyone about to
-  speak. Assume the viewer saw the previous short days ago and remembers only
-  the broad situation. Write the pair so the last shot of short N and the first
-  shot of short N+1 read as a single continuous beat, not two separate videos:
-  if short N ends on some force or figure arriving unseen, short N+1 opens by
-  naming it and saying what it does next, and to whom.
-- Do not restate the same event as a cliffhanger in one short and again as the
-  opening beat of the next. Move the story forward.
+{SERIES_RULES}
 - Write narrator lines to glue panel transitions that don't self-explain. Favour
   clarity over economy: if a jump in place, time, or who-is-speaking would
   confuse a first-time viewer, spend a narrator line on it. Dialogue still
@@ -121,6 +111,33 @@ Rules:
 - Mark at most 2-3 shots per short as hero (the most dramatic single images).
 - Aim for each short to fit the target length: roughly 2.5 words per second of
   spoken text plus ~1.2s per silent shot."""
+
+
+SERIAL_RULES = """- Each short (except the last) must END mid-tension, never at a resolved beat.
+- THE SHORTS ARE ONE CONTINUOUS SERIES, watched back to back in order. Every
+  short after the first must open with a narrator shot that (a) says in one
+  sentence where we left off, and (b) re-identifies by name anyone about to
+  speak. Assume the viewer saw the previous short days ago and remembers only
+  the broad situation. Write the pair so the last shot of short N and the first
+  shot of short N+1 read as a single continuous beat, not two separate videos:
+  if short N ends on some force or figure arriving unseen, short N+1 opens by
+  naming it and saying what it does next, and to whom.
+- Do not restate the same event as a cliffhanger in one short and again as the
+  opening beat of the next. Move the story forward."""
+
+
+GAG_RULES = """- THE COMIC IS AN ANTHOLOGY OF SHORT SELF-CONTAINED GAG STORIES. The panel
+  list is divided into STORY sections. Each short contains ONE OR MORE WHOLE
+  stories (two or three per short is the sweet spot); NEVER split a story
+  across shorts and never reorder stories.
+- Every story is a joke: find its setup and its punchline, and spend the shot
+  budget on the punchline. End each short ON its final story's punchline -
+  land the gag, then stop. No cliffhangers; set cliffhanger_note to "".
+- Each short is fully self-contained: no references to other shorts, no
+  recaps, no "last time".
+- When a new story starts inside a short, its first narrator line resets the
+  scene in a few words ("Next up,", "Another day,", "Later that week,") so
+  the viewer knows a fresh story began - then names who we're watching."""
 
 
 DIALOGUE_RULES = """- Keep character dialogue verbatim from the panels. You may trim redundant lines
@@ -274,7 +291,10 @@ def _system_prompt(config):
     than performed."""
     mode = config.get("shorts", {}).get("narration_mode", "single_voice")
     rules = SINGLE_VOICE_RULES if mode == "single_voice" else DIALOGUE_RULES
-    return PROMPT_TEMPLATE.replace("{DIALOGUE_RULES}", rules)
+    series = (GAG_RULES if config.get("shorts", {}).get("series_mode") == "gag"
+              else SERIAL_RULES)
+    return (PROMPT_TEMPLATE.replace("{DIALOGUE_RULES}", rules)
+            .replace("{SERIES_RULES}", series))
 
 
 def run(config, workdir: Path):
@@ -298,13 +318,25 @@ def run(config, workdir: Path):
             entry["sfx_in_art"] = p["sfx_text"]
         panel_lines.append(entry)
 
+    stories = config.get("comic", {}).get("stories")
+    if config.get("shorts", {}).get("series_mode") == "gag" and stories:
+        parts = []
+        for k, (a, b) in enumerate(stories, 1):
+            sub = [e for e, pnl in zip(panel_lines, panels)
+                   if a <= pnl["page"] <= b]
+            parts.append(f"--- STORY {k} (pages {a}-{b}, self-contained) ---\n"
+                         + json.dumps(sub, indent=1))
+        panels_repr = "\n\n".join(parts)
+    else:
+        panels_repr = json.dumps(panel_lines, indent=1)
+
     user_msg = (
         f"Comic: {config['comic']['title']}\n"
         f"Target: about {shorts_cfg['target_count']} shorts, "
         f"{shorts_cfg['min_seconds']}-{shorts_cfg['max_seconds']} seconds each.\n"
         f"Characters: "
         f"{', '.join(c['name'] + ' (' + c.get('speaking_style', '') + ')' for c in config.get('characters', []))}\n\n"
-        f"Panels in reading order:\n{json.dumps(panel_lines, indent=1)}"
+        f"Panels in reading order:\n{panels_repr}"
         + _voice_brief(config)   # last, so the voice is the freshest instruction
     )
 

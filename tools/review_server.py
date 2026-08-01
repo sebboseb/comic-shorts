@@ -8,21 +8,26 @@ saved to work_*/review_notes.json as data; `python run.py --stage notes`
 compiles them into manifest edits (pipeline/apply_notes.py) and the next
 `--stage 6 7` picks them up.
 
-Usage: .venv/bin/python tools/review_server.py --workdir work_jeff [--port 8420]
+Usage:
+  ./review                # newest-rendered workdir, config inferred, browser opens
+  ./review issue          # fuzzy-match a workdir ("issue" -> work_jeff_issue)
+  ./review --workdir work_x --config config/x.yaml --port 8420   # explicit
 """
 import argparse
+import html
 import json
 import re
 import subprocess
 import sys
 import threading
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 FPS = 30
 
 PAGE = """<!doctype html><meta charset="utf-8">
-<title>Review — {ep}</title>
+<title>Review — {wd} {ep}</title>
 <style>
 body {{ font-family: system-ui, sans-serif; margin: 0; background: #111;
        color: #eee; }}
@@ -64,9 +69,14 @@ textarea {{ width: 100%; height: 110px; background: #1c1c1c; color: #eee;
 .shot .dot {{ color: #e66; font-weight: 700; }}
 #epnote {{ padding: 0 16px 30px; }}
 #epnote textarea {{ height: 60px; }}
+#nav {{ padding: 10px 16px 0; font-size: 14px; }}
+#nav a {{ color: #8ab4f8; text-decoration: none; margin-right: 14px; }}
+#nav a.ep {{ padding: 2px 10px; background: #222; border-radius: 10px; }}
+#nav a.ep.on {{ background: #ffd54a; color: #111; }}
 </style>
+<div id="nav"><a href="/">&larr; all videos</a> <b>{wd}</b> {ep_tabs}</div>
 <div id="top">
-  <video src="/media/renders/{ep}.mp4" controls></video>
+  <video src="/media/{wd}/renders/{ep}.mp4" controls></video>
   <div id="panel">
     <h2 id="sel">click a shot</h2>
     <div class="line" id="selline"></div>
@@ -91,6 +101,7 @@ textarea {{ width: 100%; height: 110px; background: #1c1c1c; color: #eee;
 <script>
 const SHOTS = {shots_json};
 const EP = "{ep}";
+const WD = "{wd}";
 let notes = {notes_json};
 let sel = null;
 const strip = document.getElementById("strip");
@@ -180,7 +191,7 @@ document.getElementById("gnote").addEventListener("input", e => {{
 if ((notes[EP] || {{}})["_episode"])
   document.getElementById("gnote").value = notes[EP]["_episode"].note || "";
 async function save() {{
-  await fetch("/notes", {{ method: "POST", body: JSON.stringify(notes) }});
+  await fetch(`/notes?wd=${{WD}}`, {{ method: "POST", body: JSON.stringify(notes) }});
   document.getElementById("status").textContent =
     "saved — apply with: python run.py --stage notes 6 7";
   refresh();
@@ -211,9 +222,9 @@ applyBtn.onclick = async () => {{
   if (!confirm("Apply queued changes and re-render? Changed shots re-synthesize (a few minutes).")) return;
   applyBtn.disabled = true;
   applyStatus.textContent = "applying notes, re-synthesizing, rendering...";
-  await fetch("/apply", {{ method: "POST" }});
+  await fetch(`/apply?wd=${{WD}}`, {{ method: "POST" }});
   const poll = setInterval(async () => {{
-    const s = await (await fetch("/apply/status")).json();
+    const s = await (await fetch(`/apply/status?wd=${{WD}}`)).json();
     if (!s.running) {{
       clearInterval(poll);
       applyStatus.textContent = s.ok ? "done — reloading" : ("FAILED: " + s.tail);
@@ -224,6 +235,38 @@ applyBtn.onclick = async () => {{
 }};
 refresh();
 </script>"""
+
+
+
+GALLERY = """<!doctype html><meta charset="utf-8">
+<title>comic-shorts — videos</title>
+<style>
+body {{ font-family: system-ui, sans-serif; margin: 0; background: #111;
+       color: #eee; padding: 20px 24px; }}
+h1 {{ font-size: 20px; }} h2 {{ font-size: 15px; color: #999; margin: 26px 0 10px; }}
+#grid {{ display: flex; flex-wrap: wrap; gap: 14px; }}
+.card {{ width: 240px; background: #1a1a1a; border: 1px solid #333;
+  border-radius: 10px; overflow: hidden; cursor: pointer; text-decoration:
+  none; color: #eee; display: block; }}
+.card:hover {{ border-color: #ffd54a; }}
+.card img {{ width: 100%; height: 150px; object-fit: cover; display: block;
+  background: #000; }}
+.card .body {{ padding: 10px 12px 12px; }}
+.card .title {{ font-size: 13px; color: #ddd; height: 34px; overflow: hidden; }}
+.card .id {{ font-size: 12px; color: #888; }}
+.badge {{ display: inline-block; font-size: 11px; padding: 2px 9px;
+  border-radius: 9px; margin-top: 8px; }}
+.rendered {{ background: #1d3a1d; color: #8fdc8f; }}
+.voicing {{ background: #3a2f14; color: #ffd54a; }}
+.scripted {{ background: #222; color: #aaa; }}
+.notes {{ background: #3a1919; color: #f09090; margin-left: 6px; }}
+#finals {{ font-size: 13px; color: #999; line-height: 1.7; }}
+</style>
+<h1>Videos</h1>
+{sections}
+<h2>finals/ (shipped snapshots)</h2>
+<div id="finals">{finals}</div>
+"""
 
 
 def _shots_payload(workdir, ep):
@@ -237,7 +280,7 @@ def _shots_payload(workdir, ep):
         shots.append({
             "panel": s.get("panel"), "line": s.get("line", ""),
             "start": round(clock, 3), "end": round(clock + dur, 3),
-            "img": "/media/" + panel.get("clean_file", ""),
+            "img": f"/media/{workdir.name}/" + panel.get("clean_file", ""),
             "motion": s.get("motion", ""), "sfx": s.get("sfx", "none"),
             "emotion": s.get("emotion", ""), "hero": bool(s.get("hero")),
         })
@@ -260,6 +303,68 @@ def _apply_worker(workdir, config):
     APPLY["running"] = False
 
 
+def _workdirs():
+    return sorted((d for d in Path(".").glob("work*") if (d / "manifests").is_dir()),
+                  key=lambda d: d.name)
+
+
+def _ep_status(wd, ep):
+    manifest = json.loads((wd / "manifests" / f"{ep}.json").read_text())
+    shots = manifest.get("shots", [])
+    wavs = len(list((wd / "audio" / ep).glob("*.wav"))) if (wd / "audio" / ep).is_dir() else 0
+    render = wd / "renders" / f"{ep}.mp4"
+    if render.exists():
+        dur = sum(s.get("duration_frames") or 0 for s in shots) / FPS
+        state = ("rendered", f"rendered · {dur:.0f}s · "
+                 + time.strftime("%H:%M", time.localtime(render.stat().st_mtime)))
+    elif wavs:
+        state = ("voicing", f"voicing {wavs}/{len(shots)}")
+    else:
+        state = ("scripted", f"scripted · {len(shots)} shots")
+    thumb = ""
+    try:
+        clean = {c["id"]: c for c in json.loads((wd / "clean.json").read_text())}
+        first = clean.get(shots[0]["panel"]) if shots else None
+        if first:
+            thumb = f"/media/{wd.name}/" + first["clean_file"]
+    except FileNotFoundError:
+        pass
+    notes_file = wd / "review_notes.json"
+    n_notes = 0
+    if notes_file.exists():
+        n_notes = len(json.loads(notes_file.read_text()).get(ep, {}))
+    return manifest.get("title", ""), state, thumb, n_notes
+
+
+def _gallery():
+    sections = []
+    for wd in _workdirs():
+        cards = []
+        for mpath in sorted((wd / "manifests").glob("ep*.json")):
+            ep = mpath.stem
+            title, (cls, label), thumb, n_notes = _ep_status(wd, ep)
+            notes_badge = (f"<span class='badge notes'>{n_notes} note"
+                           f"{'s' if n_notes != 1 else ''}</span>" if n_notes else "")
+            img = f"<img src='{thumb}' loading='lazy'>" if thumb else "<img>"
+            cards.append(
+                f"<a class='card' href='/review?wd={wd.name}&ep={ep}'>{img}"
+                f"<div class='body'><div class='id'>{wd.name} · {ep}</div>"
+                f"<div class='title'>{html.escape(title)}</div>"
+                f"<span class='badge {cls}'>{label}</span>{notes_badge}"
+                f"</div></a>")
+        if cards:
+            sections.append(f"<h2>{wd.name}</h2><div id='grid'>"
+                            + "".join(cards) + "</div>")
+    finals = Path.home() / "Dev/comicops/finals"
+    flist = ""
+    if finals.is_dir():
+        rows = sorted(finals.glob("*.mp4"), key=lambda f: -f.stat().st_mtime)
+        flist = "<br>".join(
+            f"{f.name} — {time.strftime('%b %d %H:%M', time.localtime(f.stat().st_mtime))}"
+            for f in rows[:12])
+    return GALLERY.format(sections="".join(sections), finals=flist)
+
+
 class Handler(BaseHTTPRequestHandler):
     workdir: Path
     config: str
@@ -272,42 +377,69 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _wd(self):
+        """Workdir from ?wd=, validated against the real set; falls back to
+        the startup default so pre-gallery URLs keep working."""
+        q = re.search(r"[?&]wd=([\w-]+)", self.path)
+        if q:
+            wd = Path(q.group(1))
+            if wd in _workdirs():
+                return wd
+            return None
+        return self.workdir
+
     def do_POST(self):
-        if self.path == "/apply":
+        wd = self._wd()
+        if wd is None:
+            return self._send(404, b"unknown workdir")
+        if self.path.startswith("/apply"):
             if APPLY["running"]:
                 return self._send(409, b"already running", "text/plain")
             APPLY.update(running=True, ok=None, tail="")
             threading.Thread(target=_apply_worker,
-                             args=(self.workdir, self.config),
+                             args=(wd, _pick_config(wd)),
                              daemon=True).start()
             return self._send(200, b"started", "text/plain")
-        if self.path != "/notes":
+        if not self.path.startswith("/notes"):
             return self._send(404, b"nope")
         raw = self.rfile.read(int(self.headers["Content-Length"]))
         json.loads(raw)  # validate before persisting
-        (self.workdir / "review_notes.json").write_bytes(raw)
+        (wd / "review_notes.json").write_bytes(raw)
         self._send(200, b"ok", "text/plain")
 
     def do_GET(self):
-        if self.path == "/apply/status":
+        if self.path.startswith("/apply/status"):
             return self._send(200, json.dumps(APPLY).encode(),
                               "application/json")
-        if self.path.startswith("/media/"):
-            return self._media(self.workdir / self.path[len("/media/"):])
-        eps = sorted(p.stem for p in (self.workdir / "manifests").glob("ep*.json"))
-        m = re.match(r"^/(?:\?ep=(\w+))?$", self.path)
-        if not m:
-            return self._send(404, b"nope")
-        ep = m.group(1) or eps[0]
-        notes_file = self.workdir / "review_notes.json"
-        notes = notes_file.read_text() if notes_file.exists() else "{}"
-        page = PAGE.format(ep=ep, notes_json=notes,
-                           shots_json=json.dumps(_shots_payload(self.workdir, ep)))
-        self._send(200, page.encode())
+        m = re.match(r"^/media/([\w-]+)/(.+)$", self.path)
+        if m:
+            wd = Path(m.group(1))
+            if wd not in _workdirs():
+                return self._send(404, b"unknown workdir")
+            return self._media(wd, wd / m.group(2))
+        if self.path == "/" or self.path.startswith("/?"):
+            return self._send(200, _gallery().encode())
+        if self.path.startswith("/review"):
+            wd = self._wd()
+            if wd is None:
+                return self._send(404, b"unknown workdir")
+            eps = sorted(p.stem for p in (wd / "manifests").glob("ep*.json"))
+            q = re.search(r"[?&]ep=(\w+)", self.path)
+            ep = q.group(1) if q and q.group(1) in eps else eps[0]
+            tabs = " ".join(
+                f"<a class='ep{' on' if e == ep else ''}' "
+                f"href='/review?wd={wd.name}&ep={e}'>{e}</a>" for e in eps)
+            notes_file = wd / "review_notes.json"
+            notes = notes_file.read_text() if notes_file.exists() else "{}"
+            page = PAGE.format(ep=ep, wd=wd.name, ep_tabs=tabs,
+                               notes_json=notes,
+                               shots_json=json.dumps(_shots_payload(wd, ep)))
+            return self._send(200, page.encode())
+        return self._send(404, b"nope")
 
-    def _media(self, path):
+    def _media(self, wd, path):
         path = path.resolve()
-        if not (path.is_file() and self.workdir.resolve() in path.parents):
+        if not (path.is_file() and wd.resolve() in path.parents):
             return self._send(404, b"nope")
         data = path.read_bytes()
         ctype = ("video/mp4" if path.suffix == ".mp4" else "image/png")
@@ -330,16 +462,48 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
 
+def _pick_workdir(hint):
+    """No flags to remember: any workdir with manifests qualifies; the hint
+    fuzzy-matches the name; ties go to the most recently rendered."""
+    cands = [d for d in Path(".").glob("work*")
+             if (d / "manifests").is_dir()]
+    if hint:
+        cands = [d for d in cands if hint in d.name]
+    if not cands:
+        raise SystemExit(f"no workdir matches {hint!r} "
+                         "(need a work*/ dir with manifests/)")
+    def freshness(d):
+        r = d / "renders"
+        files = list(r.glob("*.mp4")) if r.is_dir() else []
+        return max((f.stat().st_mtime for f in files), default=0)
+    return max(cands, key=freshness)
+
+
+def _pick_config(workdir):
+    """Convention: work_jeff_issue -> config/jeff_issue.yaml."""
+    guess = Path("config") / (workdir.name.removeprefix("work_") + ".yaml")
+    return str(guess) if guess.exists() else "config/comic.yaml"
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--workdir", default="work")
+    ap.add_argument("hint", nargs="?", default=None,
+                    help="part of a workdir name, e.g. 'issue'")
+    ap.add_argument("--workdir", default=None)
     ap.add_argument("--port", type=int, default=8420)
-    ap.add_argument("--config", default="config/comic.yaml")
+    ap.add_argument("--config", default=None)
+    ap.add_argument("--no-open", action="store_true")
     args = ap.parse_args()
-    Handler.workdir = Path(args.workdir)
-    Handler.config = args.config
-    print(f"review gate: http://127.0.0.1:{args.port}/  "
-          f"(workdir={args.workdir})")
+    workdir = Path(args.workdir) if args.workdir else _pick_workdir(args.hint)
+    Handler.workdir = workdir
+    Handler.config = args.config or _pick_config(workdir)
+    base = f"http://127.0.0.1:{args.port}"
+    url = (f"{base}/review?wd={workdir.name}"
+           if (args.hint or args.workdir) else f"{base}/")
+    print(f"review gate: {url}")
+    if not args.no_open:
+        import webbrowser
+        threading.Timer(0.6, webbrowser.open, [url]).start()
     ThreadingHTTPServer(("127.0.0.1", args.port), Handler).serve_forever()
 
 

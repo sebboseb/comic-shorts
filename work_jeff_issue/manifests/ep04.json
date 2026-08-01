@@ -1,0 +1,233 @@
+{
+ "short_id": "ep04",
+ "title": "This baby shark adopted a whole family of cats",
+ "description": "Jeff faces down an alley cat, then Kate almost serves him at Sharksgiving dinner.",
+ "hashtags": [
+  "#itsjeff",
+  "#landshark",
+  "#marvel",
+  "#cats",
+  "#comic"
+ ],
+ "music_mood": "playful",
+ "hook_note": "A tiny shark scratching his head next to a fish sets up the softest, weirdest cat rescue arc.",
+ "shots": [
+  {
+   "panel": "p22_03",
+   "speaker": "narrator",
+   "line": "This is Jeff the Land Shark, making his usual pilgrimage to the fish shop.",
+   "emotion": "warm",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep04/shot000.wav",
+   "duration_frames": 96,
+   "segments": [
+    {
+     "text": "This is Jeff the Land Shark, making his usual pilgrimage to the fish shop.",
+     "frames": 92,
+     "speech_frames": 92
+    }
+   ]
+  },
+  {
+   "panel": "p22_04",
+   "speaker": "narrator",
+   "line": "The owner slips him a fish, and the little guy is down bad in love with it.",
+   "emotion": "delighted",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep04/shot001.wav",
+   "duration_frames": 113,
+   "segments": [
+    {
+     "text": "The owner slips him a fish, and the little guy is down bad in love with it.",
+     "frames": 109,
+     "speech_frames": 109
+    }
+   ]
+  },
+  {
+   "panel": "p22_05",
+   "speaker": "narrator",
+   "line": "But an alley cat pulls up and eyes that fish like it's already hers.",
+   "emotion": "tense",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "sting",
+   "audio": "work_jeff_issue/audio/ep04/shot002.wav",
+   "duration_frames": 109,
+   "segments": [
+    {
+     "text": "But an alley cat pulls up and eyes that fish like it's already hers.",
+     "frames": 105,
+     "speech_frames": 105
+    }
+   ]
+  },
+  {
+   "panel": "p23_01",
+   "speaker": "narrator",
+   "line": "So the GOAT roars, and the cat and a dog both scatter for their lives.",
+   "emotion": "fierce, funny",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work_jeff_issue/audio/ep04/shot003.wav",
+   "duration_frames": 109,
+   "segments": [
+    {
+     "text": "So the GOAT roars, and the cat and a dog both scatter for their lives.",
+     "frames": 104,
+     "speech_frames": 104
+    }
+   ]
+  },
+  {
+   "panel": "p24_01",
+   "speaker": "narrator",
+   "line": "But then he finds that same cat curled up cold in the alley, and softens right up.",
+   "emotion": "tender",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep04/shot004.wav",
+   "duration_frames": 161,
+   "segments": [
+    {
+     "text": "But then he finds that same cat curled up cold in the alley, and softens right up.",
+     "frames": 157,
+     "speech_frames": 157
+    }
+   ]
+  },
+  {
+   "panel": "p24_05",
+   "speaker": "narrator",
+   "line": "Turns out she's got three kittens, so the little menace starts feeding them all.",
+   "emotion": "warm",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep04/shot005.wav",
+   "duration_frames": 111,
+   "segments": [
+    {
+     "text": "Turns out she's got three kittens, so the little menace starts feeding them all.",
+     "frames": 107,
+     "speech_frames": 107
+    }
+   ]
+  },
+  {
+   "panel": "p24_07",
+   "speaker": "narrator",
+   "line": "And the whole family ends up asleep on Jeff himself, an absolute clutch of a shark.",
+   "emotion": "affectionate",
+   "motion": "zoom_out",
+   "hero": true,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep04/shot006.wav",
+   "duration_frames": 97,
+   "segments": [
+    {
+     "text": "And the whole family ends up asleep on Jeff himself, an absolute clutch of a shark.",
+     "frames": 92,
+     "speech_frames": 92
+    }
+   ]
+  },
+  {
+   "panel": "p25_04",
+   "speaker": "narrator",
+   "line": "Later, it's Sharksgiving, and Jeff keeps trying to raid Kate's roasting oven.",
+   "emotion": "amused",
+   "motion": "slow_pan",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep04/shot007.wav",
+   "duration_frames": 128,
+   "segments": [
+    {
+     "text": "Later, it's Sharksgiving, and Jeff keeps trying to raid Kate's roasting oven.",
+     "frames": 123,
+     "speech_frames": 123
+    }
+   ]
+  },
+  {
+   "panel": "p25_05",
+   "speaker": "narrator",
+   "line": "His owner Kate Bishop keeps pointing at the no-chicken sign, breaking his little heart.",
+   "emotion": "loving exasperation",
+   "motion": "zoom_face",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep04/shot008.wav",
+   "duration_frames": 116,
+   "segments": [
+    {
+     "text": "His owner Kate Bishop keeps pointing at the no-chicken sign, breaking his little heart.",
+     "frames": 112,
+     "speech_frames": 112
+    }
+   ]
+  },
+  {
+   "panel": "p27_02",
+   "speaker": "narrator",
+   "line": "So the menace sneaks onto a serving plate and passes out among the roasted vegetables.",
+   "emotion": "amused",
+   "motion": "hold",
+   "hero": false,
+   "sfx": "none",
+   "audio": "work_jeff_issue/audio/ep04/shot009.wav",
+   "duration_frames": 130,
+   "segments": [
+    {
+     "text": "So the menace sneaks onto a serving plate and passes out among the roasted vegetables.",
+     "frames": 126,
+     "speech_frames": 126
+    }
+   ]
+  },
+  {
+   "panel": "p27_01",
+   "speaker": "narrator",
+   "line": "The whole table of heroes absolutely loses it thinking Jeff is dinner.",
+   "emotion": "chaotic",
+   "motion": "shake",
+   "hero": true,
+   "sfx": "sting",
+   "audio": "work_jeff_issue/audio/ep04/shot010.wav",
+   "duration_frames": 92,
+   "segments": [
+    {
+     "text": "The whole table of heroes absolutely loses it thinking Jeff is dinner.",
+     "frames": 88,
+     "speech_frames": 88
+    }
+   ]
+  },
+  {
+   "panel": "p28_03",
+   "speaker": "narrator",
+   "line": "But the GOAT was just here for the food, mouth stuffed, happiest shark alive.",
+   "emotion": "warm, triumphant",
+   "motion": "slomo",
+   "hero": true,
+   "sfx": "impact",
+   "audio": "work_jeff_issue/audio/ep04/shot011.wav",
+   "duration_frames": 169,
+   "segments": [
+    {
+     "text": "But the GOAT was just here for the food, mouth stuffed, happiest shark alive.",
+     "frames": 162,
+     "speech_frames": 162
+    }
+   ]
+  }
+ ],
+ "cliffhanger_note": ""
+}
