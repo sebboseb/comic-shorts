@@ -1,0 +1,23 @@
+[
+  {
+    "applied_at": "2026-08-01 17:27",
+    "notes": {
+      "ep01": {
+        "5": {
+          "tags": [],
+          "note": "QA: slowish (0.35s/w vs median 0.27)"
+        },
+        "11": {
+          "tags": [
+            "reroll"
+          ],
+          "note": "QA: slow (0.44s/w vs median 0.27)"
+        },
+        "15": {
+          "tags": [],
+          "note": "QA: slowish (0.38s/w vs median 0.27)"
+        }
+      }
+    }
+  }
+]

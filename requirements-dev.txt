@@ -1,1 +1,2 @@
 pytest
+playwright>=1.40  # tools/ui_check.py (review-gate UI tests)

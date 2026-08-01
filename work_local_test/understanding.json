@@ -1,0 +1,498 @@
+[
+  {
+    "id": "p01_02",
+    "page": 1,
+    "panel": 2,
+    "file": "panels/p01_02.png",
+    "bbox_on_page": [
+      963,
+      55,
+      700,
+      603
+    ],
+    "size": [
+      700,
+      603
+    ],
+    "scene": "A cartoon shark character wearing a snorkel mask and a life preserver with Deadpool and Gwenpool masks on it, running with an open mouth.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      245,
+      6,
+      693,
+      590
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p01_03",
+    "page": 1,
+    "panel": 3,
+    "file": "panels/p01_03.png",
+    "bbox_on_page": [
+      275,
+      691,
+      1437,
+      2292
+    ],
+    "size": [
+      1437,
+      2292
+    ],
+    "scene": "A crowded pool party with numerous superheroes and characters enjoying the water and poolside area.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Nightcrawler",
+      "Hulk",
+      "Spider-Man",
+      "Captain America",
+      "Wolverine",
+      "Thor",
+      "Wasp",
+      "She-Hulk",
+      "Mantis",
+      "Groot",
+      "Deadpool",
+      "Iron Man",
+      "Black Widow",
+      "Doctor Strange",
+      "Black Panther",
+      "Storm",
+      "Beast",
+      "Professor X",
+      "Wolverine",
+      "Hawkeye",
+      "Spider-Woman",
+      "Mister Fantastic",
+      "Invisible Woman",
+      "Human Torch",
+      "Thing",
+      "Silver Surfer",
+      "Doctor Doom",
+      "Loki",
+      "Thanos",
+      "Gamora",
+      "Drax",
+      "Groot",
+      "Mantis",
+      "Star-Lord",
+      "Gamora",
+      "Drax",
+      "Groot",
+      "Mantis",
+      "Star-Lord",
+      "Gamora",
+      "Drax",
+      "Groot",
+      "Mantis",
+      "Star-Lord"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      546,
+      1758,
+      1020,
+      2258
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_01",
+    "page": 2,
+    "panel": 1,
+    "file": "panels/p02_01.png",
+    "bbox_on_page": [
+      69,
+      71,
+      917,
+      1461
+    ],
+    "size": [
+      917,
+      1461
+    ],
+    "scene": "A group of superheroes, including Spider-Man, Captain America, Wonder Woman, and Kate Bishop, are at a beach party with a large squirrel character and a baby shark wearing a Deadpool-themed floatie.",
+    "characters_present": [
+      "Spider-Man",
+      "Captain America",
+      "Wonder Woman",
+      "Kate Bishop",
+      "Squirrel Girl",
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      532,
+      362,
+      774,
+      1363
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_02",
+    "page": 2,
+    "panel": 2,
+    "file": "panels/p02_02.png",
+    "bbox_on_page": [
+      1001,
+      71,
+      916,
+      1461
+    ],
+    "size": [
+      916,
+      1461
+    ],
+    "scene": "Jeff the Land Shark is surrounded by people at a beach, being photographed on their phones while wearing a snorkel mask and a floatie, with an ice cream cone and a drink nearby.",
+    "characters_present": [
+      "Jeff the Land Shark"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      263,
+      282,
+      703,
+      1106
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_03",
+    "page": 2,
+    "panel": 3,
+    "file": "panels/p02_03.png",
+    "bbox_on_page": [
+      68,
+      1602,
+      703,
+      655
+    ],
+    "size": [
+      703,
+      655
+    ],
+    "scene": "A light blue inflatable swim ring with Deadpool and Gwenpool logos floating on a pink surface.",
+    "characters_present": [],
+    "dialogue": [],
+    "focus_box": [
+      16,
+      9,
+      694,
+      478
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_04",
+    "page": 2,
+    "panel": 4,
+    "file": "panels/p02_04.png",
+    "bbox_on_page": [
+      675,
+      1664,
+      1083,
+      519
+    ],
+    "size": [
+      1083,
+      519
+    ],
+    "scene": "A close-up of Jeff the Land Shark's face in the top-left corner, with a pink background and the top of another character's head visible at the bottom right.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      0,
+      12,
+      94,
+      356
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p02_05",
+    "page": 2,
+    "panel": 5,
+    "file": "panels/p02_05.png",
+    "bbox_on_page": [
+      902,
+      2107,
+      887,
+      773
+    ],
+    "size": [
+      887,
+      773
+    ],
+    "scene": "A close-up of Jeff the Land Shark, a small grey baby shark with big black eyes, smiling widely with his teeth showing. He is standing on a light-colored surface, with a yellow pencil in a holder visible in the background.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      164,
+      8,
+      823,
+      764
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p03_01",
+    "page": 3,
+    "panel": 1,
+    "file": "panels/p03_01.png",
+    "bbox_on_page": [
+      69,
+      262,
+      790,
+      1259
+    ],
+    "size": [
+      790,
+      1259
+    ],
+    "scene": "A group of characters are enjoying a pool party, with some floating on inflatable rings and others swimming.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Kate Bishop",
+      "Nightcrawler",
+      "Hulk",
+      "Duckling",
+      "Fairy Girl",
+      "Ant-Man"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      145,
+      658,
+      437,
+      986
+    ],
+    "sfx_text": [
+      "SPLASH"
+    ]
+  },
+  {
+    "id": "p03_02",
+    "page": 3,
+    "panel": 2,
+    "file": "panels/p03_02.png",
+    "bbox_on_page": [
+      69,
+      1536,
+      790,
+      1259
+    ],
+    "size": [
+      790,
+      1259
+    ],
+    "scene": "Underwater scene showing a small shark-like creature swimming among several people in the water.",
+    "characters_present": [
+      "Jeff",
+      "Kate Bishop",
+      "Nightcrawler"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      216,
+      533,
+      437,
+      865
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p03_03",
+    "page": 3,
+    "panel": 3,
+    "file": "panels/p03_03.png",
+    "bbox_on_page": [
+      873,
+      262,
+      1052,
+      2533
+    ],
+    "size": [
+      1052,
+      2533
+    ],
+    "scene": "Multiple superheroes are relaxing in a swimming pool, each on a unique float or swimming freely.",
+    "characters_present": [
+      "Thor",
+      "Spider-Man",
+      "Storm",
+      "Groot",
+      "Raccoon",
+      "Wolverine",
+      "Doctor Strange",
+      "Ghost Rider",
+      "Spider-Gwen",
+      "Black Panther"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      736,
+      1512,
+      1031,
+      2224
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_01",
+    "page": 4,
+    "panel": 1,
+    "file": "panels/p04_01.png",
+    "bbox_on_page": [
+      87,
+      48,
+      910,
+      1450
+    ],
+    "size": [
+      910,
+      1450
+    ],
+    "scene": "A shark fin emerges from a swimming pool, causing panic among the swimmers, while a blue-skinned mutant with yellow eyes looks on.",
+    "characters_present": [
+      "Kate Bishop",
+      "Nightcrawler"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      127,
+      682,
+      437,
+      1327
+    ],
+    "sfx_text": [
+      "SPLASH"
+    ]
+  },
+  {
+    "id": "p04_02",
+    "page": 4,
+    "panel": 2,
+    "file": "panels/p04_02.png",
+    "bbox_on_page": [
+      1010,
+      48,
+      925,
+      955
+    ],
+    "size": [
+      925,
+      955
+    ],
+    "scene": "A small, cute baby shark with big eyes and a wide grin swims happily in clear blue water, with bubbles rising around it.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      254,
+      255,
+      683,
+      580
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_03",
+    "page": 4,
+    "panel": 3,
+    "file": "panels/p04_03.png",
+    "bbox_on_page": [
+      1010,
+      1017,
+      925,
+      481
+    ],
+    "size": [
+      925,
+      481
+    ],
+    "scene": "A large shark emerges from the water with its mouth open, showing sharp teeth and a pink tongue.",
+    "characters_present": [],
+    "dialogue": [],
+    "focus_box": [
+      132,
+      80,
+      728,
+      417
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_04",
+    "page": 4,
+    "panel": 4,
+    "file": "panels/p04_04.png",
+    "bbox_on_page": [
+      87,
+      1511,
+      1030,
+      1545
+    ],
+    "size": [
+      1030,
+      1545
+    ],
+    "scene": "A swimming pool with a unicorn float, a beach ball, a pink float, a yellow ring, and three baby sharks swimming.",
+    "characters_present": [
+      "Jeff"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      481,
+      548,
+      587,
+      672
+    ],
+    "sfx_text": []
+  },
+  {
+    "id": "p04_05",
+    "page": 4,
+    "panel": 5,
+    "file": "panels/p04_05.png",
+    "bbox_on_page": [
+      1131,
+      1511,
+      804,
+      1363
+    ],
+    "size": [
+      804,
+      1363
+    ],
+    "scene": "A group of superheroes including Hulk, Captain America, Spider-Man, and others stand on a pool deck in shock, while a large pink dinosaur looms behind them. In the foreground, a small grey shark-like creature named Jeff the Land Shark emerges from the pool water.",
+    "characters_present": [
+      "Jeff the Land Shark",
+      "Hulk",
+      "Captain America",
+      "Spider-Man",
+      "Black Panther",
+      "Wasp",
+      "Kate Bishop",
+      "Nightcrawler",
+      "Devil Dinosaur"
+    ],
+    "dialogue": [],
+    "focus_box": [
+      24,
+      876,
+      482,
+      1322
+    ],
+    "sfx_text": []
+  }
+]

@@ -3,3 +3,4 @@ __pycache__/
 .venv/
 weights/
 .DS_Store
+cache/

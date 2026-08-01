@@ -11,9 +11,11 @@ Output: work/understanding.json
 """
 
 import base64
+import hashlib
 import io
 import json
 import os
+import subprocess
 import time
 from pathlib import Path
 
@@ -100,10 +102,18 @@ def _norm_to_px(box, width, height):
 
 
 def run(config, workdir: Path):
-    if "ANTHROPIC_API_KEY" not in os.environ:
-        raise SystemExit("Set ANTHROPIC_API_KEY")
-    client = anthropic.Anthropic(max_retries=5)  # ride out transient 5xx/502
-    model = config["models"]["vision_model"]
+    # anthropic (default): batch API, face-ref roster, best accuracy.
+    # local: mlx_vlm worker (pipeline/stage2_local.py), $0, qualified on
+    # Qwen3-VL-30B-A3B - scene/focus near Claude, but pair it with
+    # comic.wordless on dialogue-free comics (it invents speech bubbles).
+    provider = config["models"].get("vision_provider", "anthropic")
+    if provider == "local":
+        model = config["models"].get(
+            "vision_local_model", "mlx-community/Qwen3-VL-30B-A3B-Instruct-4bit")
+    else:
+        if "ANTHROPIC_API_KEY" not in os.environ:
+            raise SystemExit("Set ANTHROPIC_API_KEY")
+        model = config["models"]["vision_model"]
 
     panels_data = json.loads((workdir / "panels.json").read_text())
     panels = panels_data["panels"]
@@ -126,17 +136,80 @@ def run(config, workdir: Path):
             roster_blocks.append({"type": "text",
                                   "text": f"Character (no reference image): "
                                           f"{ch['name']} - {ch['description']}"})
+
+    # comic-specific iconography the model cannot be expected to know:
+    # merch prints, in-universe gags, recurring props. Supplied by the human
+    # who knows the comic (config comic.lore), because a stylized Gwenpool
+    # mask genuinely reads as a cat paw print without being told.
+    lore = config.get("comic", {}).get("lore") or []
+    if lore:
+        roster_blocks.append({
+            "type": "text",
+            "text": "Comic-specific iconography notes (trust these over "
+                    "your own guess when they apply):\n"
+                    + "\n".join(f"- {note}" for note in lore)})
     if roster_blocks:
         # identical prefix across all requests -> cache the roster
         roster_blocks[-1]["cache_control"] = {"type": "ephemeral"}
 
-    # Build one batch request per panel (Batches API = 50% of standard price)
+    # text-only roster for the local worker (it takes no reference images)
+    roster_text = "\n".join(
+        f"Character: {ch['name']} - {ch['description']}" for ch in roster)
+    if lore:
+        roster_text += ("\nComic-specific iconography notes (trust these "
+                        "over your own guess when they apply):\n"
+                        + "\n".join(f"- {note}" for note in lore))
+
+    # Annotation cache: a panel annotation is a pure function of the panel
+    # image and the full prompt context, so identical requests are never
+    # paid for twice (re-runs, overlapping workdirs, a page added to an
+    # already-annotated issue). Keyed on image bytes + model + prompt +
+    # roster + lore; any of those changing is a different question.
+    cache_dir = Path("cache/stage2")
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    ctx = hashlib.sha256(json.dumps(
+        [provider, model, SYSTEM_PROMPT,
+         roster_text if provider == "local" else roster_blocks],
+        sort_keys=True, default=str).encode()).hexdigest()
+
+    def _cache_key(panel_path):
+        h = hashlib.sha256(panel_path.read_bytes() + ctx.encode())
+        return cache_dir / f"{h.hexdigest()}.json"
+
     sizes = {}
-    requests = []
+    cached = {}
+    uncached = []
     for panel in panels:
         panel_path = workdir / panel["file"]
         sizes[panel["id"]] = Image.open(panel_path).size
+        key = _cache_key(panel_path)
+        if key.exists():
+            cached[panel["id"]] = json.loads(key.read_text())
+        else:
+            uncached.append(panel)
 
+    wordless = config.get("comic", {}).get("wordless", False)
+    if cached:
+        print(f"{len(cached)}/{len(panels)} panels served from cache")
+    if not uncached:
+        _finish(panels, cached, sizes, roster, workdir, wordless)
+        return
+
+    if provider == "local":
+        fresh = _run_local(model, roster_text, uncached, workdir)
+        for pid, parsed in fresh.items():
+            if "parse_error" not in parsed:
+                _cache_key(workdir / next(p["file"] for p in uncached
+                                          if p["id"] == pid)
+                           ).write_text(json.dumps(parsed))
+        _finish(panels, {**cached, **fresh}, sizes, roster, workdir, wordless)
+        return
+
+    # Build one batch request per panel (Batches API = 50% of standard price)
+    client = anthropic.Anthropic(max_retries=5)  # ride out transient 5xx/502
+    requests = []
+    for panel in uncached:
+        panel_path = workdir / panel["file"]
         content = list(roster_blocks)
         content.append({"type": "text", "text": "Now analyze this panel:"})
         content.append({
@@ -165,6 +238,7 @@ def run(config, workdir: Path):
               f"{c.processing} in flight")
         time.sleep(20)
 
+    paths = {p["id"]: workdir / p["file"] for p in panels}
     parsed_by_id = {}
     for result in client.messages.batches.results(batch.id):
         pid = result.custom_id
@@ -179,12 +253,51 @@ def run(config, workdir: Path):
         text = next((b.text for b in msg.content if b.type == "text"), "")
         try:
             parsed_by_id[pid] = _parse_json(text)
+            # cache the raw (0-1000 coords) annotation; failures are not
+            # cached so a re-run retries them
+            _cache_key(paths[pid]).write_text(json.dumps(parsed_by_id[pid]))
         except json.JSONDecodeError as e:
             print(f"  {pid}: JSON parse failed ({e}), storing raw")
             parsed_by_id[pid] = {"scene": "", "characters_present": [],
                                  "dialogue": [], "focus_box": [0, 0, 1000, 1000],
                                  "sfx_text": [], "parse_error": text}
 
+    _finish(panels, {**cached, **parsed_by_id}, sizes, roster, workdir,
+            wordless)
+    (workdir / BATCH_STATE_FILE).unlink(missing_ok=True)
+
+
+def _run_local(model, roster_text, panels, workdir):
+    """Annotate panels with the local mlx_vlm worker. Runs in a subprocess
+    under uvx because the pipeline venv doesn't carry mlx."""
+    job = workdir / "_stage2_local_job.json"
+    out = workdir / "_stage2_local_out.json"
+    job.write_text(json.dumps({
+        "model": model,
+        "system_prompt": SYSTEM_PROMPT,
+        "roster_text": roster_text,
+        "panels": [{"id": p["id"], "path": str((workdir / p["file"]).resolve())}
+                   for p in panels],
+    }))
+    print(f"local vision ({model}): {len(panels)} panels...")
+    subprocess.run(["uvx", "--from", "mlx-vlm", "python",
+                    str(Path(__file__).parent / "stage2_local.py"),
+                    str(job), str(out)], check=True)
+    results = json.loads(out.read_text())
+    job.unlink()
+    out.unlink()
+    return results
+
+
+def _finish(panels, parsed_by_id, sizes, roster, workdir, wordless=False):
+    """Normalize, order, and write understanding.json. Annotations arrive
+    raw (0-1000 coords) whether fresh from the batch or from the cache.
+    wordless comics get dialogue stripped outright - the local model
+    invents speech bubbles, and even API models occasionally read shouted
+    lettering as dialogue."""
+    if wordless:
+        for parsed in parsed_by_id.values():
+            parsed["dialogue"] = []
     canon = {ch["name"].lower(): ch["name"] for ch in roster}
     canon.update({"narrator": "narrator", "unknown": "unknown"})
 
@@ -210,6 +323,5 @@ def run(config, workdir: Path):
     unknowns = sum(1 for p in results for d in p.get("dialogue", [])
                    if d.get("speaker") == "unknown")
     (workdir / "understanding.json").write_text(json.dumps(results, indent=2))
-    (workdir / BATCH_STATE_FILE).unlink(missing_ok=True)
     print(f"\nDone -> understanding.json"
           f" ({unknowns} lines with unknown speaker to fix at review)")

@@ -1,0 +1,26 @@
+
+=== stage notes: apply review notes ===
+Traceback (most recent call last):
+  File "/Users/seb/Dev/comicops/comic-shorts/run.py", line 101, in <module>
+    main()
+    ~~~~^^
+  File "/Users/seb/Dev/comicops/comic-shorts/run.py", line 97, in main
+    fn(config, workdir)
+    ~~^^^^^^^^^^^^^^^^^
+  File "/Users/seb/Dev/comicops/comic-shorts/run.py", line 65, in _notes
+    apply_notes.run(config, workdir)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/seb/Dev/comicops/comic-shorts/pipeline/apply_notes.py", line 148, in run
+    edits = _apply_llm_edits(config, manifest, understanding, notes, ep)
+  File "/Users/seb/Dev/comicops/comic-shorts/pipeline/apply_notes.py", line 78, in _apply_llm_edits
+    return json.loads(text)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

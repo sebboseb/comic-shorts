@@ -37,7 +37,7 @@ Respond with ONLY a JSON object, no markdown fences:
           "speaker": "character name or 'narrator'",
           "line": "the spoken line",
           "emotion": "delivery direction",
-          "motion": "one of: zoom_face, slow_pan, shake, hold, zoom_out",
+          "motion": "one of: zoom_face, slow_pan, shake, hold, zoom_out, slomo",
           "hero": false,
           "sfx": "one of: none, whoosh, impact, heartbeat, sting"
         }
@@ -115,6 +115,9 @@ Rules:
   it motion + sfx.
 - 'shake' motion is reserved for impact/action beats. 'zoom_face' for emotional
   beats. Vary motion; three identical motions in a row reads as robotic.
+- 'slomo' is a meme slow-punch zoom for the episode's single most absurd
+  reveal - the beat the whole short exists for. At most ONE per short; give
+  that shot a short, savoured line, not a long sentence.
 - Mark at most 2-3 shots per short as hero (the most dramatic single images).
 - Aim for each short to fit the target length: roughly 2.5 words per second of
   spoken text plus ~1.2s per silent shot."""

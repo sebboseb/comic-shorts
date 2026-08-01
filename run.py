@@ -60,6 +60,11 @@ def _stage7(config, workdir):
     stage7_render.run(config, workdir)
 
 
+def _notes(config, workdir):
+    from pipeline import apply_notes
+    apply_notes.run(config, workdir)
+
+
 STAGES = {
     "1": ("panel extraction", _stage1),
     "2": ("understanding pass", _stage2),
@@ -69,6 +74,7 @@ STAGES = {
     "5": ("review page", _stage5),
     "6": ("tts (voicebox)", _stage6),
     "7": ("render (ffmpeg)", _stage7),
+    "notes": ("apply review notes", _notes),
     "check": ("config check", _check),
 }
 

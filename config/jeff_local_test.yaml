@@ -1,0 +1,104 @@
+comic:
+  title: It's Jeff!
+  reading_direction: ltr
+  lore:
+  - 'Small stylized mask prints on Jeff''s gear come in two kinds: red-with-black-eyes
+    = Deadpool masks, white-with-pink = GWENPOOL masks (they look like cat paw prints
+    - they are not).'
+  - Jeff's plush toys are a tan pug and a red Devil Dinosaur.
+  - A license plate reading E-616 is a gag about Marvel's Earth-616 universe designation.
+  pages_dir: pages_jeff_pool
+  wordless: true
+shorts:
+  target_count: 1
+  min_seconds: 55
+  max_seconds: 75
+  narrator_voice_id: unused
+  narration_mode: single_voice
+  narration_style: 'A warm, amused storyteller recapping an adorable disaster he clearly
+
+    loves. Plain everyday words, present tense, momentum from chained
+
+    clauses rather than jokes. Report the cute chaos completely straight -
+
+    the absurdity IS the comedy. Affectionate exasperation, never snark.
+
+    Sprinkle chronically-online praise and ribbing on the characters -
+
+    the GOAT, clutch, a certified menace, down bad, pulls up, the full
+
+    government name, a bum - a handful per episode, varied, always
+
+    affectionate, never forced into every line. Up to two hard swears per
+
+    episode, dropped only at peak absurdity ("even the fucking Hulk") the
+
+    way the reference channel does - never casually, and never in the
+
+    same shot twice.
+
+    '
+  pause_ms: 320
+  ellipsis_pause_ms: 560
+  shot_gap_ms: 140
+  speech_tempo: 1.45
+  captions: true
+  part_badge: false
+  drift_rate: 0.055
+  frame_tightness: 2.6
+  frame_mode: fill
+  fill_min_coverage: 0.22
+  caption_style:
+    font: /System/Library/Fonts/Supplemental/Impact.ttf
+    size_pct: 0.046
+    uppercase: true
+    outline_ratio: 9
+    shadow: true
+    color: '#FFFFFF'
+    highlight_color: '#FFD54A'
+    position: center
+    center_pct: 0.55
+    speaker_colors: {}
+  music_dir: ~/Dev/comicops/mpt-comic-kit/MoneyPrinterTurbo/resource/songs
+  music_volume: 0.11
+  music_by_mood:
+    ominous: output029.mp3
+    melancholy: output025.mp3
+    tense_buildup: output017.mp3
+    playful: output012.mp3
+    triumphant: output015.mp3
+    action: output004.mp3
+    default: output012.mp3
+  voicebox_profile: aud_qwen_Ryan
+  tts_pronounce: {}
+  narrator_instruct: 'Energetic, warm video-recap narrator: deep male voice, quick
+    pace, affectionate but bone-dry - the jokes are in the words, the delivery is
+    deadpan - punchy emphasis on names and reversals, storyteller confidence. Speak
+    ONLY the written words - never laugh, giggle, sigh or add any sound that is not
+    in the text.'
+characters:
+- name: Jeff
+  epithet: Jeff the Land Shark / the GOAT / the little menace
+  description: 'Jeff the Land Shark: small grey baby-shark pet with stubby legs, big
+    black eyes, permanently delighted. Walks on land, acts like a dog.'
+  speaking_style: does not speak; communicates in happy shark noises
+- name: Kate Bishop
+  epithet: Kate Bishop, his long-suffering owner / Hawkeye, the one with actual responsibilities
+  description: 'Kate Bishop, Hawkeye: young woman, long black hair, purple sleeveless
+    outfit with black gloves'
+  speaking_style: exasperated but loving pet owner
+- name: Nightcrawler
+  epithet: Nightcrawler, who has seen far weirder
+  description: 'Nightcrawler (Kurt Wagner): X-Man with dark indigo-blue skin, black
+    hair, pointed ears, yellow eyes'
+  speaking_style: wry, unbothered
+models:
+  vision_model: claude-sonnet-4-6
+  story_model: claude-opus-4-8
+  esrgan_weights: weights/RealESRGAN_x4plus_anime_6B.pth
+  upscale_target_long_side: 2200
+  vision_provider: local
+stage1:
+  detector: floodfill
+  min_panel_area_ratio: 0.02
+  crop_margin: 4

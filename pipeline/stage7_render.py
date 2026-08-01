@@ -79,6 +79,8 @@ def _split_points(shot, frames):
     lands near the even split point; a cut inside a word is masked by the
     caption staying put, but a cut on a sentence gap looks intentional.
     """
+    if shot.get("motion") == "slomo":
+        return [(0, frames)]   # a cut inside the slow punch would kill it
     if frames <= round(MAX_SHOT_FRAMES * 1.35):
         return [(0, frames)]
     n = max(2, round(frames / SPLIT_TARGET))
@@ -143,6 +145,9 @@ def _zoompan(motion, n, cx, cy, fw, fh):
 
     if motion == "zoom_face":
         z, x, y = f"min(1+0.18*on/{span},1.18)", cxc, cyc
+    elif motion == "slomo":
+        z, x, y = (f"min(1+{SLOMO_ZOOM - 1:.2f}*on/{span},{SLOMO_ZOOM:.2f})",
+                   cxc, cyc)
     elif motion == "zoom_out":
         z, x, y = f"max(1.18-0.18*on/{span},1.0)", cxc, cyc
     elif motion == "slow_pan":
@@ -217,11 +222,27 @@ def _frame_window(pw, ph, focus, tightness, max_frac=1.0):
     return round(x), round(y), round(tw), round(th)
 
 
+SLOMO_ZOOM = 1.38   # meme slow-punch depth; deeper than zoom_face's 1.18
+
+
 def _framed_chain(pw, ph, focus, motion, dur, tightness, max_frac=1.0):
     """Crop the subject-framed window, drift gently inside it, fill the frame."""
     x, y, w, h = _frame_window(pw, ph, focus, tightness, max_frac)
     s = PRESCALE
     sx, sy, sw, sh = x * s, y * s, w * s, h * s
+
+    if motion == "slomo":
+        # meme slow-punch: one long heavy zoom into the subject, no drift,
+        # for the episode's single most absurd reveal. Supersampled so the
+        # slow zoom doesn't shimmer on halftones.
+        n = max(2, round(dur * FPS))
+        ss_w, ss_h = W * SUPERSAMPLE, H * SUPERSAMPLE
+        return (f"scale=iw*{s}:ih*{s}:flags=lanczos,"
+                f"crop={sw}:{sh}:x={sx}:y={sy},"
+                f"zoompan=z='min(1+{SLOMO_ZOOM - 1:.2f}*on/{n - 1},{SLOMO_ZOOM:.2f})':"
+                f"x='(iw-iw/zoom)/2':y='(ih-ih/zoom)/2':"
+                f"d=1:s={ss_w}x{ss_h}:fps={FPS},"
+                f"scale={W}:{H}:flags=lanczos")
 
     # room to move without leaving the panel
     room_x = max(0, pw * s - sw)
@@ -396,9 +417,15 @@ def run(config, workdir: Path):
                 frames = _est_frames(shot.get("line", ""))
                 estimated += 1
 
-            cx, cy = _focus_norm(panel)
-            fb, size, csize = (panel.get("focus_box"), panel.get("size"),
-                               panel["clean_size"])
+            # a shot may override the panel's focus box (same coordinate
+            # space: original-panel pixels) - how a punch-in lands on a
+            # detail the panel-level focus ignores, e.g. one background
+            # character. Set by hand at the review gate.
+            fb_override = shot.get("focus_box")
+            cx, cy = (_focus_norm({**panel, "focus_box": fb_override})
+                      if fb_override else _focus_norm(panel))
+            fb, size, csize = (fb_override or panel.get("focus_box"),
+                               panel.get("size"), panel["clean_size"])
             focus = None
             if fb and size and size[0] and size[1]:
                 k = csize[0] / size[0], csize[1] / size[1]
@@ -407,6 +434,10 @@ def run(config, workdir: Path):
             for j, (off, nf) in enumerate(pieces):
                 clip = tmp / f"shot{i:03d}_{j}.mp4"
                 tm, max_frac = REFRAME[repeat % len(REFRAME)]
+                if shot.get("motion") == "slomo":
+                    # the slow punch must land ON its subject; the re-frame
+                    # rotation would sometimes hand it a zoomed-OUT variant
+                    tm, max_frac = 0.7, 0.8
                 _render_shot(img, audio_path, nf,
                              shot.get("motion", "hold"), cx, cy,
                              csize, clip, focus,

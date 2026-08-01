@@ -200,8 +200,21 @@ def _synth_one(port, profile_id, text, engine, instruct=None, seed=None):
 
 LAUGH_MARKERS = ("haha", "ha ha", "ha-ha", "huhu", "hu hu", "hehe",
                  "heh heh", "hah hah")
-MAX_SEC_PER_WORD = 0.85   # a laughing fit or stall runs far slower than speech
-VERIFY_RETRIES = 3
+# a laughing fit or stall runs far slower than speech. Whisper often
+# transcribes straight THROUGH a giggle (the words come back clean), so the
+# rate check is the only detector for laughter woven into the delivery -
+# a 12-word line at 0.52s/word shipped while its episode ran 0.25s/word.
+# The budget is per raw-voice word, so it scales with speech_tempo.
+MAX_SEC_PER_WORD = 0.65
+VERIFY_RETRIES = 5
+# whisper cannot reliably transcribe an isolated clip under ~2s (it
+# hallucinates, similarity comes back ~0.1 on a perfect take), so for very
+# short sentences the similarity check is inconclusive rather than fatal
+MIN_VERIFY_CHARS = 24
+# appended AFTER the per-shot emotion, which otherwise lands last and reads
+# as permission ("joyful" -> giggling through the line)
+NO_LAUGH_SUFFIX = ("Never laugh, giggle, chuckle or make any sound "
+                   "that is not a written word.")
 
 
 def _transcribe(port, wav_bytes):
@@ -227,7 +240,7 @@ def _transcribe(port, wav_bytes):
     return None
 
 
-def _flag_delivery(port, params, body, sentence):
+def _flag_delivery(port, params, body, sentence, tempo=1.0):
     """Why this take can't ship, or None. qwen occasionally breaks into
     laughter or vocal noise mid-sentence (stochastic - a clean text can fail
     on the next run), so every take is checked: words-per-second first
@@ -236,7 +249,8 @@ def _flag_delivery(port, params, body, sentence):
     sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
     seconds = len(body) / (sw * ch) / sr
     words = max(len(sentence.split()), 1)
-    if seconds / words > MAX_SEC_PER_WORD:
+    budget = MAX_SEC_PER_WORD / max(tempo, 1.0)  # body is post-retempo
+    if seconds / words > budget:
         return f"speech rate anomaly ({seconds / words:.2f}s/word)"
     buf = io.BytesIO()
     with wave.open(buf, "wb") as w:
@@ -250,13 +264,15 @@ def _flag_delivery(port, params, body, sentence):
         return "laughter in output"
     want = sentence.strip().lower()
     ratio = difflib.SequenceMatcher(None, heard[:len(want) + 20], want).ratio()
-    if ratio < 0.45:
+    if ratio < 0.45 and len(want) >= MIN_VERIFY_CHARS:
         return f"output doesn't match text (similarity {ratio:.2f})"
     # the prefix comparison above deliberately ignores what follows the
     # sentence -- which is exactly where qwen appends its junk ("...should
     # not make" + 2s of vocal noise shipped this way). Anything much longer
-    # than the text plus transcription slop is trailing garbage.
-    if len(heard) > len(want) * 1.5 + 30:
+    # than the text plus transcription slop is trailing garbage. Short
+    # clips are exempt (whisper hallucinates on them); their junk shows up
+    # in the rate check instead, because junk costs seconds.
+    if len(heard) > len(want) * 1.5 + 30 and len(want) >= MIN_VERIFY_CHARS:
         return f"extra speech after text ({len(heard)} vs {len(want)} chars)"
     return None
 
@@ -288,7 +304,12 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE,
             _speakable(text), pace.get("pause_ms"), pace.get("ellipsis_pause_ms")):
         # every take is verified; qwen's failure mode (laughter, vocal noise)
         # is stochastic, so a bad take gets a fresh seed rather than a rerun
-        # of the same one
+        # of the same one. If no take comes back clean, ship the one with
+        # the best (lowest) seconds-per-word: rate is the physical signal -
+        # laughter and trailing junk cost seconds - whereas "the last one"
+        # was as likely the worst take as the best.
+        words = max(len(sentence.split()), 1)
+        candidates = []
         for attempt in range(VERIFY_RETRIES):
             seed = None if attempt == 0 else random.randrange(1 << 31)
             raw = _retempo(_synth_one(port, profile_id,
@@ -300,14 +321,16 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE,
                 frames = w.readframes(w.getnframes())
             sw, ch, sr = params.sampwidth, params.nchannels, params.framerate
             body = _trim(frames, sw, ch, sr)
-            problem = _flag_delivery(port, params, body, sentence)
+            problem = _flag_delivery(port, params, body, sentence, tempo)
             if not problem:
                 break
+            candidates.append((len(body) / (sw * ch) / sr / words, body))
             print(f"    take {attempt + 1} rejected ({problem}): "
                   f"{sentence[:50]!r}")
         else:
+            spw, body = min(candidates, key=lambda c: c[0])
             print(f"    WARNING: no clean take after {VERIFY_RETRIES} tries, "
-                  f"keeping the last one: {sentence[:50]!r}")
+                  f"keeping the fastest ({spw:.2f}s/word): {sentence[:50]!r}")
         pieces.append(body)
         gap_bytes = int(sr * pause_ms / 1000) * sw * ch if pause_ms else 0
         if gap_bytes:
@@ -335,6 +358,41 @@ def _synth(port, profile_id, text, out_path: Path, engine=ENGINE,
 def _wav_seconds(path: Path) -> float:
     with wave.open(str(path), "rb") as w:
         return w.getnframes() / w.getframerate()
+
+
+SLOMO_SPEED = 0.62   # net tempo of a slomo shot's audio
+SLOMO_PITCH = 0.92   # pitch drop that sells the meme slow-motion
+
+
+def _slomo_wav(path: Path, segments):
+    """Meme slow-motion treatment for a `motion: slomo` shot: the whole
+    shot wav is slowed and pitch-dropped after synthesis (verification ran
+    on the normal-speed takes). Segment timings are rescaled in place so
+    the karaoke captions stretch with the words."""
+    tmp = path.with_suffix(".slomo.wav")
+    # asetrate by SLOMO_PITCH drops pitch and slows by the same factor;
+    # atempo supplies the rest of the slowdown without further pitch shift.
+    # asetrate MUST start from the wav's real rate: these are 24kHz qwen
+    # wavs, and a hardcoded 44100 played them 1.7x fast - the "slomo" that
+    # shipped sped-up and chipmunked.
+    with wave.open(str(path), "rb") as w:
+        sr = w.getframerate()
+    atempo = SLOMO_SPEED / SLOMO_PITCH
+    r = subprocess.run(
+        ["ffmpeg", "-v", "error", "-y", "-i", str(path),
+         "-af", f"asetrate={sr}*{SLOMO_PITCH},aresample={sr},"
+                f"atempo={atempo:.4f}",
+         str(tmp)], capture_output=True)
+    if r.returncode != 0 or not tmp.exists():
+        print(f"    WARNING: slomo treatment failed, keeping normal speed "
+              f"({r.stderr.decode()[:120]})")
+        return
+    old = _wav_seconds(path)
+    tmp.replace(path)
+    k = _wav_seconds(path) / old if old else 1.0
+    for seg in segments:
+        seg["frames"] = round(seg["frames"] * k)
+        seg["speech_frames"] = round(seg["speech_frames"] * k)
 
 def run(config, workdir: Path):
     port = _find_port()
@@ -401,9 +459,15 @@ def run(config, workdir: Path):
             print(f"  {short_id} shot{i:03d} [{speaker}] {line[:50]!r}")
             base = styles.get(speaker)
             emotion = shot.get("emotion")
-            instruct = "; ".join(x for x in (base, emotion) if x) or None
+            # NO_LAUGH_SUFFIX goes last: whatever comes last reads as the
+            # freshest instruction, and an emotion like "joyful" in final
+            # position had qwen giggling through the words
+            instruct = "; ".join(x for x in (base, emotion, NO_LAUGH_SUFFIX)
+                                 if x) or None
             segments = _synth(port, pid, line, wav, engine, pace, instruct,
                               config.get("shorts", {}).get("tts_pronounce"))
+            if shot.get("motion") == "slomo":
+                _slomo_wav(wav, segments)
             shot["audio"] = str(wav.relative_to(workdir.parent)
                                 if wav.is_relative_to(workdir.parent) else wav)
             shot["duration_frames"] = round(_wav_seconds(wav) * FPS)

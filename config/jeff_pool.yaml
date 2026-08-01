@@ -5,7 +5,15 @@
 
 comic:
   title: "It's Jeff!"
+  wordless: true             # no speech bubbles: drop any dialogue the
+                             # vision model imagines
   reading_direction: ltr
+  # In-joke iconography stage 2 can't know on its own; fed into the vision
+  # prompt. Add to this list whenever review catches a lore miss.
+  lore:
+    - "Small stylized mask prints on Jeff's gear come in two kinds: red-with-black-eyes = Deadpool masks, white-with-pink = GWENPOOL masks (they look like cat paw prints - they are not)."
+    - "Jeff's plush toys are a tan pug and a red Devil Dinosaur."
+    - "A license plate reading E-616 is a gag about Marvel's Earth-616 universe designation."
   pages_dir: "pages_jeff_pool"
 
 shorts:
@@ -28,8 +36,13 @@ shorts:
     loves. Plain everyday words, present tense, momentum from chained
     clauses rather than jokes. Report the cute chaos completely straight -
     the absurdity IS the comedy. Affectionate exasperation, never snark.
-    You may use exactly one mild swear in the whole episode, at the single
-    most absurd reveal, nowhere else.
+    Sprinkle chronically-online praise and ribbing on the characters -
+    the GOAT, clutch, a certified menace, down bad, pulls up, the full
+    government name, a bum - a handful per episode, varied, always
+    affectionate, never forced into every line. Up to two hard swears per
+    episode, dropped only at peak absurdity ("even the fucking Hulk") the
+    way the reference channel does - never casually, and never in the
+    same shot twice.
   pause_ms: 320
   ellipsis_pause_ms: 560
   shot_gap_ms: 140
@@ -67,29 +80,27 @@ shorts:
     default: "output012.mp3"   # default playful: it's a comedy short
   voicebox_profile: "aud_qwen_Ryan"
   tts_pronounce: {}
-  narrator_instruct: "Energetic, warm video-recap narrator: deep male voice, quick pace, amused and affectionate, punchy emphasis on names and reversals, storyteller confidence. Speak ONLY the written words - never laugh, giggle, sigh or add any sound that is not in the text."
+  narrator_instruct: "Energetic, warm video-recap narrator: deep male voice, quick pace, affectionate but bone-dry - the jokes are in the words, the delivery is deadpan - punchy emphasis on names and reversals, storyteller confidence. Speak ONLY the written words - never laugh, giggle, sigh or add any sound that is not in the text."
 
 # No ref face crops yet (descriptions only, like the Planet Comics run).
 # Jeff is unmistakable; Kate is the only recurring human.
 characters:
   - name: "Jeff"
-    epithet: "Jeff the Land Shark / the little land shark"
+    epithet: "Jeff the Land Shark / the GOAT / the little menace"
     description: "Jeff the Land Shark: small grey baby-shark pet with stubby legs, big black eyes, permanently delighted. Walks on land, acts like a dog."
     speaking_style: "does not speak; communicates in happy shark noises"
   - name: "Kate Bishop"
     epithet: "Kate Bishop, his long-suffering owner / Hawkeye, the one with actual responsibilities"
     description: "Kate Bishop, Hawkeye: young woman, long black hair, purple sleeveless outfit with black gloves"
     speaking_style: "exasperated but loving pet owner"
-  - name: "Iceman"
-    epithet: "Iceman, the X-Man you call when your dog is a shark"
-    description: "Iceman (Bobby Drake): X-Man made of translucent blue ice"
-    speaking_style: "easygoing"
-  - name: "Doctor"
-    epithet: "one very confused doctor"
-    description: "burly bearded human doctor in a white coat at an animal-friendly clinic"
-    speaking_style: "professional, baffled"
+  - name: "Nightcrawler"
+    epithet: "Nightcrawler, who has seen far weirder"
+    description: "Nightcrawler (Kurt Wagner): X-Man with dark indigo-blue skin, black hair, pointed ears, yellow eyes"
+    speaking_style: "wry, unbothered"
 
 models:
+  vision_provider: local      # Qwen3-VL-30B local, $0; flip to
+                              # "anthropic" for max flavor on tricky books
   vision_model: "claude-sonnet-4-6"
   story_model: "claude-opus-4-8"
   esrgan_weights: "weights/RealESRGAN_x4plus_anime_6B.pth"
